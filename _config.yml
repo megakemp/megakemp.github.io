@@ -2,6 +2,7 @@ name: Your New Jekyll Site
 markdown: redcarpet
 pygments: true
 url: http://megakemp.com
+permalink: /:year/:month/:day/:title/
 
 theme:
   # Color for top bar, links, etc
