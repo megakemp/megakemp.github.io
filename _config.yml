@@ -26,8 +26,9 @@ theme:
   email: enrico@tretton37.com
   tagline: ""
 
-  # Google Analytics key, leave blank to ignore
-  google_analytics_key:
+  # Google Analytics Tracking ID, leave blank to ignore
+  google_analytics_tracking_id: UA-5422661-2
+  google_analytics_property_name: megakemp.com
 
   # Toggle "Postings are my own" disclaimer in footer
   show_disclaimer: true
