@@ -119,6 +119,11 @@ nav hr {
   font-size: 13px;
 }
 
+#summary {
+  font-style: italic;
+  padding-bottom: 1em;
+}
+
 #post pre {
   border: 1px solid #ddd;
   background-color: #eef;
