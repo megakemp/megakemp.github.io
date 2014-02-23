@@ -6,7 +6,7 @@ permalink: /:year/:month/:day/:title/
 
 theme:
   # Color for top bar, links, etc
-  highlight_color: '#3498db'
+  highlight_color: '#e87830'
 
   # Profile links on the left sidebar, leave blank to ignore
   social:
