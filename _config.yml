@@ -5,7 +5,9 @@ url: http://megakemp.com
 permalink: /:year/:month/:day/:title/
 
 theme:
-  # Color for top bar, links, etc
+  # Base color for background elements such as the top bar
+  base_color: '#444'
+  # Accent color for links, etc
   highlight_color: '#e87830'
 
   # Profile links on the left sidebar, leave blank to ignore

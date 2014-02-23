@@ -13,7 +13,7 @@ body {
   color: #222222;
   line-height: 24px;
   margin: 0;
-  border-top: 7px solid {{ site.theme.highlight_color }};
+  border-top: 7px solid {{ site.theme.base_color }};
 }
 
 h1, h2, h3, h4, h5, h6 {
