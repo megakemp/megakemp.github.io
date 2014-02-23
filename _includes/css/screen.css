@@ -124,6 +124,10 @@ nav hr {
   padding-bottom: 1em;
 }
 
+#post blockquote {
+  border-left: 3px solid {{ site.theme.highlight_color }};
+}
+
 #post pre {
   border: 1px solid #ddd;
   background-color: #eef;
