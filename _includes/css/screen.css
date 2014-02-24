@@ -118,6 +118,19 @@ nav hr {
   border-width: 1px 0 0;
 }
 
+.article {
+  width: 256px;
+  float: right;
+}
+
+.screenshot {
+  position: relative;
+  margin:30px auto 30px auto;
+  max-width: 90%;
+  box-shadow: 0 0 20px 0 #000000;
+  -webkit-box-shadow: 0 0 20px 0 #000000;
+}
+
 #social {
   margin-bottom: 10px;
   font-size: 13px;
