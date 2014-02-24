@@ -3,7 +3,16 @@ layout: default
 ---
 
 <p class="meta">
-  {{ page.date | date: "%B %d, %Y" }}
+  <span id="meta-date">{{ page.date | date: "%B %d, %Y" }}</span>
+  <span id="meta-categories">
+    Posted in
+    {% for category in page.categories %}
+      <a href="/{{ category }}">{{ category }}</a>
+      {% if forloop.last == false %}
+        &nbsp;|&nbsp;
+      {% endif %}
+    {% endfor %}
+  </span>
   <a href="/">
     <i class="home fa fa-home"></i>
   </a>

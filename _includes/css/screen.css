@@ -96,6 +96,10 @@ ul.posts span {
   margin: 0 0 10px 0;
 }
 
+#meta-categories {
+  margin-left: 5px;
+}
+
 .site .footer {
   font-size: 80%;
   color: #666;
