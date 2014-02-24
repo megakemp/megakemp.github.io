@@ -151,6 +151,12 @@ nav hr {
   border: none;
 }
 
+#comments i {
+  font-size: 23px;
+  margin-right: 5px;
+  color: {{ site.theme.highlight_color }};
+}
+
 .sidebar {
   padding-top: 25px;
   font-family: "Lato", sans-serif;
