@@ -170,7 +170,7 @@ nav hr {
 
 #comments i {
   font-size: 23px;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-right: 5px;
   color: {{ site.theme.highlight_color }};
 }
