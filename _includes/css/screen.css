@@ -146,6 +146,12 @@ nav hr {
   -webkit-box-shadow: 0 0 20px 0 #000000;
 }
 
+.screenshot-noshadow {
+  position: relative;
+  margin:30px auto 30px auto;
+  max-width: 90%;
+}
+
 #social {
   margin-bottom: 10px;
   font-size: 13px;
