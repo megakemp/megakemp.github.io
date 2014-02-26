@@ -4,6 +4,9 @@ pygments: true
 url: http://megakemp.com
 permalink: /:year/:month/:day/:title/
 
+redcarpet:
+  extensions: ["tables", "autolink"]
+
 theme:
   # Base color for background elements such as the top bar
   base_color: '#444'
