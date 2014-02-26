@@ -134,8 +134,8 @@ nav hr {
 }
 
 .article {
-  width: 256px;
   float: right;
+  margin: 20px auto 20px 20px;
 }
 
 .screenshot {
