@@ -1,8 +1,11 @@
-[Source](http://megakemp.com/2008/08/28/the-hd-jungle-part-1/ "Permalink to The HD Jungle – Part 1")
+---
+layout: post
+title:  "The HD Jungle – Part 1"
+date:   2008-08-28
+categories: technology
+---
 
-# The HD Jungle – Part 1
-
-Since I bought a HD-Ready LCD TV, I have been wondering how HD movies actually  look like in real life. So I decided to connect my old Dell desktop to the TV via an DVI-To-HDMI cable and went to download a couple of those free [WMV HD Content Showcase movies][1] from Microsoft.![hdreadylogo][2]
+Since I bought a HD-Ready LCD TV, I have been wondering how HD movies actually  look like in real life. So I decided to connect my old Dell desktop to the TV via an DVI-To-HDMI cable and went to download a couple of those free [WMV HD Content Showcase movies][1] from Microsoft.<img alt="hdreadylogo" src="http://megakemp.files.wordpress.com/2008/08/hdreadylogo-thumb.gif?w=144&h=101" class="article" />
 
 The next step was to open one of the movies in Windows Media Player 10 and…well, the movie played, but it was more like watching a PowerPoint slideshow. Apparently I overestimated my faithful Dell (a P4 2.6 Ghz with 1 GB of RAM, by the way), since the CPU was already working at 100% of its capacity.
 
@@ -26,12 +29,10 @@ Two contenders emerged to fight for the title of “successor of the DVD disc”
   * HD-DVD with a capacity of ~15 GB
   * Blue-ray with a capacity of ~25 GB
 
-HD-DVD and Blue-ray were backed up by different manufacturing and retail companies. ![blueraylogo][3] Most remarkable is probably the case of Microsoft offering an external HD-DVD player for the Xbox 360, while Sony’s PlayStation 3 came with its own Blue-ray player.   This meant that during a 2-year period, commercial video content (movies and video games) were delivered in both formats, leaving the choice to consumers on which format to support when buying hardware. In 2008, however, two big supporters of the HD-DVD format (Warner Bros. and Toshiba) suddenly switched side, practically declaring Blue-ray the winner of the “format war”.
+HD-DVD and Blue-ray were backed up by different manufacturing and retail companies. <img alt="blueraylogo" src="http://megakemp.files.wordpress.com/2008/08/blueraylogo-thumb.gif?w=185&h=101" class="article" /> Most remarkable is probably the case of Microsoft offering an external HD-DVD player for the Xbox 360, while Sony’s PlayStation 3 came with its own Blue-ray player.   This meant that during a 2-year period, commercial video content (movies and video games) were delivered in both formats, leaving the choice to consumers on which format to support when buying hardware. In 2008, however, two big supporters of the HD-DVD format (Warner Bros. and Toshiba) suddenly switched side, practically declaring Blue-ray the winner of the “format war”.
 
 This concludes the first of three posts on the “HD Jungle”. I hope this information is as useful to you as it is to me.
 
 /Enrico
 
-   [1]: http://www.microsoft.com/windows/windowsmedia/musicandvideo/hdvideo/contentshowcase.aspx
-   [2]: http://megakemp.files.wordpress.com/2008/08/hdreadylogo-thumb.gif?w=144&h=101
-   [3]: http://megakemp.files.wordpress.com/2008/08/blueraylogo-thumb.gif?w=185&h=101
+[1]: http://www.microsoft.com/windows/windowsmedia/musicandvideo/hdvideo/contentshowcase.aspx
