@@ -152,6 +152,25 @@ nav hr {
   max-width: 90%;
 }
 
+.note {
+    border: 1px solid #ddd;
+    background-color: #e2ebf9;
+    margin: 20px 0 20px 0;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.note ul {
+    list-style: none;
+}
+
+.note ul li:before {
+    font-family: FontAwesome;
+    color: #555;
+    content: '\f0ed';
+    margin: 0 5px 0 -10px;
+}
+
 #social {
   margin-bottom: 10px;
   font-size: 13px;
