@@ -1,27 +1,30 @@
-[Source](http://megakemp.com/2009/02/06/managing-shared-cookies-in-wcf/ "Permalink to Managing shared cookies in WCF")
-
-# Managing shared cookies in WCF
+---
+layout: post
+title:  "Managing shared cookies in WCF"
+date:   2009-02-06
+categories: programming .net
+---
 
 Managing state across the HTTP protocol has always been one of the major challenges faced by developers when building applications on the web. Of course web services are no exception.
 
 One way to overcome the stateless nature of HTTP without putting to much load on the web server, is to offload some of the information that has to be saved in the context of a particular conversation over to the client. The HTTP specification provides a native mechanism to do just that, by allowing web servers to bundle small pieces of textual data in a dedicated header of the response messages sent to the clients. These recognize the special payload, extract it, and store it in a local cache on disk to have it ready to be sent with every subsequent request. These small texts are technically known as “cookies”.
 
-**Cookies are opaque in ASMX**
+### Cookies are opaque in ASMX
 
 Cookies go back a long time in the history of HTTP, and have served the Internet (fairly) well so far. Sure they brought some serious security issues with them, but for the most part they have been a conventient way for developers of web sites/web  applications to save temporary pieces of information off the server and have it transparently sent back by the client with each request.
-This guarantee comes from the fact![AsmxWs][1] that every web browser on Earth has had the notion of cookies since web browser have had built-in support for cookies for the last 15 years or so.    
+This guarantee comes from the fact <img alt="AsmxWs" src="http://megakemp.files.wordpress.com/2009/02/asmxws-thumb.jpg?w=80&h=93" class="article" /> that every web browser on Earth has had the notion of cookies since web browser have had built-in support for cookies for the last 15 years or so.    
 
 However, when it comes to web services, this assumption is no longer valid, since the client isn’t necessarily a web browser and doesn’t have to know how to handle cookies.
 
-In the ASMX programming model, this problem has a quite simple solution. The client objects used to invoke operations on a web service can optionally reference an instance of a “cookie container”, were all cookies passed back by the web server are automatically stored and sent with each request.
+In the ASMX programming model, this problem has a quite simple solution. The client objects used to invoke operations on a web service can optionally reference an instance of a *cookie container*, were all cookies passed back by the web server are automatically stored and sent with each request.
 
+```csharp
+using System.Net;
 
-    using System.Net;
-
-    public class Program
+public class Program
+{
+    private static void Main(string[] args)
     {
-      private static void Main(string[] args)
-      {
         // Creates a new instance of a client proxy for an ASMX Web service
         MyWebServiceClient client = new MyWebServiceClient();
 
@@ -32,135 +35,138 @@ In the ASMX programming model, this problem has a quite simple solution. The cli
         // From now on cookies returned by any of the web service operations
         // are automatically handled by the proxy
         client.DoSomething();
-      }
     }
+}
+```
 
 The advantage with this approach is that it is fairly opaque to the developer, which can inspect the contents of the cookie container at any time. As a bonus, it allows the same cookie container to easily be shared between multiple clients, enabling the scenarios when same cookie is required by multiple web services.
 
-**But they are transparent in WCF**
+### But they are transparent in WCF
 
-In the WCF world, things are a little bit different. WCF, being a transport-agnostic technology, doesn’t allow the concept of a cookie to be directly reflected in the high level API, since it is specific to the HTTP protocol. This translate in practice in the web service client objects not having any **CookieContainer**_ _property to set and retrieve.
+In the WCF world, things are a little bit different. WCF, being a transport-agnostic technology, doesn’t allow the concept of a cookie to be directly reflected in the high level API, since it is specific to the HTTP protocol. This translate in practice in the web service client objects not having any **CookieContainer** property to set and retrieve.
 
 However this isn’t necessarily a problem, since Microsoft did put a the possibility to enable **automatic “behind the scenes” cookie management** for HTTP clients. This of course is implemented at the **[WCF binding][2]** level, and can be switched on with a configuration setting:
 
-
-    
-        
-            
-        
-        
-            
-        
-    
+```xml
+<system.ServiceModel>
+    <bindings>
+        <basicHttpBinding allowCookies="true">
+    </bindings>
+    <client>
+        <endpoint address="http://localhost/myservice"
+                  binding="basicHttpBinding"
+                  contract="IMyService" />
+    </client>
+</system.ServiceModel>
+```
 
 When this option is enabled the client will make sure all cookies received from a given web service are stored and properly sent on each subsequent request in a transparent fashion. But there is a catch: **the cookie is only handled in the conversation with one web service**. What if you need to send the same cookies to different web services?
 
-Well, you’ll have to **explicitly set the EnableCookies setting to false**  (kind of counter-intuitive I know, but required nonetheless) and start managing the cookies yourself. Luckily, there are a couple of solutions.
+Well, you’ll have to **explicitly set the `EnableCookies` setting to `false`**  (kind of counter-intuitive I know, but required nonetheless) and start managing the cookies yourself. Luckily, there are a couple of solutions.
 
-**Ad-hoc cookie management**
+### Ad-hoc cookie management
 
 If you wish to manually retrieve, store and send a the same given set of cookies from two different web service client objects in WCF, you could do this ad-hoc this way:
 
+```csharp
+using System.ServiceModel;
+using System.ServiceModel.Channels;
 
-
-    using System.ServiceModel;
-    using System.ServiceModel.Channels;
-
-    public class Program
+public class Program
+{
+    private static void Main(object[] args)
     {
-        private static void Main(object[] args)
+        string sharedCookie;
+
+        MyWebServiceClient client = new MyWebServiceClient();
+
+        using (new OperationContextScope(client.InnerChannel))
         {
-            string sharedCookie;
+            client.DoSomething();
 
-            MyWebServiceClient client = new MyWebServiceClient();
+            // Extract the cookie embedded in the received web service response
+            // and stores it locally
+            HttpResponseMessageProperty response = (HttpResponseMessageProperty)
+            OperationContext.Current.IncomingMessageProperties[
+                HttpResponseMessageProperty.Name];
+            sharedCookie = response.Headers["Set-Cookie"];
+        }
 
-            using (new OperationContextScope(client.InnerChannel))
-            {
-                client.DoSomething();
+        MyOtherWebServiceClient otherClient = new MyOtherWebServiceClient();
 
-                // Extract the cookie embedded in the received web service response
-                // and stores it locally
-                HttpResponseMessageProperty response = (HttpResponseMessageProperty)
-                OperationContext.Current.IncomingMessageProperties[
-                    HttpResponseMessageProperty.Name];
-                sharedCookie = response.Headers["Set-Cookie"];
-            }
+        using (new OperationContextScope(otherClient.InnerChannel))
+        {
+            // Embeds the extracted cookie in the next web service request
+            // Note that we manually have to create the request object since
+            // since it doesn't exist yet at this stage
+            HttpRequestMessageProperty request = new HttpRequestMessageProperty();
+            request.Headers["Cookie"] = sharedCookie;
+            OperationContext.Current.OutgoingMessageProperties[
+                HttpRequestMessageProperty.Name] = request;
 
-            MyOtherWebServiceClient otherClient = new MyOtherWebServiceClient();
-
-            using (new OperationContextScope(otherClient.InnerChannel))
-            {
-                // Embeds the extracted cookie in the next web service request
-                // Note that we manually have to create the request object since
-                // since it doesn't exist yet at this stage
-                HttpRequestMessageProperty request = new HttpRequestMessageProperty();
-                request.Headers["Cookie"] = sharedCookie;
-                OperationContext.Current.OutgoingMessageProperties[
-                    HttpRequestMessageProperty.Name] = request;
-
-                otherClient.DoSomethingElse();
-            }
+            otherClient.DoSomethingElse();
         }
     }
-
- 
+}
+```
 
 Here we are interacting directly with the HTTP messages exchanged with the web services, reading and writing the cookies as a string in appropriate headers. In order to accomplish the task we need to use the “transport-agnostic” WCF API, which indeed makes the code more verbose compared with the ASMX example.
 
-**Centralized cookie management**
+### Centralized cookie management
 
 In situations were cookies must be managed in the same way for all web services invoked from a client applications, your best bet is to opt for a centralized solution by applying a very useful feature in WCF: **[message inspectors][3]**.
 
 Message inspectors provide a hook in the WCF messaging pipeline offering the chance to look at and possibly modify all incoming or outgoing messages that transit on the server-side as well as on the client-side. The inspectors that are registered with the WCF runtime receive the messages before they are passed on to the application or sent to the wire, depending on whether it is an incoming or outgoing message.
 
-![WcfMessageInspectors][4]
+<img alt="WcfMessageInspectors" src="http://megakemp.files.wordpress.com/2009/02/wcfmessageinspectors.png?w=500&h=88" class="screenshot-noshadow" /> 
 
 This way, it is possible to catch all HTTP responses coming from the web server, extract any cookies contained within the messages, and manually inject them in all subsequent HTTP requests on their way out. Here is a simplified view of the solution:
 
+```csharp
+using System.ServiceModel;
+using System.ServiceModel.Channels;
 
-    using System.ServiceModel;
-    using System.ServiceModel.Channels;
+public class CookieManagerMessageInspector : IClientMessageInspector
+{
+    private string sharedCookie;
 
-    public class CookieManagerMessageInspector : IClientMessageInspector
+    public void AfterReceiveReply(ref Message reply, object correlationState)
     {
-        private string sharedCookie;
+        HttpResponseMessageProperty httpResponse =
+            reply.Properties[HttpResponseMessageProperty.Name]
+            as HttpResponseMessageProperty;
 
-        public void AfterReceiveReply(ref Message reply, object correlationState)
+        if (httpResponse != null)
         {
-            HttpResponseMessageProperty httpResponse =
-                reply.Properties[HttpResponseMessageProperty.Name]
-                as HttpResponseMessageProperty;
+            string cookie = httpResponse.Headers[HttpResponseHeader.SetCookie];
 
-            if (httpResponse != null)
+            if (!string.IsNullOrEmpty(cookie))
             {
-                string cookie = httpResponse.Headers[HttpResponseHeader.SetCookie];
-
-                if (!string.IsNullOrEmpty(cookie))
-                {
-                    this.sharedCookie = cookie;
-                }
+                this.sharedCookie = cookie;
             }
-        }
-
-        public object BeforeSendRequest(ref Message request, IClientChannel channel)
-        {
-            HttpRequestMessageProperty httpRequest;
-
-            // The HTTP request object is made available in the outgoing message only
-            // when the Visual Studio Debugger is attacched to the running process
-            if (!request.Properties.ContainsKey(HttpRequestMessageProperty.Name))
-            {
-                request.Properties.Add(HttpRequestMessageProperty.Name,
-                    new HttpRequestMessageProperty());
-            }
-
-            httpRequest = (HttpRequestMessageProperty)
-                request.Properties[HttpRequestMessageProperty.Name];
-            httpRequest.Headers.Add(HttpRequestHeader.Cookie, this.sharedCookie);
-
-            return null;
         }
     }
+
+    public object BeforeSendRequest(ref Message request, IClientChannel channel)
+    {
+        HttpRequestMessageProperty httpRequest;
+
+        // The HTTP request object is made available in the outgoing message only
+        // when the Visual Studio Debugger is attacched to the running process
+        if (!request.Properties.ContainsKey(HttpRequestMessageProperty.Name))
+        {
+            request.Properties.Add(HttpRequestMessageProperty.Name,
+                new HttpRequestMessageProperty());
+        }
+
+        httpRequest = (HttpRequestMessageProperty)
+            request.Properties[HttpRequestMessageProperty.Name];
+        httpRequest.Headers.Add(HttpRequestHeader.Cookie, this.sharedCookie);
+
+        return null;
+    }
+}
+```
 
 Message inspectors are enabled through the WCF extensibility mechanism called** behaviors** for single web service operations, entire web service contracts, or even specific endpoint URLs, depending on the scope the will operate in.
 
@@ -168,8 +174,6 @@ Message inspectors are enabled through the WCF extensibility mechanism called** 
 
 /Enrico
 
-   [1]: http://megakemp.files.wordpress.com/2009/02/asmxws-thumb.jpg?w=80&h=93 (AsmxWs)
-   [2]: http://msdn.microsoft.com/en-us/library/ms733027.aspx
-   [3]: http://msdn.microsoft.com/en-us/library/aa717047.aspx
-   [4]: http://megakemp.files.wordpress.com/2009/02/wcfmessageinspectors.png?w=500&h=88 (WcfMessageInspectors)
-   [5]: http://code.msdn.microsoft.com/wcfcookiemanager/Release/ProjectReleases.aspx?ReleaseId=2240
+[2]: http://msdn.microsoft.com/en-us/library/ms733027.aspx
+[3]: http://msdn.microsoft.com/en-us/library/aa717047.aspx
+[5]: http://code.msdn.microsoft.com/wcfcookiemanager/Release/ProjectReleases.aspx?ReleaseId=2240
