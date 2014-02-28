@@ -160,8 +160,17 @@ nav hr {
     padding-right:5px;
 }
 
+.note p {
+    margin: 0 !important;
+    padding: 10px;
+}
+
 .note ul {
     list-style: none;
+}
+
+.note ul a {
+    color: #594aa2;
 }
 
 .note ul li:before {
