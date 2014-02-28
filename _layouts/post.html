@@ -3,8 +3,12 @@ layout: default
 ---
 
 <p class="meta">
-  <span id="meta-date">{{ page.date | date: "%B %d, %Y" }}</span>
+  <span id="meta-date">
+    <i class="fa fa-calendar-o"></i>
+    {{ page.date | date: "%B %d, %Y" }}
+  </span>
   <span id="meta-categories">
+    <i class="fa fa-tags"></i>
     Posted in
     {% for category in page.categories %}
       <a href="/tag/{{ category | replace:'.','dot' }}">{{ category }}</a>
