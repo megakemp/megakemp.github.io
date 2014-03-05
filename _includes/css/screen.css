@@ -87,6 +87,16 @@ img {
   margin-right: auto;
 }
 
+span.tag-icon {
+  color: #555;
+  font-size: 70%;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+}
+
+ul.posts.tag-posts {
+  margin-left: 38px;
+}
+
 ul.posts {
   list-style-type: none;
   margin-left: 20px;

@@ -1,0 +1,21 @@
+---
+layout: default
+title: AutoFixture
+---
+
+<div id="home">
+  <h2>
+    <span class="fa-stack tag-icon">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-tag fa-stack-1x fa-inverse"></i>
+    </span>
+    AutoFixture
+  </h2>
+  <ul id="blog-posts" class="posts tag-posts">
+    {% for post in site.posts %}
+    {% if post.categories contains 'autofixture' %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
