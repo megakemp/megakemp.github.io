@@ -154,11 +154,18 @@ nav hr {
 }
 
 .note {
-    border: 1px solid #ddd;
+    border: 1px solid #a0bce8;
     background-color: #e2ebf9;
     margin: 20px 0 20px 0;
     padding-left:5px;
     padding-right:5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.note.downloads {
+    border: 1px solid #ffe7bf;
+    background-color: #fff2bf;
 }
 
 .note p {
@@ -166,19 +173,41 @@ nav hr {
     padding: 10px;
 }
 
-.note ul {
+.note a {
+    color: #4183c4;
+}
+
+.note.downloads a {
+    color: #555;
+}
+
+.note.downloads ul {
     list-style: none;
+    text-align: center;
 }
 
-.note ul a {
-    color: #594aa2;
+.note.downloads ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-.note ul li:before {
+.note.downloads ul li:before {
     font-family: FontAwesome;
     color: #555;
     content: '\f0ed';
-    margin: 0 5px 0 -10px;
+    margin: 0 7px 0 0;
+}
+
+.note.downloads ul li.slides:before {
+    content: '\f144';
+}
+
+.note.downloads ul li.pdf:before {
+    content: '\f15c';
+}
+
+.note.downloads ul li.github:before {
+    content: '\f09b';
 }
 
 #social {
