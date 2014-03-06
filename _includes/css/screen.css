@@ -166,6 +166,12 @@ nav hr {
   max-width: 90%;
 }
 
+.video {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.8);
+}
+
 .note {
     border: 1px solid #a0bce8;
     background-color: #e2ebf9;
