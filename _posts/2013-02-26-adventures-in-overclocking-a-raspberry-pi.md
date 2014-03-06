@@ -4,6 +4,7 @@ title:  "Adventures in overclocking a Raspberry Pi"
 date:   2013-02-26
 categories: technology programming
 summary: This article sums up my experience when overclocking a Raspberry Pi computer. It doesn’t provide a <em>step-by-step</em> guide on how to do the actual overclocking, since that kind of resources can easily be found <a href="http://lifehacker.com/5971395/overclock-your-raspberry-pi">elsewhere on the Internet</a>. Instead, it gathers the pieces of information that I found most interesting during my research, while diving deeper on some exquisitely <a href="http://geekalabama.files.wordpress.com/2014/02/12739272345_6a50e7edaa_o.png">geeky details</a> on the way.
+excerpt: This article sums up my experience when overclocking a Raspberry Pi computer. It doesn’t provide a step-by-step guide on how to do the actual overclocking, since that kind of resources can easily be found elsewhere on the Internet. Instead, it gathers the pieces of information that I found most interesting during my research, while diving deeper on some exquisitely geeky details on the way.
 ---
 
 ### A little background

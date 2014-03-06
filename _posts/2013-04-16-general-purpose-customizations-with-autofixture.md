@@ -3,6 +3,7 @@ layout: post
 title:  "General-purpose customizations with AutoFixture"
 date:   2013-04-16
 categories: programming autofixture
+excerpt: If you’ve been using AutoFixture in your tests for more than a while, chances are you’ve already come across the concept of customizations.In this post I’m going to talk about how to write general-purpose customizations.
 ---
 
 If you’ve been using [AutoFixture][1] in your tests for more than a while, chances are you’ve already come across the concept of customizations. If you’re not familiar with it, let me give you a quick introduction:
