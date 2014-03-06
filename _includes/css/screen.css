@@ -42,6 +42,16 @@ h3 {
   margin: 1em 0;
 }
 
+h1.backdrop {
+  color: {{ site.theme.highlight_color }};
+  background: url(/assets/about/ecampidoglio.png) left center no-repeat;
+  line-height: 335px;
+  padding-left: 23px;
+  margin-bottom: 20px;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.8);
+  box-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+
 ul {
   margin: 1em 0;
   list-style: disc;
