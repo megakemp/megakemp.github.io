@@ -117,6 +117,12 @@ ul.posts span {
   font-size:14px;
 }
 
+ul.posts p {
+  font-style: italic;
+  font-size: 90%;
+  margin-left:115px;
+}
+
 .meta {
   color: #aaa;
   margin: 0 0 10px 0;
