@@ -149,6 +149,10 @@ nav hr {
   margin: 20px auto 20px 20px;
 }
 
+.article.resize {
+  max-width: 150px;
+}
+
 .screenshot {
   position: relative;
   margin:30px auto 30px auto;
