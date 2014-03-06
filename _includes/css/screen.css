@@ -157,8 +157,7 @@ nav hr {
   position: relative;
   margin:30px auto 30px auto;
   max-width: 90%;
-  box-shadow: 0 0 20px 0 #000000;
-  -webkit-box-shadow: 0 0 20px 0 #000000;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.8);
 }
 
 .screenshot-noshadow {
