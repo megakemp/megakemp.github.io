@@ -117,7 +117,7 @@ public class EqualityComparer : IEqualityComparer
 }
 ```
 
-That’s a nice flexible class that, by allowing to specify the comparison logic in the form of delegates, is suitable in different scenarios. Before the support for delegates was added, however, having AutoFixture play along with this class in the context of unit testing would be quite problematic. The tests would, in fact, fail consistently with a [NotSupportedException][10], since the constructor of the EqualityComparer class requires the creation of two delegates.
+That’s a nice flexible class that, by allowing to specify the comparison logic in the form of delegates, is suitable in different scenarios. Before the support for delegates was added, however, having AutoFixture play along with this class in the context of unit testing would be quite problematic. The tests would, in fact, fail consistently with a [NotSupportedException][10], since the constructor of the `EqualityComparer` class requires the creation of two delegates.
 Luckily, this is not a problem anymore.
 
 [1]: http://autofixture.codeplex.com

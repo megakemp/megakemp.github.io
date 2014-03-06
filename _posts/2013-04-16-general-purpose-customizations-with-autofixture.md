@@ -2,14 +2,17 @@
 layout: post
 title:  "General-purpose customizations with AutoFixture"
 date:   2013-04-16
-categories: AutoFixture
-assets:
-summary:
+categories: programming autofixture
 ---
 
 If you’ve been using [AutoFixture][1] in your tests for more than a while, chances are you’ve already come across the concept of customizations. If you’re not familiar with it, let me give you a quick introduction:
 
-> A **customization** is a group of settings that, when applied to a given `Fixture` object, control the way AutoFixture will create instances for the types requested through that `Fixture`.
+<div class="note">
+<p>
+<i class="fa fa-book fa-2x pull-left"></i>
+A <strong>customization</strong> is a group of settings that, when applied to a given <code>Fixture</code> object, control the way AutoFixture will create instances for the types requested through that <code>Fixture</code>.
+</p>
+</div>
 
 At this point you might find yourself feeling an irresistible urge to know everything there’s to know about customizations. If that’s the case, don’t worry. There are [a few resources][2] online where you learn more about them. For example, I wrote about [how to take advantage of customizations][3] to group together test data related to specific scenarios.
 
@@ -23,14 +26,14 @@ It’s hard to talk about test data without a bit of context. So, for the sake o
   * **Recipes**
   * **Ingredients**
 
-![Basic domain model for a recipe catalogue.][4]
-
-Basic domain model for a recipe catalogue.
+<a href="http://megakemp.files.wordpress.com/2013/04/domain.png">
+<img alt="Basic domain model for a recipe catalogue." title="Basic domain model for a recipe catalogue." src="http://megakemp.files.wordpress.com/2013/04/domain.png?w=480&h=55" class="screenshot-noshadow" />
+</a>
 
 Now, let’s imagine that in our backlog of requirements we have one where the user wishes to be able to search for recepies that contain a specific set of ingredients. Or in other words:
 
-> _As a foodie, I want to know which recipes I can prepare with the ingredients I have,
-so that I can get the best value for my groceries._
+> As a foodie, I want to know which recipes I can prepare with the ingredients I have,
+so that I can get the best value for my groceries.
 
 ### From the tests…
 
@@ -183,7 +186,12 @@ Given the fact that we started working from a very concrete requirement, it’s 
 
 The only part of the algorithm that is specific to the original scenario is the _type of the objects being created_. The rest can easily be applied whenever you want to create objects that are picked at random from a predefined pool.
 
-> An opportunity for writing a **general-purpose customization** has just presented itself. We can’t let it slip.
+<div class="note">
+<p>
+<i class="fa fa-lightbulb-o fa-2x pull-left"></i>
+An opportunity for writing a <strong>general-purpose customization</strong> has just presented itself. We can’t let it slip.
+</p>
+</div>
 
 Let’s see what happens if we extract the `Ingredient` type into a generic argument and remove all references to the word _“ingredient”_:
 
@@ -230,8 +238,8 @@ public class CookbookAutoDataAttribute : AutoDataAttribute
 The same is true if you’re using AutoFixture imperatively:
 
 ```csharp
-    var fixture = new Fixture();
-    fixture.Customize(new RandomFromFixedSequence());
+var fixture = new Fixture();
+fixture.Customize(new RandomFromFixedSequence());
 ```
 
 ### Wrapping up
@@ -240,12 +248,11 @@ As I said before, customizations are a great way to set up test data for a speci
 
 When such opportunity arises, it’s often a good idea to separate out the parts that are specific to a particular context and turn them into parameters. This allows the customization to become a _reusable strategy_ for controlling AutoFixture’s behavior across entire test suites.
 
-   [1]: https://github.com/AutoFixture/AutoFixture
-   [2]: http://www.google.com/search?q=AutoFixture%2Bcustomizations
-   [3]: http://megakemp.com/2011/12/15/keep-your-unit-tests-dry-with-autofixture-customizations
-   [4]: http://megakemp.files.wordpress.com/2013/04/domain.png?w=480&h=55
-   [5]: https://xunit.codeplex.com
-   [6]: http://blog.ploeh.dk/2010/10/08/AutoDataTheorieswithAutoFixture
-   [7]: http://stackoverflow.com/a/9110623/26396
-   [8]: http://www.jamesshore.com/Blog/Red-Green-Refactor.html
-   [9]: https://github.com/AutoFixture/AutoFixture/blob/master/Src/AutoFixture/FreezingCustomization.cs#L8-11
+[1]: https://github.com/AutoFixture/AutoFixture
+[2]: http://www.google.com/search?q=AutoFixture%2Bcustomizations
+[3]: http://megakemp.com/2011/12/15/keep-your-unit-tests-dry-with-autofixture-customizations
+[5]: https://xunit.codeplex.com
+[6]: http://blog.ploeh.dk/2010/10/08/AutoDataTheorieswithAutoFixture
+[7]: http://stackoverflow.com/a/9110623/26396
+[8]: http://www.jamesshore.com/Blog/Red-Green-Refactor.html
+[9]: https://github.com/AutoFixture/AutoFixture/blob/master/Src/AutoFixture/FreezingCustomization.cs#L8-11
