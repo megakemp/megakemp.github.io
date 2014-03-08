@@ -126,10 +126,15 @@ ul.posts p {
 .meta {
   color: #aaa;
   margin: 0 0 10px 0;
+  text-align: left;
+}
+
+#meta-date {
+  margin-right: 5px;
 }
 
 #meta-categories {
-  margin-left: 5px;
+  white-space: nowrap;
 }
 
 .site .footer {
