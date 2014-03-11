@@ -1,0 +1,29 @@
+---
+layout: default
+title: SQL
+---
+
+<div id="home">
+  <h2>
+    <span class="fa-stack tag-icon">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-table fa-stack-1x fa-inverse"></i>
+    </span>
+    SQL
+    <a href="/">
+      <i class="home fa fa-home"></i>
+    </a>
+  </h2>
+  <ul id="blog-posts" class="posts tag-posts">
+    {% for post in site.posts %}
+    {% if post.categories contains 'sql' %}
+    <li>
+      <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+      <p>
+        {{ post.excerpt | strip_html | replace:':','.' }}
+      </p>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
