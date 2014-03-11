@@ -143,12 +143,12 @@ span.tag-icon {
 }
 
 ul.posts.tag-posts {
-  margin-left: 38px;
+  margin-left: 6%;
 }
 
 ul.posts {
   list-style-type: none;
-  margin-left: 20px;
+  margin-left: 3%;
   margin-top: 0;
   margin-bottom: 10px;
 }
@@ -156,7 +156,7 @@ ul.posts {
 ul.posts li {
   line-height: 22px;
   font-size: 16px;
-  margin-bottom: 0px;
+  margin-bottom: 0.6%;
 }
 
 ul.posts span {
