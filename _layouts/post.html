@@ -7,7 +7,7 @@ layout: default
   <span id="meta-categories">
     Posted in
     {% for category in page.categories %}
-      <a href="/tag/{{ category }}">{{ category }}</a>
+      <a href="/tag/{{ category | replace:'.','dot' }}">{{ category }}</a>
       {% if forloop.last == false %}
         &nbsp;|&nbsp;
       {% endif %}
