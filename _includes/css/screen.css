@@ -82,7 +82,7 @@ h1.backdrop {
 }
 
 h1.backdrop.about {
-  background: url(/assets/about/backdrop.png) left center no-repeat;
+  background: url(/assets/about/backdrop.jpg) left center no-repeat;
 }
 
 ul {
