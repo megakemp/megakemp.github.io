@@ -1,0 +1,45 @@
+---
+layout: default
+title: Enrico Campidoglio
+---
+
+<div id="home">
+  <h1 class="backdrop speaking">Speaking</h1>
+  <p>
+    Going out and meet the developer community while giving technical talks is something I
+    throughly enjoy. Whether it be at a big conference, a user group or at a
+    client, I love sharing knowledge and experiences. And the best part is, it
+    goes both ways: with every presentation, I teach something and learn something new myself.
+  </p>
+
+  <h2>Schedule</h2>
+  <p>
+    I try to keep an up-to-date schedule of my upcoming talks up on <a href="http://lanyrd.com/profile/ecampidoglio">Lanyrd</a>.
+  </p>
+
+  <hr/>
+
+  <h2>Presentations</h2>
+  <p>Here's a selection of some of the most popular presentations that I've been
+  giving during the past few years. In each of them you'll find the
+  <em>slides</em> and <em>demo material</em>. If they've ever been recorded, I'll put up a link to the <em>video</em> as well.
+  {% for post in site.posts %}
+  {% if post.categories contains 'speaking' %}
+  <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+  <p style="font-size: 95%">
+    {% if post.video %}
+    <iframe src="{{ post.video }}"
+            class="video thumbnail"
+            width="160"
+            height="90"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen>
+    </iframe>
+    {% endif %}
+    {{ post.excerpt | strip_html | replace:':','.' }}
+  </p>
+  {% endif %}
+  {% endfor %}
+</div>

@@ -2,8 +2,9 @@
 layout: post
 title:  "Grokking Git by seeing it"
 date:   2013-01-22
-categories: speaking presentations
+categories: speaking
 excerpt: This is where the idea for my Grokking Git by seeing it session came from. The goal is to illustrate the meaning behind different Git operations by going through a series of demos, while having the command line running on one half of the screen and SeeGit on the other.
+video: //player.vimeo.com/video/52633764?color=8dc63f
 ---
 
 When I first started getting into [Git][1] a couple of years ago, one of the things I found most frustrating about the learning experience was the complete lack of guidance on how to interpret the myriad of commands and switches found in the documentation. On second thought, calling it _frustrating_ is actually an understatement. Utterly painful would be a better way to describe it. <img alt="Git logo" src="http://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" class="article resize" />

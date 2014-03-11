@@ -85,6 +85,12 @@ h1.backdrop.about {
   background: url(/assets/about/backdrop.jpg) left center no-repeat;
 }
 
+h1.backdrop.speaking {
+  background: url(/assets/speaking/backdrop.jpg) left center no-repeat;
+  text-align: right;
+  padding-right: 23px;
+}
+
 ul {
   margin: 1em 0;
   list-style: disc;
@@ -224,6 +230,12 @@ nav hr {
   margin-top: 10px;
   margin-bottom: 10px;
   box-shadow: 0 0 10px 0 rgba(0,0,0,0.8);
+}
+
+.video.thumbnail {
+  float: right;
+  margin-left: 3.5%;
+  margin-top: 0.5%;
 }
 
 .note {

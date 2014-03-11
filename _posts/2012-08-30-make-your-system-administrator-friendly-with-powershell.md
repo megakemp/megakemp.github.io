@@ -2,7 +2,7 @@
 layout: post
 title:  "Make your system administrator friendly with PowerShell"
 date:   2012-08-30
-categories: speaking presentations
+categories: speaking
 excerpt: Following up on my interest for PowerShell, I’ve found myself talking a fair deal about it both at conferences and user groups. In particular, during the last year or so, I’ve been giving a presentation about how to integrate PowerShell into your own applications.
 ---
 
