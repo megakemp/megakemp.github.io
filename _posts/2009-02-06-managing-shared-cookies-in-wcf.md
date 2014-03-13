@@ -168,9 +168,15 @@ public class CookieManagerMessageInspector : IClientMessageInspector
 }
 ```
 
-Message inspectors are enabled through the WCF extensibility mechanism called** behaviors** for single web service operations, entire web service contracts, or even specific endpoint URLs, depending on the scope the will operate in.
+Message inspectors are enabled through the WCF extensibility mechanism called **behaviors** for single web service operations, entire web service contracts, or even specific endpoint URLs, depending on the scope the will operate in.
 
 [Here you can download a sample application][5] showing how to implement a client-side message inspector to share the same cookies across multiple web services.
+
+<div class="note downloads">
+<p>
+The <strong>WCF Cookie Manager</strong> sample application is also <a href="http://wcfcookiemanager.codeplex.com">available on CodePlex</a>. Thanks to <a href="https://twitter.com/rayd/status/371328033975570432">Ray Dixon</a> for creating the project.
+</p>
+</div>
 
 /Enrico
 
