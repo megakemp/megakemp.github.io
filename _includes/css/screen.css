@@ -238,6 +238,11 @@ nav hr {
   margin-top: 0.5%;
 }
 
+p.thumbnail-caption {
+  font-size: 95%;
+  margin-bottom: 3%;
+}
+
 .note {
     border: 1px solid #a0bce8;
     background-color: #e2ebf9;
