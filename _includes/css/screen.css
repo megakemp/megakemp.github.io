@@ -110,6 +110,10 @@ a:visited {
   color: {{ site.theme.highlight_color }};
 }
 
+a.pagination-title {
+  text-decoration: none;
+}
+
 table {
   font-size: inherit;
   font: 100%;
@@ -337,7 +341,24 @@ p.thumbnail-caption {
   border: none;
 }
 
-#comments i {
+div.pagination {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+div.pagination a.previous-page {
+  float: left;
+}
+
+div.pagination a.next-page {
+  float: right;
+}
+
+div.comments {
+  margin-bottom: 20px;
+}
+
+div.comments i {
   font-size: 23px;
   margin-top: 5px;
   margin-right: 5px;

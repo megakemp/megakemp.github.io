@@ -3,6 +3,8 @@ markdown: redcarpet
 pygments: true
 url: http://megakemp.com
 permalink: /:year/:month/:day/:title/
+paginate: 5
+paginate_path: blog/page:num
 
 redcarpet:
   extensions: ["tables", "autolink"]

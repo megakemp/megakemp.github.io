@@ -4,10 +4,52 @@ title: Enrico Campidoglio
 ---
 
 <div id="home">
-  <h2><i class="icon-bookmark"></i> Blog Posts</h2>
-  <ul id="blog-posts" class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+  {% for post in paginator.posts %}
+  <p class="meta">
+    <span id="meta-date">{{ post.date | date: "%B %d, %Y" }}</span>
+    <span id="meta-categories">
+      Posted in
+      {% for category in post.categories %}
+        <a href="/tag/{{ category | replace:'.','dot' }}">{{ category }}</a>
+        {% if forloop.last == false %}
+          &nbsp;|&nbsp;
+        {% endif %}
+      {% endfor %}
+    </span>
+  </p>
+
+  <a href="{{ post.url }}" class="pagination-title">
+    <h1 class="title">{{ post.title }}</h1>
+  </a>
+
+  <div id="summary">
+    {{ post.summary }}
+  </div>
+
+  <div id="post">
+    {{ post.content }}
+  </div>
+
+  <div class="comments">
+    <i class="fa fa-comment"></i>
+    <a href="{{ site.url }}{{ post.url }}#disqus_thread"></a>
+  </div>
+
+  {% if forloop.last == false %}
+    <hr />
+  {% endif %}
+  {% endfor %}
+
+  <div class="pagination">
+    {% if paginator.next_page %}
+      <a href="/blog/page{{ paginator.next_page }}" class="previous-page">&laquo;&nbsp;Older Posts</a>
+    {% endif %}
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+        <a href="/" class="next-page">Newer Posts&nbsp;&raquo;</a>
+      {% else %}
+        <a href="/blog/page{{ paginator.previous_page }}" class="next-page">Newer Posts&nbsp;&raquo;</a>
+      {% endif %}
+    {% endif %}
+  </div>
 </div>
