@@ -1,4 +1,5 @@
 name: Enrico Campidoglio
+description: The blog of Enrico Campidoglio
 markdown: redcarpet
 pygments: true
 url: http://megakemp.com
