@@ -63,7 +63,9 @@ Follow me:
   </a>
   {% endif %}
 
-  <a title="RSS feed" id="rss" href="http://feeds.feedburner.com/thoughtology?format=xml">
+  {% if site.theme.social.rss %}
+  <a title="RSS feed" id="rss" href="{{ site.theme.social.rss }}">
     <i class="fa fa-rss-square"></i>
   </a>
+  {% endif %}
 </div>
