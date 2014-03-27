@@ -219,14 +219,20 @@ nav hr {
 
 .screenshot {
   position: relative;
-  margin:30px auto 30px auto;
+  margin: 30px auto 30px auto;
   max-width: 90%;
   box-shadow: 0 0 20px 0 rgba(0,0,0,0.8);
 }
 
 .screenshot-noshadow {
   position: relative;
-  margin:30px auto 30px auto;
+  margin: 30px auto 30px auto;
+  max-width: 90%;
+}
+
+.screenshot-noshadow-cropped {
+  position: relative;
+  margin: -25px auto -25px auto;
   max-width: 90%;
 }
 
