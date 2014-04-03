@@ -10,6 +10,9 @@ paginate_path: blog/page:num
 redcarpet:
   extensions: ["tables", "autolink"]
 
+gems:
+  - jekyll-redirect-from
+
 theme:
   # Base color for background elements such as the top bar
   base_color: '#444'
