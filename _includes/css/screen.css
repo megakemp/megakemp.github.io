@@ -217,6 +217,10 @@ nav hr {
   max-width: 150px;
 }
 
+.article.shadow {
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+
 .screenshot {
   position: relative;
   margin: 30px auto 30px auto;
