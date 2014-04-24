@@ -9,7 +9,7 @@ summary: When I started doing TDD a few years ago, I often felt an inexplicable 
 video: //www.youtube.com/embed/zMX588nshao?rel=0&showinfo=0&controls=2
 ---
 
-TDD makes sense and improves the quality of your code. I don't think anybody could argue against that simple fact. Is TDD flawless? Well, that's a whole different discussion.<img src="/assets/{{ page.assets }}/TurtlesAllTheWayDown.jpg" alt="Turtles all the way down" title="Turtles all the way down (based on a photo by Rusty Clark on Flickr)" class="article shadow" />
+TDD makes sense and improves the quality of your code. I don't think anybody could argue against that simple fact. Is TDD flawless? Well, that's a whole different discussion.<img src="{{ site.url }}/assets/{{ page.assets }}/TurtlesAllTheWayDown.jpg" alt="Turtles all the way down" title="Turtles all the way down (based on a photo by Rusty Clark on Flickr)" class="article shadow" />
 
 But let's back up from a moment.
 
@@ -215,7 +215,7 @@ What's important here, is that after a few rounds of Red-Green-Refactor we'll fi
 
 Let's recap our entire process with a picture:
 
-<img src="/assets/{{ page.assets }}/OutsideInDevelopmentCycle.png"
+<img src="{{ site.url }}/assets/{{ page.assets }}/OutsideInDevelopmentCycle.png"
      alt="The Outside-in development cycle"
      title="The Outside-in development cycle"
      class="screenshot-noshadow" />
@@ -261,7 +261,7 @@ be BDD all the way down.
 <a id="downloads"></a>
 <div class="note downloads">
 <ul>
-  <li class="slides"><a href="/assets/{{ page.assets }}/bddallthewaydown-slides.pdf">Slides</a></li>
+  <li class="slides"><a href="{{ site.url }}/assets/{{ page.assets }}/bddallthewaydown-slides.pdf">Slides</a></li>
   <li class="github"><a href="https://github.com/ecampidoglio/gameoflife">Conway's Game of Life Demo</a></li>
 </ul>
 </div>
