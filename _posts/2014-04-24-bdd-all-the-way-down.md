@@ -4,8 +4,8 @@ title:  BDD all the way down
 date:   2014-04-24
 categories: speaking programming
 assets: bdd-all-the-way-down
-excerpt: When I started doing TDD a few years ago, I often felt an inexplicable gap between what the requirements said the system should do and the tests I was writing to drive my implementation. BDD turned out to be the answer.
-summary: When I started doing TDD a few years ago, I often felt an inexplicable gap between what the requirements said the system should do and the tests I was writing to drive my implementation. BDD turned out to be the answer.
+excerpt: When I started doing TDD a few years ago, I often felt an inexplicable gap between the functionality described in the requirements and the tests I was writing to drive my implementation. BDD turned out to be the answer.
+summary: When I started doing TDD a few years ago, I often felt an inexplicable gap between the functionality described in the requirements and the tests I was writing to drive my implementation. BDD turned out to be the answer.
 video: //www.youtube.com/embed/zMX588nshao?rel=0&showinfo=0&controls=2
 ---
 
