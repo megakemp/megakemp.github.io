@@ -23,7 +23,7 @@ I want to obtain the next generation from underpopulated cells
 
 You want to implement this feature by following the principles of TDD, so you know that the first thing you should do is start writing a failing test. But, what should you test? How would you express this requirement in code? What's even a _cell_?
 
-If you're looking at TDD for some guidance, well I'm sorry to tell you that you'll find none. TDD has one rule. Do you remember what the first rule of TDD is? (No, it's not [_you don't talk about TDD_](http://www.diggingforfire.net/FightClub)):
+If you're looking at TDD for some guidance, well, I'm sorry to tell you that you'll find none. TDD has one rule. Do you remember what the first rule of TDD is? (No, it's not [_you don't talk about TDD_](http://www.diggingforfire.net/FightClub)):
 
 <div class="note">
 <p>
@@ -34,11 +34,11 @@ Thou shalt not write a single line of production code without a failing test.
 
 And that's basically it. TDD doesn't tell you _what to test_, how you should _name_ your tests and not even how to _understand why they fail_ in first place.
 
-As a programmer, the only thing you can think of, at this point, is writing a test that _checks for nulls_. Arguably, that's the equivalent of trying to get a car to start by [emptying the ashtrays](http://en.wiktionary.org/wiki/yak_shaving).
+As a programmer, the only thing you can think of, at this point, is writing a test that _checks for nulls_. Arguably, that's the equivalent of trying to start a car by [emptying the ashtrays](http://en.wiktionary.org/wiki/yak_shaving).
 
 ### Let the behavior be your guide
 
-What if we stopped worrying about writing tests for the sake of, well, writing tests, and instead focused on _verifying what the system is supposed to do in a certain situation_? That's called _behavior_ and a lot of good things may come out by letting it be the driving force when developing software. [Dan North](http://dannorth.net) noticed this during his research, which ultimately led him to [the formalization of Behavior-driven Development](http://dannorth.net/introducing-bdd):
+What if we stopped worrying about writing tests for the sake of, well, writing tests, and instead focused on _verifying what the system is supposed to do in a certain situation_? That's called _behavior_ and a lot of good things may come out of letting it be the driving force when developing software. [Dan North](http://dannorth.net) noticed this during his research, which ultimately led him to [the formalization of Behavior-driven Development](http://dannorth.net/introducing-bdd):
 
 > I started using the word “behavior” in place of “test” in my dealings with TDD and found that not only did it seem to fit but also that a whole category of coaching questions magically dissolved. I now had answers to some of those TDD questions. What to call your test is easy – it’s a sentence describing the next behavior in which you are interested. How much to test becomes moot – you can only describe so much behavior in a single sentence. When a test fails, simply work through the process described above – either you introduced a bug, the behavior moved, or the test is no longer relevant.
 
@@ -57,7 +57,7 @@ Any live cell with fewer than two live neighbors dies, as if by needs caused by 
 
 At this point we're ready to write our first test. But, since there's still no code for the feature, what exactly are we supposed to test? The answer to that question is simpler than you might expect: _the system itself_.
 
-We're implementing a requirement for our Game of Life web API here. The user is supposed to make an HTTP request to a certain URL sending a list of cells formatted as JSON and get back a response containing the same list of cells after the rule of underpopulation has been applied. We'll know we'll have fulfilled the requirement when the system does exactly that. It's, in other words, the requirement's _acceptance criteria_. It sure sounds like a good place to start writing a test.
+We're implementing a requirement for our Game of Life web API. The user is supposed to make an HTTP request to a certain URL sending a list of cells formatted as JSON and get back a response containing the same list of cells after the rule of underpopulation has been applied. We'll know we'll have fulfilled the requirement when the system does exactly that. It's, in other words, the requirement's _acceptance criteria_. It sure sounds like a good place to start writing a test.
 
 Let's express it the way [formalized by Dan North](http://dannorth.net/introducing-bdd):
 
