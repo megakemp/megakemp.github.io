@@ -18,7 +18,7 @@ Picture this: you've just joined a team tasked with developing some kind of soft
 ```
 In order to display the current state of the Universe
 As a Game of Life client
-I want to obtain the next generation from underpopulated cells
+I want to get the next generation from underpopulated cells
 ```
 
 You want to implement this feature by following the principles of TDD, so you know that the first thing you should do is start writing a failing test. But, what should you test? How would you express this requirement in code? What's even a _cell_?
