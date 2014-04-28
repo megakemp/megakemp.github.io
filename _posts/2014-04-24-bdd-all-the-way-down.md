@@ -9,9 +9,9 @@ summary: When I started doing TDD a few years ago, I often felt an inexplicable 
 video: //www.youtube.com/embed/zMX588nshao?rel=0&showinfo=0&controls=2
 ---
 
-TDD makes sense and improves the quality of your code. I don't think anybody could argue against that simple fact. Is TDD flawless? Well, that's a whole different discussion.<img src="{{ site.url }}/assets/{{ page.assets }}/TurtlesAllTheWayDown.jpg" alt="Turtles all the way down" title="Turtles all the way down (based on a photo by Rusty Clark on Flickr)" class="article shadow" />
+TDD makes sense and improves the quality of your code. I don't think anybody could argue against this simple fact. Is TDD flawless? Well, that's a whole different discussion.<img src="{{ site.url }}/assets/{{ page.assets }}/TurtlesAllTheWayDown.jpg" alt="Turtles all the way down" title="Turtles all the way down (based on a photo by Rusty Clark on Flickr)" class="article shadow" />
 
-But let's back up from a moment.
+But let's back up for a moment.
 
 Picture this: you've just joined a team tasked with developing some kind of software which you know nothing about. The only thing you know is that it's an implementation of [Conway's Game of Life as a web API](https://github.com/ecampidoglio/gameoflife). Your first assignment is to develop a feature in the system:
 
