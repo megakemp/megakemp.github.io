@@ -277,6 +277,12 @@ p.thumbnail-caption {
     padding: 10px;
 }
 
+.note.oneline p {
+    margin: 0 !important;
+    padding: 20px;
+    text-align: center;
+}
+
 .note a {
     color: #4183c4;
 }
