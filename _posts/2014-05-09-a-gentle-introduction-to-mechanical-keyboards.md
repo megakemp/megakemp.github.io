@@ -10,7 +10,7 @@ excerpt: "The past few of years have seen a renaissance for mechanical keyboards
 
 I love typing. I still remember how, as a kid, I used to borrow my mother's [Diplomat typewriter](http://typewriterdatabase.com/olympia.221.typewriter-serial-number-database) from 1964 and started hammering away on it pretending to type some long text:
 
-<img src="/assets/{{ page.assets }}/diplomattypewriter.jpg"
+<img src="{{ site.url }}/assets/{{ page.assets }}/diplomattypewriter.jpg"
      alt="The legendary Diplomat typewriter"
      title="The legendary Diplomat typewriter"
      class="article" />
@@ -32,7 +32,7 @@ First and foremost, let's get the terminology straight by answering that burning
 
 That leaves us wondering: what do they mean by *real* switches? Well, in this case *real* means *physical*, in the sense that under each key there's a *metal spring* that compresses every time you press a key. The spring is housed inside a plastic device that makes sure the key is registered by the computer at a specific point in time while the key is being pressed. That device is called a _switch_.
 
-<img src="/assets/{{ page.assets }}/mechanicalswitch.jpg"
+<img src="{{ site.url }}/assets/{{ page.assets }}/mechanicalswitch.jpg"
      alt="A mechanical switch"
      title="A mechanical switch"
      class="screenshot" />
@@ -59,7 +59,7 @@ Back then, computer keyboards were designed to [mimic the feeling and behavior o
 
 If you're in your 30's, chances are you remember how it felt to type on one of these keyboards, maybe in front of a Macintosh or a Commodore 64. All throughout the 80's and early 90's, every keyboard was mechanical. And _heavy_.
 
-<img src="/assets/{{ page.assets }}/commodore64.jpg"
+<img src="{{ site.url }}/assets/{{ page.assets }}/commodore64.jpg"
      alt="A Commodore 64 computer. Photo by Shane Doucette on Flickr"
      title="A Commodore 64 computer. Photo by Shane Doucette on Flickr"
      class="screenshot-noshadow" />
@@ -70,14 +70,14 @@ Keyboards, like computers, became a commodity sold in large volumes. In an effor
 
 Consequently, the heavy metal plates disappeared in favor of cheaper silicon membranes put on top of electrical matrixes. Metal springs left room to _air pads_ under each key. This keyboard technique is called [rubber dome or membrane](http://en.wikipedia.org/wiki/Keyboard_technology#Dome-switch_keyboard), and is to this day the most common type of keyboard sold with desktop computers.
 
-<img src="/assets/{{ page.assets }}/rubberdome.jpg"
+<img src="{{ site.url }}/assets/{{ page.assets }}/rubberdome.jpg"
      alt="Rubber dome switches. Source: codinghorror.com"
      title="Rubber dome switches. Source: codinghorror.com"
      class="screenshot-noshadow" />
 
 For laptops, a new kind of low profile rubber dome switch began to appear. They were made out of thin plastic parts and were called [_scissors_](http://deskthority.net/wiki/Scissor_switch) because of their collapsable `X` shape.
 
-<img src="/assets/{{ page.assets }}/scissorswitch.png"
+<img src="{{ site.url }}/assets/{{ page.assets }}/scissorswitch.png"
      alt="The scissor switch"
      title="The scissor switch"
      class="screenshot-noshadow" />
@@ -108,7 +108,7 @@ There are at least a dozen different kinds of mechanical switches available on t
 
 Each and every one of them has its own way to physically actuate a key, which conforms its own distinctive feel.
 
-<img src="/assets/{{ page.assets }}/bucklingspring.jpg"
+<img src="{{ site.url }}/assets/{{ page.assets }}/bucklingspring.jpg"
      alt="The buckling spring switch patented by IBM in 1971"
      title="The buckling spring switch patented by IBM in 1971"
      class="article shadow" />
@@ -117,7 +117,7 @@ The [buckling spring switch](https://en.wikipedia.org/wiki/Buckling_spring) pate
 That activates a plastic hammer located beneath the spring, which, upon hitting a contact, closes an electrical circuit.  
 As the spring buckles, it hits the inner wall of its plastic housing producing a loud "_click_" sound. That feedback signals the typist that the key has been registered.
 
-<img src="/assets/{{ page.assets }}/cherrymxblue.png"
+<img src="{{ site.url }}/assets/{{ page.assets }}/cherrymxblue.png"
      alt="The Cherry MX Blue switch"
      title="The Cherry MX Blue switch"
      class="article" />
@@ -146,11 +146,11 @@ The **force** indicates how hard  you have to press down a key in order to actua
 
 Switches get progressively stiffer the further down you press a key, which, again, helps you avoid bottoming out. A soft switch requires about 45 cN to actuate. A stiff one is about twice that, around 80 cN.
 
-<img src="/assets/{{ page.assets }}/bucklingspringforcegraph.png"
+<img src="{{ site.url }}/assets/{{ page.assets }}/bucklingspringforcegraph.png"
      alt="The force graph of the stiff tactile buckling spring switch"
      title="The force graph of the stiff tactile buckling spring switch"
      class="article" />
-<img src="/assets/{{ page.assets }}/cherryforcegraph.png"
+<img src="{{ site.url }}/assets/{{ page.assets }}/cherryforcegraph.png"
      alt="The force graph of a soft tactile Cherry switch"
      title="The force graph of a soft tactile Cherry switch"
      class="article" />
