@@ -82,8 +82,22 @@ For laptops, a new kind of low profile rubber dome switch began to appear. They 
      title="The scissor switch"
      class="screenshot-noshadow" />
 
-While today's mainstream keyboards certainly serve their purpose, they have a limited lifetime.  
+While today's mainstream keyboards certainly serve their purpose, they have a limited lifetime.
+
 With time and usage, the rubber bubbles eventually wear out, which means you have to press harder on the keys to activate them. The letters printed on the keys fade or peel off. The cheap plastic parts loosen up or bend. And by the time you're finally read to throw those suckers in the bin, they've managed to [drive you nuts](http://bloodysamoan.deviantart.com/art/Frustrated-T-Rex-typing-185564857).
+
+Mechanical keyboards, on the other hand, are **built to last**.
+
+As a testimony of their extreme durability, I can tell you that the oldest one in my collection is an [Apple Extended Keyboard II](http://en.m.wikipedia.org/wiki/Apple_Extended_Keyboard) dated 1989 and it works like a charm.
+
+<a href="{{ site.url }}/assets/{{ page.assets }}/appleextendedkeyboardII_hires.jpg">
+<img src="{{ site.url }}/assets/{{ page.assets }}/appleextendedkeyboardII.jpg"
+     alt="My glorious Apple Extended Keyboard II from 1989"
+     title="My glorious Apple Extended Keyboard from 1989"
+     class="screenshot-noshadow" />
+</a>
+
+That's a _25 years old_ piece of hardware which is still in perfectly good condition. So much that I use it _daily_ as my primary keyboard at home. In fact, I'm typing these very words on it right now.  
 
 ### It's all about the feeling
 
@@ -122,8 +136,8 @@ As the spring buckles, it hits the inner wall of its plastic housing producing a
      title="The Cherry MX Blue switch"
      class="article" />
 
-The modern [Cherry MX Blue switch](http://deskthority.net/wiki/Cherry_MX_Blue), on the other hand, uses a leaf spring pushed by a plastic slider (the grey one in the picture) as it passes by it on its way down.  
-When slider is half way through, the leaf spring encounters no more resistance from the slider, thus closing a circuit that signals the computer about the key press.  
+The modern [Cherry MX Blue switch](http://deskthority.net/wiki/Cherry_MX_Blue), on the other hand, uses a leaf spring pushed by a plastic slider (the grey one in the picture) as it passes by on its way down.  
+When the slider is half way through, the leaf spring encounters no more resistance from the slider, thus closing a circuit that signals the computer about the key press.  
 As the grey slider hits the bottom of the switch, it emits a high pitched "_click_" sound similar to the one of a mouse button.
 
 Don't worry, I won't get into all the nuts and bolts of all the different switches. The Internet will happily provide you [more information than you can possibly ask for](http://deskthority.net/wiki/Category:List_of_all_keyboard_switches) in that regard.
