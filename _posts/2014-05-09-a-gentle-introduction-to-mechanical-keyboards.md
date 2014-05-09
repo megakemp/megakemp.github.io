@@ -41,7 +41,7 @@ So, let's reformulate the definition of a mechanical keyboard:
 
 <div class="note oneline">
 <p>
-A keyboard is considered <em>mechanical</em> if it uses <strong>metal springs</strong> underneath every key.
+A keyboard is considered <em>mechanical</em> if it uses <strong>metal springs</strong> underneath each key.
 </p>
 </div>
 
@@ -100,7 +100,7 @@ Mechanical keys, on the other hand,  are actuated <em>before</em> they bottom ou
 </p>
 </div>
 
-What does this mean in practice? Well, it means that you don't have to press as hard on your keyboard when you type. Your fingers don't have to travel as much and, consequently, don't get as fatigued. It may also help you type faster.
+What does this mean in practice? Well, it means that you don't have to press as hard on your keyboard when you type. Your fingers don't have to travel as much and, consequently, you don't get as fatigued. It may even help you [type faster](http://youtu.be/RQeXcKxVraY).
 
 ### To each his own switch
 
