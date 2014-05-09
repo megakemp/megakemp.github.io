@@ -88,7 +88,7 @@ With time and usage, the rubber bubbles eventually wear out, which means you hav
 
 Mechanical keyboards, on the other hand, are **built to last**.
 
-As a testimony of their extreme durability, I can tell you that the oldest one in my collection is an [Apple Extended Keyboard II](http://en.m.wikipedia.org/wiki/Apple_Extended_Keyboard) dated 1989 and it works like a charm.
+As a testimony of their extreme durability, I can tell you that the oldest one in my collection is an [Apple Extended Keyboard II](http://en.m.wikipedia.org/wiki/Apple_Extended_Keyboard) dated all the way back to 1989 and it still works like a charm.
 
 <a href="{{ site.url }}/assets/{{ page.assets }}/appleextendedkeyboardII_hires.jpg">
 <img src="{{ site.url }}/assets/{{ page.assets }}/appleextendedkeyboardII.jpg"
@@ -97,7 +97,7 @@ As a testimony of their extreme durability, I can tell you that the oldest one i
      class="screenshot-noshadow" />
 </a>
 
-That's a _25 years old_ piece of hardware which is still in perfectly good condition. So much that I use it _daily_ as my primary keyboard at home. In fact, I'm typing these very words on it right now.  
+That's a _25 years old_ piece of hardware which is still in perfectly good condition. So much, in fact, that I use it _daily_ as my primary keyboard at home.  
 
 ### It's all about the feeling
 
