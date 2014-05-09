@@ -8,7 +8,7 @@ summary: "The past few of years have seen a renaissance for mechanical keyboards
 excerpt: "The past few of years have seen a renaissance for mechanical keyboards, especially among two large groups of computer enthusiasts: programmers and gamers. I, too, share a passion for these wonderful pieces of hardware that goes way back."
 ---
 
-I love typing. I still remember how, as a kid, I used to borrow my mother's [Diplomat typewriter](http://typewriterdatabase.com/olympia.221.typewriter-serial-number-database) from 1964 and started hammering away on it pretending to type some long text:
+I love typing. I still remember how I, as a kid, used to borrow my mother's [Diplomat typewriter](http://typewriterdatabase.com/olympia.221.typewriter-serial-number-database) from 1964 and started hammering away on it, pretending to type some long text:
 
 <img src="{{ site.url }}/assets/{{ page.assets }}/diplomattypewriter.jpg"
      alt="The legendary Diplomat typewriter"
@@ -16,11 +16,11 @@ I love typing. I still remember how, as a kid, I used to borrow my mother's [Dip
      class="article" />
 > "It sure sounds like you're a fast typist!"
 
-she used to say after hearing the racket coming from my room.  Little did she know that, most of the time, what came out on the sheet of paper was pure [gibberish](http://en.wikipedia.org/wiki/Gibberish). Or maybe she was just being kind.
+she would say when she heard the racket coming from my room.  Little did she know that what came out on the sheet of paper was actually [gibberish](http://en.wikipedia.org/wiki/Gibberish). Or maybe she was just being kind.
 
-Anyway, I enjoyed the feeling of pressing those stiff plastic buttons and hear the sound that the metallic arm made every time it punched a letter.
+Anyway, I enjoyed the feeling of pressing those stiff plastic buttons and hear the sound made by the metallic arm every time it punched a letter.
 
-Today I continue to enjoy a similar experience on my computer by using a [mechanical keyboard](http://deskthority.net/wiki/Mechanical_keyboard).
+Today, I continue to enjoy a similar experience on my computer by using a [mechanical keyboard](http://deskthority.net/wiki/Mechanical_keyboard).
 
 ### So, what's a mechanical keyboard?
 
