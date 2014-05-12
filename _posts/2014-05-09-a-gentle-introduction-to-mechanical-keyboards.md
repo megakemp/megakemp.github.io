@@ -97,7 +97,7 @@ As a testimony of their extreme durability, I can tell you that the oldest one i
      class="screenshot-noshadow" />
 </a>
 
-That's a _25 years old_ piece of hardware which is still in perfectly good condition. So much, in fact, that I use it _daily_ as my primary keyboard at home.  
+That's a _25 years old_ piece of hardware still in perfectly good condition. So much, in fact, that I use it _daily_ as my primary keyboard at home.  
 
 ### It's all about the feeling
 
@@ -179,6 +179,6 @@ And telling them that all keyboards sounded like that back in the 80's no longer
 
 ### Wrapping it up
 
-I know it sounds crazy, but I barely scratched the surface of what there is to know about mechanical keyboards. However, the purpose of this post was to give an idea about what they are and where they come from, and I hope I've succeeded in that.
+I know it sounds crazy, but I barely scratched the surface of what there is to know about mechanical keyboards. However, the purpose of this post was to give you an idea about what they are and where they come from, and I hope I've succeeded in that.
 
 If you're eager to know more, fear not. I intend to write more about this topic. Next time, I'll start reviewing some of my favorite mechanical keyboards. In the meantime, take a look at [the official guide to mechanical keyboards](http://www.overclock.net/t/491752/official-mechanical-keyboard-guide) put together by this growing community of keyboard enthusiasts.
