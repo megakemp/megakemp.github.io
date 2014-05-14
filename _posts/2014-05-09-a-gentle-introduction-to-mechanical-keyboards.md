@@ -84,7 +84,7 @@ For laptops, a new kind of low profile rubber dome switch began to appear. They 
 
 While today's mainstream keyboards certainly serve their purpose, they have a limited lifetime.
 
-With time and usage, the rubber bubbles eventually wear out, which means you have to press harder on the keys to activate them. The letters printed on the keys fade or peel off. The cheap plastic parts loosen up or bend. And by the time you're finally read to throw those suckers in the bin, they've managed to [drive you nuts](http://bloodysamoan.deviantart.com/art/Frustrated-T-Rex-typing-185564857).
+With time and usage, the rubber bubbles eventually wear out, which means you have to press harder on the keys to activate them. The letters printed on the keys fade or peel off. The cheap plastic parts loosen up or bend. And by the time you're finally ready to throw those suckers in the bin, they've managed to [drive you nuts](http://bloodysamoan.deviantart.com/art/Frustrated-T-Rex-typing-185564857).
 
 Mechanical keyboards, on the other hand, are **built to last**.
 
