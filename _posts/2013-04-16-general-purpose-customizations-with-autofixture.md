@@ -63,7 +63,7 @@ public class RandomIngredientsFromFixedSequence : ICustomization
 
     private Ingredient PickRandomIngredientFromSequence()
     {
-        var randomIndex = this.randomizer.Next(0, sequence.Count() - 1);
+        var randomIndex = this.randomizer.Next(0, sequence.Count());
         return sequence.ElementAt(randomIndex);
     }
 }
@@ -215,7 +215,7 @@ public class RandomFromFixedSequence : ICustomization
 
     private T PickRandomItemFromSequence()
     {
-        var randomIndex = this.randomizer.Next(0, sequence.Count() - 1);
+        var randomIndex = this.randomizer.Next(0, sequence.Count());
         return sequence.ElementAt(randomIndex);
     }
 }
