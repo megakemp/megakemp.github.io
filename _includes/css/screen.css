@@ -234,6 +234,11 @@ nav hr {
   max-width: 95%;
 }
 
+.screenshot-noshadow-fullwidth {
+  position: relative;
+  margin: 30px auto 30px auto;
+}
+
 .screenshot-noshadow-cropped {
   position: relative;
   margin: -25px auto -25px auto;
