@@ -42,7 +42,7 @@ Valve puts out their [Source Dedicated Server](https://developer.valvesoftware.c
 
 Now, having established that I needed a Linux box, the next question was which of the available clouds I was going to entrust with our gaming night. Since [tretton37](http://tretton37.com) is mainly a Microsoft shop, I was naturally inclined to go for [Microsoft Azure](http://azure.microsoft.com). However, I wasn't holding any high hopes that they would allow me to install Linux on one of their virtual machines.
 
-As it turned out, I had to [eat my hat](http://english.stackexchange.com/questions/150159/origin-of-eat-my-hat) on that one. Azure does, in fact, offer [pre-installed Linux virtual machines](http://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-tutorial) ready to go. To me, this is proof that the cloud division at Microsoft is totally getting how things are supposed to work in the 21th century. Kudos to them.
+As it turned out, I had to [eat my hat](http://english.stackexchange.com/questions/150159/origin-of-eat-my-hat) on that one. Azure does, in fact, offer [pre-installed Linux virtual machines](http://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-tutorial) ready to go. To me, this is proof that the cloud division at Microsoft is totally getting how things are supposed to work in the 21st century. Kudos to them.
 
 <a href="/assets/{{ page.assets }}/azure-create-vm.png">
 <img src="/assets/{{ page.assets }}/azure-create-vm.png"
