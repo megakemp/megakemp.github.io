@@ -7,7 +7,7 @@ assets: leveraging-the-cloud-for-fun-and-games
 summary: "The story of how a group of programmers decided to have a <a href=\"http://store.steampowered.com/app/730\">Counter-Strike: Global Offensive</a> deathmatch, but didn't have the hardware to host their own game. So they took it to the cloud, learning a few lessons along the way."
 ---
 
-<a href="https://twitter.com/tretton37/status/436790174014791680">Friday, February 21, 2014</a>. That's when the [tretton37](http://tretton37.com) Counter-Strike: Global Offensive [fragfest](http://www.urbandictionary.com/define.php?term=fragfest) was bound to start. Avid gamers looking to share virtual blood together, were eager to join in from our offices in Lund and Stockholm. A few more would play over the Internet.
+<a href="https://twitter.com/tretton37/status/436790174014791680">Friday night, February 21, 2014</a>. That's when the [tretton37](http://tretton37.com) Counter-Strike: Global Offensive [fragfest](http://www.urbandictionary.com/define.php?term=fragfest) was bound to start. Avid gamers looking to share virtual blood together, were eager to join in from our offices in Lund and Stockholm. A few more would play over the Internet.
 
 <img src="/assets/{{ page.assets }}/counter-strike-global-offensive-by-griddark.png"
      alt="CS:GO icon by griddark"
