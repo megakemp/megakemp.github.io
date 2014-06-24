@@ -30,7 +30,7 @@ For days I pondered my options when, suddenly, it hit me:
 <div class="note">
 <p>
 <i class="fa fa-lightbulb-o fa-2x pull-left"></i>
-Where's the place to find commodity hardware <em>for rent</em> that's available on the Internet and <em>can scale</em> as needed?
+Where's the place to find commodity hardware that's available <em>for rent</em>, is <em>on the Internet</em> and <em>can scale</em> at will?
 </p>
 </div>
 
