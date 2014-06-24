@@ -158,7 +158,7 @@ sv_lan 0 # Disables LAN mode
 
 ### Step 5: Gold plating
 
-The final touch was customizing the server's [Message of the Day or MOTD](http://css.gamebanana.com/tuts/5484#Motd) for the occasion. That's the screen players are greeted with when they join the server.
+The final touch was to provide an appropriate [Message of the Day (or MOTD)](http://css.gamebanana.com/tuts/5484#Motd) for the occasion. That would be the screen that greets the players as they join the game, setting the right tone.
 
 Once again, the whole thing was done by simply editing a text file. In this case, the file contained some HTML markup and a few stylesheets and was located in */home/steam/csgo/motd.txt*.
 
