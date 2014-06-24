@@ -9,7 +9,7 @@ summary: "The story of how a group of programmers decided to have a <a href=\"ht
 
 <a href="https://twitter.com/tretton37/status/436790174014791680">Friday night, February 21, 2014</a>. That's when the [tretton37](http://tretton37.com) Counter-Strike: Global Offensive [fragfest](http://www.urbandictionary.com/define.php?term=fragfest) was bound to start. Avid gamers looking to share virtual blood together, were eager to join in from our offices in Lund and Stockholm. A few more would play over the Internet.
 
-<img src="/assets/{{ page.assets }}/counter-strike-global-offensive-by-griddark.png"
+<img src="{{ site.url }}/assets/{{ page.assets }}/counter-strike-global-offensive-by-griddark.png"
      alt="CS:GO icon by griddark"
      title="CS:GO icon by griddark"
      class="article" />
@@ -44,8 +44,8 @@ Now, having established that I needed a Linux box, the next question was which o
 
 As it turned out, I had to [eat my hat](http://english.stackexchange.com/questions/150159/origin-of-eat-my-hat) on that one. Azure does, in fact, offer [pre-installed Linux virtual machines](http://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-tutorial) ready to go. To me, this is proof that the cloud division at Microsoft is totally getting how things are supposed to work in the 21st century. Kudos to them.
 
-<a href="/assets/{{ page.assets }}/azure-create-vm.png">
-<img src="/assets/{{ page.assets }}/azure-create-vm.png"
+<a href="{{ site.url }}/assets/{{ page.assets }}/azure-create-vm.png">
+<img src="{{ site.url }}/assets/{{ page.assets }}/azure-create-vm.png"
      alt="Creating a Linux VM on Azure"
      title="Creating a Linux VM on Azure"
      class="screenshot" />
@@ -53,7 +53,7 @@ As it turned out, I had to [eat my hat](http://english.stackexchange.com/questio
 
 After literally 2 minutes, I had an [Ubuntu Server](http://www.ubuntu.com/server) machine with root access via SSH running in the cloud.
 
-<img src="/assets/{{ page.assets }}/azure-create-vm-progress.png"
+<img src="{{ site.url }}/assets/{{ page.assets }}/azure-create-vm-progress.png"
      alt="Creating a Linux VM on Azure"
      title="Creating a Linux VM on Azure"
      class="screenshot" />
@@ -139,7 +139,7 @@ Thanks to <a href="https://twitter.com/dangibbsuk">Daniel Gibbs</a>' hard work, 
 
 You can find a detailed description how to use the **csgoserver** [up on his site](http://danielgibbs.co.uk/scripts/csgoserver/), so I'm just gonna report how I configured it to suit our deathmatch needs.
 
-<img src="/assets/{{ page.assets }}/csds-shell.png"
+<img src="{{ site.url }}/assets/{{ page.assets }}/csds-shell.png"
      alt="The status of the CS:GO Dedicated server as reported by csgoserver"
      title="The status of the CS:GO Dedicated server as reported by csgoserver"
      class="screenshot" />
@@ -164,8 +164,8 @@ Once again, the whole thing was done by simply editing a text file. In this case
 
 Here's how it looked like in action:
 
-<a href="/assets/{{ page.assets }}/motd_hires.jpg">
-<img src="/assets/{{ page.assets }}/motd.jpg"
+<a href="{{ site.url }}/assets/{{ page.assets }}/motd_hires.jpg">
+<img src="{{ site.url }}/assets/{{ page.assets }}/motd.jpg"
      alt="The tretton37 Message of the Day in action"
      title="The tretton37 Message of the Day in action"
      class="screenshot-noshadow-fullwidth" />
@@ -175,8 +175,8 @@ Here's how it looked like in action:
 
 This article is primarily meant as a reference on how to configure a dedicated CS:GO server on a Linux box hosted on Microsoft Azure. Nonetheless, I figured it would be interesting to follow up with some information on how the server itself held up during [that glorious game night](https://twitter.com/tretton37/status/436917080739573760).
 
-<a href="/assets/{{ page.assets }}/stats_hires.png">
-<img src="/assets/{{ page.assets }}/stats.png"
+<a href="{{ site.url }}/assets/{{ page.assets }}/stats_hires.png">
+<img src="{{ site.url }}/assets/{{ page.assets }}/stats.png"
      alt="The CS:GO Dedicated server stats while running on Azure during game night"
      title="The CS:GO Dedicated server stats while running on Azure during game night"
      class="screenshot-noshadow-fullwidth" />
