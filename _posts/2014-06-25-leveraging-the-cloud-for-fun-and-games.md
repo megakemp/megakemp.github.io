@@ -193,7 +193,7 @@ In retrospect, that configuration was probably a little overkill for the job. A 
 
 ### One final thought
 
-Oddly enough, this experience open up my eyes to the **great potential of cloud computing**.
+Oddly enough, this experience opened up my eyes to the **great potential of cloud computing**.
 
 <div class="note">
 <p>
