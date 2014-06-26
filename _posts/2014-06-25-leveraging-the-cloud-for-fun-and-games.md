@@ -38,7 +38,7 @@ Where's the place to find commodity hardware that's available <em>for rent</em>,
 
 ### Step 1: Getting a machine in the cloud
 
-Valve puts out their [Source Dedicated Server](https://developer.valvesoftware.com/wiki/Source_Dedicated_Server) software both for Windows and Linux. The Windows version has GUIs and is generally what you'd call "user friendly". The Linux version, on the other hand, is *lean & mean* and is managed entirely from the command line. Programmers being programmers, I decided to go for the Linux version.
+Valve puts out their [Source Dedicated Server](https://developer.valvesoftware.com/wiki/Source_Dedicated_Server) software both for Windows and Linux. The Windows version has a GUI and is generally what you'd call "user friendly". The Linux version, on the other hand, is *lean & mean* and is managed entirely from the command line. Programmers being programmers, I decided to go for the Linux version.
 
 Now, having established that I needed a Linux box, the next question was: which of the available clouds was I going to entrust with our gaming night? Since [tretton37](http://tretton37.com) is mainly a Microsoft shop, it felt natural to go for [Microsoft Azure](http://azure.microsoft.com). However, I wasn't holding any high hopes that they would allow me to install Linux on one of their virtual machines.
 
