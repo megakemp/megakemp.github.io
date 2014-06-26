@@ -18,7 +18,7 @@ The time and place were set. Pizzas were ordered. Everything was ready to go. Ex
 
 > We didn't have a dedicated Counter-Strike server to host the game on.
 
-Finding a spare machine to dedicate for that one night wasn't an easy task given our requirements:
+Finding a spare machine to dedicate for that one night wasn't an easy task, given our requirements:
 
  - The host should be reachable from the Internet
  - The machine should have enough hardware to handle a CS:GO game with 15+ players
