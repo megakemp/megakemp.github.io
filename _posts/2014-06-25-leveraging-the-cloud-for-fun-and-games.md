@@ -38,11 +38,11 @@ Where's the place to find commodity hardware that's available <em>for rent</em>,
 
 ### Step 1: Getting a machine in the cloud
 
-Valve puts out their [Source Dedicated Server](https://developer.valvesoftware.com/wiki/Source_Dedicated_Server) software both for Windows and Linux. The Windows version has GUIs and is generally "user friendly". The Linux version, on the other hand, is *lean & mean* and is managed entirely from the command line. Programmers being programmers, I decided to go for the Linux version.
+Valve puts out their [Source Dedicated Server](https://developer.valvesoftware.com/wiki/Source_Dedicated_Server) software both for Windows and Linux. The Windows version has GUIs and is generally what you'd call "user friendly". The Linux version, on the other hand, is *lean & mean* and is managed entirely from the command line. Programmers being programmers, I decided to go for the Linux version.
 
-Now, having established that I needed a Linux box, the next question was which of the available clouds I was going to entrust with our gaming night. Since [tretton37](http://tretton37.com) is mainly a Microsoft shop, I was naturally inclined to go for [Microsoft Azure](http://azure.microsoft.com). However, I wasn't holding any high hopes that they would allow me to install Linux on one of their virtual machines.
+Now, having established that I needed a Linux box, the next question was: which of the available clouds was I going to entrust with our gaming night? Since [tretton37](http://tretton37.com) is mainly a Microsoft shop, it felt natural to go for [Microsoft Azure](http://azure.microsoft.com). However, I wasn't holding any high hopes that they would allow me to install Linux on one of their virtual machines.
 
-As it turned out, I had to [eat my hat](http://english.stackexchange.com/questions/150159/origin-of-eat-my-hat) on that one. Azure does, in fact, offer [pre-installed Linux virtual machines](http://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-tutorial) ready to go. To me, this is proof that the cloud division at Microsoft is totally getting how things are supposed to work in the 21st century. Kudos to them.
+As it turned out, I had to [eat my hat](http://english.stackexchange.com/questions/150159/origin-of-eat-my-hat) on that one. Azure does, in fact, offer [pre-installed Linux virtual machines](http://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-tutorial) ready to go. To me, this is proof that the cloud division at Microsoft totally gets how things are supposed to work in the 21st century. Kudos to them.
 
 <a href="{{ site.url }}/assets/{{ page.assets }}/azure-create-vm.png">
 <img src="{{ site.url }}/assets/{{ page.assets }}/azure-create-vm.png"
@@ -62,7 +62,9 @@ If I hadn't already eaten my hat, I would take it off for Azure.
 
 ### Step 2: Installing the Steam Console Client
 
-Hosting a CS:GO server implies setting up a so called [Source Dedicated Server](https://developer.valvesoftware.com/wiki/Source_Dedicated_Server), also known as **SRCDS**. That's Valve server software used to run their games based on the [Source Engine](http://source.valvesoftware.com), such as Half Life 2, Team Fortress, Counter-Strike and so on. A SRCDS is easily installed through the Steam Console Client, or [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD). The easiest way to get it on Linux is to download it and unpack it from a [tarball](http://www.computerhope.com/jargon/t/tarball.htm). But first things first.
+Hosting a CS:GO server implies setting up a so called [Source Dedicated Server](https://developer.valvesoftware.com/wiki/Source_Dedicated_Server), also known as **SRCDS**. That's Valve's server software used to run all their games that are based on the [Source Engine](http://source.valvesoftware.com). The list includes Half Life 2, Team Fortress, Counter-Strike and so on.
+
+A SRCDS is easily installed through the Steam Console Client, or [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD). The easiest way to get it on Linux, is to download it and unpack it from a [tarball](http://www.computerhope.com/jargon/t/tarball.htm). But first things first.
 
 It's probably a good idea to run the Source server with a dedicated user account that doesn't have root privileges. So I went ahead and created a `steam` user, switched to it and headed to its home directory:
 
@@ -72,7 +74,7 @@ su steam
 cd ~
 ```
 
-Next, I needed to install a few libraries that SteamCMD depends on, like the [GNU C compiler and its friends](http://gcc.gnu.org/onlinedocs/gccint/Libgcc.html). That's were I hit the first roadblock.
+Next, I needed to install a few libraries that SteamCMD depends on, like the [GNU C compiler and its friends](http://gcc.gnu.org/onlinedocs/gccint/Libgcc.html). That's where I hit the first roadblock.
 
 > steamcmd: error while loading shared libraries: libstdc++.so.6: cannot open shared object file: No such file or directory
 
@@ -92,7 +94,7 @@ The prepackaged Linux VMs available in Azure come in <em>64 bit only</em>.
 </p>
 </div>
 
-Ouch. Luckily, the issue is easily solved by installing the right version of [Libgcc](http://gcc.gnu.org/onlinedocs/gccint/Libgcc.html):
+Ouch. Luckily, the issue was easily solved by installing the right version of [Libgcc](http://gcc.gnu.org/onlinedocs/gccint/Libgcc.html):
 
 ```bash
 apt-get install lib32gcc1
