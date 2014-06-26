@@ -199,7 +199,7 @@ Oddly enough, this experience opened up my eyes to the **great potential of clou
 
 <div class="note">
 <p>
-The CS:GO server was only intended to run for the duration of the event, which would be a few hours. During that short period of time, I needed it to be <em>as fast and responsive as possible</em>. Hence, I went <em>all out</em> on the hardware.
+The CS:GO server was only intended to run for the duration of the event, which would last for a few hours. During that short period of time, I needed it to be <em>as fast and responsive as possible</em>. Hence, I went <em>all out</em> on the hardware.
 </p>
 </div>
 
