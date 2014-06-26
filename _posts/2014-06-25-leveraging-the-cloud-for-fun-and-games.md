@@ -78,7 +78,7 @@ Next, I needed to install a few libraries that SteamCMD depends on, like the [GN
 
 > steamcmd: error while loading shared libraries: libstdc++.so.6: cannot open shared object file: No such file or directory
 
-Uh? A quick search on the Internet revealed that SteamCMD [doesn't like to run on a 64-bit OS.](https://developer.valvesoftware.com/wiki/SteamCMD#32-bit_libraries_on_64-bit_Linux_systems). In fact:
+Uh? A quick search on the Internet revealed that SteamCMD [doesn't like to run on a 64-bit OS](https://developer.valvesoftware.com/wiki/SteamCMD#32-bit_libraries_on_64-bit_Linux_systems). In fact:
 
 <div class="note oneline">
 <p>
