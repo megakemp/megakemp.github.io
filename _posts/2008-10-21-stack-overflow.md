@@ -2,7 +2,7 @@
 layout: post
 title:  "Stack Overflow"
 date:   2008-10-21
-categories: community
+categories: technology
 ---
 
 If you are interested in technology-agnostic software development practices, then you should definitely check out Jeff Atwood’s blog “[Coding Horror][1]“. I’ve been a reader for years and, even if I might not necessarily agree on all his points, it’s very interesting to have a discussion about the art and science of building high quality software without focusing on particular technologies or programming languages.

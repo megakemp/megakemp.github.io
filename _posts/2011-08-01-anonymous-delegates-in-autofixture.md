@@ -126,7 +126,7 @@ Luckily, this is not a problem anymore.
 [4]: http://nuget.org/List/Packages/AutoFixture
 [5]: http://autofixture.codeplex.com/SourceControl/changeset/view/493eecec7784#Src%2fAutoFixture%2fKernel%2fDelegateGenerator.cs
 [6]: http://blog.ploeh.dk/2011/03/18/EncapsulatingAutoFixtureCustomizations.aspx
-[7]: http://en.wikipedia.org/wiki/Don't_repeat_yourself
+[7]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 [8]: http://sourcemaking.com/design_patterns/strategy
 [9]: http://msdn.microsoft.com/en-us/library/ms132151.aspx
 [10]: http://msdn.microsoft.com/en-us/library/system.notsupportedexception.aspx

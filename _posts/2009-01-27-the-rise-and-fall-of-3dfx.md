@@ -53,7 +53,7 @@ Even if 3Dfx no longer exist as a company, it effectively placed a landmark in t
 /Enrico
 
 [1]: http://www.tech-faq.com/3d-accelerator.shtml
-[2]: http://www.gamespot.com/features/vgs/universal/hist_pacman/
+[2]: http://www.gamespot.com/pac-man/
 [3]: http://www.gamespot.com/pc/rpg/fallout3/index.html?tag=result;title;1
 [6]: http://www.gamers.org/dEngine/xf3D/glide/glidepgm.htm
 [7]: http://www.opengl.org/
