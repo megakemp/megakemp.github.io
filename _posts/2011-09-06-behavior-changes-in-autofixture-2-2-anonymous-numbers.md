@@ -110,7 +110,7 @@ Console.WriteLine("SingleValue property is {0}", specimen.SingleValue);
 
 See how all the numeric properties on the generated object have different values? That’s what I’m talking about.
 
-Now, in theory, this shouldn’t be considered a breaking change. I say this because AutoFixture is all about [anonymous variables][3], which, by definition, can’t be expected to have specific values during a test run. So, as long as you’ve played by this rule, the new behavior shouldn’t impact any of your existing tests.
+Now, in theory, this shouldn’t be considered a breaking change. I say this because AutoFixture is all about [anonymous variables][2], which, by definition, can’t be expected to have specific values during a test run. So, as long as you’ve played by this rule, the new behavior shouldn’t impact any of your existing tests.
 
 However, if this does turn out to be a problem or you simply prefer the old way of doing things, you shouldn’t feel left out in the cold. The **previous behavior is still in the box, packaged up in a nice customization** unambiguously named `NumericSequencePerTypeCustomization`. The simple act of adding it to a Fixture instance will restore things the way they were:
 
@@ -119,8 +119,8 @@ var fixture = new Fixture();
 fixture.Customize(new NumericSequencePerTypeCustomization());
 ```
 
-If you wish to try this out today, I encourage you to go head and grab the latest build off of [AutoFixture’s project page on Team City][4]. Enjoy.
+If you wish to try this out today, I encourage you to go head and grab the latest build off of [AutoFixture’s project page on TeamCity][3]. Enjoy.
 
 [1]: http://twitter.com/#!/ploeh/status/109005068581343232
-[3]: http://blogs.msdn.com/b/ploeh/archive/2008/11/17/anonymous-variables.aspx
-[4]: http://teamcity.codebetter.com/project.html;jsessionid=C212815CFF41DFCD2E93DDDECABF1668?projectId=project129&tab=projectOverview
+[2]: http://blogs.msdn.com/b/ploeh/archive/2008/11/17/anonymous-variables.aspx
+[3]: http://teamcity.codebetter.com/project.html?projectId=AutoFixture
