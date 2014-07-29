@@ -2,7 +2,7 @@
 layout: post
 title:  "Another Visual Studio Color Theme"
 date:   2009-04-06
-categories: tools musings
+categories: musings .net
 ---
 
 An interesting trend has emerged in the .NET community during the past couple of years, which involves [developers sharing their favorite color theme for the Visual Studio code editor][1] with their peers. <img alt="VSSettingsDialog" src="http://megakemp.files.wordpress.com/2009/04/vssettingsdialog1.png?w=190&h=117" class="article" />
@@ -69,7 +69,7 @@ I’ve modified my dark theme to work in Visual Studio 2010. Most of the setting
 [3]: http://msdn.microsoft.com/en-us/library/1x6229t8.aspx
 [5]: http://www.vim.org/
 [6]: http://www.gnu.org/software/emacs/
-[7]: http://www.microsoft.com/visualstudio/en-gb/default.mspx
+[7]: http://en.wikipedia.org/wiki/Microsoft_Visual_Studio#Visual_Studio_2008
 [8]: http://www.microsoft.com/downloads/details.aspx?familyid=22e69ae4-7e40-4807-8a86-b3d36fab68d3&displaylang=en
 [9]: http://www.microsoft.com/typography/cleartype/tuner/step1.aspx
 [10]: http://www.iunknown.com/2007/06/vibrant_ink_vis.html

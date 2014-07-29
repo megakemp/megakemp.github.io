@@ -2,7 +2,7 @@
 layout: post
 title:  "Microsoft launches Windows Azure"
 date:   2008-10-28
-categories: events cloud
+categories: technology
 ---
 
 Yesterday at 9:00 AM (Pacific Time) at the [Microsoft PDC 2008][1]‘s keynote, Microsoft Chief Software Architect Ray Ozzie reveled the company’s platform for cloud computing named **[Windows Azure][2]**.

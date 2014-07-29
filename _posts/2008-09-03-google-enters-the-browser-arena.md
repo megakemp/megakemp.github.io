@@ -19,7 +19,7 @@ The browser’s diffusion among the Internet users grew constantly since it’s 
 
 A new browser war was started, with two main contenders, Microsoft’s Internet Explorer once again on one side, and Mozilla’s Firefox on the other. Until now.
 
-Fast forward to Tuesday September 2nd, 2008. Google shocks the world by announcing the <img alt="Google Chrome" src="http://megakemp.files.wordpress.com/2008/09/googlechromelogo-thumb.jpg?w=104&h=99" class="article" /> release of the company’s own brand-new open source browser, called [Google Chrome][5].  [According to the product team][6], Chrome was designed and built from the ground up to match the demands of  today’s Internet, characterized by rich browser-centered web applications powered by JavaScript. Once again, the main focus is on [minimal design, compliance with web standards and performance][7].
+Fast forward to Tuesday September 2nd, 2008. Google shocks the world by announcing the <img alt="Google Chrome" src="http://megakemp.files.wordpress.com/2008/09/googlechromelogo-thumb.jpg?w=104&h=99" class="article" /> release of the company’s own brand-new open source browser, called [Google Chrome][5]. [According to the product team][6], Chrome was designed and built from the ground up to match the demands of  today’s Internet, characterized by rich browser-centered web applications powered by JavaScript. Once again, the main focus is on [minimal design, compliance with web standards and performance][7].
 
 Google Chrome is a beta release, but from my experience with it so far, I would say it’s in a good position to permanently replace Firefox as my main day-to-day browser. I’ll write more about my thoughts on Chrome as I spend more time with it.
 
@@ -30,5 +30,5 @@ Google Chrome is a beta release, but from my experience with it so far, I would 
 [3]: http://www.w3counter.com/globalstats.php
 [4]: http://www.microsoft.com/windows/products/winfamily/ie/default.mspx
 [5]: http://www.google.com/chrome
-[6]: http://www.google.com/chrome/intl/en/features.html
-[7]: http://www.google.com/chrome/intl/en/why.html?hl=en
+[6]: http://googleblog.blogspot.se/2008/09/fresh-take-on-browser.html
+[7]: https://www.google.com/chrome/browser/features.html

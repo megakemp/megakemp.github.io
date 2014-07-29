@@ -235,4 +235,4 @@ This exercise teaches three general guidelines that can be applied when programm
 [16]: http://msdn.microsoft.com/en-us/library/bb397687(lightweight).aspx
 [18]: http://ayende.com/projects/rhino-mocks.aspx
 [19]: http://code.google.com/p/moq/
-[20]: http://learn.typemock.com/typemock-isolator/
+[20]: http://www.typemock.com/isolator-product-page

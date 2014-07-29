@@ -184,7 +184,7 @@ However we all know that [software abstractions are leaky][21], and this is espe
 [2]: http://en.wikipedia.org/wiki/Ajax_(programming)
 [4]: http://ajaxcontroltoolkit.codeplex.com/
 [5]: http://www.codeplex.com/
-[8]: http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ComboBox/ComboBox.aspx
+[8]: https://ajaxcontroltoolkit.codeplex.com/wikipage?title=ComboBox%20Control&referringTitle=Tutorials
 [9]: http://ajaxcontroltoolkit.codeplex.com/WorkItem/View.aspx?WorkItemId=25295
 [10]: http://en.wikipedia.org/wiki/Minification_(programming)
 [13]: http://aspnet.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=35893

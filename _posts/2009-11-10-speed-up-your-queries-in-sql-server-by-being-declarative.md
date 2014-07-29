@@ -17,13 +17,11 @@ Imagine an application that manages a **wait list**. Users of this application p
   * The users’ position in the wait list at any given time is decided by a score.
   * This score is calculated based on the number of credits each user has in the system compared to the amount required by the resource they wish to access.
 
-Let’s say that this wait list is modeled in a **[Microsoft SQL Server**][2] database with the following schema:
+Let’s say that this wait list is modeled in a [Microsoft SQL Server][2] database with the following schema:
 
-<a href="http://megakemp.files.wordpress.com/2009/11/waitlistschema1.png">
 <img alt="WaitListSchema" src="http://megakemp.files.wordpress.com/2009/11/waitlistschema_thumb1.png?w=500&h=317" class="screenshot-noshadow" />
-</a>
 
-The position of the different users in the wait list is periodically updated by a **[Stored Procedure**][4] that calculates the current score for each and every row in the `WaitList` table.
+The position of the different users in the wait list is periodically updated by a [Stored Procedure][4] that calculates the current score for each and every row in the `WaitList` table.
 
 So far so good. Now, imagine that this `WaitList` table contains somewhere around **30 millions rows**, and the Stored Procedure that updates all of the scores takes about **9 hours** to complete. And now we have problem.
 

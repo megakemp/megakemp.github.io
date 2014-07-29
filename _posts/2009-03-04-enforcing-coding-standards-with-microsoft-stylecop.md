@@ -9,7 +9,7 @@ I can’t stress enough the importance of having a code convention in place befo
 
 ### What’s a code convention?
 
-A code convention it’s about a team of developers agreeing on a standard <img alt="csharpcodingstd" src="http://megakemp.files.wordpress.com/2009/03/csharpcodingstd-thumb.png?w=90&h=99" class="article" /> way to statically structure the code that will be part of the system they are building together . Note that it doesn’t cover any aspect of the software design, (coupling, cohesion, dependency management and so on) but rather focuses exclusively on how the body of the code is organized.
+A code convention it’s about a team of developers agreeing on a standard <img alt="csharpcodingstd" src="http://megakemp.files.wordpress.com/2009/03/csharpcodingstd-thumb.png?w=90&h=99" class="article" /> way to statically structure the code that will be part of the system they are building together. Note that it doesn’t cover any aspect of the software design, (coupling, cohesion, dependency management and so on) but rather focuses exclusively on how the body of the code is organized.
 
 You may wonder, how is this valuable? Well, a convention has one primary goal that goes beyond plain esthetic: to **improve the code readability by achieving consistency**. Following a common standard will make it easier for the members of a team to work on each other’s code without the burden of having to mentally adjust to different coding styles.
 
@@ -68,11 +68,10 @@ StyleCop can also be run through a set of [MSBuild][7] tasks. All you have to do
 
 ### Resources
 
-You can download [the latest version of StyleCop from MSDN][8] including documentation and samples. If you need more information, [here][9] you can find a good tutorial on how to successfully integrate StyleCop in your .NET project.
+You can download [the latest version of StyleCop from MSDN][8] including documentation and samples. ~~If you need more information, here you can find a good tutorial on how to successfully integrate StyleCop in your .NET project~~ As of *July 29, 2014* the tutorial is no longer available online.
 
 /Enrico
 
 [3]: http://code.msdn.microsoft.com/sourceanalysis
 [7]: http://msdn.microsoft.com/en-us/library/ms171452.aspx
 [8]: http://code.msdn.microsoft.com/sourceanalysis/Release/ProjectReleases.aspx?ReleaseId=1425
-[9]: http://www.onedotnetway.com/stylecop-tutorial/

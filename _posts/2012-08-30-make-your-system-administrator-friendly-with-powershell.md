@@ -46,7 +46,7 @@ So here it goes, I hope you find it useful.
 </ul>
 </div>
 
-[1]: http://www.bash.org
+[1]: http://www.gnu.org/software/bash
 [3]: http://blogs.msdn.com/b/monad/archive/2005/08/25/456590.aspx
 [4]: http://powershell.com/cs/blogs/ebookv2/archive/2012/03/05/chapter-5-the-powershell-pipeline.aspx#object-oriented-pipeline
 [5]: http://en.wikipedia.org/wiki/Command_Prompt

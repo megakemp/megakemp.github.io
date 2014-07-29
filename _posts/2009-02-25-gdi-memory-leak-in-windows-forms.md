@@ -2,7 +2,7 @@
 layout: post
 title:  "GDI memory leak in Windows Forms"
 date:   2009-02-25
-categories: programming windows
+categories: programming
 ---
 
 A while ago I run into a rather interesting and insidious bug, which I thought I would share.

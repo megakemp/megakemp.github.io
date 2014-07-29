@@ -48,7 +48,7 @@ This could easily be achieved in much the same way with an [NAnt][5] task, if th
 
 /Enrico
 
-[1]: http://ccnet.thoughtworks.org
+[1]: http://www.cruisecontrolnet.org/
 [2]: http://channel9.msdn.com/wiki/msbuild/homepage/
 [3]: http://code.msdn.microsoft.com/vscoveragetoxmltask
 [4]: http://code.msdn.microsoft.com
