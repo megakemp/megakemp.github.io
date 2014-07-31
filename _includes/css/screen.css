@@ -263,66 +263,66 @@ p.thumbnail-caption {
 }
 
 .note {
-    border: 1px solid #a0bce8;
-    background-color: #e2ebf9;
-    margin: 20px 0 20px 0;
-    padding-left:5px;
-    padding-right:5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+  border: 1px solid #a0bce8;
+  background-color: #e2ebf9;
+  margin: 20px 0 20px 0;
+  padding-left:5px;
+  padding-right:5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.8);
 }
 
 .note.downloads {
-    border: 1px solid #ffe7bf;
-    background-color: #fff2bf;
+  border: 1px solid #ffe7bf;
+  background-color: #fff2bf;
 }
 
 .note p {
-    margin: 0 !important;
-    padding: 10px;
+  margin: 0 !important;
+  padding: 10px;
 }
 
 .note.oneline p {
-    margin: 0 !important;
-    padding: 20px;
-    text-align: center;
+  margin: 0 !important;
+  padding: 20px;
+  text-align: center;
 }
 
 .note a {
-    color: #4183c4;
+  color: #4183c4;
 }
 
 .note.downloads a {
-    color: #555;
+  color: #555;
 }
 
 .note.downloads ul {
-    list-style: none;
-    text-align: center;
+  list-style: none;
+  text-align: center;
 }
 
 .note.downloads ul li {
-    display: inline;
-    margin-right: 20px;
+  display: inline;
+  margin-right: 20px;
 }
 
 .note.downloads ul li:before {
-    font-family: FontAwesome;
-    color: #555;
-    content: '\f0ed';
-    margin: 0 7px 0 0;
+  font-family: FontAwesome;
+  color: #555;
+  content: '\f0ed';
+  margin: 0 7px 0 0;
 }
 
 .note.downloads ul li.slides:before {
-    content: '\f144';
+  content: '\f144';
 }
 
 .note.downloads ul li.pdf:before {
-    content: '\f15c';
+  content: '\f15c';
 }
 
 .note.downloads ul li.github:before {
-    content: '\f09b';
+  content: '\f09b';
 }
 
 #social {
