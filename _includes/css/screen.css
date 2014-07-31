@@ -495,8 +495,9 @@ i.fa-hn {
 }
 
 .footnotes {
-  font-size: 14px;
+  font-size: 13px;
   font-style: italic;
+  line-height: 18px;
 }
 
 .icon-overlay {
