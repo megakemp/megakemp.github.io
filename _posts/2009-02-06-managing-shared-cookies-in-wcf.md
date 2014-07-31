@@ -3,6 +3,8 @@ layout: post
 title:  "Managing shared cookies in WCF"
 date:   2009-02-06
 categories: programming .net
+image: http://megakemp.files.wordpress.com/2009/02/wcfmessageinspectors.png
+ranking: 3
 ---
 
 Managing state across the HTTP protocol has always been one of the major challenges faced by developers when building applications on the web. Of course web services are no exception.
@@ -118,7 +120,7 @@ In situations were cookies must be managed in the same way for all web services 
 
 Message inspectors provide a hook in the WCF messaging pipeline offering the chance to look at and possibly modify all incoming or outgoing messages that transit on the server-side as well as on the client-side. The inspectors that are registered with the WCF runtime receive the messages before they are passed on to the application or sent to the wire, depending on whether it is an incoming or outgoing message.
 
-<img alt="WcfMessageInspectors" src="http://megakemp.files.wordpress.com/2009/02/wcfmessageinspectors.png?w=500&h=88" class="screenshot-noshadow" /> 
+<img alt="WcfMessageInspectors" src="http://megakemp.files.wordpress.com/2009/02/wcfmessageinspectors.png?w=500&h=88" class="screenshot-noshadow" />
 
 This way, it is possible to catch all HTTP responses coming from the web server, extract any cookies contained within the messages, and manually inject them in all subsequent HTTP requests on their way out. Here is a simplified view of the solution:
 

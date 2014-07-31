@@ -85,6 +85,11 @@ h1.backdrop.about {
   background: url(/assets/about/backdrop.jpg) left center no-repeat;
 }
 
+h1.backdrop.bestof {
+  background: url(/assets/bestof/backdrop.jpg) left center no-repeat;
+  margin-bottom: 5%;
+}
+
 h1.backdrop.speaking {
   background: url(/assets/speaking/backdrop.jpg) left center no-repeat;
   text-align: right;
@@ -260,6 +265,42 @@ nav hr {
 p.thumbnail-caption {
   font-size: 95%;
   margin-bottom: 3%;
+}
+
+.thumbnail-image {
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: left;
+  margin-right: 3.5%;
+  width: 160px;
+  height: 160px;
+}
+
+.thumbnail-container {
+  clear: left;
+  min-height: 160px;
+}
+
+.thumbnail-icon {
+  text-align: right;
+  margin-top: -1%;
+  margin-left: -7.5%;
+  float: left;
+}
+
+.thumbnail-description {
+  margin-left: 29%;
+}
+
+.thumbnail-description p {
+  font-size: 95%;
+  margin-top: -1%;
+}
+
+.thumbnail-separator {
+  margin: 30px auto 30px auto;
+  width: 90%;
 }
 
 .note {

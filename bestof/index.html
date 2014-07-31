@@ -1,0 +1,33 @@
+---
+layout: default
+title: Best Of
+---
+
+<div id="home">
+  <h1 class="backdrop bestof">Best Of</h1>
+
+  {% for position in (1..5) %}
+    {% for post in site.posts %}
+      {% if position == post.ranking %}
+        <div class="thumbnail-container">
+          <div class="thumbnail-image" style="background-image: url({{ post.image }});{% if post.imagesize %}background-size: {{ post.imagesize }};{% endif %}"></div>
+          <span class="fa-stack fa-lg thumbnail-icon">
+            <i class="fa fa-circle fa-stack-2x" style="color: {{ site.theme.highlight_color }};"></i>
+            <i class="fa fa-stack-1x" style="color: white;">{{ position }}</i>
+          </span>
+          <div class="thumbnail-description">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+          </div>
+        </div>
+        <hr class="thumbnail-separator" />
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  <div class="footnotes">
+    <p>
+    The typewriter image used in this page is a modification based on the work of <a href="https://flic.kr/p/6Tpz6w">Raúl Hernández González</a> and is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</div>

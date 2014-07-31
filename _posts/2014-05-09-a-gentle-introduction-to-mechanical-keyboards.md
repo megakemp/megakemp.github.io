@@ -6,6 +6,8 @@ categories: mechanical-keyboards
 assets:  a-gentle-introduction-to-mechanical-keyboards
 summary: "The past few of years have seen a renaissance for mechanical keyboards, especially among two large groups of computer enthusiasts: programmers and gamers. I, too, share a passion for these wonderful pieces of hardware that goes way back. A quick search on the Internet reveals <a href=\"http://www.google.com/search?q=mechanical+keyboard\">a wealth of web sites</a> entirely dedicated to the subject. Unfortunately, most of the information in them is too \"nerdy\" for someone who's approaching it for the first time. In this post I'd like to give a gentle introduction to the world of mechanical keyboards for the curious, but uninitiated."
 excerpt: "The past few of years have seen a renaissance for mechanical keyboards, especially among two large groups of computer enthusiasts: programmers and gamers. I, too, share a passion for these wonderful pieces of hardware that goes way back."
+image: http://megakemp.com/assets/a-gentle-introduction-to-mechanical-keyboards/mechanicalswitch.jpg
+ranking: 2
 ---
 
 I love typing. I still remember how I, as a kid, used to borrow my mother's [Diplomat typewriter](http://typewriterdatabase.com/olympia.221.typewriter-serial-number-database) from 1964 and started hammering away on it, pretending to type some long text:
@@ -97,7 +99,7 @@ As a testimony of their extreme durability, I can tell you that the oldest one i
      class="screenshot-noshadow" />
 </a>
 
-That's a _25 years old_ piece of hardware still in perfectly good condition. So much, in fact, that I use it _daily_ as my primary keyboard at home.  
+That's a _25 years old_ piece of hardware still in perfectly good condition. So much, in fact, that I use it _daily_ as my primary keyboard at home.
 
 ### It's all about the feeling
 
@@ -105,7 +107,7 @@ However, believe it or not, the biggest problem with rubber dome keyboards isn't
 
 We said that the _switches_ are responsible for telling the computer which key is being pressed. The precise moment when that happens is called [_actuation point_](http://deskthority.net/wiki/Switch_terminology#Actuation_and_reset_points). The distance between a key's rest position and when it's fully pressed down is called [_key travel_](http://deskthority.net/wiki/Switch_terminology#Key_travel).
 
-Now, in rubber dome keyboards, the only way to actuate a key is to _press it all the way to the bottom_ (also known as [_bottoming out_](http://deskthority.net/wiki/Switch_terminology#Bottoming_out)). That's when the silicon air bubble beneath it gets squashed, thus sending an electrical signal to the computer. This means that your fingers have to travel a longer distance when typing, which puts a strain on your hands and wrists. 
+Now, in rubber dome keyboards, the only way to actuate a key is to _press it all the way to the bottom_ (also known as [_bottoming out_](http://deskthority.net/wiki/Switch_terminology#Bottoming_out)). That's when the silicon air bubble beneath it gets squashed, thus sending an electrical signal to the computer. This means that your fingers have to travel a longer distance when typing, which puts a strain on your hands and wrists.
 
 <div class="note">
 <p>
@@ -127,8 +129,8 @@ Each and every one of them has its own way to physically actuate a key, which co
      title="The buckling spring switch patented by IBM in 1971"
      class="article shadow" />
 
-The [buckling spring switch](https://en.wikipedia.org/wiki/Buckling_spring) patented by IBM in 1971, for example, actuates a key by having the internal spring buckle outwards as it collapses.  
-That activates a plastic hammer located beneath the spring, which, upon hitting a contact, closes an electrical circuit.  
+The [buckling spring switch](https://en.wikipedia.org/wiki/Buckling_spring) patented by IBM in 1971, for example, actuates a key by having the internal spring buckle outwards as it collapses.
+That activates a plastic hammer located beneath the spring, which, upon hitting a contact, closes an electrical circuit.
 As the spring buckles, it hits the inner wall of its plastic housing producing a loud "_click_" sound. That feedback signals the typist that the key has been registered.
 
 <img src="{{ site.url }}/assets/{{ page.assets }}/cherrymxblue.png"
@@ -136,8 +138,8 @@ As the spring buckles, it hits the inner wall of its plastic housing producing a
      title="The Cherry MX Blue switch"
      class="article" />
 
-The modern [Cherry MX Blue switch](http://deskthority.net/wiki/Cherry_MX_Blue), on the other hand, uses a leaf spring pushed by a plastic slider (the grey one in the picture) as it passes by on its way down.  
-When the slider is half way through, the leaf spring encounters no more resistance from the slider, thus closing a circuit that signals the computer about the key press.  
+The modern [Cherry MX Blue switch](http://deskthority.net/wiki/Cherry_MX_Blue), on the other hand, uses a leaf spring pushed by a plastic slider (the grey one in the picture) as it passes by on its way down.
+When the slider is half way through, the leaf spring encounters no more resistance from the slider, thus closing a circuit that signals the computer about the key press.
 As the grey slider hits the bottom of the switch, it emits a high pitched "_click_" sound similar to the one of a mouse button.
 
 Don't worry, I won't get into all the nuts and bolts of all the different switches. The Internet will happily provide you [more information than you can possibly ask for](http://deskthority.net/wiki/Category:List_of_all_keyboard_switches) in that regard.
@@ -155,7 +157,7 @@ Let's look at each of them briefly.
 A switch is called **tactile** if it gives some kind of feedback about when a key is actuated. This is usually done by significantly dropping the key's resistance the instant it gets registered. Some switches even accompany that with a "click" sound and are therefore referred to as "_clicky_".
 
 #### Force
- 
+
 The **force** indicates how hard  you have to press down a key in order to actuate it. This is measured in *centinewtons* (cN) or, more commonly *grams-force* (gf). In practice they're interchangeable, since 1 cN is roughly equivalent to 1 gf (more precisely 1 cn = 1.02 gf).
 
 Switches get progressively stiffer the further down you press a key, which, again, helps you avoid bottoming out. A soft switch requires about 45 cN to actuate. A stiff one is about twice that, around 80 cN.
@@ -169,12 +171,12 @@ Switches get progressively stiffer the further down you press a key, which, agai
      title="The force graph of a soft tactile Cherry switch"
      class="article" />
 
-These are called _force graphs_ and indicate how much **force in cN** (Y axis) is required to press a key during its **travel in mm** (X axis) from rest position to bottom.  
+These are called _force graphs_ and indicate how much **force in cN** (Y axis) is required to press a key during its **travel in mm** (X axis) from rest position to bottom.
 Did you notice the sudden drop in force about half way through the travel? That's how _tactile_ switches announce that the key has been **actuated**, as shown by the little black dot.
 
 #### Sound
- 
-As I mentioned earlier, certain switches emit a "click" **sound** when they get actuated. This extra piece of feedback can either be pleasurable (even [nostalgic](https://www.youtube.com/watch?v=GaFbe5gdRhY) if you will) or totally annoying. I strongly advise you to investigate how the people who will be sitting next to you feel about clicky keyboards before buying one.  
+
+As I mentioned earlier, certain switches emit a "click" **sound** when they get actuated. This extra piece of feedback can either be pleasurable (even [nostalgic](https://www.youtube.com/watch?v=GaFbe5gdRhY) if you will) or totally annoying. I strongly advise you to investigate how the people who will be sitting next to you feel about clicky keyboards before buying one.
 And telling them that all keyboards sounded like that back in the 80's no longer cuts it.
 
 ### Wrapping it up
