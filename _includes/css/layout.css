@@ -42,6 +42,31 @@
 		border: 0px;
 		padding-left: 0px;
 	}
+	.thumbnail-image {
+		display: none;
+	}
+	.thumbnail-container {
+		height: 100%;
+	}
+	.thumbnail-icon {
+		margin-top: 2%;
+		margin-left: 0%;
+	}
+	.thumbnail-description {
+		margin-left: 0%;
+	}
+	.thumbnail-description h3 {
+		font-size: 20px;
+		padding-top: 1%;
+		padding-left: 16%;
+	}
+	.thumbnail-description p {
+		font-size: 100%;
+		margin-top: -3%;
+	}
+	.thumbnail-separator {
+		margin: 10px auto 30px auto;
+	}
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
