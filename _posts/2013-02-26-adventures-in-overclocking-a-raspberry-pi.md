@@ -3,9 +3,10 @@ layout: post
 title:  "Adventures in overclocking a Raspberry Pi"
 date:   2013-02-26
 categories: technology programming
+assets: adventures-in-overclocking-a-raspberry-pi
 summary: This article sums up my experience when overclocking a Raspberry Pi computer. It doesn’t provide a <em>step-by-step</em> guide on how to do the actual overclocking, since that kind of resources can easily be found <a href="http://lifehacker.com/5971395/overclock-your-raspberry-pi">elsewhere on the Internet</a>. Instead, it gathers the pieces of information that I found most interesting during my research, while diving deeper on some exquisitely <a href="http://geekalabama.files.wordpress.com/2014/02/12739272345_6a50e7edaa_o.png">geeky details</a> on the way.
 excerpt: This article sums up my experience when overclocking a Raspberry Pi computer. It doesn’t provide a step-by-step guide on how to do the actual overclocking. Instead, it gathers the pieces of information that I found most interesting during my research, while diving deeper on some exquisitely geeky details on the way.
-image: http://megakemp.files.wordpress.com/2013/02/raspberrypi-closet.jpg
+image: http://megakemp.com/assets/adventures-in-overclocking-a-raspberry-pi/raspberrypi-closet.jpg
 ranking: 1
 ---
 
@@ -14,7 +15,10 @@ ranking: 1
 For the past couple of months I’ve been running a [Raspberry Pi][2] as my primary NAS at home. It wasn’t something that I had planned. On the contrary, it all started by chance when I received a Raspberry Pi as a conference gift at last year’s [Leetspeak][3].
 But why using it as a NAS when there are [much better products][4] on the market, you might ask. Well, because I happen to have a small network closet at home and the Pi is a pretty good fit for a device that’s capable of acting like a NAS while at the same time taking _very_ little space.
 
-<img alt="My Raspberry Pi in the network closet." title="My Raspberry Pi in the network closet." src="http://megakemp.files.wordpress.com/2013/02/raspberrypi-closet.jpg?w=300&h=300" class="article" />
+<img alt="My Raspberry Pi sitting in the network closet."
+     title="My Raspberry Pi sitting in the network closet."
+     src="{{ site.url }}/assets/{{ page.assets }}/raspberrypi-closet.jpg"
+     class="article" />
 
 Much like the size, the setup itself also strikes with its simplicity: I plugged in an external [1 TB WD Element USB drive][6] that I had lying around (the black box sitting above the Pi in the picture on the right), installed [Raspbian][7] on a SD memory card and went to town. Once booted, the little Pi exposes the storage space on the local network through 2 channels:
 
@@ -53,15 +57,17 @@ Setting the `force_turbo` option to `1` will cause the CPU to run at its full sp
 
 When Turbo Mode is enabled, the CPU speed and voltage will switch between two values, a **minimum** one and a **maximum** one, both of which are configurable. When it comes to speed, the default minimum is the stock **700 MHz**. The default voltage is **1.20 V**. During my overclocking experiments I wanted to keep a close eye on these parameters, so I wrote [a simple Bash script][21] that fetches the current state of the CPU from different sources within the system and displays a brief summary. Here’s how it looks like when the system is idle:
 
-<a href="http://megakemp.files.wordpress.com/2013/02/cpustatus-idle.png">
-<img alt="Output of my cpustatus script when the CPU is idle." title="Output of my cpustatus script when the CPU is idle." src="http://megakemp.files.wordpress.com/2013/02/cpustatus-idle.png?w=300&h=113" class="screenshot" />
-</a>
+<img alt="Output of my cpustatus script when the CPU is idle."
+     title="Output of my cpustatus script when the CPU is idle."
+     src="{{ site.url }}/assets/{{ page.assets }}/cpustatus-idle.png"
+     class="screenshot" />
 
 See how the current speed is equal to the minimum one? Now, take a look at how things change on full blast with the Turbo mode kicked in:
 
-<a href="http://megakemp.files.wordpress.com/2013/02/cpustatus-load.png">
-<img alt="Output of my cpustatus script with Turbo Mode enabled." title="Output of my cpustatus script with Turbo Mode enabled." src="http://megakemp.files.wordpress.com/2013/02/cpustatus-load.png?w=300&h=113" class="screenshot" />
-</a>
+<img alt="Output of my cpustatus script with Turbo Mode enabled."
+     title="Output of my cpustatus script with Turbo Mode enabled."
+     src="{{ site.url }}/assets/{{ page.assets }}/cpustatus-load.png"
+     class="screenshot" />
 
 As you can see, the CPU is running hot at the maximum speed of **1 GHz** fed with **0,15 extra volts**.
 
