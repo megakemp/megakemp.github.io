@@ -3,6 +3,7 @@ layout: post
 title:  "GDI memory leak in Windows Forms"
 date:   2009-02-25
 categories: programming
+assets: gdi-memory-leak-in-windows-forms
 excerpt: A while ago I run into a rather interesting and insidious bug, which I thought I would share. The bug manifested itself in a Windows Forms application, occasionally causing it to crash with an "out of memory" error. Little did we know that the hunt would lead us down the dark corners of the Win32 graphics API.
 image: http://megakemp.com/assets/gdi-memory-leak-in-windows-forms/windowslogo.png
 imagesize: contain
@@ -29,12 +30,12 @@ Oddly enough, a through examination of the source code confirmed that all bitmap
 
 To further investigate exactly what was being used and left hanging around, we used a free tool called [GDIUsage][11], which shows exactly how many and which kinds of GDI objects are being allocated by an application. On the left picture you can see how memory looked like at application startup compared to after a couple of minutes of normal usage.
 
-<img src="http://localhost:4000/assets/gdi-memory-leak-in-windows-forms/gdileaksbefore.png"
+<img src="{{ site.url }}/assets/{{ page.assets }}/gdileaksbefore.png"
      alt="The number of allocated GDI resources right after the application is launched"
      title="The number of allocated GDI resources right after the application is launched"
      class="screenshot-noshadow-fullwidth"
      style="display: inline;" />
-<img src="http://localhost:4000/assets/gdi-memory-leak-in-windows-forms/gdiusageafter.png"
+<img src="{{ site.url }}/assets/{{ page.assets }}/gdiusageafter.png"
      alt="The number of allocated GDI resources after using the application for a few minutes"
      title="The number of allocated GDI resources after using the application for a few minutes"
      class="screenshot-noshadow-fullwidth"
@@ -44,7 +45,7 @@ It was apparent that we were creating an awful lot of **font objects** and forge
 
 It turned out Windows puts a limit on the number of total GDI objects that can be created inside of a process. And [that limit is exactly of 10.000 GDI objects in Windows XP][14]. This means that allocating GDI object number 10.001 will always cause an error. You can use Task Manager to see how many GDI resources each process has currently allocated by selecting the **GDI Objects** column.
 
-<img src="http://localhost:4000/assets/gdi-memory-leak-in-windows-forms/taskmanagergdiobjects.png"
+<img src="{{ site.url }}/assets/{{ page.assets }}/taskmanagergdiobjects.png"
      alt="The total number of GDI resources allocated by the application as shown by Task Manager"
      title="The total number of GDI resources allocated by the application as shown by Task Manager"
      class="screenshot-noshadow-fullwidth" />
