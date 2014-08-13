@@ -233,6 +233,13 @@ nav hr {
   box-shadow: 0 0 20px 0 rgba(0,0,0,0.8);
 }
 
+.screenshot-caption {
+  position: relative;
+  margin: 30px auto auto auto;
+  max-width: 90%;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.8);
+}
+
 .screenshot-noshadow {
   position: relative;
   margin: 30px auto 30px auto;
@@ -248,6 +255,12 @@ nav hr {
   position: relative;
   margin: -25px auto -25px auto;
   max-width: 90%;
+}
+
+.screenshot-noshadow-caption {
+  position: relative;
+  margin: 30px auto auto auto;
+  max-width: 95%;
 }
 
 .video {
@@ -550,8 +563,10 @@ i.fa-hn {
 }
 
 .caption {
+  display: block;
   margin: 0 auto;
   text-align: center;
   font-size: smaller;
+  padding-top: 10px;
   padding-bottom: 10px
 }
