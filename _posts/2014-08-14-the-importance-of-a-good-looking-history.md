@@ -134,7 +134,7 @@ where:
 - `%w(72,4,4)` wraps the following text at 72 characters. Then, indents the first line as well as the remaining ones with 4 spaces
 - `%b` shows the long description of the commit, if any
 
-[GitHub](https://github.com) itself follows this convention when showing the commit history on its website. In fact, it will only show you the *summary* of the commit by default. If there's a longer *description*, it'll allow you to expand it with the press of a button.
+[GitHub](https://github.com) itself follows this convention when showing the commit history of a project. In fact, they will only show you the *summary* of each commit by default. If there's a longer *description* available, they allow you to expand it with the press of a button.
 
 <p>
     <img src="{{ site.url }}/assets/{{ page.assets }}/github-commitmessage.png"
