@@ -71,7 +71,7 @@ Even in the early days of Git, e-mail was still used as a way to send patches am
 If you look closely, you'll notice that the concept of e-mail is pretty pervasive throughout Git. Here's some evidence off the top of my head:
 
 - Every user *has to have* an e-mail address which is always part of the commit's metadata
-- The `git format-patch` and `git am` commands are specifically used to convert commits to e-mails with patches as attachments
+- The `git format-patch` and `git am` commands are specifically designed to convert commits into e-mails with patches as attachments
 - Both `git blame` and `git shortlog` have special options to display the committers' e-mail addresses instead of their names
 - The `git log` command has [dedicated placeholders](https://www.kernel.org/pub/software/scm/git/docs/git-log.html#_pretty_formats) to indicate a commit message's **subject** and **body**
 
