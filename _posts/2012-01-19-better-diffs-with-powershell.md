@@ -113,7 +113,7 @@ will generate this output in PowerShell:
      class="screenshot-noshadow-caption" />
 <span class="caption">The Out-Diff PowerShell cmdlet in action</span>
 
-One thing I'd like to point out is that even if the output of `svn diff` consists of many lines of text, PowerShell will redirect them to the `Out-Diff` function _one line at a time_. This is called a [streaming pipeline][15] and it allows PowerShell to be responsive and consume less memory even when processing large amounts of data. Neat.
+One thing I'd like to point out is that even if the output of `git diff` consists of many lines of text, PowerShell will redirect them to the `Out-Diff` function _one line at a time_. This is called a [streaming pipeline][15] and it allows PowerShell to be responsive and consume less memory even when processing large amounts of data. Neat.
 
 ### Wrapping up
 
