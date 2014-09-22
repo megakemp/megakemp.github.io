@@ -94,11 +94,11 @@ param(
 
 Let's break this function down into logical steps:
 
-1. Take whatever input comes from [the PowerShell pipeline][12] and convert it to a string.
-2. Match that string against a set of regular expressions to determine whether it's part of the [Unified DIFF format][9].
-3. Print the string to the console with the appropriate color: green for added, red for removed and gray for the headers.
+1. **Take** whatever input comes from [the PowerShell pipeline][12] and convert it to a string.
+2. **Match** that string against a set of regular expressions to determine whether it's part of the [Unified DIFF format][9].
+3. **Print** the string to the console with the appropriate color: green for added, red for removed and gray for the headers.
 
-Pretty simple. And using it is even simpler: just load the script into your PowerShell session using [dot sourcing][13] or by [adding it to your profile][14] and **redirect the output of a 'diff' command to the Out-Diff cmdlet through piping** to start enjoying colorized DIFFs. For example the following commands:
+Pretty simple. And using it is even simpler: just load the script into your PowerShell session using [dot sourcing][13] or by [adding it to your profile][14] and _redirect the output of a 'diff' command to the Out-Diff cmdlet through piping_ to start enjoying colorized DIFFs. For example the following commands:
 
 ```powershell
 . .\Out-Diff.ps1
@@ -113,7 +113,7 @@ will generate this output in PowerShell:
      class="screenshot-noshadow-caption" />
 <span class="caption">The Out-Diff PowerShell cmdlet in action</span>
 
-One thing I'd like to point out is that even if the output of `svn diff` consists of many lines of text, PowerShell will redirect them to the `Out-Diff` function **one line at a time**. This is called a [streaming pipeline][15] and it allows PowerShell to be responsive and consume less memory even when processing large amounts of data. Neat.
+One thing I'd like to point out is that even if the output of `svn diff` consists of many lines of text, PowerShell will redirect them to the `Out-Diff` function _one line at a time_. This is called a [streaming pipeline][15] and it allows PowerShell to be responsive and consume less memory even when processing large amounts of data. Neat.
 
 ### Wrapping up
 
@@ -143,3 +143,4 @@ PowerShell is an extremely versatile console. In this case, it allowed me to enh
 [15]: http://powershell.com/cs/blogs/ebook/archive/2008/11/23/chapter-5-the-powershell-pipeline.aspx#streaming-real-time-processing-or-not
 [16]: https://github.com/dahlbyk/posh-git
 [17]: http://poshhg.codeplex.com
+
