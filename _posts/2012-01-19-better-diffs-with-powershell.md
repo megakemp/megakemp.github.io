@@ -2,7 +2,7 @@
 layout: post
 title:  "Better Diffs with PowerShell"
 date:   2012-01-19
-categories: programming tools
+categories: programming
 assets: better-diffs-with-powershell
 ---
 
