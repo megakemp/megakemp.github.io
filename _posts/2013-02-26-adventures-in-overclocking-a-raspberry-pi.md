@@ -79,7 +79,7 @@ It’s interesting to notice that the choice of `governor`, contrary to what you
 cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 # Prints ondemand
 
-"powersave" | /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+echo "powersave" | /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
 cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 # Prints powersave
