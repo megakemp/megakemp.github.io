@@ -82,6 +82,27 @@
 	em { font-style: italic; }
 	strong { font-weight: bold; color: #333; }
 	small { font-size: 80%; }
+        sup {
+          vertical-align: baseline;
+          position: relative;
+          top: -0.3em;
+        }
+        sup a {
+          color: #FFF !important;
+          text-decoration: none !important;
+          font-weight: 600;
+          font-size: 70%;
+          border-radius: 1em;
+          background-color: #AAA;
+          padding: 0px 6px;
+          transition: all 0.2s ease-in;
+          -webkit-transition: all 0.2s ease-in;
+          -moz-transition: all 0.2s ease-in;
+          -o-transition: all 0.2s ease-in;
+        }
+        sup a:hover {
+          background-color: {{ site.theme.highlight_color }};
+        }
 
 /*	Blockquotes  */
 	blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #777; font-style: italic; }
