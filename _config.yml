@@ -1,7 +1,7 @@
 name: Enrico Campidoglio
 description: The blog of Enrico Campidoglio
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 url: http://megakemp.com
 permalink: /:year/:month/:day/:title/
 paginate: 5
