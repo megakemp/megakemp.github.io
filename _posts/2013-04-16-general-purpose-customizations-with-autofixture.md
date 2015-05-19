@@ -48,7 +48,7 @@ Here’s how such a customization would look like:
 public class RandomIngredientsFromFixedSequence : ICustomization
 {
     private readonly Random randomizer = new Random();
-    private IEnumerable sequence;
+    private IEnumerable<Ingredient> sequence;
 
     public void Customize(IFixture fixture)
     {
@@ -58,7 +58,7 @@ public class RandomIngredientsFromFixedSequence : ICustomization
 
     private void InitializeIngredientSequence(IFixture fixture)
     {
-        this.sequence = fixture.CreateMany();
+        this.sequence = fixture.CreateMany<Ingredient>();
     }
 
     private Ingredient PickRandomIngredientFromSequence()
@@ -138,14 +138,14 @@ After a couple of [Red-Green-Refactor][8] cycles spawned from the above tests, i
 // Cookbook.cs
 public class Cookbook
 {
-    private readonly ICollection recipes;
+    private readonly ICollection<Recipe> recipes;
 
-    public Cookbook(IEnumerable recipes)
+    public Cookbook(IEnumerable<Recipe> recipes)
     {
-        this.recipes = new List(recipes);
+        this.recipes = new List<Recipe>(recipes);
     }
 
-    public IEnumerable FindRecipies(params Ingredient[] ingredients)
+    public IEnumerable<Recipe> FindRecipies(params Ingredient[] ingredients)
     {
         return recipes.Where(r => r.Ingredients.Intersect(ingredients).Any());
     }
@@ -159,9 +159,9 @@ public class Cookbook
 // Recipe.cs
 public class Recipe
 {
-    public readonly IEnumerable Ingredients;
+    public readonly IEnumerable<Ingredient> Ingredients;
 
-    public Recipe(IEnumerable ingredients)
+    public Recipe(IEnumerable<Ingredient> ingredients)
     {
         this.Ingredients = ingredients;
     }
@@ -197,10 +197,10 @@ An opportunity for writing a <strong>general-purpose customization</strong> has 
 Let’s see what happens if we extract the `Ingredient` type into a generic argument and remove all references to the word _“ingredient”_:
 
 ```csharp
-public class RandomFromFixedSequence : ICustomization
+public class RandomFromFixedSequence<T> : ICustomization
 {
     private readonly Random randomizer = new Random();
-    private IEnumerable sequence;
+    private IEnumerable<T> sequence;
 
     public void Customize(IFixture fixture)
     {
@@ -210,7 +210,7 @@ public class RandomFromFixedSequence : ICustomization
 
     private void InitializeSequence(IFixture fixture)
     {
-        this.sequence = fixture.CreateMany();
+        this.sequence = fixture.CreateMany<T>();
     }
 
     private T PickRandomItemFromSequence()
@@ -230,7 +230,7 @@ public class CookbookAutoDataAttribute : AutoDataAttribute
 {
     public CookbookAutoDataAttribute()
         : base(new Fixture().Customize(
-                   new RandomFromFixedSequence())))
+                   new RandomFromFixedSequence<Ingredient>())))
     {
     }
 }
@@ -240,7 +240,7 @@ The same is true if you’re using AutoFixture imperatively:
 
 ```csharp
 var fixture = new Fixture();
-fixture.Customize(new RandomFromFixedSequence());
+fixture.Customize(new RandomFromFixedSequence<Ingredient>());
 ```
 
 ### Wrapping up
