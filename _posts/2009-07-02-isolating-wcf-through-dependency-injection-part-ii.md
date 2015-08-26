@@ -131,7 +131,7 @@ public class MailClient
         {
             proxy.Abort();
 
-            throw new MailClientException(&quot;Failed to download Email messages&quot;, e);
+            throw new MailClientException("Failed to download Email messages", e);
         }
     }
 }
