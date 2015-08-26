@@ -63,9 +63,9 @@ However, at a second thought, I realized this wasn’t really the responsibility
 ```csharp
 public class MailClient
 {
-    private ChannelFactory proxyFactory;
+    private ChannelFactory<IMailServiceClientChannel> proxyFactory;
 
-    public MailClient(ChannelFactory proxyFactory)
+    public MailClient(ChannelFactory<IMailServiceClientChannel> proxyFactory)
     {
         this.proxyFactory = proxyFactory;
     }
@@ -119,9 +119,10 @@ This turns out to be a much better approach to assign WCF proxies to classes thr
 // as stated in the configuration file
 var container = new UnityContainer();
 container
-    .RegisterType()
-        .Configure()
-            .ConfigureInjectionFor(new InjectionConstructor("localMailServiceEndpoint"));
+    .RegisterType<ChannelFactory<IMailServiceClientChannel>>()
+        .Configure<InjectedMembers>()
+            .ConfigureInjectionFor<ChannelFactory<IMailServiceClientChannel>>(
+                new InjectionConstructor("localMailServiceEndpoint"));
 
 var client = container.Resolve();
 
