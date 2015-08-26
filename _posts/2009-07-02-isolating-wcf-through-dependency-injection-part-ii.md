@@ -41,7 +41,7 @@ Here is the definition of the adapter interface:
 ```csharp
 using System.ServiceModel;
 
-public interface IClientChannelFactory
+public interface IClientChannelFactory<TChannel>
     where TChannel : IClientChannel
 {
     void Open();
@@ -60,14 +60,14 @@ And here is the default implementation:
 using System;
 using System.ServiceModel;
 
-public class ClientChannelFactory : IClientChannelFactory
+public class ClientChannelFactory<TChannel> : IClientChannelFactory<TChannel>
     where TChannel : IClientChannel
 {
-    private ChannelFactory factory;
+    private ChannelFactory<TChannel> factory;
 
     public ClientChannelFactory(string endpointConfigurationName)
     {
-        this.factory = new ChannelFactory(endpointConfigurationName);
+        this.factory = new ChannelFactory<TChannel>(endpointConfigurationName);
     }
 
     public void Open()
@@ -101,9 +101,9 @@ Here is the final `MailClient` implementation:
 ```csharp
 public class MailClient
 {
-    private IClientChannelFactory proxyFactory;
+    private IClientChannelFactory<IMailServiceClientChannel> proxyFactory;
 
-    public MailClient(IClientChannelFactory proxyFactory)
+    public MailClient(IClientChannelFactory<IMailServiceClientChannel> proxyFactory)
     {
         this.proxyFactory = proxyFactory;
     }
@@ -156,7 +156,7 @@ public class MailClientTest
     public void DownloadMessages_WithValidEmailAddress_ReturnsOneMessage()
     {
         // Fakes out the WCF proxy
-        var stubProxy = MockRepository.CreateStub();
+        var stubProxy = MockRepository.CreateStub<IMailServiceClientChannel>();
 
         // Stubs the service operation invoked by the class under test
         stubProxy
@@ -164,7 +164,7 @@ public class MailClientTest
             .Returns(new EmailMessage[0]);
 
         // Fakes out the WCF proxy factory
-        var stubProxyFactory = MockRepository.CreateStub();
+        var stubProxyFactory = MockRepository.CreateStub<IClientChannelFactory<IMailServiceClientChannel>>();
 
         // Stubs the factory method to return the mocked proxy
         stubProxyFactory
