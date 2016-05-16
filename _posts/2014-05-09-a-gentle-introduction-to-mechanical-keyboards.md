@@ -16,6 +16,7 @@ I love typing. I still remember how I, as a kid, used to borrow my mother's [Dip
      alt="The legendary Diplomat typewriter"
      title="The legendary Diplomat typewriter"
      class="article" />
+
 > "It sure sounds like you're a fast typist!"
 
 she would say when she heard the racket coming from my room.  Little did she know that what came out on the sheet of paper was actually [gibberish](http://en.wikipedia.org/wiki/Gibberish). Or maybe she was just being kind.
