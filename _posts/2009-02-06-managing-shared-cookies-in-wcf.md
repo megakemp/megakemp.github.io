@@ -137,7 +137,7 @@ public class CookieManagerMessageInspector : IClientMessageInspector
     {
         HttpResponseMessageProperty httpResponse =
             reply.Properties[HttpResponseMessageProperty.Name]
-            as HttpResponseMessageProperty;
+            as HttpResponseMessageProperty;
 
         if (httpResponse != null)
         {
@@ -158,12 +158,13 @@ public class CookieManagerMessageInspector : IClientMessageInspector
         // when the Visual Studio Debugger is attacched to the running process
         if (!request.Properties.ContainsKey(HttpRequestMessageProperty.Name))
         {
-            request.Properties.Add(HttpRequestMessageProperty.Name,
-                new HttpRequestMessageProperty());
+            request.Properties.Add(
+                HttpRequestMessageProperty.Name,
+                new HttpRequestMessageProperty());
         }
 
         httpRequest = (HttpRequestMessageProperty)
-            request.Properties[HttpRequestMessageProperty.Name];
+            request.Properties[HttpRequestMessageProperty.Name];
         httpRequest.Headers.Add(HttpRequestHeader.Cookie, this.sharedCookie);
 
         return null;
