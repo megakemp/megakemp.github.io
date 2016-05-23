@@ -9,6 +9,7 @@ paginate_path: blog/page:num
 
 gems:
   - jekyll-redirect-from
+  - jekyll-paginate
 
 theme:
   # Base color for background elements such as the top bar
