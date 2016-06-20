@@ -552,6 +552,8 @@ i.fa-hn {
   font-size: 13px;
   font-style: italic;
   line-height: 18px;
+  border-top: 1px solid #ddd;
+  padding-top: 16px;
 }
 
 .icon-overlay {
