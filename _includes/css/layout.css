@@ -27,6 +27,9 @@
 	.sidebar ul {
 		font-size: 14px;
 	}
+        h1.backdrop {
+		line-height: 285px;
+        }
 }
 
 /* All Mobile Sizes (devices and browser) */
@@ -67,6 +70,9 @@
 	.thumbnail-separator {
 		margin: 10px auto 30px auto;
 	}
+        h1.backdrop {
+		line-height: 168px;
+        }
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
@@ -79,6 +85,10 @@
 		font-size: 28px;
 		line-height: 36px;
 	}
+
+        h1.backdrop {
+		line-height: 218px;
+        }
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */

@@ -73,6 +73,9 @@ h3 {
 }
 
 h1.backdrop {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
   color: {{ site.theme.highlight_color }};
   line-height: 335px;
   padding-left: 23px;
@@ -82,16 +85,16 @@ h1.backdrop {
 }
 
 h1.backdrop.about {
-  background: url(/assets/about/backdrop.jpg) left center no-repeat;
+  background-image: url(/assets/about/backdrop.jpg);
 }
 
 h1.backdrop.bestof {
-  background: url(/assets/bestof/backdrop.jpg) left center no-repeat;
+  background-image: url(/assets/bestof/backdrop.jpg);
   margin-bottom: 5%;
 }
 
 h1.backdrop.speaking {
-  background: url(/assets/speaking/backdrop.jpg) left center no-repeat;
+  background-image: url(/assets/speaking/backdrop.jpg);
   text-align: right;
   padding-right: 23px;
 }
