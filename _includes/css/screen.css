@@ -399,7 +399,7 @@ p.thumbnail-caption {
 #post pre {
   border: 1px solid #ddd;
   background-color: #f8f8f8;
-  padding: 0 .4em;
+  padding: .3em;
   margin-bottom: 20px !important;
 }
 
@@ -412,7 +412,7 @@ p.thumbnail-caption {
   border: 1px solid #ddd;
   background-color: #f8f8f8;
   font-size: 85%;
-  padding: 0 .2em;
+  padding: .3em
 }
 
 #post pre code {
