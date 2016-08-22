@@ -1,7 +1,9 @@
 {% if page.layout == 'post' or page.url == '/' %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="/js/bigfoot.min.js"></script>
-<script>
-  $.bigfoot();
+<script type="text/javascript">
+  $.bigfoot({
+    actionOriginalFN: "ignore"
+  });
 </script>
 {% endif %}
