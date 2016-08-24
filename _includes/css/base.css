@@ -103,6 +103,9 @@
         .footnote:hover {
           background-color: {{ site.theme.highlight_color }};
         }
+        .fa.pull-left-three-lines {
+          line-height: 2;
+        }
 
 /*	Blockquotes  */
 	blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #777; font-style: italic; }
