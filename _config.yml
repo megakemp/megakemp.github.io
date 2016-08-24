@@ -11,7 +11,7 @@ gems:
   - jekyll-redirect-from
   - jekyll-paginate
 
-theme:
+style:
   # Base color for background elements such as the top bar
   base_color: '#444'
   # Accent color for links, etc

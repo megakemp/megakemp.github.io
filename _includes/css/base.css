@@ -101,7 +101,7 @@
           -o-transition: all 0.2s ease-in;
         }
         .footnote:hover {
-          background-color: {{ site.theme.highlight_color }};
+          background-color: {{ site.style.highlight_color }};
         }
         .fa.pull-left-three-lines {
           line-height: 2;
