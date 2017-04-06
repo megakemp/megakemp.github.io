@@ -511,13 +511,13 @@ div.comments i {
 }
 
 #stalker {
-  display: inline-block;
-  height: 18px;
-  margin-left: 5px;
+  width: 160px;
+  height: auto;
+  margin: 0 auto;
 }
 
 #stalker a {
-  width: 29px;
+  width: 40px;
   overflow: hidden;
   float: left;
   color: #555;
@@ -528,8 +528,7 @@ div.comments i {
 }
 
 #stalker i {
-  font-size: 28px;
-  margin-right: 5px;
+  font-size: 34px;
 }
 
 #stalker a:hover {
