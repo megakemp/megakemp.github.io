@@ -20,6 +20,7 @@ body {
 #topbar {
   margin-top: -63px;
   margin-bottom: 63px;
+  font-weight: 600;
 }
 
 #topbar ul li {
@@ -48,28 +49,30 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #181818;
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
 
 h1.title {
-  font-weight: 800;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 39px;
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 30px;
   line-height: 40px;
 }
 
 h2 {
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 32px;
 }
 
 h3 {
-  font-size: 21px;
-  line-height: 24px;
-  margin: 1em 0;
+  font-size: 23px;
+  line-height: 23px;
+  margin: 1.5em 0 1em;
 }
 
 h1.backdrop {
@@ -393,7 +396,13 @@ p.thumbnail-caption {
 }
 
 #post blockquote {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   border-left: 3px solid {{ site.style.highlight_color }};
+}
+
+#post blockquote p {
+  font-size: 18px;
 }
 
 #post pre {
@@ -411,8 +420,7 @@ p.thumbnail-caption {
 #post code {
   border: 1px solid #ddd;
   background-color: #f8f8f8;
-  font-size: 85%;
-  padding: .3em
+  padding: .2em
 }
 
 #post pre code {
@@ -445,11 +453,12 @@ div.comments i {
 
 .sidebar {
   padding-top: 25px;
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
 }
 
 .sidebar p {
-  font-weight: 200;
+  text-align: left;
 }
 
 .sidebar a {
@@ -457,7 +466,9 @@ div.comments i {
 }
 
 .content {
-  font: 400 16px/22px "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
   border-left: 1px solid #DDD;
   padding-left: 40px;
   padding-top: 25px;
@@ -527,7 +538,6 @@ div.comments i {
 }
 
 i.fa-hn {
-  font-family: "Lato", sans-serif;
   text-align: center;
   font-size: 18px !important;
   position: relative;
