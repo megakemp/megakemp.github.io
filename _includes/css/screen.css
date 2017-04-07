@@ -421,6 +421,7 @@ p.thumbnail-caption {
   margin-left: 1.35em;
 }
 
+.thumbnail-description code,
 #post code {
   border: 1px solid #ddd;
   background-color: #f8f8f8;
