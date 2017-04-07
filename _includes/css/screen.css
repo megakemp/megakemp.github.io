@@ -151,6 +151,11 @@ img {
   margin-right: auto;
 }
 
+p img {
+  display: block;
+  margin: 50px auto;
+}
+
 span.tag-icon {
   color: #555;
   font-size: 70%;
