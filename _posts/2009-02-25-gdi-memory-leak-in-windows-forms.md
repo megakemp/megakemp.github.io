@@ -7,7 +7,6 @@ assets: gdi-memory-leak-in-windows-forms
 excerpt: A while ago I run into a rather interesting and insidious bug, which I thought I would share. The bug manifested itself in a Windows Forms application, occasionally causing it to crash with an "out of memory" error. Little did we know that the hunt would lead us down the dark corners of the Win32 graphics API.
 image: http://megakemp.com/assets/gdi-memory-leak-in-windows-forms/windowslogo.png
 imagesize: contain
-ranking: 4
 ---
 
 A while ago I run into a rather interesting and insidious bug, which I thought I would share.
