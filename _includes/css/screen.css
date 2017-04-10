@@ -402,7 +402,7 @@ p.thumbnail-caption {
 
 #summary {
   font-style: italic;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 
 #post blockquote {
