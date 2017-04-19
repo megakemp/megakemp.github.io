@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -9,6 +9,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="{{ site.style.name }}" />
   <meta name="description" content="The blog of {{ site.style.name }}" />
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
+  {% if page.summary %}
+  <meta property="og:description" content="{{ page.summary }}" />
+  {% endif %}
+  {% if page.image %}
+  <meta property="og:image" content="{{ site.url }}/assets/{{ page.assets }}/{{ page.image }}" />
+  {% endif %}
   <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
 
   <link rel="shortcut icon" href="/favicon.ico">
