@@ -4,6 +4,7 @@ title: What's in a Branch
 date: 2017-04-19
 categories: programming
 assets: what-is-in-a-git-branch
+image: overview.png
 summary: "Regardless of how you choose to track your history, one of the things you often want to know is which commits are in what branch. Sounds easy enough, right? And yet, you wouldn't believe just how cumbersome certain version control systems make answering such a simple question. What I think you'll find even harder to believe, however, is the fact that with Git it's as easy as pie."
 ---
 
