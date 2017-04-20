@@ -9,23 +9,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="{{ site.style.name }}" />
   <meta name="description" content="The blog of {{ site.style.name }}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@ecampidoglio" />
+  <meta name="twitter:title" content="{{ page.title }}" />
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
   {% if page.summary %}
   <meta property="og:description" content="{{ page.summary }}" />
+  <meta name="twitter:description" content="{{ page.summary }}" />
   {% endif %}
   {% if page.image %}
   <meta property="og:image" content="{{ site.url }}/assets/{{ page.assets }}/{{ page.image }}" />
+  <meta name="twitter:image" content="{{ site.url }}/assets/{{ page.assets }}/{{ page.image }}" />
   {% endif %}
   <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
-
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="alternate" type="application/rss+xml" title="megakemp.com" href="http://feeds.feedburner.com/thoughtology?format=xml" />
-
   <link rel="stylesheet" href="/css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,600|Open+Sans:700|Roboto:300|Inconsolata" rel="stylesheet">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css">
-
   {% include analytics.html %}
 
   {% include footnotes.html %}
