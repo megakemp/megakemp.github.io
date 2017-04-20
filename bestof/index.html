@@ -10,7 +10,7 @@ title: Best Of
     {% for post in site.posts %}
       {% if position == post.ranking %}
         <div class="thumbnail-container">
-          <div class="thumbnail-image" style="background-image: url({{ post.image }});{% if post.imagesize %}background-size: {{ post.imagesize }};{% endif %}"></div>
+          <div class="thumbnail-image" style="background-image: url({{ site.url }}/assets/{{ post.assets }}/{{ post.image }});{% if post.imagesize %}background-size: {{ post.imagesize }};{% endif %}"></div>
           <span class="fa-stack fa-lg thumbnail-icon">
             <i class="fa fa-circle fa-stack-2x" style="color: {{ site.style.highlight_color }};"></i>
             <i class="fa fa-stack-1x" style="color: white;">{{ position }}</i>
