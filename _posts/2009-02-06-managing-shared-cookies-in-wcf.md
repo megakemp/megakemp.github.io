@@ -3,6 +3,7 @@ layout: post
 title:  "Managing shared cookies in WCF"
 date:   2009-02-06
 categories: programming .net
+assets: managing-shared-cookies-in-wcf
 excerpt: The ASMX Web Services framework, as obsolete as it may feel, still supports HTTP cookies in the exact same way as you would normally expect. WCF, on the other hand, broke that tradition in the name of a higher level API. This article explains how the two programming models handle cookies and suggests a solution to the problem of sharing a common cookie across multiple Web Service requests.
 image: http://megakemp.files.wordpress.com/2009/02/wcfmessageinspectors.png
 ranking: 4
@@ -15,7 +16,7 @@ One way to overcome the stateless nature of HTTP without putting to much load on
 ### Cookies are opaque in ASMX
 
 Cookies go back a long time in the history of HTTP, and have served the Internet (fairly) well so far. Sure they brought some serious security issues with them, but for the most part they have been a conventient way for developers of web sites/web  applications to save temporary pieces of information off the server and have it transparently sent back by the client with each request.
-This guarantee comes from the fact <img alt="AsmxWs" src="http://megakemp.files.wordpress.com/2009/02/asmxws-thumb.jpg?w=80&h=93" class="article" /> that every web browser on Earth has had the notion of cookies since web browser have had built-in support for cookies for the last 15 years or so.    
+This guarantee comes from the fact <img alt="AsmxWs" src="{{ site.url }}/assets/{{ page.assets }}/asmxws-thumb.jpg" class="article" /> that every web browser on Earth has had the notion of cookies since web browser have had built-in support for cookies for the last 15 years or so.    
 
 However, when it comes to web services, this assumption is no longer valid, since the client isn’t necessarily a web browser and doesn’t have to know how to handle cookies.
 
@@ -121,7 +122,7 @@ In situations were cookies must be managed in the same way for all web services 
 
 Message inspectors provide a hook in the WCF messaging pipeline offering the chance to look at and possibly modify all incoming or outgoing messages that transit on the server-side as well as on the client-side. The inspectors that are registered with the WCF runtime receive the messages before they are passed on to the application or sent to the wire, depending on whether it is an incoming or outgoing message.
 
-<img alt="WcfMessageInspectors" src="http://megakemp.files.wordpress.com/2009/02/wcfmessageinspectors.png?w=500&h=88" class="screenshot-noshadow" />
+<img alt="WcfMessageInspectors" src="{{ site.url }}/assets/{{ page.assets }}/wcfmessageinspectors.png" class="screenshot-noshadow" />
 
 This way, it is possible to catch all HTTP responses coming from the web server, extract any cookies contained within the messages, and manually inject them in all subsequent HTTP requests on their way out. Here is a simplified view of the solution:
 
