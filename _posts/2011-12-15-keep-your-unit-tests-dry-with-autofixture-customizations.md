@@ -5,7 +5,7 @@ date:   2011-12-15
 categories: programming autofixture
 assets: keep-your-unit-tests-dry-with-autofixture-customizations
 excerpt: When I first incorporated AutoFixture as part of my daily unit testing workflow, I noticed how a consistent usage pattern had started to emerge. Multiple tests shared the same context, which had to be initialized in exactly the same way over and over again. Luckily, AutoFixture customizations offer an elegant way out of this unnecessary duplication.
-image: http://megakemp.com/assets/keep-your-unit-tests-dry-with-autofixture-customizations/autofixturelogo.png
+image: autofixturelogo.png
 ranking: 5
 ---
 

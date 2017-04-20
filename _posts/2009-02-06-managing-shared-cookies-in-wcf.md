@@ -5,7 +5,7 @@ date:   2009-02-06
 categories: programming .net
 assets: managing-shared-cookies-in-wcf
 excerpt: The ASMX Web Services framework, as obsolete as it may feel, still supports HTTP cookies in the exact same way as you would normally expect. WCF, on the other hand, broke that tradition in the name of a higher level API. This article explains how the two programming models handle cookies and suggests a solution to the problem of sharing a common cookie across multiple Web Service requests.
-image: http://megakemp.files.wordpress.com/2009/02/wcfmessageinspectors.png
+image: wcfmessageinspectors.png
 ranking: 4
 ---
 

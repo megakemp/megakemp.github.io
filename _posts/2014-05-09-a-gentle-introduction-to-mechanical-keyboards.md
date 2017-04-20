@@ -6,7 +6,7 @@ categories: mechanical-keyboards
 assets:  a-gentle-introduction-to-mechanical-keyboards
 summary: "The past few of years have seen a renaissance for mechanical keyboards, especially among two large groups of computer enthusiasts: programmers and gamers. I, too, share a passion for these wonderful pieces of hardware that goes way back. A quick search on the Internet reveals <a href=\"http://www.google.com/search?q=mechanical+keyboard\">a wealth of web sites</a> entirely dedicated to the subject. Unfortunately, most of the information in them is too \"nerdy\" for someone who's approaching it for the first time. In this post I'd like to give a gentle introduction to the world of mechanical keyboards for the curious, but uninitiated."
 excerpt: "The past few of years have seen a renaissance for mechanical keyboards, especially among two large groups of computer enthusiasts: programmers and gamers. I, too, share a passion for these wonderful pieces of hardware that goes way back."
-image: http://megakemp.com/assets/a-gentle-introduction-to-mechanical-keyboards/mechanicalswitch.jpg
+image: mechanicalswitch.jpg
 ranking: 2
 ---
 
