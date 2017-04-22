@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Enrico Campidoglio
+assets: speaking
 redirect_from: /tag/speaking/
 ---
 
@@ -25,40 +26,87 @@ redirect_from: /tag/speaking/
     Here's a list of podcasts I have been a guest on:
   </p>
 
-  <h4>.NET Rocks! 1079: <a href="https://www.dotnetrocks.com/?show=1079" target="_blank">Databases in Continuous Delivery</a></h4>
+  <h4>.NET Rocks! 1079 — <a href="https://www.dotnetrocks.com/?show=1079" target="_blank"><i class="fa fa-microphone" aria-hidden="true"></i> Databases in Continuous Delivery</a></h4>
   <p>While I was at NDC London 2014, I spoke to Carl and Richard about including
   relational databases in the Continuous Delivery process. I had a lot of fun
   doing this episode and we even managed to squeeze in a few words about vintage
   computers — I couldn't have asked for more.</p>
 
-  <h4>.NET Rocks! 1082: <a href="https://www.dotnetrocks.com/?show=1082" target="_blank">State of DevOps in .NET at NDC London</a></h4>
-  <p>This episode was a panel discussion recorded live in front of an audience at NDC London
+  <h4>.NET Rocks! 1082 — <a href="https://www.dotnetrocks.com/?show=1082" target="_blank"><i class="fa fa-microphone" aria-hidden="true"></i> State of DevOps in .NET at NDC London</a></h4>
+  <p>This episode was a panel discussion <a href="https://vimeo.com/113632392">recorded live</a> in front of an audience at NDC London
   2014. The topic was the presence of the DevOps culture among .NET developers.
   During the discussion we also shared our experiences with implementing Continuous Delivery in .NET projects. The panel consisted of Ben Hall, Peter Mounce, Jeff French and myself.</p>
 
   <hr />
 
   <h2>Presentations</h2>
-  <p>Here's a selection of some of the most popular presentations that I've been
-  giving during the past few years. In each of them you'll find the
-  <em>slides</em> and <em>demo material</em>. If they've ever been recorded, I'll put up a link to the <em>video</em> as well.
-  {% for post in site.posts %}
-  {% if post.categories contains 'speaking' %}
-  <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+  <p>Here's a selection of some of my most popular presentations from recent years. I linked to the <em>slides</em> and <em>demo material</em> as they were available. If a talk was recorded, I made sure to up a link to the <em>video</em> as well.</p>
+
+  <h4>The Things Git Can Do — <a href="https://vimeo.com/171317261"><i class="fa fa-play-circle" aria-hidden="true"></i> NDC Oslo 2016</a> <a href="https://vimeo.com/163822148"><i class="fa fa-play-circle" aria-hidden="true"></i> WROC# 2016</a></h4>
   <p class="thumbnail-caption">
-    {% if post.video %}
-    <iframe src="{{ post.video }}"
-            class="video thumbnail"
-            width="160"
-            height="90"
-            frameborder="0"
-            webkitallowfullscreen
-            mozallowfullscreen
-            allowfullscreen>
-    </iframe>
-    {% endif %}
-    {{ post.excerpt | strip_html | replace:':','.' }}
+    <a href="https://vimeo.com/171317261">
+      <img src="{{ site.url }}/assets/{{ page.assets }}/ndcoslo2016-enricocampidoglio-preview.png"
+          class="thumbnail-video" />
+    </a>
+    In this talk, I demonstrate exactly what Git can do for you that none of the GUI tools ever tells you about. Moving chunks of commits between branches in a single command, <a href="{{ site.url }}/2014/08/14/the-importance-of-a-good-looking-history/">custom history visualizations</a> and <a href="{{ site.url }}/2016/08/25/git-undo/">data recovery</a> are only some of the things I demonstrate, all 100% from the command line. If you're using Git through a GUI, you're missing out and in this talk I show you why.
   </p>
-  {% endif %}
-  {% endfor %}
+
+  <h4>Testing with No Harm — <a href="https://vimeo.com/154312751"><i class="fa fa-play-circle" aria-hidden="true"></i> NDC London 2016</a></h4>
+  <p class="thumbnail-caption">
+    <a href="https://vimeo.com/154312751">
+      <img src="{{ site.url }}/assets/{{ page.assets }}/ndclondon2016-enricocampidoglio-preview.png"
+          class="thumbnail-video" />
+    </a>
+    In this talk, I explore the question of whether creating automated tests inhibits good design by looking at the trade-offs we are often faced with when we want to make our code testable. We look at techniques like BDD and Specification by Example and see how they use tests as a way to lead the design to fit its purpose. We also look at the balance between unit tests, integration tests and end-to-end tests in order to decouple our tests from the internal structure of the system. All to achieve the honorable goal of testing with no harm done.
+  </p>
+
+  <h4>Databases: The Elephant in the CD Room — <a href="https://vimeo.com/113594256"><i class="fa fa-play-circle" aria-hidden="true"></i> NDC London 2014</a></h4>
+  <p class="thumbnail-caption">
+    <a href="https://vimeo.com/113594256">
+      <img src="{{ site.url }}/assets/{{ page.assets }}/ndclondon2014-enricocampidoglio-preview.png"
+          class="thumbnail-video" />
+    </a>
+    In this talk, I look at the challenges of continuously deploying a SQL database. I explore issues such as packaging and versioning, handling schema changes, migrating data and recovery. What tools do we have at our disposal? What strategies can we put in place to prevent us from having to bang our heads against the wall when something goes wrong?
+  </p>
+
+  <h4>Testing the Essential with AutoFixture — <a href="https://vimeo.com/108441213"><i class="fa fa-play-circle" aria-hidden="true"></i> Leetspeak 2014</a></h4>
+  <p class="thumbnail-caption">
+    <a href="https://vimeo.com/108441213">
+      <img src="{{ site.url }}/assets/{{ page.assets }}/leetspeak2014-enricocampidoglio-preview.png"
+          class="thumbnail-video" />
+    </a>
+    In this talk, I show you how to get rid of dummy values in your tests by leveraging <a href="{{ site.url }}/2011/09/06/behavior-changes-in-autofixture-2-2-anonymous-numbers/">anonymous test data</a>. By using a library like <a href="https://github.com/AutoFixture/AutoFixture">AutoFixture</a> to runtime-generate test data that meets your requirements, you can free yourself from having to write a lot of boilerplate setup code in your tests, leaving them to contain just the essence of what is being tested. It'll also makes them more robust, since they no longer rely on hard coded constants to determine their outcome.
+  </p>
+
+  <h4>Why No Code Reviews? — <a href="https://vimeo.com/97505680"><i class="fa fa-play-circle" aria-hidden="true"></i> NDC Oslo 2014</a> <a href="https://youtu.be/xd9n83yOmiY"><i class="fa fa-play-circle" aria-hidden="true"></i> DevDay 14</a></h4>
+  <p class="thumbnail-caption">
+    <a href="https://vimeo.com/97505680">
+      <img src="{{ site.url }}/assets/{{ page.assets }}/ndcoslo2014-enricocampidoglio-preview.png"
+          class="thumbnail-video" />
+    </a>
+    In this talk, I explore the social and practical reasons why code reviews aren't as widely adopted in modern software development shops as they should be. We look at a few concrete tools and techniques that teams can put in place to help them overcome the most common road blocks. In the end, we'll see how code reviews help peers leverage each other's knowledge and skills to ensure their work is as good as it can possibly be.
+  </p>
+
+  <h4>BDD All the Way Down — <a href="http://gotocon.com/aarhus-2013/presentation/BDD%20all%20the%20way%20down">GOTO Aarhus 2013</a> <a href="https://youtu.be/zMX588nshao"><i class="fa fa-play-circle" aria-hidden="true"></i> Foo Café</a> <a href="{{ site.url }}/2014/04/24/bdd-all-the-way-down/"><i class="fa fa-pencil" aria-hidden="true"></i> Blog</a></h4>
+  <p class="thumbnail-caption">
+    <a href="https://youtu.be/zMX588nshao">
+      <img src="{{ site.url }}/assets/{{ page.assets }}/foocafe-enricocampidoglio-preview.jpg"
+          class="thumbnail-video" />
+    </a>
+    In this talk, I show how to apply the Behavior Driven Development (BDD) cycle when developing a feature from top to bottom in a fictitious .NET web application. Building on the concepts of Test Driven Development, I demonstrate how BDD helps you <a href="{{ site.url }}/2014/04/24/bdd-all-the-way-down/">produce tests that read like specifications</a>, by forcing you to focus on what the system is supposed to do, rather than how it’s implemented.
+  </p>
+
+  <h4>Grokking Git by Seeing It — <a href="https://vimeo.com/52633764"><i class="fa fa-play-circle" aria-hidden="true"></i> Leetspeak 2012</a> <a href="{{ site.url }}/2013/01/22/grokking-git-by-seeing-it/"><i class="fa fa-pencil" aria-hidden="true"></i> Blog</a></h4>
+  <p class="thumbnail-caption">
+    <a href="https://vimeo.com/52633764">
+      <img src="{{ site.url }}/assets/{{ page.assets }}/leetspeak2012-enricocampidoglio-preview.png"
+          class="thumbnail-video" />
+    </a>
+    In this talk, I teach you the Git zen from the inside out. Working out of real world scenarios, I walk you through Git’s core concepts and building blocks, building our way up to more advanced features. And I do it by showing you graphically what happens under the covers every time you fire a Git command. It’s my belief that this kind of deep understanding of Git’s inner workings is the key to unlock its true power: taking control of your history.
+  </p>
+
+  <h4>Make Your System Admin Friendly with Powershell — <a href="{{ site.url }}/2012/08/30/make-your-system-administrator-friendly-with-powershell/"><i class="fa fa-pencil" aria-hidden="true"></i> Blog</a></h4>
+  <p class="thumbnail-caption">
+    In this talk, I show you how to enhance an existing .NET web application with a set of administrative tools, built using the PowerShell programming model. Once that is in place, I demonstrate how common maintenance tasks can either be performed manually using a traditional GUI or be fully automated through PowerShell scripts using the same code base.
+  </p>
 </div>

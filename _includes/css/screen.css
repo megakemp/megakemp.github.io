@@ -103,6 +103,12 @@ h1.backdrop.speaking {
   padding-right: 25px;
 }
 
+h4 a {
+  display: inline-block;
+  font-size: 95%;
+  margin-right: 5pt;
+}
+
 ul {
   margin: 1em 0;
   list-style: disc;
@@ -275,16 +281,12 @@ nav hr {
   max-width: 95%;
 }
 
-.video {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  box-shadow: 0 0 10px 0 rgba(0,0,0,0.8);
-}
-
-.video.thumbnail {
+.thumbnail-video {
   float: right;
+  margin-top: 7px;
+  margin-bottom: 7px;
   margin-left: 3.5%;
-  margin-top: 0.5%;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.8);
 }
 
 p.thumbnail-caption {

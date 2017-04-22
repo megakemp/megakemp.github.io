@@ -48,6 +48,9 @@
 	.thumbnail-image {
 		display: none;
 	}
+	.thumbnail-video {
+		display: none;
+	}
 	.thumbnail-container {
 		height: 100%;
 	}
