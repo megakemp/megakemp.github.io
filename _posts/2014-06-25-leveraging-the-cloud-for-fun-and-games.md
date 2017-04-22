@@ -135,11 +135,11 @@ Salvation came in the form of a meticulously crafted script, designed to take ca
 <div class="note">
 <p>
 <i class="fa fa-gears fa-2x pull-left"></i>
-Thanks to <a href="https://twitter.com/dangibbsuk">Daniel Gibbs</a>' hard work, I could use his fabulous <a href="http://danielgibbs.co.uk/scripts/csgoserver"><strong>csgoserver script</strong></a> to install, configure and, above all, manage our CS:GO Dedicated Server without pain.
+Thanks to <a href="https://twitter.com/dangibbsuk">Daniel Gibbs</a>' hard work, I could use his fabulous <a href="https://gameservermanagers.com/lgsm/csgoserver/"><strong>csgoserver script</strong></a> to install, configure and, above all, manage our CS:GO Dedicated Server without pain.
 </p>
 </div>
 
-You can find a detailed description how to use the **csgoserver** [up on his site](http://danielgibbs.co.uk/scripts/csgoserver/), so I'm just gonna report how I configured it to suit our deathmatch needs.
+You can find a detailed description how to use the **csgoserver** [up on his site](https://gameservermanagers.com/lgsm/csgoserver/), so I'm just gonna report how I configured it to suit our deathmatch needs.
 
 <img src="{{ site.url }}/assets/{{ page.assets }}/csds-shell.png"
      alt="The status of the CS:GO Dedicated server as reported by csgoserver"
