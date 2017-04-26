@@ -58,5 +58,5 @@ Even if 3Dfx no longer exist as a company, it effectively placed a landmark in t
 [6]: http://www.gamers.org/dEngine/xf3D/glide/glidepgm.htm
 [7]: http://www.opengl.org/
 [8]: http://msdn.microsoft.com/en-us/directx/default.aspx
-[11]: http://www.sudhian.com/index.php?/articles/show/3dfx_voodoo_5_6000_review/conspiracy_theories_cont
+[11]: http://www.sharkyforums.com/showthread.php?72576-An-excellent-commentary-on-what-happened-to-3Dfx
 [12]: http://www.x86-secret.com/articles/divers/v5-6000/letter_to_customers.htm
