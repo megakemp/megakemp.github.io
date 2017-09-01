@@ -1,4 +1,10 @@
 <div id="stalker">
+  {% if site.style.social.twitter %}
+  <a title="{{ site.style.social.twitter }} on Twitter" href="https://twitter.com/{{ site.style.social.twitter }}">
+    <i class="fa fa-twitter-square"></i>
+  </a>
+  {% endif %}
+
   {% if site.style.social.github %}
   <a title="{{ site.style.social.github }} on Github" href="https://github.com/{{ site.style.social.github }}">
     <i class="fa fa-github-square"></i>
@@ -29,12 +35,6 @@
   {% if site.style.social.stackoverflow %}
   <a title="{{ site.style.name }} on Stack Overflow" href="http://stackoverflow.com/users/{{site.style.social.stackoverflow }}">
     <i class="fa fa-stack-overflow"></i>
-  </a>
-  {% endif %}
-
-  {% if site.style.social.twitter %}
-  <a title="{{ site.style.social.twitter }} on Twitter" href="https://twitter.com/{{ site.style.social.twitter }}">
-    <i class="fa fa-twitter-square"></i>
   </a>
   {% endif %}
 
