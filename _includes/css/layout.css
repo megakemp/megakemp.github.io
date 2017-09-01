@@ -76,6 +76,9 @@
         h1.backdrop {
 		line-height: 168px;
         }
+	span.hide {
+		display: none;
+	}
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
