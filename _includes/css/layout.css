@@ -45,6 +45,9 @@
 		border: 0px;
 		padding-left: 0px;
 	}
+	.thumbnail-article {
+		display: none;
+	}
 	.thumbnail-image {
 		display: none;
 	}

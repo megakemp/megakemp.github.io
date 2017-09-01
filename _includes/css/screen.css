@@ -289,6 +289,19 @@ nav hr {
   box-shadow: 0 0 10px 0 rgba(0,0,0,0.8);
 }
 
+.thumbnail-article {
+  float: right;
+  width: 190px;
+  height: 120px;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 3.5%;
+  margin-top: 6px;
+  margin-bottom: 7px;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.8);
+}
+
 p.thumbnail-caption {
   font-size: 95%;
   margin-bottom: 3%;
