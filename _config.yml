@@ -41,4 +41,4 @@ style:
   google_analytics_property_name: megakemp.com
 
   # Toggle "Postings are my own" disclaimer in footer
-  show_disclaimer: true
+  show_disclaimer: false
