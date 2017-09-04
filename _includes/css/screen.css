@@ -97,6 +97,12 @@ h1.backdrop.about {
   background-image: url(/assets/about/backdrop.jpg);
 }
 
+h1.backdrop.offering {
+  background-image: url(/assets/offering/backdrop.jpg);
+  text-align: right;
+  padding-right: 30px;
+}
+
 h1.backdrop.bestof {
   background-image: url(/assets/bestof/backdrop.jpg);
   margin-bottom: 5%;
