@@ -432,13 +432,13 @@ p.thumbnail-caption {
   padding-bottom: 0.5em;
 }
 
-#post blockquote {
+#home blockquote, #post blockquote {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   border-left: 3px solid {{ site.style.highlight_color }};
 }
 
-#post blockquote p {
+#home blockquote p, #post blockquote p {
   font-size: 18px;
 }
 
