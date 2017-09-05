@@ -169,6 +169,10 @@ span.tag-icon {
   text-shadow: 0 1px 0 rgba(255,255,255,0.8);
 }
 
+span.nowrap {
+  display: inline-block;
+}
+
 ul.posts.tag-posts {
   margin-left: 6%;
 }
