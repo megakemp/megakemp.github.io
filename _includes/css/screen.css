@@ -526,6 +526,11 @@ div.comments i {
   color: {{ site.style.highlight_color }};
 }
 
+#home h2 span.subtitle {
+  color: #555;
+  font-size: 75%;
+}
+
 #logo {
   display: block;
   width: 100px;
