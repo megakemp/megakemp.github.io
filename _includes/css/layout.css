@@ -30,6 +30,12 @@
         h1.backdrop {
 		line-height: 285px;
         }
+        #stalker i {
+		font-size: 30px;
+        }
+        #stalker a {
+		width: 36px;
+        }
 }
 
 /* All Mobile Sizes (devices and browser) */
