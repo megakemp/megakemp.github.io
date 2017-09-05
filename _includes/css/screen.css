@@ -203,6 +203,14 @@ ul.posts p {
   margin-left:115px;
 }
 
+#home ul {
+  margin-left: 20px;
+}
+
+#home li {
+  line-height: 23px;
+}
+
 .meta {
   color: #aaa;
   margin: 0 0 10px 0;
