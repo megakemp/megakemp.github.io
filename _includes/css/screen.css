@@ -103,6 +103,13 @@ h1.backdrop.speaking {
   padding-right: 25px;
 }
 
+h1.backdrop.git {
+  background-image: url(/assets/git/backdrop.png);
+  text-align: right;
+  padding-right: 30px;
+  font-size: 218%;
+}
+
 h4 a {
   display: inline-block;
   font-size: 95%;
