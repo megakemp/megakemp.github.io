@@ -44,6 +44,10 @@
 	nav { position: relative; }
 	nav ul,
 	#logo { text-align: left; }
+        #topbar ul li {
+		margin-left: 15px;
+		font-size: 93%;
+	}
 	.sidebar {
 		display: none;
 	}
