@@ -19,11 +19,11 @@
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	nav {
-		width: 160px; }
+		width: 160px;
+	}
 	.sidebar h2 {
 		font-size: 18px;
 	}
-
 	.sidebar ul {
 		font-size: 14px;
 	}
