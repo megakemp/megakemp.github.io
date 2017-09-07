@@ -20,7 +20,9 @@ title: Best Of
             <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
           </div>
         </div>
+        {% unless position == 5 %}
         <hr class="thumbnail-separator" />
+        {% endunless %}
       {% endif %}
     {% endfor %}
   {% endfor %}
