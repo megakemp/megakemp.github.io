@@ -445,8 +445,13 @@ p.thumbnail-caption {
   border-left: 3px solid {{ site.style.highlight_color }};
 }
 
-#home blockquote p, #post blockquote p {
+#post blockquote p {
   font-size: 18px;
+}
+
+#home blockquote p {
+  font-size: 20px;
+  margin: 25px auto;
 }
 
 #post pre {
