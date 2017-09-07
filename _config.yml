@@ -2,7 +2,7 @@ name: Enrico Campidoglio
 description: The blog of Enrico Campidoglio
 markdown: kramdown
 highlighter: rouge
-url: http://megakemp.com
+url: https://megakemp.com
 permalink: /:year/:month/:day/:title/
 paginate: 5
 paginate_path: blog/page:num
