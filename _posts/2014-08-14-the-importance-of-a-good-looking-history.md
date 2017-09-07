@@ -191,7 +191,7 @@ and in its desktop clients:
     <span class="caption">...and in GitHub for Windows</span>
 </p>
 
-But what if you prefer to use Git from the command line, the way [it should be](http://megakemp.com/2013/01/22/grokking-git-by-seeing-it)?
+But what if you prefer to use Git from the command line, the way [it should be](/2013/01/22/grokking-git-by-seeing-it)?
 
 Easy. You write a shell script that gets triggered by [Git's client side hooks](http://git-scm.com/book/en/Customizing-Git-Git-Hooks) every time you're about to do a commit. In that script, you make sure the message is formatted according to the rules.
 

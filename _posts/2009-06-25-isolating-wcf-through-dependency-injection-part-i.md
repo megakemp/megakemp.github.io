@@ -167,4 +167,4 @@ In my [next post][10] I will explain a way to modify this sample to be able to w
 [7]: http://blogs.msdn.com/wenlong/default.aspx
 [8]: http://blogs.msdn.com/wenlong/archive/2007/10/27/performance-improvement-of-wcf-client-proxy-creation-and-best-practices.aspx
 [9]: http://www.codeplex.com/unity
-[10]: http://megakemp.com/2009/07/02/isolating-wcf-through-dependency-injection-part-ii/
+[10]: /2009/07/02/isolating-wcf-through-dependency-injection-part-ii/

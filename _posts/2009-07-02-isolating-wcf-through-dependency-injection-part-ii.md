@@ -184,7 +184,7 @@ This concludes this short series of posts on how to apply Dependency Injection t
 
 /Enrico
 
-[1]: http://megakemp.com/2009/06/25/isolating-wcf-through-dependency-injection-part-i/
+[1]: /2009/06/25/isolating-wcf-through-dependency-injection-part-i/
 [2]: http://www.martinfowler.com/bliki/TestDouble.html
 [3]: http://msdn.microsoft.com/en-us/library/ms576132.aspx
 [4]: http://msdn.microsoft.com/en-us/library/ms405876.aspx

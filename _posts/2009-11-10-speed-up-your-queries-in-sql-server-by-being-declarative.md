@@ -162,7 +162,7 @@ Hope this helps.
 
 /Enrico
 
-[1]: http://megakemp.com/2009/09/04/improving-performance-with-generic-delegates-in-net/
+[1]: /2009/09/04/improving-performance-with-generic-delegates-in-net/
 [2]: http://www.microsoft.com/sqlserver/2008/en/us/default.aspx
 [4]: http://en.wikipedia.org/wiki/Stored_procedure
 [5]: http://en.wikipedia.org/wiki/Transact-SQL

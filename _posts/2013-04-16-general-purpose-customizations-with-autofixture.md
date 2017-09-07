@@ -251,7 +251,7 @@ When such opportunity arises, it’s often a good idea to separate out the parts
 
 [1]: https://github.com/AutoFixture/AutoFixture
 [2]: http://www.google.com/search?q=AutoFixture%2Bcustomizations
-[3]: http://megakemp.com/2011/12/15/keep-your-unit-tests-dry-with-autofixture-customizations
+[3]: /2011/12/15/keep-your-unit-tests-dry-with-autofixture-customizations
 [5]: https://xunit.codeplex.com
 [6]: http://blog.ploeh.dk/2010/10/08/AutoDataTheorieswithAutoFixture
 [7]: http://stackoverflow.com/a/9110623/26396
