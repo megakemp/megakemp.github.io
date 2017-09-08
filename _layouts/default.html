@@ -33,20 +33,22 @@
   {% include footnotes.html %}
 </head>
 <body>
+  <nav class="topbar" role="navigation">
+    <ul>
+      <li role="presentation"><a href="/about">about</a></li>
+      <span class="hide"><li role="presentation"><a href="/git">git</a></li></span>
+      <li role="presentation"><a href="/">blog</a></li>
+      <li role="presentation"><a href="/bestof">best of</a></li>
+      <li role="presentation"><a href="/speaking">speaking</a></li>
+    </ul>
+  </nav>
+
   <div class="container">
     <div class="four columns sidebar">
       {% include sidebar.html %}
     </div>
 
     <div class="eleven columns content">
-      <div id="topbar">
-        <ul>
-          <li><a href="/speaking">speaking</a></li>
-          <li><a href="/bestof">best of</a></li>
-          <li><a href="/">blog</a></li>
-          <li><a href="/about">about</a></li>
-        </ul>
-      </div>
       {{ content }}
 
       <div class="footer">

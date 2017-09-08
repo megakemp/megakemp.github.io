@@ -7,6 +7,17 @@
 * 8/17/2011
 */
 
+/* Big Tablet Portrait size to Tablet Landscape (devices and browsers) */
+@media only screen and (min-width: 959px) and (max-width: 1024px) {
+        .topbar {
+		padding-left: 28%;
+		padding-right: 6%;
+	}
+        .topbar ul li {
+		margin-left: 30px;
+	}
+}
+
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
 	#logo {
@@ -18,7 +29,14 @@
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-	nav {
+        .topbar {
+		padding-left: 29%;
+		padding-right: 4%;
+	}
+        .topbar ul li {
+		margin-left: 20px;
+	}
+	.sidebar {
 		width: 160px;
 	}
 	.sidebar h2 {
@@ -41,12 +59,12 @@
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
 	header h1 { font-size: 34px; line-height: 37px; }
-	nav { position: relative; }
-	nav ul,
-	#logo { text-align: left; }
-        #topbar ul li {
-		margin-left: 15px;
-		font-size: 93%;
+        .topbar {
+		padding-left: 19%;
+		padding-right: 20%;
+	}
+        .topbar ul li {
+		margin-left: 20px;
 	}
 	.sidebar {
 		display: none;
@@ -112,6 +130,14 @@
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
+	.topbar {
+		padding-left: 0%;
+		padding-right: 3%;
+	}
+	.topbar ul li {
+                font-size: 105%;
+                margin-left: 10px;
+	}
 	.sidebar {
 		display: none;
 	}
