@@ -15,7 +15,7 @@ Before I tell you all about querying the state of your branches, let's back up f
 
 Consider this graph:
 
-![Directed acyclic graph]({{ site.url }}/assets/{{ page.assets }}/graph.png)
+<img class="screenshot-noshadow" alt="Directed acyclic graph" src="{{ site.url }}/assets/{{ page.assets }}/graph.png"/>
 
 What you're seeing here is a [_directed acyclic graph_](https://en.wikipedia.org/wiki/Directed_acyclic_graph): a fancy name used to describe a group of nodes (_graph_) where the edges point to a certain direction (_directed_) and never loop back on themselves (_acyclic_).
 
@@ -25,7 +25,7 @@ In Git's parlance, each node represents a _commit_ and each commit has exactly o
 
 So far, so good. Now let's add one more piece of information to the mix:
 
-![Branch]({{ site.url }}/assets/{{ page.assets }}/branch.png)
+<img class="screenshot-noshadow" alt="Branch" src="{{ site.url }}/assets/{{ page.assets }}/branch.png"/>
 
 See that `master` label? That's a _branch_. Branches are simply [_references_](https://git-scm.com/docs/gitglossary#gitglossary-aiddefrefaref) that point to specific commits. In fact, a branch is a _41 bytes_ text file that contains the ID of the commit it references. Don't believe me? Try running this command in the root of your repository:[^1]
 
@@ -60,7 +60,7 @@ Now that we have a good mental model for thinking about history, we can talk abo
 
 Imagine we have a history that looks like this:
 
-![Fork]({{ site.url }}/assets/{{ page.assets }}/fork.png)
+<img class="screenshot-noshadow" alt="Fork" src="{{ site.url }}/assets/{{ page.assets }}/fork.png"/>
 
 Here, we have two branches named `master` and `feature` that diverge on commit `B`. We can immediately observe two things at first glance:
 
@@ -100,7 +100,7 @@ fa77581 D
 
 This literally means: show me the commits that are _not reachable_ from the first reference in the range (`master`) but that _are reachable_ from the second reference (`feature`). The results is commits `E` and `D`:
 
-![Reachable from feature]({{ site.url }}/assets/{{ page.assets }}/unmerged-right.png)
+<img class="screenshot-noshadow" alt="Reachable from feature" src="{{ site.url }}/assets/{{ page.assets }}/unmerged-right.png"/>
 
 Observe what happens when we switch places between the two branch references:
 
@@ -111,7 +111,7 @@ git log --oneline feature..master
 
 That's right, we get commit `C`, that is the commit _not reachable_ from `feature` but _reachable_ from `master`:
 
-![Reachable from master]({{ site.url }}/assets/{{ page.assets }}/unmerged-left.png)
+<img class="screenshot-noshadow" alt="Reachable from master" src="{{ site.url }}/assets/{{ page.assets }}/unmerged-left.png"/>
 
 This expression is so useful that I even made an [alias](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases) for it:
 
@@ -133,7 +133,7 @@ If your workflow involves a lot of merge commits (like [GitFlow](http://nvie.com
 
 To answer that, let's consider our two sample branches; this time, we're going to merge feature `feature` into `master`:
 
-![Merged feature into master]({{ site.url }}/assets/{{ page.assets }}/merged-before.png)
+<img class="screenshot-noshadow" alt="Merged feature into master" src="{{ site.url }}/assets/{{ page.assets }}/merged-before.png"/>
 
 Let's play a bit of [Jeopardy](https://en.wikipedia.org/wiki/Jeopardy!)[^4]: if the answer is commits `E` and `D`, what's the Git command? Remember, we don't have a pretty graph to look at; all we have is the console and the concept of _reachability_ that we talked about before. Give it some thought. Can you guess it?
 
@@ -152,7 +152,7 @@ fa77581 D
 
 This is saying: show me the commits that are _not reachable_ from the first parent of the merge commit `M` (that is `C`) but that _are reachable_ from `M`.
 
-![What was merged into master]({{ site.url }}/assets/{{ page.assets }}/merged-after.png)
+<img class="screenshot-noshadow" alt="What was merged into master" src="{{ site.url }}/assets/{{ page.assets }}/merged-after.png"/>
 
 As you would expect, we get back `M` itself followed by `E` and `D`, that is the commits merged into `master` 🎉
 
