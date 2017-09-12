@@ -14,6 +14,7 @@
   <meta name="twitter:title" content="{{ page.title }}" />
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
+  <meta property="og:type" content="article" />
   {% if page.excerpt %}
   <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
   <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
