@@ -2,7 +2,7 @@
 layout: post
 title: On Being a Good .NET Developer
 date: 2016-06-20
-categories: programming
+categories: musings
 ---
 
 While reading [Rob Ashton](https://twitter.com/RobAshton)'s thought-provoking piece titled "[_Why you can't be a good .NET developer_](http://codeofrob.com/entries/why-you-cant-be-a-good-.net-developer.html)" over my morning cappuccino the other day, for the first few paragraphs I found myself nodding in agreement.
