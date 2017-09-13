@@ -16,17 +16,17 @@ If you'd like to hear the background story, read on. If, instead, you're more in
 
 ## Background Story
 
-Sharing information has always been a passion of mine. In high-school, I remember taking every opportunity to tell my friends the latest facts about one of my favorite subjects.[^1] Normally, I would get about five minutes before someone would change the subject, and that was OK. But every once in a while, I managed to capture someone's attention. I could see it in their eyes that they wanted to know more. I remember thinking how that was a precious moment — a rare opportunity to share with someone something I knew very well — and that I had to treat that chance with respect or there would be no others.
+Sharing information has always been a passion of mine. In high-school, I remember taking every opportunity to tell my friends the latest facts about one of my favorite subjects.[^1] Normally, I would get about five minutes before someone would change the subject, and that was OK. But every once in a while, I managed to capture someone's attention. I could see it in their eyes that they wanted to know more. I remember thinking how that was a precious moment — a rare opportunity to share with someone something I knew very well — and I had to treat that chance with respect or there would be no others.
 
 ### Teaching
 
-Fast-forward ten years. I'm in a classroom in front of twenty students. I had just accepted an assignment in a continuing education school in Malmö. Those twenty people were waiting for me to teach them Linux. It was frightening but I enjoyed every bit of that experience! By the end of the semester, I knew what I wanted to do.
+Fast-forward ten years. I'm in a classroom in front of twenty students. I had just accepted an assignment in a continuing education school in Malmö and those twenty people were waiting for me to teach them Linux. It was frightening but I enjoyed every bit of that experience! By the end of the semester, I knew what I wanted to do.
 
 But teaching wasn't my main occupation. I was a consultant and my time was spent developing software for my clients. Don't get me wrong — I _loved my job_ and still do. Occasionally, I would be lucky enough to teach an internal course at a client for a few days, which was grand. But those assignments were few and far between. Nevertheless, I loved teaching and the feedback I got motivated me to hold on to it.
 
 ### Speaking
 
-In 2011, I started doing talks at conferences and user group meetings. In the beginning, I would only speak at local events in the Malmö and Copenhagen area but, soon enough, I expanded to international conferences around Europe. I had found another outlet for doing what I love, which was great, but it still wasn't part of my day job. I could only devote to it my spare time.
+In 2011, I started doing talks at conferences and user group meetings. In the beginning, I would only speak at local events in the Malmö and Copenhagen area but, soon enough, I expanded to international conferences around Europe. I had found another outlet for doing what I love, which was great, but it still wasn't part of my day job. My spare time was all I could give it.
 
 ### tretton37
 
@@ -57,11 +57,11 @@ I am grateful for my time at tretton37 — they're a talented group of people wi
 
 ## What's Next
 
-Basically, I'm going to work on the same things I did before, only instead of doing them in my spare time, I made them my day job.
+Basically, I'm going to be working on the same things I did before in my spare time, only now they _are_ my day job.
 
 I'll continue to make courses for Pluralsight.[^2] I'll also be doing [on-site training][9] with presentations and [workshops][10].
 
-In addition to that, I'll be offering a new service which combines education and productivity. I call it [_teaching by doing_][11]. You can read more about that in my [offering page][11], if you're interested.
+In addition to that, I'll be offering a new service which combines education with productivity: I call it [_teaching by doing_][11]. You can read more about that in my [offering page][11], if you're interested.
 
 That's all for now. If you've made it this far, thank you for reading. Exciting times are ahead and I can't wait to get started.
 
