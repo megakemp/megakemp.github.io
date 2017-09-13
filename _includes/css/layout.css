@@ -8,10 +8,10 @@
 */
 
 /* Big Tablet Portrait size to Tablet Landscape (devices and browsers) */
-@media only screen and (min-width: 959px) and (max-width: 1024px) {
+@media only screen and (min-width: 959px) and (max-width: 1160px) {
         .topbar {
-		padding-left: 28%;
-		padding-right: 6%;
+		padding-left: 29%;
+		padding-right: 5%;
 	}
         .topbar ul li {
 		margin-left: 30px;
@@ -30,8 +30,8 @@
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
         .topbar {
-		padding-left: 29%;
-		padding-right: 4%;
+		padding-left: 30%;
+		padding-right: 3%;
 	}
         .topbar ul li {
 		margin-left: 20px;
@@ -60,11 +60,14 @@
 @media only screen and (max-width: 767px) {
 	header h1 { font-size: 34px; line-height: 37px; }
         .topbar {
-		padding-left: 19%;
-		padding-right: 20%;
+		padding-left: 18%;
+		padding-right: 21%;
 	}
         .topbar ul li {
 		margin-left: 20px;
+	}
+        .topbar ul li.hide {
+		display: none;
 	}
 	.sidebar {
 		display: none;
@@ -114,6 +117,14 @@
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+	.topbar {
+		padding-left: 0%;
+		padding-right: 2%;
+	}
+	.topbar ul li {
+                font-size: 105%;
+                margin-left: 20px;
+	}
 	.sidebar {
 		display: none;
 	}
@@ -132,7 +143,7 @@
 @media only screen and (max-width: 479px) {
 	.topbar {
 		padding-left: 0%;
-		padding-right: 3%;
+		padding-right: 2%;
 	}
 	.topbar ul li {
                 font-size: 105%;
