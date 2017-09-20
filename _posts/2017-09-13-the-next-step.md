@@ -61,7 +61,7 @@ Basically, I'm going to be working on the same things I did before in my spare t
 
 I'll continue to make courses for Pluralsight.[^2] I'll also be doing [on-site training][9] with presentations and [workshops][10].
 
-In addition to that, I'll be offering a new service which combines education with productivity: I call it [_teaching by doing_][11]. You can read more about that in my [offering page][11], if you're interested.
+In addition to that, I'll be offering a new consulting service that combines education with productivity: I call it [_teaching by doing_][11]. You can read more about that in my [offering page][11], if you're interested.
 
 That's all for now. If you've made it this far, thank you for reading. Exciting times are ahead and I can't wait to get started.
 
