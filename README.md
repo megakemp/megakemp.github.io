@@ -1,6 +1,6 @@
 ## megakemp.com
 
-This repository contains the source code for my personal blog at http://megakemp.com.
+This repository contains the source code for my personal blog at https://megakemp.com.
 
 ## License
 
