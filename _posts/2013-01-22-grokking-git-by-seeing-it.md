@@ -2,7 +2,7 @@
 layout: post
 title:  "Grokking Git by seeing it"
 date:   2013-01-22
-categories: speaking
+categories: git
 excerpt: This is where the idea for my Grokking Git by seeing it session came from. The goal is to illustrate the meaning behind different Git operations by going through a series of demos, while having the command line running on one half of the screen and SeeGit on the other.
 video: //player.vimeo.com/video/52633764?color=8dc63f
 ---

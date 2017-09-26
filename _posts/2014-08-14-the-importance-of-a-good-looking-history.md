@@ -2,7 +2,7 @@
 layout: post
 title:  "The importance of a good-looking history"
 date:   2014-08-14
-categories: programming
+categories: git
 assets: the-importance-of-a-good-looking-history
 excerpt: "Since the dawn of civilization, common sense has taught us that the way forward starts by knowing how we got here in the first place. While this powerful principle applies to practically all aspects of life, it's especially true when developing software."
 ---
