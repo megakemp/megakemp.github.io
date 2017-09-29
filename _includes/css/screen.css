@@ -560,7 +560,7 @@ div.comments i {
   color: #666;
 }
 
-#home h2 {
+#home h2, #post h2 {
   color: {{ site.style.highlight_color }};
 }
 
