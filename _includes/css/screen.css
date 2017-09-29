@@ -634,9 +634,8 @@ i.fa-hn {
   line-height: 15px;
 }
 
-.disclaimer img {
-  display: inline-block;
-  margin: 0;
+.disclaimer i.fa-heart {
+  color: {{ site.style.highlight_color }};
 }
 
 .footnotes {
