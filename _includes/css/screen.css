@@ -629,9 +629,14 @@ i.fa-hn {
 
 .disclaimer p {
   margin-top: 15px;
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
   line-height: 15px;
+}
+
+.disclaimer img {
+  display: inline-block;
+  margin: 0;
 }
 
 .footnotes {
