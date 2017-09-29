@@ -627,16 +627,6 @@ i.fa-hn {
   color: white;
 }
 
-.home {
-  font-size: 24px;
-  float: right;
-  color: #AAA;
-}
-
-.home:hover {
-  text-decoration: none;
-}
-
 .disclaimer p {
   margin-top: 15px;
   font-size: 12px;
