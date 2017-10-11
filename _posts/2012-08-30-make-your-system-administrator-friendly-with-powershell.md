@@ -38,11 +38,11 @@ So here it goes, I hope you find it useful.
 <a id="downloads"></a>
 <div class="note downloads">
 <ul>
-  <li class="slides"><a
+  <li id="slides"><a
   href="http://megakemp.files.wordpress.com/2012/08/sysadminfriendlywithpowershell-slides.pdf">Slides</a></li>
-  <li class="pdf"><a
+  <li id="pdf"><a
   href="http://megakemp.files.wordpress.com/2012/08/sysadminfriendlywithpowershell-codesamples.pdf">Code samples</a></li>
-  <li class="github"><a href="https://github.com/ecampidoglio/Expresso">Expresso on GitHub</a></li>
+  <li id="github"><a href="https://github.com/ecampidoglio/Expresso">Expresso on GitHub</a></li>
 </ul>
 </div>
 

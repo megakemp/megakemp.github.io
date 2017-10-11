@@ -271,6 +271,6 @@ Not that you'd ever want to do that.
 <a id="downloads"></a>
 <div class="note downloads">
 <ul>
-  <li class="github"><a href="https://gist.github.com/ecampidoglio/e380abe1c2556d05d302">Source code for <strong>commit-msg</strong></a></li>
+  <li id="github"><a href="https://gist.github.com/ecampidoglio/e380abe1c2556d05d302">Source code for <strong>commit-msg</strong></a></li>
 </ul>
 </div>

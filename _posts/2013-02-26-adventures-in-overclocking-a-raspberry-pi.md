@@ -113,7 +113,7 @@ I have to say that I’ve been positively surprised by the capabilities of the R
 <a id="downloads"></a>
 <div class="note downloads">
 <ul>
-  <li class="github"><a href="https://gist.github.com/ecampidoglio/5009512">Source code for <strong>cpustatus.sh</strong></a></li>
+  <li id="github"><a href="https://gist.github.com/ecampidoglio/5009512">Source code for <strong>cpustatus.sh</strong></a></li>
 </ul>
 </div>
 

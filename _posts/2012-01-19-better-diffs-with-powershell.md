@@ -122,7 +122,7 @@ PowerShell is an extremely versatile console. In this case, it allowed me to enh
 <a id="downloads"></a>
 <div class="note downloads">
 <ul>
-  <li class="github"><a href="https://gist.github.com/ecampidoglio/1635952">Source code for <strong>Out-Diff</strong></a></li>
+  <li id="github"><a href="https://gist.github.com/ecampidoglio/1635952">Source code for <strong>Out-Diff</strong></a></li>
 </ul>
 </div>
 

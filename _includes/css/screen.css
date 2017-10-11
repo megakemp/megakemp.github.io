@@ -448,16 +448,25 @@ p.thumbnail-caption {
   margin: 0 7px 0 0;
 }
 
-.note.downloads ul li.slides:before {
+.note.downloads ul #slides:before {
+  font-family: FontAwesome;
+  color: #555;
   content: '\f144';
+  margin: 0 7px 0 0;
 }
 
-.note.downloads ul li.pdf:before {
+.note.downloads ul #pdf:before {
+  font-family: FontAwesome;
+  color: #555;
   content: '\f15c';
+  margin: 0 7px 0 0;
 }
 
-.note.downloads ul li.github:before {
+.note.downloads ul #github:before {
+  font-family: FontAwesome;
+  color: #555;
   content: '\f09b';
+  margin: 0 7px 0 0;
 }
 
 #social {

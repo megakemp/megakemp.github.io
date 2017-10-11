@@ -261,7 +261,7 @@ be BDD all the way down.
 <a id="downloads"></a>
 <div class="note downloads">
 <ul>
-  <li class="slides"><a href="{{ site.url }}/assets/{{ page.assets }}/bddallthewaydown-slides.pdf">Slides</a></li>
-  <li class="github"><a href="https://github.com/ecampidoglio/gameoflife">Conway's Game of Life Demo</a></li>
+  <li id="slides"><a href="{{ site.url }}/assets/{{ page.assets }}/bddallthewaydown-slides.pdf">Slides</a></li>
+  <li id="github"><a href="https://github.com/ecampidoglio/gameoflife">Conway's Game of Life Demo</a></li>
 </ul>
 </div>

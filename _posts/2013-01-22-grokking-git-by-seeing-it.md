@@ -61,9 +61,9 @@ So, this is just to give you a little background. Here you’ll find the session
 <a id="downloads"></a>
 <div class="note downloads">
 <ul>
-  <li class="slides"><a
+  <li id="slides"><a
   href="http://megakemp.files.wordpress.com/2013/01/grokkinggitbyseeingit-slides.pdf">Slides</a></li>
-  <li class="pdf"><a
+  <li id="pdf"><a
   href="http://megakemp.files.wordpress.com/2013/01/grokkinggitbyseeingit-demos.pdf">Demos</a></li>
 </ul>
 </div>
