@@ -646,11 +646,15 @@ i.fa-hn {
 }
 
 .footnotes {
-  font-size: 13px;
-  font-style: italic;
+  font-size: 81%;
   line-height: 18px;
   border-top: 1px solid #ddd;
   padding-top: 16px;
+}
+
+.footnotes li p {
+  line-height: 20px;
+  margin: 0;
 }
 
 .icon-overlay {
