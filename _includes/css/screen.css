@@ -229,7 +229,16 @@ ul.posts p {
 }
 
 #home ul {
+  list-style-type: none;
   margin-left: 20px;
+}
+
+#home li::before {
+  content: '\25CF';
+  color: {{ site.style.highlight_color }};
+  display: inline-block;
+  width: 1.3em;
+  margin-left: -1em;
 }
 
 #home li {
