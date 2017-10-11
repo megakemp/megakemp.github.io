@@ -198,8 +198,12 @@ span.nowrap {
   display: inline-block;
 }
 
-ul.posts.tag-posts {
+#home #blog-posts {
   margin-left: 6%;
+}
+
+#home #blog-posts li:before {
+  content: '';
 }
 
 ul.posts {
