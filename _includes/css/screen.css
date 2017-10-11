@@ -237,7 +237,7 @@ ul.posts p {
   margin-left: 1.35em;
 }
 
-#home ul li::before, #post ul li::before {
+#home ul li:before, #post ul li:before {
   content: '\25CF';
   color: {{ site.style.highlight_color }};
   display: inline-block;
