@@ -245,8 +245,8 @@ ul.posts p {
   margin-left: -1em;
 }
 
-#home li {
-  line-height: 23px;
+#home ul li, #post ul li {
+  line-height: 24px;
 }
 
 .meta {
