@@ -33,7 +33,7 @@ In 2011, I started doing talks at conferences and user group meetings. In the be
 In 2012, I found a young but ambitious consulting company that valued _knowledge sharing_ as much as I did: [tretton37][2]. I joined them and had the privilege to represent those values at numerous conferences and user group events (including twice at their very own and highly praised [Leetspeak][3]). I had a great time! But as with all good things, there was a downside: although speaking _was_ part of my job description, it still only accounted for a small portion of my time. That didn't bother me too much in the beginning but, as time went on, I wished I could do more.
 
 <img alt="Speaking at a Foo Café meetup in Malmö, March 2013"
-     src="/assets/{{ page.assets }}/speaking.jpg"
+     src="{{ site.url }}/assets/{{ page.assets }}/speaking.jpg"
      class="screenshot-caption" />
 <span class="caption">Me, speaking at a <a href="http://foocafe.org" target="_blank">Foo Café</a> meetup in Malmö sponsored by tretton37 in March 2013.</span>
 
