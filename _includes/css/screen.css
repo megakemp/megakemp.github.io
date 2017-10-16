@@ -557,6 +557,8 @@ div.comments i {
 
 .sidebar p {
   text-align: left;
+  width: 178px;
+  margin: 0 auto;
 }
 
 .sidebar a {
