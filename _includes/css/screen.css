@@ -74,12 +74,13 @@ h1 {
 h2 {
   font-size: 25px;
   line-height: 32px;
+  margin: 1.5em 0 0.5em;
 }
 
 h3 {
   font-size: 23px;
   line-height: 23px;
-  margin: 1.5em 0 1em;
+  margin: 1.5em 0 0.5em;
 }
 
 h1.backdrop {
