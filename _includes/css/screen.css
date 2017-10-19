@@ -483,6 +483,10 @@ p.thumbnail-caption {
   padding-bottom: 0.5em;
 }
 
+#home p, #post p {
+  line-height: 1.5em;
+}
+
 #home blockquote, #post blockquote {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
