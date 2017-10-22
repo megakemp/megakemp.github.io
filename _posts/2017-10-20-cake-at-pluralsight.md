@@ -120,6 +120,13 @@ My goal was to come up with as many scenarios as possible, throw them at Cake an
 
 [Cake][] is a great build automation tool — especially if you're a C# developer — and I really think it shows in the course. I'm very happy with how this course turned out, and I hope you'll enjoy [watching it][CakeCourse] as much as I did baking it. 🙂
 
+<div class="note">
+    <div style="display: inline-block; margin: 1em 0.3em 0 1em"><i class="fa fa-play-circle-o fa-2x"></i></div>
+    <div style="display: inline-block; vertical-align: middle; margin: -0.9em 0 0 0">
+        <a href="http://bit.ly/ps-cake-build-deploy">Building and Deploying Applications with Cake</a>
+    </div>
+</div>
+
 [^1]: Just not the _kind_ of cake you're thinking about. OK, that was a bad [Portal joke][PortalCake].
 [^2]: With the possible exception of [Fake][], but — then again — how many .NET developers do you know who feel comfortable writing a build script in F#? My guess is not so many.
 [^3]: IIS, Azure, Active Directory and SQL Server — to give you an idea — can all be controlled _entirely_ from PowerShell.
