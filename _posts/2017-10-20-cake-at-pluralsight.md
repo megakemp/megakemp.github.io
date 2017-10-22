@@ -20,20 +20,20 @@ If you've never heard of it, let me tell you a story.
 
 When I first came across the [Cake project][CakeProject] it was the fall of 2014, almost exactly three years ago. [Patrik Svensson][PatrikSvensson] — a colleague of mine at [tretton37][] at the time — had been working on it for some time, and had reached a point where things were starting to shape up. So I took a quick look at the code and I remember being impressed by how well it was designed!
 
-As for the tool itself, however, I was a bit skeptical. Let me tell you why. Back then, the software industry had just gone through a sort of _Make renaissance_ — a period of time during which we saw a large number of build tools, all inspired by the venerable [Make][], appear on the open source scene.
+As for the tool itself, however, I remained skeptical and here's why. Back then, the software industry had just gone through a sort of _Make renaissance_ — a period of time during which we saw a large number of build tools, all inspired by the venerable [Make][], appear on the open source scene.
 
-Each tool was characterized by the particular _programming language_ it would use for its [DSL][]; there was [Rake][] with Ruby, [Psake][] with PowerShell, [Fake][] with F# and [Gradle][] with Groovy, just to name a few. On top of that, you had all the JavaScript ones like [Grunt][] and [Gulp][]. All these tools were part of the _Make-renaissance_. Frankly, I thought we had seen them all and yet there I was, looking at [Cake][] — the one with the C# DSL. As much as I appreciated Cake's high standard and thoughtfulness, I had trouble justifying its _raison d'être_.
+Each tool was characterized by the particular _programming language_ it would use for its [DSL][]; there was [Rake][] with Ruby, [Psake][] with PowerShell, [Fake][] with F# and [Gradle][] with Groovy, just to name a few. On top of that, you had all the JavaScript ones like [Grunt][] and [Gulp][]. All these tools were part of the _Make-renaissance_. Frankly, I thought we had seen them all and yet there I was, looking at [Cake][] — the one with the C# DSL. As much as I appreciated Cake's high standard and thoughtful design, I had trouble justifying its _raison d'être_.
 
 <img alt="Build Tools"
      src="{{ site.url }}/assets/{{ page.assets }}/build-tools.png"
      class="screenshot-noshadow-caption" />
 <span class="caption">Rake, Psake, Fake or Gradle? You must choose, but choose wisely.</span>
 
-To be fair, none of the tools that came from the _Make-renaissance_ was a particularly good fit for a .NET project.[^2] But that had never stopped me from writing my build scripts. Before Cake, my tool of choice was Psake, for no reason other than PowerShell being so well integrated with the Windows ecosystem.[^3] Believe me, when you're automating any sort of deployment process, _integration_ is what you're after.
+To be fair, none of the tools that came from the _Make-renaissance_ was a particularly good fit for a .NET project.[^2] But that had never stopped me from writing my build scripts. Before Cake, my tool of choice was Psake, for no reason other than that PowerShell is so well integrated with the Windows ecosystem.[^3] Believe me, when you're automating any sort of deployment process, _integration_ is what you're after.
 
 Psake was good in that sense, but it was never _great_. You still had to manually make sure that every tool you invoked from your build script was present on the target machine (things like compilers, test runners and package managers). On top of that, you had the PowerShell syntax which — let's face it — isn't particularly fun to read and much less to write.
 
-One day, I decided it was time to check on Cake to see how it was doing. And I have to say, it was doing _really_ well; the [core team][CakeTeam] had expanded and the project was thriving with frequent [releases][CakeReleases] and a growing [community][CakeContributors]. Although I found the C#-based DSL to be absolutely _delightful_, it wasn't before I saw [this][CakeContrib] that I got really _excited_:
+One day, I decided it was time to check on Cake to see how it was doing. And let me tell you, it was doing _really_ well; the [core team][CakeTeam] had expanded and the project was thriving with frequent [releases][CakeReleases] and a growing [community][CakeContributors]. Although I found the C#-based DSL to be absolutely _delightful_, it wasn't until I saw [this][CakeContrib] that I got really _excited_:
 
 <img alt="Cake Addins on NuGet.org"
      src="{{ site.url }}/assets/{{ page.assets }}/cake-addins.png"
@@ -62,7 +62,7 @@ nunit3-console.exe "./src/UnitTests/bin/Release/MyProject.UnitTests.dll"
 
 See how the `"src/**/bin/Release/*Tests.dll"` _glob pattern_ was expanded into an actual path to a DLL file? Yeah, Cake did that.
 
-But how do you make sure that NUnit 3 Console Runner is actually present on the target machine? Easy — you tell Cake to download the [NUnit.Console][NUnitConsole] package from the NuGet Gallery *before* it runs the script by adding a `#tool` [*preprocessor directive*][CakePreprocessorDirective]:
+But how do you make sure that the NUnit 3 Console Runner is actually present on the target machine? Easy — you tell Cake to download the [NUnit.Console][NUnitConsole] package from the NuGet Gallery *before* it runs the script by adding a `#tool` [*preprocessor directive*][CakePreprocessorDirective]:
 
 ```csharp
 #tool nuget:?package=NUnit.Console&version=3.7.0
@@ -105,18 +105,18 @@ Also, since Cake is cross-platform, I thought it would be a good idea to demonst
      class="screenshot-noshadow-caption" />
 <span class="caption">Overview of the demo application used in the course.</span>
 
-The course is about creating a complete _build and deployment pipeline_ for that application — from source code to software running in the cloud — all using Cake. Along the way, you'll get to know Cake's features and put them all to practice to overcome the challenges of automating a build and deploy process, both on .NET and on .NET Core.
+The course is about creating a complete _build and deployment pipeline_ for that application — from source code to software running in the cloud — all using Cake. Along the way, you'll get to know Cake's features and how to use them to overcome the challenges of automating a build and deploy process, both on .NET and on .NET Core.
 
-Here are some of the main topics:
+Here are some of the topics covered in the course:
 
 - **Compiling** an ASP.NET web application on Windows and an ASP.NET Core one on macOS.
 - **Testing** with xUnit.net while measuring code coverage.
 - **Versioning** by generating a semantic version number.
-- **Packaging** as a NuGet and Web Deploy package on Windows, and as Zip archive on macOS.
+- **Packaging** as a NuGet and Web Deploy package on Windows, and as a Zip archive on macOS.
 - **Deploying** to an Azure Web App using Octopus Deploy, Web Deploy and the Kudu REST API.
 - Doing **Continuous Integration** with TeamCity, Visual Studio Team Services and Travis CI.
 
-My goal was to come up with as many scenarios as possible, throw them at Cake and see if it made my life easier or more difficult. The result? Not only was I able to complete many common tasks (like running the tests or packaging the application) in a matter of minutes, but the build script came out remarkably short and — most importantly — _readable_.
+My goal was to come up with as many scenarios as possible, throw them at Cake and see if it made my life easier or more difficult. The result? Not only was I able to complete many common tasks (like running the tests or packaging the application) in a matter of minutes, but the final build script came out remarkably short and — most importantly — _readable_.
 
 [Cake][] is a great build automation tool — especially if you're a C# developer — and I really think it shows in the course. I'm very happy with how this course turned out, and I hope you'll enjoy [watching it][CakeCourse] as much as I did baking it. 🙂
 
