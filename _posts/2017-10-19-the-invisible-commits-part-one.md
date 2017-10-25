@@ -20,7 +20,7 @@ That's why I always follow up with an asterisk:
 
 If that sounds vague to you, don't worry—explaining what I mean by that is the very topic of this article.
 
-## Resilience by Design
+### Resilience by Design
 
 The fact that Git is *resilient* is no coincidence—it was a deliberate design choice made by Linus Torvalds. Here's what he wrote in response to a [question about data corruption back in 2007][LinusTorvaldsQuote]:
 
@@ -39,7 +39,7 @@ In this article series, I'll talk about what I like to call the *invisible commi
 
 Let's start with the easy one: the [reflog][].
 
-## The Reflog
+### The Reflog
 
 I've talked about the mighty *reflog* in [more than one occasion][GitUndo]. Simply put, the reflog is a journal which records the values of the branch and `HEAD` [references][] over time. This journal is *local* to a repository, meaning it can't be shared by pushing it to remote repositories.
 
@@ -78,7 +78,7 @@ It's a list where each entry contains a few pieces of information:
 
 The reason why this is important in the context of data recovery, is that you can *reference* reflog entries as you would regular commits.
 
-## Recovering Commits from the Reflog
+### Recovering Commits from the Reflog
 
 That's enough theory. Let's talk about this works in practice. Imagine you have history that looks like this:
 
@@ -128,7 +128,7 @@ git cherry-pick @{90}
 
 And voilà—the commit referenced by the reflog entry with index `90` is back in your `master` branch.[^3]
 
-## Searching the Reflog
+### Searching the Reflog
 
 The last example implies that you can find the commit you're looking for by simply scrolling through the reflog. Of course, that's not always the case.
 
@@ -171,7 +171,7 @@ This will print out the *timestamps* when the reflog entry were created instead 
 2b60b60 master@{Mon Oct 16 10:37:8 2017 +0200}: rebase: checkout master
 ```
 
-## Things You Won't Find in the Reflog
+### Things You Won't Find in the Reflog
 
 By now, it should be clear that the reflog should your first destination when you're looking for commits to restore. However, be aware that things won't stay there forever.
 
