@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Invisible Commits — Part 1
+title: The Invisible Commits (Part 1)
 date: 2017-10-19
 categories: git
 assets: the-invisible-commits-part-one
