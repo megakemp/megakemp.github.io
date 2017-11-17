@@ -199,6 +199,13 @@ span.nowrap {
   display: inline-block;
 }
 
+span.inline-info {
+  display: inline-block;
+  font-size: 80%;
+  font-weight: lighter;
+  margin-right: 0.5em;
+}
+
 #home #blog-posts {
   margin-left: 6%;
 }

@@ -162,4 +162,8 @@
 		font-size: 22px;
 		line-height: 24px;
 	}
+
+	span.inline-info {
+		display: block;
+	}
 }
