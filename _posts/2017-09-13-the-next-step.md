@@ -66,7 +66,7 @@ In addition to that, I'll be offering a new consulting service that combines edu
 That's all for now. If you've made it this far, thank you for reading. Exciting times are ahead and I can't wait to get started.
 
 [^1]: Back then, it would have been either PC hardware, radioactivity, the NBA or all of the above. 😳
-[^2]: In fact, I have a _new course_ coming out in just a few short weeks, so watch out for that. 😊
+[^2]: In fact, I have a [_new course_]({{ site.url }}/2017/10/20/cake-at-pluralsight/) coming out in just a few short weeks, so watch out for that. 😊
 
 [1]: #whats-next
 [2]: https://tretton37.com
