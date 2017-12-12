@@ -24,14 +24,13 @@
   <meta property="og:image" content="{{ site.url }}/assets/{{ page.assets }}/{{ page.image }}" />
   <meta name="twitter:image" content="{{ site.url }}/assets/{{ page.assets }}/{{ page.image }}" />
   {% endif %}
+  {% include analytics.html %}
   <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="alternate" type="application/rss+xml" title="Enrico Campidoglio" href="http://feeds.feedburner.com/megakemp" />
   <link rel="stylesheet" href="{{ site.url }}/css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,600|Open+Sans:700|Roboto:300|Inconsolata" rel="stylesheet">
   <script src="https://use.fontawesome.com/44db616403.js" async></script>
-  {% include analytics.html %}
-
   {% include footnotes.html %}
 </head>
 <body>
