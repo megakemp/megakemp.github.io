@@ -30,7 +30,7 @@
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
         .topbar {
-		padding-left: 30%;
+		padding-left: 20%;
 		padding-right: 3%;
 	}
         .topbar ul li {
@@ -119,7 +119,7 @@
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	.topbar {
 		padding-left: 0%;
-		padding-right: 2%;
+		padding-right: 3%;
 	}
 	.topbar ul li {
                 font-size: 105%;
