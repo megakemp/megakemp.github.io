@@ -77,7 +77,7 @@
     @media only screen and (min-width: 768px) and (max-width: 959px) {
         .container                                  { width: 768px; }
         .container .column,
-        .container .columns                         { margin-left: 10px; margin-right: 10px;  }
+        .container .columns                         { margin-left: 80px; margin-right: 80px;  }
         .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
         .column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
 
@@ -91,7 +91,7 @@
         .container .eight.columns                   { width: 364px; }
         .container .nine.columns                    { width: 412px; }
         .container .ten.columns                     { width: 460px; }
-        .container .eleven.columns                  { width: 508px; }
+        .container .eleven.columns                  { width: 608px; }
         .container .twelve.columns                  { width: 556px; }
         .container .thirteen.columns                { width: 604px; }
         .container .fourteen.columns                { width: 652px; }
