@@ -10,7 +10,7 @@
 /* Big Tablet Portrait size to Tablet Landscape (devices and browsers) */
 @media only screen and (min-width: 959px) and (max-width: 1160px) {
         .topbar {
-		padding-left: 29%;
+		padding-left: 30%;
 		padding-right: 5%;
 	}
         .topbar ul li {
@@ -30,11 +30,11 @@
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
         .topbar {
-		padding-left: 20%;
-		padding-right: 3%;
+		padding-left: 2%;
+		padding-right: 5%;
 	}
         .topbar ul li {
-		margin-left: 20px;
+		margin-left: 25px;
 	}
 	.sidebar {
 		width: 160px;
