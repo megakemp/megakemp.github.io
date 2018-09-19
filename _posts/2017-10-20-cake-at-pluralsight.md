@@ -16,6 +16,10 @@ _I'm excited to announce that my [new Pluralsight course][CakeCourse] is out —
 
 Kidding aside, I didn't make a Pluralsight course about baking; it's about a Make-inspired build tool that uses C# _called_ [Cake][].
 
+<img alt="Cake at Pluralsight"
+     src="{{ site.url }}/assets/{{ page.assets }}/cake-ps-banner.png"
+     class="screenshot-noshadow-fullwidth" />
+
 If you've never heard of it, let me tell you a story.
 
 When I first came across the [Cake project][CakeProject] it was the fall of 2014, almost exactly three years ago. [Patrik Svensson][PatrikSvensson] — a colleague of mine at [tretton37][] at the time — had been working on it for some time, and had reached a point where things were starting to shape up. So I took a quick look at the code and I remember being impressed by how well it was designed!
