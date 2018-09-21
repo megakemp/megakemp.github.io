@@ -7,14 +7,11 @@
 * 8/17/2011
 */
 
-/* Big Tablet Portrait size to Tablet Landscape (devices and browsers) */
-@media only screen and (min-width: 959px) and (max-width: 1160px) {
+/* Tablet Landscape to Big Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 834px) and (max-width: 1365px) {
         .topbar {
-		padding-left: 30%;
-		padding-right: 5%;
-	}
-        .topbar ul li {
-		margin-left: 30px;
+		padding-left: 27%;
+		padding-right: 6%;
 	}
 }
 
