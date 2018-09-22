@@ -16,9 +16,11 @@ _I'm excited to announce that my [new Pluralsight course][CakeCourse] is out —
 
 Kidding aside, I didn't make a Pluralsight course about baking; it's about a Make-inspired build tool that uses C# _called_ [Cake][].
 
-<img alt="Cake at Pluralsight"
-     src="{{ site.url }}/assets/{{ page.assets }}/cake-ps-banner.png"
-     class="screenshot-noshadow-fullwidth" />
+<a href="https://www.pluralsight.com/courses/cake-applications-deploying-building">
+    <img alt="Cake at Pluralsight"
+         src="{{ site.url }}/assets/{{ page.assets }}/cake-ps-banner.png"
+         class="screenshot-noshadow-fullwidth" />
+ </a>
 
 If you've never heard of it, let me tell you a story.
 
