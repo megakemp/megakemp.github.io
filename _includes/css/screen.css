@@ -327,6 +327,7 @@ nav hr {
 .screenshot-noshadow-fullwidth {
   position: relative;
   margin: 30px auto 30px auto;
+  max-width: 100%;
 }
 
 .screenshot-noshadow-cropped {
