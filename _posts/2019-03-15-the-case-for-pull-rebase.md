@@ -79,11 +79,11 @@ However, consider the effect this has on your repo over time:
      class="screenshot-noshadow-caption" />
 <span class="caption">Cluttered history.</span>
 
-This is how history looks like in a project who uses Git together with the Trunk-based development workflow (which, as we established, is pretty common). You see all those merge commits cluttering the mainline? The only reason they’re there is because someone on the team happened to push their commits before someone else.
+This is how history looks like in a project who uses Git together with the Trunk-based development workflow (which, as we established, is pretty common). You see all those merge commits cluttering the mainline? The only reason they exist is because someone on the team happened to push their commits before someone else.
 
-> In other words, when everyone commits to a single shared branch, the standard `git pull`/`git push` commands is going to clutter your history with a bunch of merge commits, simply due to the asynchronous nature of collaboration.
+> In other words, when everyone commits to a single shared branch, the standard `git pull` command is going to clutter your history with a bunch of merge commits, simply due to the asynchronous nature of collaboration.
 
-A merge commit represents *significative event*: the point in time when work done in different lines of history came together. For example, a topic branch merged into a long-running branch (like a pull request), or a long-running branch merged into another (like a release). Those merge commits, on the other hand, don't represent anything — they’re just an artificial side-effect.
+A merge commit should represent a *significative event*: the point in time when two different lines of history came together. For example, a topic branch merged into a long-running branch (like a pull request), or a long-running branch merged into another (like a release). The merge commits created by `git pull`, on the other hand, don't represent anything — they’re just an artificial side-effect.
 
 ## Pull Rebase
 
@@ -91,7 +91,7 @@ Fortunately, it doesn't have to be that way. Here's a different approach.
 
 We said that `git pull` is actually two separate operations: `git fetch` followed by `git merge`. Well, it turns out that if we pass the [-r (--rebase)](https://git-scm.com/docs/git-pull#git-pull--r) option to `git pull`, we can replace that `git merge` with `git rebase`. I know, a fine example of Git’s syntax at its best, right?
 
-Let's go back to our previous example before we did `git pull`.
+Let's go back to our previous example right before we did `git pull`.
 
 <img alt="Initial repo"
      src="{{ site.url }}/assets/{{ page.assets }}/repo-with-remote.png"
@@ -111,7 +111,7 @@ Now, if everyone on the team was doing `git pull --rebase` by default, we wouldn
 
 ## Keeping The True Merges
 
-There is one more scenario we need to consider: what if you have a local merge commit that you _do_ want to push to the remote — is `git pull -r` going keep it?
+There is one more scenario we need to consider: what if you have a local merge commit that you _do_ want to push to the remote — is `git pull -r` going to keep it?
 
 Unfortunately, the answer is **no**.
 
