@@ -89,7 +89,7 @@ A merge commit should represent a *significative event*: the point in time when 
 
 Fortunately, it doesn't have to be that way. Here's a different approach.
 
-We said that `git pull` is actually two separate operations: `git fetch` followed by `git merge`. Well, it turns out that if we pass the [-r (--rebase)](https://git-scm.com/docs/git-pull#git-pull--r) option to `git pull`, we can replace that `git merge` with `git rebase`. I know, a fine example of Git’s syntax at its best, right?
+We said that `git pull` is actually two separate operations: `git fetch` followed by `git merge`. Well, it turns out that if we pass the [-r (--rebase)](https://git-scm.com/docs/git-pull#Documentation/git-pull.txt--r) option to `git pull`, we can replace that `git merge` with `git rebase`. I know, a fine example of Git’s syntax at its best, right?
 
 Let's go back to our previous example right before we did `git pull`.
 
@@ -136,7 +136,7 @@ Double-merge! 😱 Fortunately, we know better now, so let's run `git pull -r` i
      class="screenshot-noshadow-caption" />
 <span class="caption">Our merge commit `N` is gone after a pull rebase.</span>
 
-Wait — where did `N` go? The answer is `git rebase` _removed it_ because, well, that’s what `rebase` does by default. Luckily for us, there is an option to keep the merge commits during a rebase: the [`--preserve-merges`](https://git-scm.com/docs/git-rebase#git-rebase--p) parameter.[^6]
+Wait — where did `N` go? The answer is `git rebase` _removed it_ because, well, that’s what `rebase` does by default. Luckily for us, there is an option to keep the merge commits during a rebase: the [`--preserve-merges`](https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt--p) parameter.[^6]
 
 In the context of `git pull`, this translates to `git pull --rebase=preserve`. So, let’s run that instead:
 
@@ -149,7 +149,7 @@ That’s more like it: our merge commit `N` was _rebased_ on top of the remote `
 
 ## The New Default
 
-You'd be forgiven for not remembering to invoke `pull` with the right combination of arguments at any given time, so let's make it our new default, shall we? The way you tell Git to always do a _pull rebase_ instead of a _pull merge_ (while still keeping any local merge commits) is by setting the [`pull.rebase`](https://git-scm.com/docs/git-config#git-config-pullrebase) configuration option:
+You'd be forgiven for not remembering to invoke `pull` with the right combination of arguments at any given time, so let's make it our new default, shall we? The way you tell Git to always do a _pull rebase_ instead of a _pull merge_ (while still keeping any local merge commits) is by setting the [`pull.rebase`](https://git-scm.com/docs/git-config#Documentation/git-config.txt-pullrebase) configuration option:
 
 ```
 git config --global pull.rebase preserve
@@ -175,4 +175,4 @@ If you're interested in learning other techniques like the one described in this
 [^4]: Where by *current*, I mean the branch that reflects your working copy. In technical terms, that would be the branch *referenced* by `HEAD`.
 [^5]: Git calls them [_tracking branches_](https://git-scm.com/book/en/v1/Git-Branching-Remote-Branches#Tracking-Branches) but you can think of them as _bookmarks_ that keep track of where a branch is on a remote repository.
 [^6]: There's a interesting story behind the origin of the `--preserve-merges` option. If you have the time, I suggest you read it. It's all told inside of [a commit message](https://github.com/git/git/commit/8f6aed71d27f33096449d28c4711d3b68159632e).
-[^7]: A short note: the `--preserve-merges` option has recently been replaced by a more robust implementation in the form of the [`--rebase-merges`](https://git-scm.com/docs/git-rebase#git-rebase--r) option. If you're using Git 2.18 (Q2 2018) or later, you should use that instead by saying `git pull --rebase=merges`.
+[^7]: A short note: the `--preserve-merges` option has recently been replaced by a more robust implementation in the form of the [`--rebase-merges`](https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt--r) option. If you're using Git 2.18 (Q2 2018) or later, you should use that instead by saying `git pull --rebase=merges`.
