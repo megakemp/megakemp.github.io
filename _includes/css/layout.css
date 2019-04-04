@@ -143,6 +143,9 @@
 	.sidebar {
 		display: none;
 	}
+	span.flag-icon {
+		max-width: 1.5em;
+	}
 
 	h1 {
 		font-size: 24px;
