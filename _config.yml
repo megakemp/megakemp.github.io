@@ -11,6 +11,18 @@ plugins:
   - jekyll-redirect-from
   - jekyll-paginate
 
+exclude:
+  - css/flag-icon-css/*.coffee
+  - css/flag-icon-css/*.html
+  - css/flag-icon-css/*.json
+  - css/flag-icon-css/*.lock
+  - css/flag-icon-css/*.md
+  - css/flag-icon-css/*.sh
+  - css/flag-icon-css/*.yaml
+  - css/flag-icon-css/assets/
+  - css/flag-icon-css/less/
+  - css/flag-icon-css/sass/
+
 style:
   # Base color for background elements such as the top bar
   base_color: '#444'

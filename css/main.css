@@ -6,3 +6,4 @@
 {% include css/layout.css %}
 {% include css/syntax.css %}
 {% include css/footnotes.css %}
+{% include css/flags.css %}
