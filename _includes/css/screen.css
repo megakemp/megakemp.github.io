@@ -508,6 +508,10 @@ p.thumbnail-caption {
   margin: 25px auto;
 }
 
+#home blockquote.testimonial {
+  margin-top: 30px;
+}
+
 #post pre {
   border: 1px solid #ddd;
   background-color: #f8f8f8;
