@@ -512,6 +512,25 @@ p.thumbnail-caption {
   margin-top: 30px;
 }
 
+#home blockquote.tweet::before {
+  font-family: "FontAwesome";
+  content: "\f10d";
+  font-size: 120%;
+  position: absolute;
+  margin-left: -0.8em;
+}
+
+#home blockquote.tweet {
+  border-left: 0;
+  margin-top: 2.2em;
+  margin-bottom: -0.5em;
+}
+
+#home blockquote.tweet p {
+  padding-left: 0.7em;
+  padding-right: 1em;
+}
+
 #post pre {
   border: 1px solid #ddd;
   background-color: #f8f8f8;
