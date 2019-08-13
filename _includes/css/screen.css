@@ -240,7 +240,8 @@ ul.posts p {
 
 #home ul, #post ul {
   list-style-type: none;
-  margin-left: 20px;
+  margin-left: 30px;
+  text-indent: -0.3em;
 }
 
 #post ol {
