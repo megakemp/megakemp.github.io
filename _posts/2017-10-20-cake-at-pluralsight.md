@@ -8,7 +8,7 @@ image: banner.png
 excerpt: "I'm excited to announce that my new Pluralsight course is out! And yes, in case you're wondering, it really does contain Cake."
 ---
 
-_I'm excited to announce that my [new Pluralsight course][CakeCourse] is out — and yes, there really will be Cake._[^1]
+_I'm excited to announce that my [new Pluralsight course][CakeCourse] is out — and yes, there will be Cake._[^1]
 
 ---
 
