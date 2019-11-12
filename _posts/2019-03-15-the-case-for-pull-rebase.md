@@ -83,7 +83,7 @@ This is how history looks like in a project who uses Git together with the Trunk
 
 > In other words, when everyone commits to a single shared branch, the standard `git pull` command is going to clutter your history with a bunch of merge commits, simply due to the asynchronous nature of collaboration.
 
-A merge commit should represent a *significative event*: the point in time when two different lines of history came together. For example, a topic branch merged into a long-running branch (like a pull request), or a long-running branch merged into another (like a release). The merge commits created by `git pull`, on the other hand, don't represent anything — they’re just an artificial side-effect.
+A merge commit should represent a *significative event*, namely the point in time in which two different lines of history came together: a topic branch merged into a long-running branch (like a pull request), or a long-running branch merged into another (like a release) just to give you an example. The merge commits created by `git pull`, on the other hand, don't represent anything — they are an artificial side-effect.
 
 ## Pull Rebase
 
