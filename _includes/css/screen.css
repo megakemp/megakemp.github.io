@@ -105,10 +105,10 @@ h1.backdrop.offering {
   padding-right: 30px;
 }
 
-h1.backdrop.workshops {
+h1.backdrop.training {
   background-image: url(/assets/workshops/backdrop.jpg);
   text-align: right;
-  padding-right: 10px;
+  padding-right: 27px;
 }
 
 h1.backdrop.bestof {
