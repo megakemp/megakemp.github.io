@@ -106,8 +106,8 @@ h1.backdrop.about {
   padding-left: 25px;
 }
 
-h1.backdrop.offering {
-  background-image: url(/assets/offering/backdrop.jpg);
+h1.backdrop.services {
+  background-image: url(/assets/services/backdrop.jpg);
   text-align: right;
   padding-right: 25px;
 }

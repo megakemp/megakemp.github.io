@@ -61,7 +61,7 @@ Basically, I'm going to be working on the same things I did before in my spare t
 
 I'll continue to make courses for Pluralsight.[^2] I'll also be doing [on-site training][9] with presentations and [workshops][10].
 
-In addition to that, I'll be offering a new consulting service that combines education with productivity: I call it [_teaching by doing_][11]. You can read more about that in my [offering page][11], if you're interested.
+In addition to that, I'll be offering a new consulting service that combines education with productivity: I call it [_teaching by doing_][11]. You can read more about that in my [services page][11], if you're interested.
 
 That's all for now. If you've made it this far, thank you for reading. Exciting times are ahead and I can't wait to get started.
 
@@ -75,7 +75,7 @@ That's all for now. If you've made it this far, thank you for reading. Exciting 
 [5]: https://www.pluralsight.com/courses/git-advanced-tips-tricks
 [6]: /git
 [7]: https://tretton37.com/knowledge-sharing
-[8]: /offering
-[9]: /offering/#on_site_training
+[8]: /services
+[9]: /services/#on_site_training
 [10]: /workshops
-[11]: /offering/#teaching_by_doing
+[11]: /services/#teaching_by_doing
