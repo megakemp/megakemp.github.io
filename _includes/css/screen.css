@@ -194,6 +194,11 @@ p img {
   margin: 50px auto;
 }
 
+img.customerlogo {
+  max-width: 250px;
+  margin: 30px auto;
+}
+
 span.tag-icon {
   color: #555;
   font-size: 70%;
