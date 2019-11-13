@@ -64,11 +64,12 @@ h1.title {
   font-weight: 700;
   font-size: 39px;
   line-height: 49px;
+  letter-spacing: 0.03em;
 }
 
 h1 {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 40px;
+  letter-spacing: 0.04em;
 }
 
 h2 {
@@ -83,6 +84,11 @@ h3 {
   margin: 1.5em 0 0.5em;
 }
 
+#greeting {
+    font-size: 30px;
+    line-height: 40px;
+}
+
 h1.backdrop {
   background-position: center center;
   background-repeat: no-repeat;
@@ -91,24 +97,25 @@ h1.backdrop {
   line-height: 335px;
   padding-left: 25px;
   margin-bottom: 20px;
-  text-shadow: 0 -1px 0 rgba(0,0,0,0.8);
-  box-shadow: 0 0 5px rgba(0,0,0,0.8);
+  text-shadow: 0 1px 1px rgba(0,0,0,0.8);
 }
 
 h1.backdrop.about {
   background-image: url(/assets/about/backdrop.jpg);
+  text-align: left;
+  padding-left: 25px;
 }
 
 h1.backdrop.offering {
   background-image: url(/assets/offering/backdrop.jpg);
   text-align: right;
-  padding-right: 30px;
+  padding-right: 25px;
 }
 
 h1.backdrop.training {
   background-image: url(/assets/workshops/backdrop.jpg);
   text-align: right;
-  padding-right: 27px;
+  padding-right: 25px;
 }
 
 h1.backdrop.bestof {
