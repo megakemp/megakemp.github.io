@@ -76,6 +76,6 @@ That's all for now. If you've made it this far, thank you for reading. Exciting 
 [6]: /git
 [7]: https://tretton37.com/knowledge-sharing
 [8]: /services
-[9]: /services/#on_site_training
+[9]: /services/#training
 [10]: /workshops
-[11]: /services/#teaching_by_doing
+[11]: /services/#mentoring
