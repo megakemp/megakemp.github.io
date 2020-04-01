@@ -732,3 +732,12 @@ i.fa-hn {
   font-size: smaller;
   font-style: italic;
 }
+
+figure {
+  margin: 15px auto;
+  text-align: center;
+}
+
+figcaption {
+  font-size: smaller;
+}
