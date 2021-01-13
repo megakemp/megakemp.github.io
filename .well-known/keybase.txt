@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/ecampidoglio
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://megakemp.com
+  * I am ecampidoglio (https://keybase.io/ecampidoglio) on keybase.
+  * I have a public key ASB1yUbEDiwZWB8eiGJf1t6nA1gcmxibzdMp0anIxfuLgAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120c9809e7e9186b18f9660cada585851f7462c440d02f014f5b42bf28df27a131f0a",
+      "host": "keybase.io",
+      "kid": "012075c946c40e2c19581f1e88625fd6dea703581c9b189bcdd329d1a9c8c5fb8b800a",
+      "uid": "8b4c5b0a793d59d610c6f8022e684d19",
+      "username": "ecampidoglio"
+    },
+    "merkle_root": {
+      "ctime": 1610566651,
+      "hash": "8f506a77e9bf31a875e27f98e6a42472da3e4addb2841ec35604942b00831c0c2b20a90f37e788dd70622429b90088ce4adc934693739392c56454eeb929cfd3",
+      "hash_meta": "557bbe54f455c7e0c1d39ae824d99e109d6e718f2263d7f817f798cfad5ede25",
+      "seqno": 18732652
+    },
+    "service": {
+      "entropy": "7XKBFu4FCFYFCqdKXVCNb5wL",
+      "hostname": "megakemp.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1610566665,
+  "expire_in": 504576000,
+  "prev": "bd4ac5e8ab9f6fc1ca1d6f4720bef83cadd9105caf71d95d6c771ae901a1f2bf",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgdclGxA4sGVgfHohiX9bepwNYHJsYm83TKdGpyMX7i4AKp3BheWxvYWTESpcCCcQgvUrF6Kufb8HKHW9HIL74PK3ZEFyvcdldbHca6QGh8r/EINBGdlugpDlB7FKNPsVKGyquf+vHaThV9YUEJtrQYzyYAgHCo3NpZ8RAwMe6wUtZvMl38+EXXBnPU4v5rcWx50bEuYExhzmSyOTlrGbazNEiO9P5ZRMvEschOiq7qqXp63YAVbNpexLpDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIApbYrMsTd1BPe3V9nWzJMzG4vTAiW71is4e+09mX5cwo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ecampidoglio
+
+==================================================================

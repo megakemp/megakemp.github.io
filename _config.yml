@@ -11,6 +11,9 @@ plugins:
   - jekyll-redirect-from
   - jekyll-paginate
 
+include:
+  - .well-known
+
 exclude:
   - css/flag-icon-css/*.coffee
   - css/flag-icon-css/*.html
