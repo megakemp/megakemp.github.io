@@ -56,6 +56,12 @@
   </a>
   {% endif %}
 
+  {% if site.style.social.keybase %}
+  <a title="{{ site.style.name }} on Keybase" href="https://keybase.io/{{ site.style.social.keybase }}">
+    <i class="fab fa-keybase"></i>
+  </a>
+  {% endif %}
+
   {% if site.style.social.gplus %}
   <a title="{{ site.style.name }} on Google Plus" href="https://plus.google.com/{{ site.style.social.gplus }}">
     <i class="fa fa-google-plus-square"></i>
