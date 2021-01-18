@@ -1,4 +1,6 @@
-_site
+.jekyll-cache/
+_site/
+
 *.sublime-project
 *.sublime-workspace
 *.jekyll-metadata
