@@ -735,6 +735,10 @@ i.fa-hn {
   font-style: italic;
 }
 
+.video-thumbnail-caption {
+  margin: 10px auto 45px;
+}
+
 figure {
   margin: 15px auto;
   text-align: center;
