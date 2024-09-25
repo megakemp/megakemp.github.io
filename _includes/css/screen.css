@@ -199,6 +199,16 @@ img.customerlogo {
   margin: 50px auto 30px;
 }
 
+img.pluralsightlogo {
+  max-width: 400px;
+  margin: 50px auto 30px;
+}
+
+img.githublogo {
+  max-width: 300px;
+  margin: 50px auto 30px;
+}
+
 span.tag-icon {
   color: #555;
   font-size: 70%;
