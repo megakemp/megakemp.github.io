@@ -274,3 +274,10 @@ Not that you'd ever want to do that.
   <li id="github"><a href="https://gist.github.com/ecampidoglio/e380abe1c2556d05d302">Source code for <strong>commit-msg</strong></a></li>
 </ul>
 </div>
+
+<div class="note">
+<p>
+<i class="fa fa-play-circle-o fa-2x pull-left pull-left-three-lines"></i>
+If you're interested in learning other techniques like the one described in this article, you should check out my <a href="https://www.pluralsight.com/authors/enrico-campidoglio">Pluralsight</a> course <a href="https://www.pluralsight.com/courses/git-tips-tricks">Git Tips and Tricks</a>.
+</p>
+</div>

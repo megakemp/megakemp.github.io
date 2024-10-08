@@ -175,7 +175,7 @@ Git's syntax might be ridiculously opaque at times, but finding out what's in a 
 <div class="note">
 <p>
 <i class="fa fa-play-circle-o fa-2x pull-left pull-left-three-lines"></i>
-Was this helpful? If you like, you can find even more ways to slice and dice the history of your Git repository in my <a href="http://bit.ly/ps-enrico-campidoglio">Pluralsight</a> course <a href="http://bit.ly/git-tips-tricks">Advanced Git Tips and Tricks</a>.
+Was this helpful? If you like, you can find even more ways to slice and dice the history of your Git repository in my <a href="https://www.pluralsight.com/authors/enrico-campidoglio">Pluralsight</a> course <a href="https://www.pluralsight.com/courses/git-tips-tricks">Git Tips and Tricks</a>.
 </p>
 </div>
 
