@@ -10,7 +10,6 @@ If you’ve been using [AutoFixture][1] in your tests for more than a while, cha
 
 <div class="note">
 <p>
-<i class="fa fa-book fa-2x pull-left"></i>
 A <strong>customization</strong> is a group of settings that, when applied to a given <code>Fixture</code> object, control the way AutoFixture will create instances for the types requested through that <code>Fixture</code>.
 </p>
 </div>
@@ -189,7 +188,6 @@ The only part of the algorithm that is specific to the original scenario is the 
 
 <div class="note">
 <p>
-<i class="fa fa-lightbulb-o fa-2x pull-left"></i>
 An opportunity for writing a <strong>general-purpose customization</strong> has just presented itself. We can’t let it slip.
 </p>
 </div>

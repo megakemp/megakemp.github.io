@@ -112,7 +112,6 @@ Now, in rubber dome keyboards, the only way to actuate a key is to _press it all
 
 <div class="note">
 <p>
-<i class="fa fa-hand-o-right fa-2x pull-left"></i>
 Mechanical keys, on the other hand,  are actuated <em>before</em> they bottom out. For most types of switches, that happens about <em>half way</em> through the key travel.
 </p>
 </div>

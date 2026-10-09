@@ -1,0 +1,51 @@
+# Testimonials, copied verbatim from design/pages/.
+# clients: Services page. `pull` is the line quoted on the home page.
+# attendees: Speaking page. students: Training page.
+
+clients:
+  skanska-byggvaror:
+    quote: Enrico took on the responsibility for our web backend after a short handover. He has been able to resolve all issues and new requirements that we have thrown at him. He has with passion, knowledge and great enthusiasm supported our business and customers in an excellent way. Enrico's passion for teaching and mentoring has given us a lot more than just his work done.
+    name: Jonas Rylander
+    title: CTO, Skånska Byggvaror
+    logo: { src: /assets/services/logo-skanska-byggvaror.png, alt: Skånska Byggvaror logo, width: 97, height: 32 }
+
+  alfa-laval:
+    quote: Enrico and I worked together during two intensive days to find the perfect solution. He found how to migrate from Bazaar to Git while keeping the history and the version flags, helped me structure the new repositories to fit our needs, and set up Git submodules to share parts of the code between projects. Enrico knows Git so well; when I have an idea, he helps me realise it in an effective manner.
+    pull: Enrico knows Git so well; when I have an idea, he helps me realise it in an effective manner.
+    name: Edith Lesage
+    title: Automation Platform Expert, Alfa Laval
+    logo: { src: /assets/services/logo-alfa-laval.png, alt: Alfa Laval logo, width: 105, height: 32 }
+
+  spectrum:
+    quote: We had the pleasure of inviting Enrico to a conference. Enrico delivered a very professional presentation with passion and knowledge. No question went unanswered and all our developers, from the seasoned Git veteran to the beginner, were happy.
+    name: Ola Randerz
+    title: Business Area Manager, Spectrum Digital Solutions
+    logo: { src: /assets/services/logo-spectrum.png, alt: Spectrum Digital Solutions logo, width: 119, height: 40 }
+
+  jyske-bank:
+    quote: Enrico's presentation was very clear. He took a "simple" but complex tool like Git and broke it down into smaller parts that made it easier to understand. Enrico has a deep knowledge of Git and in general about source control, and is very accurate and thorough in his explanations — something that is very important when your audience is experienced software developers.
+    name: Philip Juhl
+    title: Product Owner, DevOps Service Team, Jyske Bank
+    logo: { src: /assets/services/logo-jyske-bank.png, alt: Jyske Bank logo, width: 141, height: 40 }
+
+attendees:
+  - quote: "‘The things Git can do that none of the GUIs ever told you about’ with Enrico was easily the best Techorama session yet!"
+    name: "Mark Seemann"
+    context: "Techorama"
+  - quote: "Really great talk from Enrico at NDC Oslo on Git. First time I've actually understood “low level” git-stuff."
+    name: "Thomas Darvik"
+    context: "NDC Oslo"
+  - quote: "Enrico's Git talks are always brilliant. Highly recommend you check him out."
+    name: "Mat McLoughlin"
+    context: "Conference attendee"
+
+students:
+  - quote: "Thanks for the great Pluralsight course about Git — it's awesome. Started to use some tricks like <code>commit --fixup</code> or <code>rebase --whitespace=fix</code>: real life saver."
+    name: "Alex Povar"
+    context: "on <em>Advanced Git Tips and Tricks</em>"
+  - quote: "The Advanced Git Tips and Tricks course on Pluralsight is paying for itself. So much good info there!"
+    name: "Igal Tabachnik"
+    context: "on <em>Advanced Git Tips and Tricks</em>"
+  - quote: "What a course! This will really take your Git workflow to another level."
+    name: "Maja Gaćica"
+    context: "on <em>Advanced Git Tips and Tricks</em>"

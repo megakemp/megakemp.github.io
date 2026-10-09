@@ -1,0 +1,8 @@
+{%- comment %} A post's first category as a tag link. git and speaking have their own pages. {% endcomment %}
+{%- assign tag = include.categories | first %}
+{%- if tag == 'git' or tag == 'speaking' %}
+  {%- assign tag_url = tag | prepend: '/' | append: '/' %}
+{%- else %}
+  {%- assign tag_url = tag | replace: '.', 'dot' | prepend: '/tag/' | append: '/' %}
+{%- endif -%}
+<a class="tag" href="{{ tag_url }}"><span class="nf" aria-hidden="true">&#xF02B;</span>{{ tag }}</a>

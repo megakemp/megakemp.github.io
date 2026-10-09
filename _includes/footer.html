@@ -1,16 +1,14 @@
-<div class="disclaimer">
-  {% if site.style.show_disclaimer %}
-  <p>
-    The postings on this site are my own and don't necessarily represent my
-    employer’s positions, strategies or opinions.
-  </p>
-  {% endif %}
-
-  <p>
-    {% include license.html %}
-  </p>
-
-  <p>
-  © {{ site.style.name }}, 2008&ndash;{{ site.time | date: "%Y" }} &mdash; built with <i class="fa fa-heart" aria-hidden="true"></i> <span class="nowrap">Vim and Jekyll</span>.
-  </p>
-</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="social">
+      <li><a href="https://github.com/{{ site.style.social.github }}"><span class="nf" aria-hidden="true">&#xF09B;</span>GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/{{ site.style.social.linkedin }}"><span class="nf" aria-hidden="true">&#xF0E1;</span>LinkedIn</a></li>
+      <li><a href="https://stackoverflow.com/users/{{ site.style.social.stackoverflow }}"><span class="nf" aria-hidden="true">&#xF16C;</span>Stack Overflow</a></li>
+      <li><a href="https://keybase.io/{{ site.style.social.keybase }}"><span class="nf" aria-hidden="true">&#xEDBF;</span>Keybase</a></li>
+    </ul>
+    <div class="colophon">
+      <span>© {{ site.style.name }}, 2008–{{ site.time | date: '%Y' }} · <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
+      <span>Built with Vim and Jekyll</span>
+    </div>
+  </div>
+</footer>

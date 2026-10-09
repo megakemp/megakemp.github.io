@@ -27,7 +27,6 @@ If you're looking at TDD for some guidance, well, I'm sorry to tell you that you
 
 <div class="note">
 <p>
-<i class="fa fa-gavel"></i>
 Thou shalt not write a single line of production code without a failing test.
 </p>
 </div>
@@ -48,7 +47,6 @@ So, what's the first thing you should do? Well, let's start by understanding wha
 
 <div class="note">
 <p>
-<i class="fa fa-book fa-2x pull-left"></i>
 Any live cell with fewer than two live neighbors dies, as if by needs caused by <strong>underpopulation</strong>.
 </p>
 </div>
@@ -165,7 +163,6 @@ Let's get back to our test. Since we're testing one single scenario, we can stru
 
 <div class="note">
 <p>
-<i class="fa fa-book fa-2x pull-left"></i>
 For each scenario there's exactly one <strong>context</strong> to set up, one <strong>action</strong> and one or more <strong>assertions</strong> on the outcome.
 </p>
 </div>
@@ -224,7 +221,6 @@ This approach to developing software is called [Outside-in development](http://e
 
 <div class="note">
 <p>
-<i class="fa fa-lightbulb-o fa-2x pull-left"></i>
 In our little exercise, we <strong>grew a feature</strong> in our Game of Life web API from the <strong>outside-in</strong>, following the principles of <strong>Behavior-driven Development</strong>.
 </p>
 </div>
@@ -259,9 +255,9 @@ be BDD all the way down.
 </iframe>
 
 <a id="downloads"></a>
-<div class="note downloads">
+<div class="note">
 <ul>
-  <li id="slides"><a href="{{ site.url }}/assets/{{ page.assets }}/bddallthewaydown-slides.pdf">Slides</a></li>
-  <li id="github"><a href="https://github.com/ecampidoglio/gameoflife">Conway's Game of Life Demo</a></li>
+  <li><a href="{{ site.url }}/assets/{{ page.assets }}/bddallthewaydown-slides.pdf">Slides</a></li>
+  <li><a href="https://github.com/ecampidoglio/gameoflife">Conway's Game of Life Demo</a></li>
 </ul>
 </div>

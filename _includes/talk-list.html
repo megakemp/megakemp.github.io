@@ -1,0 +1,39 @@
+{%- comment %}
+  Talk rows (Speaking, Git). A talk has year, title, description and optionally
+  id, event, video (a "Video ↗" link the title also points to), links (label and
+  url pairs) and thumbnail (a picture set in assets/speaking/).
+{% endcomment -%}
+<div class="talk-list">
+  {%- for talk in include.talks %}
+  <article class="talk-row"{% if talk.id %} id="{{ talk.id }}"{% endif %}>
+    <div class="talk-meta">
+      <span class="year">{{ talk.year }}</span>
+      {%- if talk.event %}
+      <span class="venue"><span class="nf" aria-hidden="true">&#xF041;</span>{{ talk.event }}</span>
+      {%- endif %}
+    </div>
+    <div class="talk-body{% if talk.thumbnail %} has-thumb{% endif %}">
+      <div>
+        <h3>{% if talk.video %}<a href="{{ talk.video }}">{{ talk.title }}</a>{% else %}{{ talk.title }}{% endif %}</h3>
+        <p>{{ talk.description }}</p>
+        {%- if talk.video or talk.links %}
+        <div class="links">
+          {%- if talk.video %}
+          <a href="{{ talk.video }}"><span class="nf" aria-hidden="true">&#xF03D;</span>Video ↗</a>
+          {%- endif %}
+          {%- for link in talk.links %}
+          <a href="{{ link.url }}"><span class="nf" aria-hidden="true">&#xF03D;</span>{{ link.label }} ↗</a>
+          {%- endfor %}
+        </div>
+        {%- endif %}
+      </div>
+      {%- if talk.thumbnail %}
+      {%- capture alt %}Watch {{ talk.title }} on YouTube{% endcapture %}
+      <a class="thumb" href="{{ talk.video }}">
+        {% include picture.html src=talk.thumbnail width=1120 height=630 alt=alt lazy=true %}
+      </a>
+      {%- endif %}
+    </div>
+  </article>
+  {%- endfor %}
+</div>

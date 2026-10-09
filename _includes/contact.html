@@ -1,0 +1,24 @@
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-intro">
+      <h2 class="section-title">Get in touch</h2>
+      <p>{{ include.intro | default: "Want me to speak at your company or event? Interested in hiring me? I'd love to hear from you." }}</p>
+    </div>
+    <ul class="channel">
+      <li>
+        <span class="nf" aria-hidden="true">&#xF0E0;</span>
+        <div>
+          <a href="mailto:{{ site.style.email }}">{{ site.style.email }}</a>
+          <span class="hint">By far the easiest way to start a conversation.</span>
+        </div>
+      </li>
+      <li>
+        <span class="nf" aria-hidden="true">&#xF0E1;</span>
+        <div>
+          <a href="https://www.linkedin.com/in/{{ site.style.social.linkedin }}">linkedin.com/in/{{ site.style.social.linkedin }}</a>
+          <span class="hint">If you're on LinkedIn, send me a message there.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

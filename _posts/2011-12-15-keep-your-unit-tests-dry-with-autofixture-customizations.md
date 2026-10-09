@@ -92,7 +92,6 @@ A customization is a pretty general term. However, put in the context of AutoFix
 
 <div class="note">
 <p>
-<i class="fa fa-book fa-2x pull-left"></i>
 A <strong>customization</strong> is a group of settings that, when applied to a given <code>Fixture</code>, control the way AutoFixture will create anonymous instances of the types requested through that <code>Fixture</code>.
 </p>
 </div>

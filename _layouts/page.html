@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<section class="page-header">
+  <div class="wrap">
+    <div class="header-text">
+      <h1>{{ page.title }}</h1>
+      {%- if page.intro %}
+      <div class="intro">
+        {{ page.intro }}
+      </div>
+      {%- endif %}
+      {%- if page.buttons %}
+      <div class="buttons">
+        {%- for button in page.buttons %}
+        <a class="btn {% if forloop.first %}btn-primary{% else %}btn-secondary{% endif %}" href="{{ button.url }}">{{ button.label }}</a>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+    </div>
+    {%- if page.graph %}
+    {{ page.graph }}
+    {%- endif %}
+  </div>
+</section>
+
+{{ content }}

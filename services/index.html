@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Services
 assets: services
 image: backdrop.jpg
@@ -7,138 +7,84 @@ excerpt: If you're part of a team of developers who is looking to improve their 
 redirect_from:
   - /offering/
   - /hire/
+intro: |
+  <p>I've been a consultant since early 2002. For over two decades, I've helped teams of all sizes build better software. My focus is on delivering real value by emphasising code quality and fast feedback cycles.</p>
+  <p>I believe in continuous improvement, both for myself and the teams I work with. I'm passionate about sharing what I learn and helping others grow. If your team is looking to level up their skills in key areas, I can help.</p>
+buttons:
+  - label: Get in touch
+    url: "#contact"
+  - label: What clients say
+    url: "#testimonials"
 ---
+<section class="photo wrap">
+  <figure>
+    {% include picture.html src="/assets/services/backdrop" width=1120 height=747 position="50% 40.9%" alt="Enrico on stage at Techorama Belgium, in front of a wall of projected C# code" %}
+    <figcaption><span class="nf" aria-hidden="true">&#xF041;</span>Techorama Belgium — photo: Techorama</figcaption>
+  </figure>
+</section>
 
-<div id="home">
-  <h1 id="header" class="backdrop services">Services</h1>
+<section class="offers wrap">
+  <article id="training" class="offer">
+    <h2>Training</h2>
+    <div class="offer-body">
+      <p>Learning something new can be overwhelming with all the information out there. That's where I come in — I help you focus on what matters and guide you in the right direction.</p>
+      <p>Whether you need a quick one-hour presentation or a full-day workshop, I offer training tailored to your schedule and needs. My sessions cover a range of topics I specialise in, giving your team practical skills to apply right away.</p>
+      <p>To get a feel for my expertise and style, check out some of my <a href="/speaking/">previous presentations</a> or explore my <a href="/workshops/">current workshops</a> to find a good fit for your team.</p>
+    </div>
+  </article>
 
-  <p>I've been a consultant since early 2002. For over two decades, I’ve helped teams of all sizes build better software. My focus is on delivering real value by emphasizing <a href="/speaking/#developer_on_fire_414">code quality</a> and fast feedback cycles.</p>
+  <article id="mentoring" class="offer">
+    <h2>Mentoring</h2>
+    <div class="offer-body">
+      <p>Classroom training is great for getting started, but it can only take you so far. Once it's over, the challenge is finding time to continue learning while staying productive on your project.</p>
+      <p>That's where mentoring comes in. I'll join your team, actively working on your project while coaching the team on the topics that matter to you. It's learning by doing, with a real impact that lasts.</p>
+      <blockquote class="pull-quote">What if, instead of choosing between training and productivity, you can have both.</blockquote>
+      <p>With over 20 years of experience, I've focused on building REST APIs with ASP.NET, along with HTML/JavaScript frontends. I also specialise in creating and maintaining Continuous Delivery pipelines on both Windows and Linux. Whatever your team's needs, I'll help them grow while delivering value to your project.</p>
+    </div>
+  </article>
 
-  <p>I believe in <a href="/about/#my_mission">continuous improvement</a>, both for myself and the teams I work with. I’m passionate about sharing what I learn and helping others grow. If your team is looking to level up their skills in <a href="/services/#topics">key areas</a>, I can help.</p>
+  <article id="consulting" class="offer">
+    <h2>Consulting</h2>
+    <div class="offer-body">
+      <p>If you need expert advice, I offer traditional consulting services. Here are some of the ways I've helped my clients:</p>
+      <ul class="bullets ruled">
+        <li><span aria-hidden="true">›</span><span>Choosing the right architecture for a new project</span></li>
+        <li><span aria-hidden="true">›</span><span>Assessing and improving the quality of existing code</span></li>
+        <li><span aria-hidden="true">›</span><span>Establishing a peer review culture using Pull Requests</span></li>
+        <li><span aria-hidden="true">›</span><span>Setting up deployment pipelines and implementing Continuous Delivery</span></li>
+        <li><span aria-hidden="true">›</span><span>Enhancing release management with Semantic Versioning and branching strategies</span></li>
+        <li><span aria-hidden="true">›</span><span>Introducing Test-Driven Development and writing maintainable tests</span></li>
+        <li><span aria-hidden="true">›</span><span>Improving team collaboration with the appropriate Git workflow</span></li>
+        <li><span aria-hidden="true">›</span><span>Migrating codebases from Subversion, TFS, Mercurial or Bazaar to Git</span></li>
+      </ul>
+      <p>These projects typically involve dedicated workshop days where we work through the tasks together. Depending on the scope, I can assist in person, remotely, or a mix of both. For larger projects, I'm available for longer-term engagements as well.</p>
+    </div>
+  </article>
+</section>
 
-  <p>Here’s what I offer.</p>
-
-  <hr/>
-
-  <h2 id="training">Training</h2>
-
-  <p>Learning something new can be overwhelming with all the information out there. That’s where I come in — I help you focus on what matters and guide you in the right direction.</p>
-
-  <p>
-  <span class="thumbnail-article" style="background-image: url('/assets/services/classroom-training.jpg'); background-position: center; width: 230px; height: 153px; margin-left: 3%; margin-top: 8px; box-shadow: 0 0 9px 0 rgba(0,0,0,0.8)"></span>
-  Whether you need a quick <a href="/speaking/#presentations">1-hour presentation</a> or a <a href="/workshops">full-day workshop</a>, I offer training tailored to your schedule and needs.<br/>
-  My sessions cover a range of <a href="/services/#topics">topics I specialize in</a>, giving your team practical skills to apply right away.
-  </p>
-
-  <p>To get a feel for my expertise and style, check out some of my <a href="/speaking/#presentations">previous presentations</a> on the <a href="/speaking">speaking page</a> or explore my <a href="/workshops">current workshops</a> to find a good fit for your team.</p>
-
-  <hr/>
-
-  <h2 id="mentoring">Mentoring</h2>
-
-  <p>Classroom training is great for getting started, but it can only take you so far. Once it’s over, the challenge is finding time to continue learning while staying productive on your project.</p>
-
-  <p>That’s where mentoring comes in. Instead of choosing between training and productivity, you can have both. I’ll join your team, actively working on your project while coaching the team on the topics that matter to you. It’s learning by doing, with a real impact that lasts.</p>
-
-  <blockquote><p>What if, instead of choosing between training and productivity, you can have both.</p></blockquote>
-
-  <p>With over 20 years of experience, I’ve focused on building REST APIs with ASP.NET, along with HTML/JavaScript frontends. I also specialize in creating and maintaining Continuous Delivery pipelines on both Windows and Linux. Whatever your team’s needs, I’ll help them grow while delivering value to your project.</p>
-
-  <hr/>
-
-  <h2 id="consulting">Consulting</h2>
-
-  <p>If you need expert advice, I offer traditional consulting services. Here are some of the ways I’ve helped <a href="#testimonials">my clients</a>:</p>
-
-  <ul>
-    <li>Choosing the right architecture for a new project</li>
-    <li>Assessing and improving the quality of existing code</li>
-    <li>Establishing a peer review culture using Pull Requests</li>
-    <li>Setting up <a href="/workshops/#building_a_deployment_pipeline_with_csharp_and_cake">deployment pipelines</a> and implementing <a href="https://martinfowler.com/bliki/ContinuousDelivery.html">Continuous Delivery</a></li>
-    <li>Enhancing release management with <a href="https://semver.org">Semantic Versioning</a> and branching strategies</li>
-    <li>Introducing Test-Driven Development and writing <a href="/2011/12/15/keep-your-unit-tests-dry-with-autofixture-customizations/">maintenable tests</a></li>
-    <li>Improving team collaboration with the appropriate <a href="/git">Git workflow</a></li>
-    <li>Migrating codebases from Subversion, TFS, Mercurial, or Bazaar to <a href="/git">Git</a></li>
-  </ul>
-
-  <p>These projects typically involve dedicated workshop days where we work through the tasks <a href="#mentoring">together</a>. Depending on the scope, I can assist in person, remotely, or a mix of both. For larger projects, I’m available for longer-term engagements as well.</p>
-
-  <hr/>
-
-  <h2 id="topics">Expertise</h2>
-
-  <p>Regardless of how you choose to improve your skills, here's the list of topics I specialize in and will gladly help you with:</p>
-
-  <ul>
-    <li><a href="/git">Git</a> and how to <a href="/workshops/#mastering_git">work with it</a> in a team</li>
-    <li>Object-oriented design and architecture</li>
-    <li>Designing RESTful APIs</li>
-    <li>Developing web applications on the .NET Framework or .NET Core with C#</li>
-    <li>Implementing and maintaining a <a href="/workshops/#building_a_deployment_pipeline_with_csharp_and_cake">deployment pipeline</a></li>
-    <li>Writing <a href="/speaking/#testing_with_no_harm"><em>readable</em></a> and <a href="/speaking/#testing_the_essential_with_autofixture"><em>maintainable</em></a> automated tests with C# or Java</li>
-    <li>Test-driven development, again with C# or Java</li>
-    <li><a href="/speaking/#why_no_code_reviews">Code reviews</a> and how to make them part of your development process</li>
-  </ul>
-
-  <p>If you're interested in learning or improving your knowledge in one of these areas, get in touch. You'll find my contact information <a href="#contact">below</a>.</p>
-
-  <hr/>
-
-  <h2 id="testimonials">Testimonials</h2>
-
-  <p>I believe the best measure of success is what my clients say after we’ve worked together. Here are some of their thoughts on our collaboration:</p>
-
-  <img class="customerlogo" alt="SKB logo" src="/assets/services/skanskabyggvaror.png" />
-  <blockquote class="testimonial">
-    <p>Enrico took on the responsibility for our web backend after a short handover. He has been able to resolve all issues and new requirements that we have thrown at him. He has with passion, knowledge and great enthusiasm supported our business and customers in an excellent way.<br/>
-    Enrico's passion for teaching and mentoring has given us a lot more than just his work done.</p>
-  </blockquote>
-  <span>— Jonas Rylander, CTO, Skånska Byggvaror</span>
-
-  <img class="customerlogo" alt="AlfaLaval logo" src="/assets/services/alfalaval.png" />
-  <blockquote class="testimonial">
-    <p>At Alfa Laval, the Automation Development department used Bazaar to handle the source code. Bazaar has limited features, so we decided to have a better and more sustainable solution by using Team Foundation Server and Git.<br/>
-    Enrico and I worked together during two intensive days to find the perfect solution.<br/>
-    Enrico found how to migrate from Bazaar to Git while keeping the history and the version flags. He helped me structure the new repositories in Git to fit our needs by creating different branches. He also helped me create Git submodules in our application, to share parts of the code with different projects. This feature really improved our code development.<br/>
-    Enrico knows Git so well; when I have an idea, he helps me realise it in an effective manner.</p>
-  </blockquote>
-  <span>— Edith Lesage, Automation Platform Expert, Alfa Laval</span>
-
-  <img class="customerlogo" alt="Spectrum logo" src="/assets/services/spectrum.png" />
-  <blockquote class="testimonial">
-    <p>We had the pleasure of inviting Enrico to a conference. Enrico delivered a very professional presentation with passion and knowledge. No question went unanswered and all our developers, from the seasoned Git veteran to the beginner, were happy.</p>
-  </blockquote>
-  <span>— Ola Randerz, Business Area Manager, Spectrum Digital Solutions</span>
-
-  <img class="customerlogo" alt="Jyske Bank logo" src="/assets/services/jyskebank.png" />
-  <blockquote class="testimonial">
-    <p>I've had the pleasure of holding a Meetup with Enrico Campidoglio.<br/>
-    Enrico's presentation was very clear. He took a "simple" but complex tool like Git and broke it down into smaller parts that made it easier to understand.<br/>
-    Enrico has a deep knowledge of Git and in general about source control, and is very accurate and thorough in his explanations. Something that is very important when your audience is experienced software developers.</p>
-  </blockquote>
-  <span>— Philip Juhl, Product Owner at DevOps-Serviceteam, Jyske Bank</span>
-
-  <hr/>
-
-  <h2 id="contact">Contact</h2>
-
-  <p>Do you want me to speak at your company or event? Are you interested in hiring me? If so, I'd love to hear from you. Here's a few different ways you can reach me.</p>
-
-  <h3><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</h3>
-
-  <p>By far the easiest way to start a conversation with me is by sending off an email. The address is <a href="mailto:enrico@megakemp.com">enrico@megakemp.com</a>.
-
-  <h3><i class="fa-brands fa-twitter" aria-hidden="true"></i> X</h3>
-
-  <p>X is great if you just want to ping me about something specific. For example, you may have a burning question <a href="/git">about Git</a> and would like me to take a look at it. You can also DM me, if you prefer. My handle is <a href="https://x.com/ecampidoglio" target="_blank">@ecampidoglio</a>.</p>
-
-  <h3><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</h3>
-
-  <p>If you're on LinkedIn, you can always send me a message there. Here's a link to my <a href="https://www.linkedin.com/in/ecampidoglio" target="_blank">public profile</a>.</p>
-
-  <div class="footnotes">
-    <p>
-    The image used at the <a href="/services/#header">top of this page</a> is a modification based on a photo kindly licensed by the <a href="https://techorama.be" target="_blank">Techorama conference</a>.
-    </p>
+<section id="expertise" class="expertise">
+  <div class="wrap">
+    <div class="expertise-intro">
+      <h2 class="section-title">Expertise</h2>
+      <p>Regardless of how you choose to improve your skills, these are the topics I specialise in and will gladly help you with.</p>
+    </div>
+    <ul class="bullets topics">
+      <li><span aria-hidden="true">›</span><span>Git and how to work with it in a team</span></li>
+      <li><span aria-hidden="true">›</span><span>Object-oriented design and architecture</span></li>
+      <li><span aria-hidden="true">›</span><span>Designing RESTful APIs</span></li>
+      <li><span aria-hidden="true">›</span><span>Developing web applications on .NET with C#</span></li>
+      <li><span aria-hidden="true">›</span><span>Implementing and maintaining a deployment pipeline</span></li>
+      <li><span aria-hidden="true">›</span><span>Writing readable, maintainable automated tests in C# or Java</span></li>
+      <li><span aria-hidden="true">›</span><span>Test-driven development, again with C# or Java</span></li>
+      <li><span aria-hidden="true">›</span><span>Code reviews and how to make them part of your process</span></li>
+    </ul>
   </div>
-</div>
+</section>
+
+<section id="testimonials" class="clients wrap">
+  <div class="section-header">
+    <h2 class="section-title">What clients say</h2>
+    <p>I believe the best measure of success is what my clients say after we've worked&nbsp;together.</p>
+  </div>
+  {% include testimonials.html items=site.data.testimonials.clients wide=true %}
+</section>

@@ -1,0 +1,25 @@
+{%- comment %}
+  Post rows. With blurbs (a list of url, title and excerpt), only the posts
+  that have one are listed, with that title and excerpt.
+{% endcomment -%}
+<div class="post-list">
+  {%- for post in include.posts %}
+  {%- assign blurb = include.blurbs | where: 'url', post.url | first %}
+  {%- if include.blurbs and blurb == nil %}{% continue %}{% endif %}
+  {%- assign date = post.date | date: '%Y-%m-%d' %}
+  {%- assign excerpt = post.excerpt | markdownify | remove: '<p>' | remove: '</p>' | strip %}
+  {%- comment %} Some 2008–2009 posts have no excerpt and open with an inline image. {% endcomment %}
+  {%- if excerpt contains '<img' %}{% assign excerpt = excerpt | strip_html %}{% endif %}
+  {%- if blurb %}{% assign excerpt = blurb.excerpt %}{% endif %}
+  <article class="post-row">
+    <div class="post-meta">
+      <time datetime="{{ date }}">{{ date }}</time>
+      {% include tag-link.html categories=post.categories %}
+    </div>
+    <div class="post-body">
+      <h3><a href="{{ post.url }}">{{ blurb.title | default: post.title }}</a></h3>
+      <p>{{ excerpt }}</p>
+    </div>
+  </article>
+  {%- endfor %}
+</div>

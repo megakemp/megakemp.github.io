@@ -1,0 +1,9 @@
+<ul class="talks-compact">
+  {%- for talk in include.talks %}
+  <li>
+    <span class="year">{{ talk.year }}</span>
+    <span class="title">{{ talk.title }}</span>
+    <span class="venue"><span class="nf" aria-hidden="true">&#xF041;</span>{{ talk.event }}</span>
+  </li>
+  {%- endfor %}
+</ul>

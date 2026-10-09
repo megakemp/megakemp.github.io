@@ -1,191 +1,135 @@
 ---
-layout: default
-title: Enrico Campidoglio
+layout: page
+title: Git
 assets: git
 image: backdrop.png
 redirect_from: /tag/git/
+intro: |
+  <p>Over the years, I've both written and spoken about Git in articles, talks, workshops and online courses, and I've answered more than a few questions about it on Stack Overflow.</p>
+  <p>More than once, I've wanted to link to one of those and couldn't find it. This page gathers everything in one place.</p>
+buttons:
+  - label: Articles
+    url: "#articles"
+  - label: Talks
+    url: "#talks"
+graph: |
+  <pre class="graph" aria-hidden="true"><span class="n">*</span> <span class="h">a3f9c1e</span> <span class="r">(HEAD -&gt; main)</span>
+  |\
+  | <span class="n">*</span> 7d21b40
+  | <span class="n">*</span> c0ffee5
+  <span class="n">*</span> | 91e4d2a
+  |/
+  <span class="n">*</span> 4b8e7f3
+  |\
+  | <span class="n">*</span> e5a1c9d
+  | |\
+  | | <span class="n">*</span> 2f6b0a8
+  | |/
+  | <span class="n">*</span> 8c3d1e7
+  |/
+  <span class="n">*</span> d34db33
+  <span class="n">*</span> 1a2b3c4
+  </pre>
+articles:
+  - url: /2019/03/20/the-case-for-pull-rebase/
+    title: "The Case for Pull Rebase"
+    excerpt: "When using a trunk-based workflow, the standard <code>git pull</code> clutters your history with merge commits, simply due to the asynchronous nature of collaboration. Fortunately, there's a somewhat obscure way to make things right."
+  - url: /2017/10/19/the-invisible-commits-part-one/
+    title: "The Invisible Commits — Part 1"
+    excerpt: "Your repository has more commits than what meets the eye. They hide somewhere in the <code>.git</code> directory, where you can't see them, but they're there. Knowing where to find them can mean the difference between recovering your work and losing it to the sands of time."
+  - url: /2017/04/19/what-is-in-a-git-branch/
+    title: "What's in a Branch"
+    excerpt: "One of the things you often want to know is which commits are in what branch. You wouldn't believe how cumbersome some version control systems make answering such a simple question. With Git, it's as easy as pie."
+  - url: /2016/08/25/git-undo/
+    title: "Git Undo"
+    excerpt: "You're in the middle of rewriting your local commits when you realise you've gone too far and, after one too many rebases, you're left with a history that looks nothing like what you wanted. Here's the <code>git undo</code> command I came up with, and how I got there."
+  - url: /2014/08/14/the-importance-of-a-good-looking-history/
+    title: "The Importance of a Good-looking History"
+    excerpt: "Version control is the rear mirror through which we look at the history of a code base before we go on to shape its future. Among everything it captures, the most critical part is the commit messages."
+  - url: /2013/01/22/grokking-git-by-seeing-it/
+    title: "Grokking Git by Seeing It"
+    excerpt: "When I first got into Git, the most frustrating part was the lack of guidance on how to interpret the myriad of commands and switches. What I wanted was a way to see how each one changed the state of my repository."
+talks:
+  - year: 2023
+    title: "Git Hidden Gems"
+    description: "There is more to Git than meets the eye. On the surface, it's a version control system. Underneath, it's a virtual file system built to track your files. And right in between is a wealth of productivity features very few people know about: from automating common daily tasks to better handling of merge conflicts, the quality-of-life improvements you always wished you knew about."
+    links:
+      - label: "Copenhagen Developers Festival 2023"
+        url: https://youtu.be/uFrPgUjv_Y8
+  - year: 2020
+    title: "How Effective Teams Use Git"
+    description: "What I've learned from working with people who are really good at being productive with Git: the things you can do to make Git more pleasant to work with and improve the way you collaborate with the rest of your team. Success starts with good habits."
+    links:
+      - label: "NDC Oslo 2020"
+        url: https://youtu.be/yP7DAdZAdTw
+      - label: "NDC DevOps 2020"
+        url: https://youtu.be/yXixyZ5ch3c
+  - year: 2019
+    title: "Understanding Git — Behind the Command Line"
+    description: "How Git works from the ground up: its fundamental concepts and how they're implemented in the object model, then up to the user-facing commands and how to use Git's unique features to craft a beautiful history without compromising on your workflow."
+    links:
+      - label: "NDC Oslo 2019"
+        url: https://youtu.be/BdiLKxSu-2Q
+  - year: 2016
+    title: "The Things Git Can Do"
+    description: "Exactly what Git can do for you that none of the GUI tools ever tell you about: moving chunks of commits between branches in a single command, custom history visualisations, data recovery. All 100% from the command line."
+    links:
+      - label: "NDC Oslo 2016"
+        url: https://vimeo.com/171317261
+  - year: 2016
+    title: "Git Tips and Tricks"
+    description: "Taking advantage of Git's advanced, and therefore lesser-known, features to take your daily workflow to the next level, with a graphic representation of the repository showing how each command affects the underlying history."
+    links:
+      - label: "WROC# 2016"
+        url: https://vimeo.com/163822148
+  - year: 2012
+    title: "Grokking Git by Seeing It"
+    description: "The Git zen from the inside out. Working from real-world scenarios, from Git's core concepts and building blocks up to its advanced features, showing graphically what happens under the covers every time you run a command."
+    links:
+      - label: "Leetspeak 2012"
+        url: https://vimeo.com/52633764
 ---
+<section id="articles" class="git-articles wrap">
+  <div class="section-header">
+    <h2 class="section-title">Articles</h2>
+    <p>I made a rule for myself: every time I learn a new peculiar thing about Git, I write it down. Every once in a while, something needs more explaining than a note, and it becomes an article.</p>
+  </div>
+  {% include post-list.html posts=site.categories.git blurbs=page.articles %}
+</section>
 
-<div id="home">
-  <h1 class="backdrop git">Git</h1>
+<section id="courses" class="git-courses wrap">
+  <div class="section-header">
+    <h2 class="section-title">Courses</h2>
+    <p>Sometimes I have more to say than fits in an article or a talk. That's when I make a course instead.</p>
+  </div>
+  <div class="post-list">
+    {%- assign courses = site.data.courses | where: 'git', true %}
+    {%- for course in courses %}
+    <article class="post-row">
+      <div class="post-meta">
+        <span>{{ course.year }}</span>
+        <span class="source"><img src="/assets/pluralsight-mark-mono.png" width="16" height="16" alt="">Pluralsight</span>
+      </div>
+      <div class="post-body">
+        <h3><a href="{{ course.url }}">{{ course.title }} ↗</a></h3>
+        <p>{{ course.description }}</p>
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
 
-  <p>Over the years, I've both <a href="/git/#articles">written</a> and <a href="/git/#presentations">spoken</a> about Git in articles, presentations, workshops or by <a href="https://stackoverflow.com/search?tab=votes&q=user%3a26396%20%5bgit%5d" target="_blank">answering questions on Stack Overflow</a>.</p>
+<section id="talks" class="git-talks wrap">
+  <div class="section-header">
+    <h2 class="section-title">Talks</h2>
+    <p>My most popular talks about Git. Where a talk was recorded, there's a link to the video.</p>
+  </div>
+  {% include talk-list.html talks=page.talks %}
+</section>
 
-  <p>In more than one occasion, I've found myself wanting to link to one of those resources but not being able to find it. This page is an attempt to group everything together in a single place to make it easier to reference in the future. I hope you find it useful.</p>
-
-  <hr/>
-
-  <h2 id="articles">Articles</h2>
-  <p>I made a rule for myself that every time I learn a new peculiar thing about Git, <a href="https://twitter.com/ecampidoglio/status/664356505005764608" target="_blank">I write it down</a>. Every once in a while, I'll come across something that really needs explaining, so I'll write an article about it. Here are the links to my Git notes so far.</p>
-
-  <h4>The Case for Pull Rebase</h4>
-  <p>
-    <a href="/2019/03/20/the-case-for-pull-rebase/">
-      <span class="thumbnail-article"
-            style="background-image: url('/assets/the-case-for-pull-rebase/trunk.png'); background-position: left;"></span>
-    </a>
-    When using a Trunk-based development workflow, the standard <code>git pull</code> command is going to clutter your history with a bunch of merge commits, simply due to the asynchronous nature of collaboration. Fortunately, there’s a somewhat obscure way to make things right.<br/>
-    <span class="nowrap"><a href="/2019/03/20/the-case-for-pull-rebase/">Continue reading ↦</a></span>
-  </p>
-
-  <h4>The Invisible Commits — Part 1</h4>
-  <p>
-    <a href="/2017/10/19/the-invisible-commits-part-one/">
-      <span class="thumbnail-article"
-            style="background-image: url('/assets/the-invisible-commits-part-one/card.jpg'); background-position: center;"></span>
-    </a>
-    Your repository has more commits than what meets the eye. They hide somewhere in the <code>.git</code> directory — where you can’t see them — but they’re there. I call them the <em>invisible commits</em>.<br/>
-    Knowing where to find them, can sometimes mean the difference between being able to recover your work and losing it to the sands of time.<br/>
-    <span class="nowrap"><a href="/2017/10/19/the-invisible-commits-part-one/">Continue reading ↦</a></span>
-  </p>
-
-  <h4>What's in a Branch</h4>
-  <p>
-    <a href="/2017/04/19/what-is-in-a-git-branch/">
-      <span class="thumbnail-article"
-            style="background-image: url('/assets/what-is-in-a-git-branch/unmerged-right.png'); background-position: right 2px center; background-size: 500px;"></span>
-    </a>
-    Regardless of how you choose to track your history, one of the things you often want to know is which commits are in what branch. Sounds easy enough, right? And yet, you wouldn't believe just how cumbersome certain version control systems make answering such a simple question. What I think you'll find even harder to believe, however, is the fact that with Git it's as easy as pie. <span class="nowrap"><a href="/2017/04/19/what-is-in-a-git-branch/">Continue reading ↦</a></span>
-  </p>
-
-  <h4>Git Undo</h4>
-  <p>
-    <a href="/2016/08/25/git-undo/">
-      <span class="thumbnail-article"
-            style="background-image: url('/assets/git-undo/git-lg-restored.png');"></span>
-    </a>
-    Tell me if you recognize this scenario: you’re in the middle of rewriting your local commits when you suddenly realize that you have gone too far and, after one too many rebases, you are left with a history that looks nothing like the way you wanted. No? Well, I certainly do. It was in one of those moments of despair that I finally decided to set out to create my own git undo command. Here’s what I came up with and how I got there.<br /><a href="/2016/08/25/git-undo/">Continue reading ↦</a>
-  </p>
-
-  <h4>The Importance of a Good-looking History</h4>
-  <p>
-    <a href="/2014/08/14/the-importance-of-a-good-looking-history/">
-      <span class="thumbnail-article"
-            style="background-image: url('/assets/the-importance-of-a-good-looking-history/githubformac-commitwarning.png');"></span>
-    </a>
-    Since the dawn of civilization, common sense has taught us that the way forward starts by knowing how we got here in the first place. While this powerful principle applies to practically all aspects of life, it’s especially true when developing software. For us programmers, the rear mirror through which we look at the history of a code base before we go on to shape its future is version control. Among all the information captured by a version control tool, the most critical ones are the commit messages.<br /><a href="/2014/08/14/the-importance-of-a-good-looking-history/">Continue reading ↦</a>
-  </p>
-
-  <h4>Grokking Git by Seeing It</h4>
-  <p>
-    <a href="/2013/01/22/grokking-git-by-seeing-it/">
-      <span class="thumbnail-article"
-            style="background-image: url('/assets/git/seegitsession.png');"></span>
-    </a>
-    When I first started getting into Git a couple of years ago, one of the things I found most frustrating about the learning experience was the complete lack of guidance on how to interpret the myriad of commands and switches found in the documentation. What I was looking for, was a way to represent the state of a Git repository in some sort of graphical format. In my mind, if only I could have visualized how the different combinations of commands and switches impacted my repo, I would have had a much better shot at actually understand their meaning.<br /><a href="/2013/01/22/grokking-git-by-seeing-it/">Continue reading ↦</a>
-  </p>
-
-  <hr/>
-
-  <h2 id="courses">Courses</h2>
-  <p>
-    Sometimes, I have more things to say than can fit in an article or a presentation. That's when I make a course instead. However, those take longer so there are fewer of them. In any case, rest assured that every time I publish a new one, you'll find a link for it here.
-  </p>
-
-  <h4 id="advanced_git_tips_tricks">Advanced Git Tips and Tricks <span class="hide">—</span> <a href="http://bit.ly/ps-git-tips-tricks"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Pluralsight</a></h4>
-  <p class="thumbnail-caption">
-    <a href="http://bit.ly/ps-git-tips-tricks">
-      <img src="/assets/git/advanced-git-tips-and-tricks-preview.png"
-           class="thumbnail-video" />
-    </a>
-    If you've been using Git for a while, you probably know how to use it like any other version control system; you commit files, review changes, maybe even create and merge branches. That's how most people use it. But Git is unique in that it's more powerful and puts you in complete control of your source code history. This course will teach you how to use Git's advanced features to improve your daily workflow. By the end of this course, you'll have discovered just how much potential lies hidden behind the surface of <code>git commit</code> and <code>git branch</code> — potential that will serve you well every single day.
-  </p>
-
-  <hr/>
-
-  <h2 id="presentations">Presentations</h2>
-  <p>A selection of some of my most popular presentations about Git from recent years. I linked to the <em>slides</em> and <em>demo material</em> as they were available. If a talk was recorded, I made sure to include a link to the <em>video</em> as well. For my other presentations, check out my <a href="/speaking">speaking page</a>.</p>
-
-  <h4 id="effective_git">How Effective Teams Use Git<br/><a href="https://youtu.be/yXixyZ5ch3c"><i class="fa fa-play-circle" aria-hidden="true"></i> NDC DevOps 2020</a> <a href="https://youtu.be/yP7DAdZAdTw"><i class="fa fa-play-circle" aria-hidden="true"></i> NDC Oslo 2020</a></h4>
-  <p class="thumbnail-caption">
-    <a href="https://youtu.be/yXixyZ5ch3c">
-      <img src="/assets/speaking/ndcoslo2020-enricocampidoglio-preview.png"
-           class="thumbnail-video" />
-    </a>
-    In this talk, I share with you what I've learned from working with people who are really good being productive using Git. I show you the things you can do to make Git more pleasant to work with and improve the way you <a href="/2019/03/20/the-case-for-pull-rebase/">collaborate with the rest of your team</a>. Success starts with good habits—by seeing how effective teams use Git in their daily work, I hope you'll be inspired to pick up a new one.
-  </p>
-
-  <h4 id="understanding_git">Understanding Git — Behind the Command Line <a href="https://youtu.be/BdiLKxSu-2Q"><i class="fa fa-play-circle" aria-hidden="true"></i> NDC Oslo 2019</a></h4>
-  <p class="thumbnail-caption">
-    <a href="https://youtu.be/BdiLKxSu-2Q">
-      <img src="/assets/speaking/ndcoslo2019-enricocampidoglio-preview.png"
-           class="thumbnail-video" />
-    </a>
-    In this talk, I show you how Git works from the ground up. I start out by going through Git's fundamental concepts and how they're implemented in the object model. From there, I work my way up to the user-facing commands and show you how to take advantage of Git's unique features to craft a <a href="/2014/08/14/the-importance-of-a-good-looking-history/">beautiful history</a> without having to compromise on your workflow. If you ever wished you knew how Git really works, then this presentation is for you.
-  </p>
-
-  <h4 id="the_things_git_can_do">The Things Git Can Do <span class="hide">—</span> <a href="https://vimeo.com/171317261"><i class="fa fa-play-circle" aria-hidden="true"></i> NDC Oslo 2016</a></h4>
-  <p class="thumbnail-caption">
-    <a href="https://vimeo.com/171317261">
-      <img src="/assets/speaking/ndcoslo2016-enricocampidoglio-preview.png"
-           class="thumbnail-video" />
-    </a>
-    In this talk, I demonstrate exactly what Git can do for you that none of the GUI tools ever tells you about. Moving chunks of commits between branches in a single command, <a href="/2014/08/14/the-importance-of-a-good-looking-history/">custom history visualizations</a> and <a href="/2016/08/25/git-undo/">data recovery</a> are only some of the things I demonstrate, all 100% from the command line. If you're using Git through a GUI, you're missing out and in this talk I show you why.
-  </p>
-
-  <h4>Git Tips and Tricks <span class="hide">—</span> <a href="https://vimeo.com/163822148"><i class="fa fa-play-circle" aria-hidden="true"></i> WROC# 2016</a></h4>
-  <p class="thumbnail-caption">
-    <a href="https://vimeo.com/163822148">
-      <img src="/assets/speaking/wrocsharp2016-enricocampidoglio-preview.png"
-           class="thumbnail-video" />
-    </a>
-    In this talk, we'll learn to take advantage of Git's advanced — and therefore lesser known — features to take our daily workflow to the next level. Since staring at the command line alone can be daunting at times, we'll also be looking at a graphic representation of our Git repository. As we run different commands, we'll see immediately how they affect the underlying history. This will help us understand how they work at a fundamental level, making it easier to remember them and use them in the right situation.
-  </p>
-
-  <h4 id="grokking_git_by_seeing_it">Grokking Git by Seeing It <span class="hide">—</span> <a href="https://vimeo.com/52633764"><i class="fa fa-play-circle" aria-hidden="true"></i> Leetspeak 2012</a></h4>
-  <p class="thumbnail-caption">
-    <a href="https://vimeo.com/52633764">
-      <img src="/assets/speaking/leetspeak2012-enricocampidoglio-preview.png"
-           class="thumbnail-video" />
-    </a>
-    In this talk, I teach you the Git zen from the inside out. Working out of real world scenarios, I walk you through Git’s core concepts and building blocks, building our way up to more advanced features. And I do it by showing you graphically what happens under the covers every time you fire a Git command. It’s my belief that this kind of deep understanding of Git’s inner workings is the key to unlock its true power: taking control of your history.
-  </p>
-
-  <hr/>
-
-  <h2 id="testimonials">What Others Are Saying</h2>
-  <p>Here's some of the feedback I received from people who watched my Pluralsight courses or attended one of my presentations:</p>
-
-  <blockquote class="tweet">
-    <p>What a course!! <a href="https://www.pluralsight.com/courses/git-advanced-tips-tricks">https://www.pluralsight.com/courses/git-advanced-tips-tricks</a> This will really take your Git workflow to another level. Thanks and enormous kudos to @ecampidoglio!!</p>
-  </blockquote>
-  <span>— <a href="https://twitter.com/MajaMimikrija/status/1154672829385850880">Maja Gaćica</a></span>
-
-  <blockquote class="tweet">
-    <p>"Advanced Git tips and Tricks" by @ecampidoglio course on Pluralsight is paying for itself. So much good info there!</p>
-  </blockquote>
-  <span>— <a href="https://twitter.com/hmemcpy/status/728166376138022912">Igal Tabachnik</a></span>
-
-  <blockquote class="tweet">
-    <p>Your passion to Git and level of knowledge inspires me to learn it too :)
-    BTW, thanks for the great Pluralsight course about Git - it's awesome. Started to use some tricks like <code>commit --fixup</code> or <code>rebase --whitespace=fix</code> - real life saver.</p>
-  </blockquote>
-  <span>— <a href="https://twitter.com/zvirja/status/941680752869167105">Alex Povar</a></span>
-
-  <blockquote class="tweet">
-    <p>@ecampidoglio I'm really enjoying your "Advanced Git Tips and Tricks" Pluralsight course. Well explained &amp; very useful!</p>
-  </blockquote>
-  <span>— <a href="https://twitter.com/jose_pedro_dias/status/778748545507614720">José Pedro Dias</a></span>
-
-  <blockquote class="tweet">
-    <p>"The things Git can do that none of the GUIs ever told you about" with @ecampidoglio
- was easily the best #techorama session yet!</p>
-  </blockquote>
-  <span>— <a href="https://twitter.com/ploeh/status/598418072563777536">Mark Seemann</a></span>
-
-  <blockquote class="tweet">
-    <p>Really great talk from @ecampidoglio at NDC Oslo on Git. First time I've actually understood "low level" git-stuff.</p>
-  </blockquote>
-  <span>— <a href="https://twitter.com/ThomasDarvik/status/1141370914686328838">Thomas Darvik</a></span>
-
-  <blockquote class="tweet">
-    <p>Enrico’s Git talks are always brilliant. Highly recommend you check him out.</p>
-  </blockquote>
-  <span>— <a href="https://twitter.com/mat_mcloughlin/status/1141613919297048577">Mat McLoughlin</a></span>
-
-  <hr/>
-
-  <h2>Bookings</h2>
-  <p>If you'd like me to speak at your company or event, you can find more information on the <a href="/services#contact">contact page</a>.</p>
-
-</div>
+<section class="git-workshops wrap">
+  <div class="callout">
+    <p>I also teach Git in person, as one-day workshops for teams: <em>Understanding Git</em> for people new to it, <em>Mastering Git</em> for everyone else.</p>
+    <a href="/workshops/">Workshops →</a>
+  </div>
+</section>

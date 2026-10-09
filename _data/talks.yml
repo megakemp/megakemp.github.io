@@ -1,0 +1,79 @@
+# Talks on the Speaking page, newest first. Copy from design/pages/speaking.html.
+# `id` keeps the anchor the old page used; `thumbnail` is a picture set (see
+# _includes/picture.html).
+# `home: true` marks the four talks listed on the home page.
+
+- year: 2023
+  title: Git Hidden Gems
+  id: git_hidden_gems
+  video: https://youtu.be/uFrPgUjv_Y8
+  thumbnail: /assets/speaking/git-hidden-gems
+  event: Copenhagen Developers Festival
+  home: true
+  description: There is more to Git than meets the eye. On the surface, it's a version control system. Underneath, it's a virtual file system built to track your files. And right in between is a wealth of productivity features very few people know about.
+
+- year: 2021
+  title: DRY TDD with AutoFixture
+  id: dry_tdd
+  video: https://youtu.be/1V-Htcc3fW0
+  event: NDC London
+  home: true
+  description: How to write DRY tests by leveraging an open source library called AutoFixture. By not repeating the same boilerplate setup code everywhere, your tests will have minimal coupling to your production code — a safety net that still leaves you free to refactor.
+
+- year: 2020
+  title: How Effective Teams Use Git
+  id: effective_git
+  video: https://youtu.be/yP7DAdZAdTw
+  event: NDC Oslo
+  home: true
+  description: "What I've learned from working with people who are really good at being productive with Git: the things you can do to make Git more pleasant to work with and improve the way you collaborate with the rest of your team."
+
+- year: 2019
+  title: Understanding Git
+  id: understanding_git
+  video: https://youtu.be/BdiLKxSu-2Q
+  event: NDC Oslo
+  description: "How Git works from the ground up: the fundamental concepts and how they're implemented in the object model, then up to the user-facing commands and how to craft a beautiful history without compromising on your workflow."
+
+- year: 2018
+  title: "Cake: Write Once, Build Anywhere"
+  id: cake_write_once_build_anywhere
+  video: https://youtu.be/FKbykwvB_MU
+  event: NDC London
+  home: true
+  description: "Using Cake (C# Make) to automate the build of an ASP.NET Core app from start to finish — compile, test, version, package and deploy, all in C#, cross-platform: written on macOS, run on Linux CI, deployed to Azure."
+
+- year: 2016
+  title: The Things Git Can Do
+  id: the_things_git_can_do
+  video: https://vimeo.com/171317261
+  event: NDC Oslo
+  description: "Exactly what Git can do for you that none of the GUI tools ever tell you about: moving chunks of commits between branches in a single command, custom history visualisations and data recovery — all 100% from the command line."
+
+- year: 2016
+  title: Testing with No Harm
+  id: testing_with_no_harm
+  video: https://vimeo.com/154312751
+  event: NDC London
+  description: Does creating automated tests inhibit good design? A look at the trade-offs of making code testable, at BDD and Specification by Example, and at the balance between unit, integration and end-to-end tests.
+
+- year: 2014
+  title: "Databases: The Elephant in the CD Room"
+  id: databases_the_elephant_in_the_cd_room
+  video: https://vimeo.com/113594256
+  event: NDC London
+  description: "The challenges of continuously deploying a SQL database: packaging and versioning, handling schema changes, migrating data and recovery. What tools do we have, and what strategies stop us banging our heads against the wall?"
+
+- year: 2014
+  title: Why No Code Reviews?
+  id: why_no_code_reviews
+  video: https://youtu.be/xd9n83yOmiY
+  event: DevDay
+  description: The social and practical reasons why code reviews aren't as widely adopted as they should be, and the concrete tools and techniques teams can put in place to overcome the most common road blocks.
+
+- year: 2013
+  title: BDD All the Way Down
+  id: bdd_all_the_way_down
+  video: https://youtu.be/zMX588nshao
+  event: GOTO Aarhus · Foo Café
+  description: Applying the Behaviour Driven Development cycle to a feature from top to bottom in a .NET web application, producing tests that read like specifications by focusing on what the system does rather than how it's implemented.

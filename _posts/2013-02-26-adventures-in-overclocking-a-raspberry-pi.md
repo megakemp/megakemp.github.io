@@ -111,9 +111,9 @@ Here we’re saying that we’d like to have the Turbo Mode kick in when the CPU
 I have to say that I’ve been positively surprised by the capabilities of the Raspberry Pi. Its exceptional form factor and low power consumption makes it ideal to work as a NAS in very restricted spaces, like my network closet. Add to that the flexibility that comes from running Linux and the possibilities become [ truly endless][27]. In fact, the more stuff I add to my Raspberry Pi, the more I’d like it to do. What’s next, a [Node.js server][28]?
 
 <a id="downloads"></a>
-<div class="note downloads">
+<div class="note">
 <ul>
-  <li id="github"><a href="https://gist.github.com/ecampidoglio/5009512">Source code for <strong>cpustatus.sh</strong></a></li>
+  <li><a href="https://gist.github.com/ecampidoglio/5009512">Source code for <strong>cpustatus.sh</strong></a></li>
 </ul>
 </div>
 

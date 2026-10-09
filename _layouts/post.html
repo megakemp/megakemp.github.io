@@ -1,44 +1,43 @@
 ---
 layout: default
 ---
+{%- assign date = page.date | date: '%Y-%m-%d' %}
+{%- assign lead = page.summary | default: page.excerpt | strip %}
+<section class="post-header">
+  <div class="wrap">
+    <div class="post-meta">
+      <time datetime="{{ date }}">{{ date }}</time>
+      {% include tag-link.html categories=page.categories %}
+    </div>
+    <h1>{{ page.title }}</h1>
+    {%- comment %} Without an excerpt in front matter, the lead is the first paragraph, already in the article. {% endcomment %}
+    {%- unless content contains lead %}
+    <p class="lead">{{ lead | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+    {%- endunless %}
+  </div>
+</section>
 
-<p class="meta">
-  <span id="meta-date">{{ page.date | date: "%B %d, %Y" }}</span>
-  <span id="meta-categories">
-    Posted in
-    {% for category in page.categories %}
-      <a href="/tag/{{ category | replace:'.','dot' }}">{{ category }}</a>
-      {% if forloop.last == false %}
-        &nbsp;|&nbsp;
-      {% endif %}
-    {% endfor %}
-  </span>
-</p>
-
-<h1 class="title">{{ page.title }}</h1>
-
-<div id="summary">
-  {{ page.summary }}
-</div>
-
-<div id="post">
+<article class="prose wrap">
   {{ content }}
-</div>
+</article>
 
-<div id="related">
-  <h3>Related Posts</h3>
-  <ul class="posts">
-    {% for post in site.related_posts limit:3 %}
-    <li>
-      <span>{{ post.date | date_to_string }} &raquo;</span> <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+{%- if page.previous or page.next %}
+<nav class="adjacent wrap" aria-label="Adjacent posts">
+  {%- if page.previous %}
+  <a class="older" href="{{ page.previous.url }}"><span>← Older</span>{{ page.previous.title }}</a>
+  {%- endif %}
+  {%- if page.next %}
+  <a class="newer" href="{{ page.next.url }}"><span>Newer →</span>{{ page.next.title }}</a>
+  {%- endif %}
+</nav>
+{%- endif %}
 
-<div id="about">
-  <h4>Enrico Campidoglio</h4>
-  <p>Hi, I'm Enrico Campidoglio. I'm a freelance programmer, trainer and mentor focusing on helping teams develop software better. I write this blog because I love sharing stories about the things I know. You can read more about me <a href="{{ site.url }}/about/">here</a>, if you like.</p>
-</div>
-
-{% include comments.html %}
+<section class="author">
+  <div class="wrap">
+    <img src="/assets/about/avatar-2x.jpg" width="72" height="72" alt="{{ site.name }}" loading="lazy">
+    <div class="bio">
+      <p class="name">{{ site.name }}</p>
+      <p>Freelance programmer, trainer and mentor helping teams develop software better. I write this blog because I love sharing stories about the things I know. <a href="/about/">More about me →</a></p>
+    </div>
+  </div>
+</section>

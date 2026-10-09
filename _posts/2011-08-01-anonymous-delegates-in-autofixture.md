@@ -11,7 +11,6 @@ If you aren’t familiar with AutoFixture, let me give you the pitch:
 
 <div class="note">
 <p>
-<i class="fa fa-book fa-2x pull-left"></i>
 <strong>AutoFixture</strong> is an open source framework for .NET designed to minimize the ‘<em>Arrange</em>’ phase of your unit tests. Its primary goal is to allow developers to focus on what is being tested rather than how to setup the test scenario, by making it easier to create object graphs containing test data.
 </p>
 </div>

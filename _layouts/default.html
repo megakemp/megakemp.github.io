@@ -2,63 +2,64 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta http-equiv="Cache-control" content="public">
-  <meta http-equiv="Cache-control" content="max-age=2592000">
-  <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="{{ site.style.name }}" />
-  <meta name="description" content="The blog of {{ site.style.name }}" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@ecampidoglio" />
-  <meta name="twitter:title" content="{{ page.title }}" />
-  <meta property="og:title" content="{{ page.title }}" />
-  <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
-  <meta property="og:type" content="article" />
-  {% if page.excerpt %}
-  <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
-  <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
-  {% endif %}
-  {% if page.image %}
-  <meta property="og:image" content="{{ site.url }}/assets/{{ page.assets }}/{{ page.image }}" />
-  <meta name="twitter:image" content="{{ site.url }}/assets/{{ page.assets }}/{{ page.image }}" />
-  {% endif %}
-  {% include analytics.html %}
-  <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="alternate" type="application/rss+xml" title="Enrico Campidoglio" href="http://feeds.feedburner.com/megakemp" />
-  <link rel="stylesheet" href="{{ site.url }}/css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  {% include flags.html %}
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,600|Open+Sans:700|Roboto:300|Inconsolata" rel="stylesheet">
-  <script src="{{ site.url }}/js/jquery-header-bigfoot.min.js"></script>
+  {%- if page.url == '/' %}
+  {%- assign title = site.name %}
+  {%- else %}
+  {%- assign title = page.title | append: ' — ' | append: site.name %}
+  {%- endif %}
+  {%- assign description = page.description | default: page.excerpt | default: site.description | markdownify | strip_html | normalize_whitespace | escape %}
+  {%- assign canonical = page.url | replace: 'index.html', '' | prepend: site.url %}
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="author" content="{{ site.name }}">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#2E3440">
+  <link rel="canonical" href="{{ canonical }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ page.title | default: site.name }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  {%- if page.image %}
+  <meta property="og:image" content="{{ site.url }}/assets/{{ page.assets }}/{{ page.image }}">
+  {%- endif %}
+  <link rel="icon" href="/favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - AutoFixture" href="/feed.autofixture.xml">
+  <link rel="preload" href="/css/fonts/ibm-plex-mono-semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/css/fonts/ibm-plex-mono-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/main.css?v={{ site.time | date: '%s' }}">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-  <nav class="topbar header" role="navigation">
-    <ul>
-      <li role="presentation"><a href="/about/">about</a></li>
-      <li role="presentation" class="hide"><a href="/services/">services</a></li>
-      <li role="presentation" class="hide"><a href="/workshops/">training</a></li>
-      <li role="presentation"><a href="/speaking/">speaking</a></li>
-      <li role="presentation"><a href="/">blog</a></li>
-      <li role="presentation"><a href="/services/#contact">contact</a></li>
-    </ul>
-  </nav>
+  <a class="skip" href="#main">Skip to content</a>
+  {% include header.html %}
 
-  <div class="container">
-    <div class="four columns sidebar">
-      {% include sidebar.html %}
-    </div>
+  <main id="main">
+    {{ content }}
+  </main>
 
-    <div class="eleven columns content">
-      {{ content }}
+  {% include contact.html intro=page.contact_intro %}
+  {% include footer.html %}
 
-      <div class="footer">
-        {% include footer.html %}
-      </div>
-    </div>
-  </div>
-
-  <script id="dsq-count-scr" src="//megakemp.disqus.com/count.js" async></script>
+  <script>
+    (function () {
+      var button = document.querySelector('[aria-controls="phone-menu"]');
+      var parts = document.querySelectorAll('.menu-clip, .menu');
+      function toggle(open) {
+        button.setAttribute('aria-expanded', open);
+        button.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+        button.textContent = open ? '' : '';
+        parts.forEach(function (e) { e.classList.toggle('open', open); });
+      }
+      button.addEventListener('click', function () {
+        toggle(button.getAttribute('aria-expanded') !== 'true');
+      });
+      document.getElementById('phone-menu').addEventListener('click', function (e) {
+        if (e.target.closest('a')) toggle(false);
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+{%- assign section = page.url | split: '/' -%}{%- assign section = section[1] -%}
+{%- if page.layout == 'post' or section == 'blog' or section == 'tag' or section == 'git' -%}{%- assign section = 'writing' -%}{%- endif -%}
+{%- assign current = ' aria-current="page"><span aria-hidden="true">./</span' -%}
+{%- capture links -%}
+<a href="/about/"{% if section == 'about' %}{{ current }}{% endif %}>About</a>
+<a href="/services/"{% if section == 'services' %}{{ current }}{% endif %}>Services</a>
+<a href="/workshops/"{% if section == 'workshops' %}{{ current }}{% endif %}>Training</a>
+<a href="/speaking/"{% if section == 'speaking' %}{{ current }}{% endif %}>Speaking</a>
+<a href="/blog/"{% if section == 'writing' %}{{ current }}{% endif %}>Writing</a>
+<a href="#contact">Contact</a>
+{%- endcapture -%}
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="/"><span>~</span>megakemp.com</a>
+    <nav class="nav" aria-label="Main">
+      {{ links }}
+    </nav>
+    <button type="button" class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="phone-menu">&#xF0C9;</button>
+  </div>
+  <div class="menu-clip">
+    <nav id="phone-menu" class="menu" aria-label="Main">
+      {{ links }}
+    </nav>
+  </div>
+</header>

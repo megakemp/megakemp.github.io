@@ -29,7 +29,6 @@ For days I pondered my options when, suddenly, it hit me:
 
 <div class="note">
 <p>
-<i class="fa fa-lightbulb-o fa-2x pull-left"></i>
 Where's the place to find commodity hardware that's available <em>for rent</em>, is <em>on the Internet</em> and <em>can scale</em> at will?
 </p>
 </div>
@@ -134,7 +133,6 @@ Salvation came in the form of a meticulously crafted script, designed to take ca
 
 <div class="note">
 <p>
-<i class="fa fa-gears fa-2x pull-left"></i>
 Thanks to <a href="https://twitter.com/dangibbsuk">Daniel Gibbs</a>' hard work, I could use his fabulous <a href="https://gameservermanagers.com/lgsm/csgoserver/"><strong>csgoserver script</strong></a> to install, configure and, above all, manage our CS:GO Dedicated Server without pain.
 </p>
 </div>

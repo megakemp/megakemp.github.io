@@ -1,0 +1,24 @@
+# Pluralsight courses, newest first. Copy from design/pages/about.html.
+# `git: true` marks the courses listed on the Git page.
+
+- title: Git Tips and Tricks
+  url: https://www.pluralsight.com/courses/git-tips-tricks
+  git: true
+  year: 2024
+  description: Speed up common tasks, keep a clean history, undo mistakes and even debug, all using Git's lesser-known power features.
+
+- title: Building Custom GitHub Actions
+  url: https://www.pluralsight.com/courses/building-custom-github-actions
+  year: 2020
+  description: Unlock the full potential of GitHub's official automation solution by building real-world custom actions with TypeScript and Docker.
+
+- title: Building and Deploying Applications with Cake
+  url: https://www.pluralsight.com/courses/cake-applications-deploying-building
+  year: 2017
+  description: Use Cake, a cross-platform build automation system with a beautiful DSL, to compile, test, version, package and deploy your .NET application.
+
+- title: Advanced Git Tips and Tricks
+  url: https://www.pluralsight.com/courses/git-advanced-tips-tricks
+  git: true
+  year: 2016
+  description: "Git beyond the basics: working from the command line, crafting commits, searching and rewriting history, recovering from mistakes. Now retired."

@@ -1,0 +1,7 @@
+---
+layout: page
+---
+{%- assign posts = site.posts | where_exp: 'post', 'post.categories contains page.tag' %}
+<section class="listing wrap">
+  {% include post-list.html posts=posts %}
+</section>

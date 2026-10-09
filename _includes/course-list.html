@@ -1,0 +1,12 @@
+{%- comment %} Pluralsight courses as a glyph list, with the Pluralsight mark as the glyph. {% endcomment -%}
+<ul class="glyph-list">
+  {%- for course in include.courses %}
+  <li>
+    <img src="/assets/pluralsight-mark-mono.png" width="19" height="19" alt="">
+    <div>
+      <a class="name" href="{{ course.url }}">{{ course.title }}</a>
+      <span>{{ course.year }}. {{ course.description }}</span>
+    </div>
+  </li>
+  {%- endfor %}
+</ul>

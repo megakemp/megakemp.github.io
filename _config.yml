@@ -1,10 +1,11 @@
 name: Enrico Campidoglio
-description: The blog of Enrico Campidoglio
+description: Freelance programmer, speaker and trainer. Pluralsight author. Open source maintainer.
+timezone: Europe/Stockholm
 markdown: kramdown
 highlighter: rouge
 url: https://megakemp.com
 permalink: /:year/:month/:day/:title/
-paginate: 3
+paginate: 5
 paginate_path: blog/page:num
 
 plugins:
@@ -15,45 +16,20 @@ include:
   - .well-known
 
 exclude:
-  - css/flag-icon-css/*.coffee
-  - css/flag-icon-css/*.html
-  - css/flag-icon-css/*.json
-  - css/flag-icon-css/*.lock
-  - css/flag-icon-css/*.md
-  - css/flag-icon-css/*.sh
-  - css/flag-icon-css/*.yaml
-  - css/flag-icon-css/assets/
-  - css/flag-icon-css/less/
-  - css/flag-icon-css/sass/
+  - design/
+  - script/
+  - _screenshots/
+  - _verify/
+  - docker-compose.yml
 
 style:
-  # Base color for background elements such as the top bar
-  base_color: '#444'
-  # Accent color for links, etc
-  highlight_color: '#e87830'
-
-  # Profile links on the left sidebar, leave blank to ignore
+  # Profile links in the footer
   social:
     github: ecampidoglio
     stackoverflow: 26396
-    twitter: ecampidoglio
     linkedin: ecampidoglio
     keybase: ecampidoglio
-    rss: http://feeds.feedburner.com/megakemp
-    #bitbucket:
-    #hacker_news:
-    #stackexchange:
-    #facebook:
-    #tumblr:
-    #gplus:
 
-  # "Hi, I'm _______"
+  # The copyright holder in the footer, and the contact address
   name: Enrico Campidoglio AB
   email: enrico@megakemp.com
-
-  # Google Analytics Tracking ID, leave blank to ignore
-  google_analytics_tracking_id: UA-5422661-2
-  google_analytics_property_name: megakemp.com
-
-  # Toggle "Postings are my own" disclaimer in footer
-  show_disclaimer: false

@@ -1,56 +1,94 @@
 ---
 layout: default
+redirect_from:
+  - /bestof/
+  - /tools/migration/
 title: Enrico Campidoglio
+contact_intro: Want me to speak at your event, or work with your team? I'd love to hear from you.
 ---
 
-<div id="home">
-  {% for post in paginator.posts %}
-  <p class="meta">
-    <span id="meta-date">{{ post.date | date: "%B %d, %Y" }}</span>
-    <span id="meta-categories">
-      Posted in
-      {% for category in post.categories %}
-        <a href="/tag/{{ category | replace:'.','dot' }}">{{ category }}</a>
-        {% if forloop.last == false %}
-          &nbsp;|&nbsp;
-        {% endif %}
-      {% endfor %}
-    </span>
-  </p>
-
-  <a href="{{ post.url }}" class="pagination-title">
-    <h1 class="title">{{ post.title }}</h1>
-  </a>
-
-  <div id="summary">
-    {{ post.summary }}
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <p class="prompt"><span>$</span> whoami</p>
+      <h1>Enrico<br>Campidoglio<span class="cursor" aria-hidden="true"></span></h1>
+      <p class="tagline">Freelance programmer, speaker and trainer. Pluralsight&nbsp;author. Open&nbsp;source&nbsp;maintainer.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="/services/">Work with me</a>
+        <a class="btn btn-secondary" href="/blog/">Read the blog</a>
+      </div>
+    </div>
+    <pre class="graph" aria-hidden="true">┌──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┐
+│<span class="h">██</span>│  │  │  │  │  │  │  │  │  │  │  │  │  │  │
+├──┴─┬┴─┬┴─┬┴─┬┴─┬┴─┬┴─┬┴─┬┴─┬┴─┬┴─┬┴─┬┴─┬┴──┤
+│    │  │  │  │  │  │  │  │  │  │  │  │  │   │
+├────┼──┼──┼──┼──┼──┼──┼──┼──┼──┼──┼──┼──┴───┤
+│    │  │  │  │  │  │  │  │  │  │  │  │<span class="b">██████</span>│
+├────┴─┬┴─┬┴─┬┴─┬┴─┬┴─┬┴─┬┴─┬┴─┬┴─┬┴─┬┴───┬──┤
+│      │  │  │  │  │  │  │  │  │  │  │    │  │
+├────┬─┴┬─┴──┼──┴──┴──┴──┴──┴──┴┬─┴──┼──┬─┴──┤
+│    │  │    │<span class="s">██████████████████</span>│    │  │    │
+└────┴──┴────┴──────────────────┴────┴──┴────┘</pre>
   </div>
+</section>
 
-  <div id="post">
-    {{ post.content }}
+<section id="writing" class="home-writing">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">Writing</h2>
+      <a href="/blog/">All posts →</a>
+    </div>
+    {% assign latest = site.posts | slice: 0, 3 %}
+    {% include post-list.html posts=latest %}
   </div>
+</section>
 
-  <div class="comments">
-    <i class="fa fa-comment"></i>
-    <a href="{{ site.url }}{{ post.url }}#disqus_thread"
-       data-disqus-identifier="{{ post.url }}"></a>
+<section id="services" class="home-services">
+  <div class="wrap">
+    <div class="section-intro">
+      <h2 class="section-title">How I can help</h2>
+      <p>Consultant since 2002. I care about code quality and fast feedback cycles. The&nbsp;rest&nbsp;follows.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Training</h3>
+        <p>From a one-hour presentation to a full-day workshop, tailored to your team's schedule and needs. Practical skills to apply right away.</p>
+        <div class="card-links">
+          <a href="/workshops/">Current workshops →</a>
+          <a href="https://www.pluralsight.com/authors/enrico-campidoglio">Courses on Pluralsight ↗</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Mentoring</h3>
+        <p>Instead of choosing between training and productivity, have both. I join your team, work on the real project and coach along the way.</p>
+        <div class="card-links">
+          <a href="/services/#mentoring">How it works →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Consulting</h3>
+        <p>Architecture, code quality, deployment pipelines, TDD, Git workflows and migrations — usually as focused workshop days, in person or remote.</p>
+        <div class="card-links">
+          <a href="/services/#expertise">Areas of expertise →</a>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
-  {% if forloop.last == false %}
-    <hr />
-  {% endif %}
-  {% endfor %}
-
-  <div class="pagination">
-    {% if paginator.next_page %}
-      <a href="/blog/page{{ paginator.next_page }}" class="previous-page">&laquo;&nbsp;Older Posts</a>
-    {% endif %}
-    {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-        <a href="/" class="next-page">Newer Posts&nbsp;&raquo;</a>
-      {% else %}
-        <a href="/blog/page{{ paginator.previous_page }}" class="next-page">Newer Posts&nbsp;&raquo;</a>
-      {% endif %}
-    {% endif %}
+{% assign testimonial = site.data.testimonials.clients['alfa-laval'] %}
+<section class="quote-band">
+  <div class="wrap">
+    <blockquote>“{{ testimonial.pull }}”</blockquote>
+    <p class="cite">— {{ testimonial.name }}, {{ testimonial.title }} <a href="/services/#testimonials">More from clients →</a></p>
   </div>
-</div>
+</section>
+
+<section id="speaking" class="home-speaking wrap">
+  <div class="section-head">
+    <h2 class="section-title">Speaking</h2>
+    <a href="/speaking/">All talks and podcasts →</a>
+  </div>
+  {% assign talks = site.data.talks | where: 'home', true %}
+  {% include talks-compact.html talks=talks %}
+</section>

@@ -36,13 +36,13 @@ So here it goes, I hope you find it useful.
 > Since the last few years, Microsoft itself has committed to making all of its major server products fully administrable both through traditional GUI based tools _as well as_ PowerShell. If you’re building a server application on the .NET platform, you will soon be expected to do the same.
 
 <a id="downloads"></a>
-<div class="note downloads">
+<div class="note">
 <ul>
-  <li id="slides"><a
+  <li><a
   href="http://megakemp.files.wordpress.com/2012/08/sysadminfriendlywithpowershell-slides.pdf">Slides</a></li>
-  <li id="pdf"><a
+  <li><a
   href="http://megakemp.files.wordpress.com/2012/08/sysadminfriendlywithpowershell-codesamples.pdf">Code samples</a></li>
-  <li id="github"><a href="https://github.com/ecampidoglio/Expresso">Expresso on GitHub</a></li>
+  <li><a href="https://github.com/ecampidoglio/Expresso">Expresso on GitHub</a></li>
 </ul>
 </div>
 

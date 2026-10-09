@@ -1,0 +1,46 @@
+# Podcasts on the Speaking page. Copy from design/pages/speaking.html.
+# `id` keeps the anchor the old page used. A `clip` gets an audio player;
+# its `duration` is shown before the clip loads.
+
+- show: ".NET Rocks! 1680"
+  id: dotnetrocks_1680
+  title: "GitHub Actions with Enrico Campidoglio"
+  description: "GitHub's CI/CD solution and how it compares to Azure Pipelines, the role of CI in the era of DevOps — and the philosophical differences between cars and carpets."
+  url: "https://www.dotnetrocks.com/?show=1680"
+  link: "Full episode ↗"
+  clip:
+    title: "Cars and Carpets"
+    src: /assets/speaking/dotnetrocks-1680-cars-and-carpets.m4a
+    duration: "0:34"
+
+- show: "Developer On Fire 414"
+  id: developer_on_fire_414
+  title: "Clean History"
+  description: "With Dave Rael on what keeps me going as a programmer and teacher: how I got into teaching, the move from Italy to Sweden, true vs. clean history in Git, and my old Olivetti M24."
+  url: "https://developeronfire.com/podcast/episode-414-enrico-campidoglio-clean-history"
+  link: "Full episode ↗"
+  clip:
+    title: "My First Computer"
+    src: /assets/speaking/developer-on-fire-414-my-first-computer.m4a
+    duration: "0:40"
+
+- show: "Developers! 16 · in Swedish"
+  id: developers_16
+  title: "The Story of Git"
+  description: "Geeking out with Madeleine and Sofia about Git and keyboards: Git's origin story, the Unix philosophy, choosing a workflow that fits your team, and my top three Git tips."
+  url: "https://open.spotify.com/episode/6PoDsta2JCGftGiKQhaEg1?si=YVKcxuvkTR-VBm5Ts_M6uQ&nd=1&dlsi=28e5a4000ed14652"
+  link: "Listen ↗"
+
+- show: ".NET Rocks! 1079"
+  id: dotnetrocks_1079
+  title: "Databases in Continuous Delivery"
+  description: "Recorded at NDC London 2014 with Carl and Richard: including relational databases in the Continuous Delivery process — plus a few words about vintage computers."
+  url: "https://www.dotnetrocks.com/?show=1079"
+  link: "Listen ↗"
+
+- show: ".NET Rocks! 1082"
+  id: dotnetrocks_1082
+  title: "State of DevOps in .NET at NDC London"
+  description: "A panel recorded live at NDC London 2014 on the DevOps culture among .NET developers, with Ben Hall, Peter Mounce and Jeff French."
+  url: "https://www.dotnetrocks.com/?show=1082"
+  link: "Listen ↗"

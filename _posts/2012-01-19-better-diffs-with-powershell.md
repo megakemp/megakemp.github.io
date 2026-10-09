@@ -120,9 +120,9 @@ One thing I'd like to point out is that even if the output of `git diff` consist
 PowerShell is an extremely versatile console. In this case, it allowed me to enhance a traditional command line tool (`diff`) through a simple script. Other projects, like [Posh-Git][16] and [Posh-Hg][17], take it even further and leverage PowerShell's rich programming model to provide a better experience on top of existing console based source control tools. If you enjoy working with the command line, I seriously encourage you to check them out.
 
 <a id="downloads"></a>
-<div class="note downloads">
+<div class="note">
 <ul>
-  <li id="github"><a href="https://gist.github.com/ecampidoglio/1635952">Source code for <strong>Out-Diff</strong></a></li>
+  <li><a href="https://gist.github.com/ecampidoglio/1635952">Source code for <strong>Out-Diff</strong></a></li>
 </ul>
 </div>
 

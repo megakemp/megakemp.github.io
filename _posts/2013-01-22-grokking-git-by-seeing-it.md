@@ -59,11 +59,11 @@ So, this is just to give you a little background. Here you’ll find the session
 </iframe>
 
 <a id="downloads"></a>
-<div class="note downloads">
+<div class="note">
 <ul>
-  <li id="slides"><a
+  <li><a
   href="http://megakemp.files.wordpress.com/2013/01/grokkinggitbyseeingit-slides.pdf">Slides</a></li>
-  <li id="pdf"><a
+  <li><a
   href="http://megakemp.files.wordpress.com/2013/01/grokkinggitbyseeingit-demos.pdf">Demos</a></li>
 </ul>
 </div>

@@ -19,7 +19,6 @@ When we're trying to understand how a piece of software has evolved over time, t
 
 <div class="note">
 <p>
-<i class="fa fa-bullhorn fa-2x pull-left"></i>
 In other words, what you write in these messages is <strong>crucial</strong> and you should put extra effort in making them as <strong>loud</strong> and <strong>clear</strong> as possible.
 </p>
 </div>
@@ -56,7 +55,6 @@ Having talked about the importance of keeping your history clean, let's take the
 
 <div class="note">
 <p>
-<i class="fa fa-pencil-square-o fa-2x pull-left"></i>
 When you use Git, you should not only pay attention to the contents of your commit messages, but also how they're <strong>formatted</strong>.
 </p>
 </div>
@@ -269,15 +267,15 @@ If you choose to press `y`, the commit message will open up in your default text
 Not that you'd ever want to do that.
 
 <a id="downloads"></a>
-<div class="note downloads">
+<div class="note">
 <ul>
-  <li id="github"><a href="https://gist.github.com/ecampidoglio/e380abe1c2556d05d302">Source code for <strong>commit-msg</strong></a></li>
+  <li><a href="https://gist.github.com/ecampidoglio/e380abe1c2556d05d302">Source code for <strong>commit-msg</strong></a></li>
 </ul>
 </div>
 
-<div class="note">
+<div class="note course">
+<img src="{{ site.url }}/assets/pluralsight-mark-mono.png" width="19" height="19" alt="">
 <p>
-<i class="fa fa-play-circle-o fa-2x pull-left pull-left-three-lines"></i>
 If you're interested in learning other techniques like the one described in this article, you should check out my <a href="https://www.pluralsight.com/authors/enrico-campidoglio">Pluralsight</a> course <a href="https://www.pluralsight.com/courses/git-tips-tricks">Git Tips and Tricks</a>.
 </p>
 </div>

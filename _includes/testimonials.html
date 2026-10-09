@@ -1,0 +1,20 @@
+{%- comment %}
+  Testimonial cards from a list or a map of testimonials. Each has quote, name,
+  either title or context, and optionally a logo (src, alt, width, height).
+{% endcomment -%}
+<div class="testimonials{% if include.wide %} wide{% endif %}">
+  {%- for entry in include.items %}
+  {%- comment %} Iterating a map yields [key, value] pairs. {% endcomment %}
+  {%- assign t = entry[1] | default: entry %}
+  <figure class="card testimonial">
+    <span class="mark" aria-hidden="true">“</span>
+    <blockquote>{{ t.quote }}</blockquote>
+    <figcaption>
+      <span><span class="name">{{ t.name }}</span><br>{{ t.title | default: t.context }}</span>
+      {%- if t.logo %}
+      <img src="{{ t.logo.src }}" alt="{{ t.logo.alt }}" width="{{ t.logo.width }}" height="{{ t.logo.height }}" loading="lazy">
+      {%- endif %}
+    </figcaption>
+  </figure>
+  {%- endfor %}
+</div>

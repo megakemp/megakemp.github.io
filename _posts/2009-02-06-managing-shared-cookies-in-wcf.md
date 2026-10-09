@@ -177,7 +177,7 @@ Message inspectors are enabled through the WCF extensibility mechanism called **
 
 [Here you can download a sample application][5] showing how to implement a client-side message inspector to share the same cookies across multiple web services.
 
-<div class="note downloads">
+<div class="note">
 <p>
 The <strong>WCF Cookie Manager</strong> sample application is also <a href="http://wcfcookiemanager.codeplex.com">available on CodePlex</a>. Thanks to <a href="https://twitter.com/rayd/status/371328033975570432">Ray Dixon</a> for creating the project.
 </p>

@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+#
+# Builds the site in the gh-pages Docker image and checks it.
+#
+#   script/verify           build, internal link check, URL inventory, redirects
+#   script/verify --shots   also take 1280px and 390px screenshots of every page
+#                           and of the matching design mockup, into _screenshots/
+#
+# The gh-pages image is built from a clone of github/pages-gem:
+#
+#   docker build --build-arg RUBY_VERSION=3.1 -t gh-pages .
+#   printf 'FROM gh-pages\nRUN gem install --no-document webrick\n' | docker build -t gh-pages -
+#
+# (The Dockerfile's default Ruby 2.7.3 image is on Debian buster, whose apt
+# repositories are gone. Ruby 3 no longer bundles webrick, which jekyll serve
+# needs.) Screenshots need Node and Google Chrome.
+
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+IMAGE=gh-pages:latest
+SITE=_verify   # not _site, so a running `jekyll serve` doesn't race the checks
+failed=0
+
+run() {
+  docker run --rm -v "$PWD:/src/site" \
+    -e GEM_HOME=/gems -e GEM_PATH=/gems:/usr/local/bundle -e PATH=/gems/bin:/usr/local/bundle/bin:/usr/local/bin:/usr/bin:/bin \
+    -v megakemp-verify-gems:/gems "$IMAGE" "$@"
+}
+
+fail() { echo "FAIL: $*"; failed=1; }
+
+echo "==> jekyll build"
+if ! log=$(run jekyll build --destination $SITE 2>&1); then
+  echo "$log"; exit 1
+fi
+# Ruby 3.1 prints two interpreter warnings about Jekyll 3's logger. They come
+# from the toolchain, not from the site, so they are filtered out.
+warnings=$(echo "$log" | grep -i -E 'warn|error|exception|deprecat' | grep -v -E 'Logger not initialized|does not call super' || true)
+[ -z "$warnings" ] || fail "build warnings:"$'\n'"$warnings"
+
+echo "==> htmlproofer (internal links)"
+run sh -c 'command -v htmlproofer >/dev/null || gem install --no-document html-proofer -v "~> 3.19" >/dev/null 2>&1
+           htmlproofer ./'$SITE' --disable-external --empty-alt-ignore' || fail "htmlproofer"
+
+echo "==> URL inventory (script/urls.txt)"
+while read -r url; do
+  case "$url" in
+    */) file="$SITE${url}index.html" ;;
+    *)  file="$SITE${url}" ;;
+  esac
+  [ -f "$file" ] || fail "missing $url"
+done < script/urls.txt
+
+echo "==> redirects"
+grep -rl --include='*.html' 'http-equiv="refresh"' $SITE | while read -r file; do
+  target=$(sed -n 's/.*http-equiv="refresh" content="0; url=\([^"]*\)".*/\1/p' "$file" | head -1)
+  path=${target#https://megakemp.com}
+  path=${path%%#*}
+  case "$path" in
+    http*) continue ;;
+    */) [ -f "$SITE${path}index.html" ] || echo "FAIL: ${file#$SITE} redirects to missing $target" ;;
+    *)  [ -f "$SITE${path}" ] || echo "FAIL: ${file#$SITE} redirects to missing $target" ;;
+  esac
+done | tee /dev/stderr | grep -q FAIL && failed=1
+
+if [ "${1:-}" = "--shots" ]; then
+  echo "==> screenshots (_screenshots/)"
+  mkdir -p _screenshots
+  python3 -m http.server 4101 -d $SITE >/dev/null 2>&1 & site=$!
+  python3 -m http.server 4102 -d design >/dev/null 2>&1 & design=$!
+  trap 'kill $site $design' EXIT
+  sleep 1
+  # name | site path | desktop mockup | phone mockup
+  while IFS='|' read -r name path desktop phone; do
+    for width in 1280 390; do
+      npx -y playwright@1.56 screenshot --channel chrome --full-page --wait-for-timeout 500 \
+        --viewport-size "$width,800" "http://localhost:4101$path" "_screenshots/$name-$width.png" >/dev/null
+      mockup=$desktop; [ $width = 390 ] && mockup=$phone
+      [ -n "$mockup" ] && npx -y playwright@1.56 screenshot --channel chrome --full-page --wait-for-timeout 1500 \
+        --viewport-size "$width,800" "http://localhost:4102/pages/$mockup" "_screenshots/$name-$width-design.png" >/dev/null
+    done
+    echo "$name"
+  done <<'EOF'
+home|/|home.html|home-phone.html
+blog|/blog/|blog.html|blog.html
+post|/2019/03/20/the-case-for-pull-rebase/|post.html|post.html
+git|/git/|git.html|git.html
+speaking|/speaking/|speaking.html|speaking.html
+services|/services/|services.html|services.html
+training|/workshops/|training.html|training.html
+about|/about/|about.html|about.html
+tag|/tag/programming/||
+EOF
+fi
+
+if [ $failed = 0 ]; then echo "==> OK"; else echo "==> FAILED"; exit 1; fi

@@ -1,169 +1,182 @@
 ---
-layout: default
+layout: page
 title: Training
+assets: workshops
 image: backdrop.jpg
+intro: |
+  <p>I put together a number of workshops that I can deliver for you and your team on request. They come with a specific set of contents, but I can always customise the agenda to meet your specific needs.</p>
+  <p>All workshops include a Q&amp;A session. To get the most out of it, email me your questions beforehand — that helps me get a sense of where you stand on the topic and where to put extra emphasis.</p>
+buttons:
+  - label: Book a workshop
+    url: "#contact"
+  - label: What students say
+    url: "#feedback"
 ---
+<section class="photo wrap">
+  <figure>
+    {% include picture.html src="/assets/workshops/backdrop" width=1120 height=630 position="50% 37.9%" alt="Enrico teaching a workshop to a small room, code on the projector" %}
+  </figure>
+</section>
 
-<div id="home">
-  <h1 class="backdrop training">Training</h1>
+<section id="workshops" class="workshop-cards wrap">
+  <div class="section-header">
+    <h2 class="section-title">Workshops</h2>
+    <p>Three workshops, on site or online. Pick the one that fits your team, or ask me to combine&nbsp;them.</p>
+  </div>
+  <div class="cards">
+    <a class="card" href="#understanding_git">
+      <span class="level">Beginner · 1 day</span>
+      <h3>Understanding Git<br><span>Behind the Command Line</span></h3>
+      <p>Git from the inside out: watch the object model change as you commit, branch, merge and rebase, and the magic disappears.</p>
+      <span class="more">Details →</span>
+    </a>
+    <a class="card" href="#mastering_git">
+      <span class="level">Advanced · 1 day</span>
+      <h3>Mastering Git<br><span>Beyond the Command Line</span></h3>
+      <p>A clean history and how to keep one: good commits, rewriting history, branching strategies, submodules and the tools that make it stick.</p>
+      <span class="more">Details →</span>
+    </a>
+    <a class="card" href="#building_a_deployment_pipeline_with_csharp_and_cake">
+      <span class="level">Intermediate · 2 days</span>
+      <h3>Building a Deployment Pipeline with C#&nbsp;and&nbsp;Cake</h3>
+      <p>A complete build and deployment pipeline for an ASP.NET Core app, written in nothing but C#, with build scripts that stay maintainable.</p>
+      <span class="more">Details →</span>
+    </a>
+  </div>
+</section>
 
-  <p>I put together a number of workshops that I can deliver for you and your team on request. They come with a specific set of contents, but I can always customize the agenda to meet your specific needs, if you so desire.</p>
+<section id="schedule" class="schedule wrap">
+  <div class="section-header">
+    <h2 class="section-title">Schedule</h2>
+    <p>Upcoming public workshops. Follow the link to the event's page for availability and bookings.</p>
+  </div>
+  <ul>
+    <li>
+      <span class="when">On demand · Online</span>
+      <span class="what">
+        <span><a href="#building_a_deployment_pipeline_with_csharp_and_cake">Building a Deployment Pipeline with C# and Cake</a><span>Hosted by Programutvikling</span></span>
+        <a href="https://programutvikling.no/slot/building-a-deployment-pipeline-with-c-and-cake">Book at Programutvikling ↗</a>
+      </span>
+    </li>
+  </ul>
+</section>
 
-  <p>All workshops include a Q&amp;A session. In order to get the most out of it, I encourage you to email me your questions beforehand. That will help me get a sense for where you stand on the topic and identify any particular areas where to put extra emphasis during the workshop.</p>
-
-  <p>If you'd like to know more, don't hesitate to <a href="/services/#contact">contact me</a>.</p>
-
-  <hr/>
-
-  <h2 id="schedule">Schedule</h2>
-
-  <p>Here's a list of my upcoming public workshops. Please, follow the link to the event's page for availability and bookings.</p>
-
-    <h4>
-    <span><a href="https://programutvikling.no/slot/building-a-deployment-pipeline-with-c-and-cake" target="_blank">Programutvikling</a></span>
-    <div class="nowrap">
-      <span class="inline-info">On demand — Online 🌍</span>
+<section class="workshops wrap">
+  <article id="understanding_git" class="workshop">
+    <div class="workshop-facts">
+      <h2>Understanding Git<br><span>Behind the Command Line</span></h2>
+      <dl>
+        <dt>Level</dt><dd>Beginner</dd>
+        <dt>Length</dt><dd>1 day</dd>
+        <dt>Format</dt><dd>On site or online</dd>
+        <dt>For</dt><dd>Developers new to Git</dd>
+      </dl>
+      <a class="btn btn-secondary btn-small" href="#contact">Book this workshop</a>
     </div>
-  </h4>
+    <div class="workshop-body">
+      <p>Git has become the <em>de facto</em> version control system of our industry, and for good reason. But for all its power and flexibility, Git has a terrible flaw: its complexity. A myriad of awkwardly named commands and options have earned it the reputation of being hard — and unnecessarily so — both to learn and to use.</p>
+      <p>I don't believe Git is hard to <em>understand</em>, though. Git is surprisingly simple at its core. If you don't believe me, type <code>man git</code> and read the very first line:</p>
+      <blockquote class="pull-quote">git — the stupid content tracker</blockquote>
+      <p>Git is nothing more than a simple, yet very efficient, content tracker for your files. The key to its power is to understand it at a fundamental level — and the best way to do that is to actually see what's going on behind all those cryptic commands. That's exactly what this workshop is about.</p>
+      <h3>What you will learn</h3>
+      <p>Git from the inside out: you'll understand how the commands work by watching a real-time visual representation of Git's internal object model. Each time you create a branch, merge or rebase, you'll see how it affects your history. Once you have that mental model, the magic disappears and you'll make Git work for you instead of the other way around.</p>
+      <h3>Topics</h3>
+      <ul class="bullets topics">
+        <li><span aria-hidden="true">›</span><span>The Git Parable</span></li>
+        <li><span aria-hidden="true">›</span><span>Git's object model</span></li>
+        <li><span aria-hidden="true">›</span><span>Anatomy of a commit</span></li>
+        <li><span aria-hidden="true">›</span><span>Customising the way you view history</span></li>
+        <li><span aria-hidden="true">›</span><span>What the index is and what it's good for</span></li>
+        <li><span aria-hidden="true">›</span><span>Branching, a visual explanation</span></li>
+        <li><span aria-hidden="true">›</span><span>Rebasing, a visual explanation</span></li>
+        <li><span aria-hidden="true">›</span><span>Different kinds of branches</span></li>
+        <li><span aria-hidden="true">›</span><span>Different ways of merging</span></li>
+        <li><span aria-hidden="true">›</span><span>Branches vs. tags</span></li>
+        <li><span aria-hidden="true">›</span><span>Resolving conflicts</span></li>
+        <li><span aria-hidden="true">›</span><span>Choosing a Git client that works for you</span></li>
+      </ul>
+      <h3>Audience</h3>
+      <p>Developers with little to no experience with Git. The only prerequisite is some familiarity with a command-line shell; I'll show you how to work with Git from either PowerShell or Bash. You don't have to keep using the command line afterwards — it's a learning tool to understand how Git works. Once you master the concepts, pick any Git client you like.</p>
+    </div>
+  </article>
 
-  <hr/>
+  <article id="mastering_git" class="workshop">
+    <div class="workshop-facts">
+      <h2>Mastering Git<br><span>Beyond the Command Line</span></h2>
+      <dl>
+        <dt>Level</dt><dd>Advanced</dd>
+        <dt>Length</dt><dd>1 day</dd>
+        <dt>Format</dt><dd>On site or online</dd>
+        <dt>For</dt><dd>Confident Git users</dd>
+      </dl>
+      <a class="btn btn-secondary btn-small" href="#contact">Book this workshop</a>
+    </div>
+    <div class="workshop-body">
+      <p>You've been using Git for a while and feel comfortable with the basics: committing, branching, merging. But something is missing — maybe you're not taking full advantage of what Git has to offer; maybe you occasionally end up with an entangled history and would like to know how to avoid that. If that sounds like you, this workshop is for you.</p>
+      <p>Mastering Git is about going beyond the basics and learning to use Git to support your working style, both individually and within your team — and picking up a few tricks along the way that will directly improve your day-to-day workflow.</p>
+      <h3>What you will learn</h3>
+      <p>The value of a clean history and how Git was designed to let you keep one: what makes a good commit, when and how to rewrite history, readable vs. true history. Then branching strategies — GitFlow, GitHub Flow and when each makes sense — submodules for dependencies between projects, and the techniques that make you faster: recovering lost commits with the reflog, parallel work with multiple working directories, and finding the commit that introduced a bug by binary search.</p>
+      <h3>Topics</h3>
+      <ul class="bullets topics">
+        <li><span aria-hidden="true">›</span><span>The importance of a good-looking history</span></li>
+        <li><span aria-hidden="true">›</span><span>ACID commits</span></li>
+        <li><span aria-hidden="true">›</span><span>Consistent line endings and whitespace</span></li>
+        <li><span aria-hidden="true">›</span><span>When and how to rewrite history</span></li>
+        <li><span aria-hidden="true">›</span><span>The many ways to use <code>git rebase</code></span></li>
+        <li><span aria-hidden="true">›</span><span>Choosing a branching strategy</span></li>
+        <li><span aria-hidden="true">›</span><span>GitFlow vs. GitHub Flow vs. Your Own Flow™</span></li>
+        <li><span aria-hidden="true">›</span><span>Dependencies between projects with submodules</span></li>
+        <li><span aria-hidden="true">›</span><span>Searching history</span></li>
+        <li><span aria-hidden="true">›</span><span>Recovering lost commits</span></li>
+        <li><span aria-hidden="true">›</span><span>Reusing conflict resolutions (<code>git rerere</code>)</span></li>
+        <li><span aria-hidden="true">›</span><span>Multiple working directories (<code>git worktree</code>)</span></li>
+        <li><span aria-hidden="true">›</span><span>Debugging (<code>git bisect</code>)</span></li>
+        <li><span aria-hidden="true">›</span><span>Taking care of your repository (<code>git gc</code>)</span></li>
+      </ul>
+      <h3>Audience</h3>
+      <p>You should feel confident with Git's fundamental concepts. If you'd like to strengthen that first, take <a href="#understanding_git">Understanding Git</a> and have this as a continuation — both workshops share the same visualisation techniques. You should also be comfortable with a command-line shell; I'll use PowerShell or Bash, based on your preference.</p>
+    </div>
+  </article>
 
-  <h2 id="building_a_deployment_pipeline_with_csharp_and_cake">
-    <span class="nowrap">Building a Deployment Pipeline</span>&nbsp;<span class="nowrap">with C# and Cake</span><br/>
-    <span class="subtitle">2 Days</span>
-  </h2>
+  <article id="building_a_deployment_pipeline_with_csharp_and_cake" class="workshop">
+    <div class="workshop-facts">
+      <h2>Building a Deployment Pipeline with C# and Cake</h2>
+      <dl>
+        <dt>Level</dt><dd>Intermediate</dd>
+        <dt>Length</dt><dd>2 days</dd>
+        <dt>Format</dt><dd>On site or online</dd>
+        <dt>For</dt><dd>C# developers</dd>
+      </dl>
+      <a class="btn btn-secondary btn-small" href="#contact">Book this workshop</a>
+    </div>
+    <div class="workshop-body">
+      <p>Modern web applications consist of an ever increasing number of moving parts: JavaScript frontends, web APIs, microservices, cloud environments — the list goes on. Building and deploying them means juggling a complex set of tools and services and making them come together in one unified, fully automated process, from source code to production servers.</p>
+      <p>As a .NET developer living in a DevOps culture, how do you achieve that without investing in a whole new set of tools and languages? Meet <a href="https://cakebuild.net">Cake</a>: an open source, cross-platform build automation tool with a rich ecosystem of integrations — and a C# DSL that will make you feel right at home.</p>
+      <h3>What you will learn</h3>
+      <p>Everything you need to automate a complete build and deployment pipeline for a modern ASP.NET Core web application using nothing more than C# and Cake — and, as a bonus, how to write maintainable build scripts that adapt as the needs of the software change.</p>
+      <h3>Topics</h3>
+      <ul class="bullets topics">
+        <li><span aria-hidden="true">›</span><span>Compiling using MSBuild and the .NET CLI</span></li>
+        <li><span aria-hidden="true">›</span><span>Running automated tests and measuring code coverage</span></li>
+        <li><span aria-hidden="true">›</span><span>Versioning based on the Git history of the project</span></li>
+        <li><span aria-hidden="true">›</span><span>Packaging with NuGet or as regular Zip files</span></li>
+        <li><span aria-hidden="true">›</span><span>Publishing the application as a Docker container</span></li>
+        <li><span aria-hidden="true">›</span><span>Deploying to an on-premises web server using Octopus Deploy</span></li>
+        <li><span aria-hidden="true">›</span><span>Deploying to an Azure Web App using Kudu</span></li>
+        <li><span aria-hidden="true">›</span><span>Deploying to a containerised Azure Web App with Docker and ACR</span></li>
+        <li><span aria-hidden="true">›</span><span>Integrating with CI servers such as TeamCity, Azure DevOps and GitHub Actions</span></li>
+        <li><span aria-hidden="true">›</span><span>Troubleshooting the pipeline with logging and debugging</span></li>
+      </ul>
+      <h3>Audience</h3>
+      <p>C# developers who want a CI/CD pipeline without learning a completely new set of tools and languages. If you've worked with other Make-like build tools before, great; if not, we'll cover the basics of writing a solid build script.</p>
+    </div>
+  </article>
+</section>
 
-  <p>Remember when most web applications were just a website and a SQL database? Yeah, things are different these days. Modern web applications consist of an ever increasing number of moving parts: JavaScript frontends, web APIs, microservices, cloud environments—the list goes on. Building and deploying these applications involves joggling a complex set of tools and services—each with their own rules and requirements—and make them all come together in a unified process. On top of that, modern development teams are expected to release software often, which means that those processes must be entirely automated, from source code to production servers.</p>
-
-  <p>As a .NET developer living in a DevOps culture, how do you achieve that without having to invest in learning a whole new set of tools and languages? Meet <a href="https://cakebuild.net" target="_blank">Cake</a>. Cake is an open source cross-platform build automation tool with a surprisingly rich ecosystem of integrations to third-party tools and services. And the best part is: it uses a beautiful C# DSL that will make you feel right at home.</p>
-
-  <h3>What You Will Learn</h3>
-
-  <p>In this workshop, you will learn everything you need to know to automate a complete build and deployment pipeline for a modern ASP.NET Core 3.0 web application using nothing more than <a href="/2017/10/20/cake-at-pluralsight/">C# and Cake</a>.</p>
-
-  <p>You will know how to apply your existing C# and .NET skills to automate a modern build and deployment pipeline — as a bonus, you'll also learn how to write maintainable build scripts that can adapt as the needs of the software change.</p>
-
-  <h3>Topics</h3>
-
-  <ul>
-    <li>Compiling using MSBuild and the .NET Core CLI tools</li>
-    <li>Running automated tests and measuring code coverage</li>
-    <li>Versioning based on the Git history of the project</li>
-    <li>Packaging with NuGet or as regular Zip files</li>
-    <li>Publishing the application as a Docker container</li>
-    <li>Deploying to an on-premises web server using Octopus Deploy</li>
-    <li>Deploying to an Azure Web App using Kudu</li>
-    <li>Deploying to a containerized Azure Web App using Docker and the Azure Container Registry</li>
-    <li>Integrating with CI servers such as TeamCity, Azure DevOps and GitHub Actions</li>
-    <li>Troubleshooting the pipeline with logging and debugging</li>
-  </ul>
-
-  <h3>Audience</h3>
-
-  <p>If you're a C# developer who wishes to set up a Continuous Integration/Continuous Delivery pipeline without having to learn a completely new set of tools and languages, then this workshop is for you. You'll be able to apply your hard-earned knowledge of the .NET platform to the world of build and deployment automation. If you've worked with other <a href="/2017/10/20/cake-at-pluralsight/#not-just-another-make">Make-like build automation tools</a> before, that's great. If you haven't, don't worry — we'll cover the basics of how to write a solid build script.</p>
-
-  <hr/>
-
-  <h2 id="understanding_git">
-    <span class="nowrap">Understanding Git —</span>&nbsp;<span class="nowrap">Behind the Command Line</span><br/>
-    <span class="subtitle">1 Day</span>
-  </h2>
-
-  <p>Git has become the <em>de-facto</em> version control system of our industry, and for good reason. What you're able to achieve with Git is unmatched by any other version control system that came before it. But for all its power and flexibility, Git has a terrible flaw: its complexity. A myriad of awkwardly named commands and options, have earned Git the reputation of being <em>hard</em>—and unnecessarily so—both to learn and to use.</p>
-
-  <p>You won't find me arguing with that. In fact, I, too, question whether we need that many options and, most of all, I have my reservations about some of the name choices.</p>
-
-  <p>However, I don't believe that Git is hard to <em>understand</em>. In fact, it's quite the opposite — Git is surprisingly simple at its core. If you don't believe me, open up Git's manual page by typing <code>man git</code> in your favorite command-line shell. If you take a look at the very first paragraph, you'll see this:</p>
-
-  <blockquote>
-    <p>git — the stupid content tracker</p>
-  </blockquote>
-
-  <p>It says it right in the tagline. Git is nothing more than a simple, yet very efficient, <em>content tracker for your files</em>. The key to unlock its power and flexibility is to understand it at a fundamental level. And I found that the best way to do so is by actually seeing what's going on <em>behind</em> all those cryptic commands and options.</p>
-
-  <p>That's exactly what this workshop is about.</p>
-
-  <h3>What You Will Learn</h3>
-
-  <p>In this workshop, you'll learn Git from the inside out; you will understand how the different commands work by watching a <em>real-time visual representation</em> of Git's internal object model.</p>
-
-  <p>Each time you run a common operation like <em>creating a branch</em>, <em>merging</em> or <em>rebasing</em>, you'll immediately see how it affects the underlying history of your repository. This will give you a useful mental model of how Git works. Once you have that, all of the magic will disappear and you'll finally be able to make Git work for you instead of the other way around.</p>
-
-  <h3>Topics</h3>
-
-  <ul>
-    <li>The Git Parable</li>
-    <li>Git's object model</li>
-    <li>Anatomy of a commit</li>
-    <li>Customizing the way you view history</li>
-    <li>What the <em>index</em> is and what it's good for</li>
-    <li>Branching, a <a href="/2017/04/19/what-is-in-a-git-branch/">visual explanation</a></li>
-    <li>Rebasing, a visual explanation</li>
-    <li>Different kinds of branches</li>
-    <li>Different ways of merging</li>
-    <li>Branches vs. Tags</li>
-    <li>Resolving conflicts</li>
-    <li>Choosing a Git client that works for you</li>
-  </ul>
-
-  <h3>Audience</h3>
-
-  <p>This workshop is designed for developers who have little to no experience with Git. The only prerequisite is that you're somewhat familiar with using a command-line shell for your operating system of choice. During the workshop, I'll show you how to interact with Git from either <em>PowerShell</em> or <em>Bash</em>.</p>
-
-  <p>Note that you don't have to keep using the command-line after the workshop if you don't want to; we'll use it as a <em>learning tool</em> to understand how Git works. Once you master the concepts, you'll be able to choose any Git client of your liking and make the most out of it.</p>
-
-  <hr/>
-
-  <h2 id="mastering_git">
-    <span class="nowrap">Mastering Git —</span>&nbsp;<span class="nowrap">Beyond the Command Line</span><br/>
-    <span class="subtitle">1 Day</span>
-  </h2>
-
-  <p>You've been using Git for a while and feel pretty comfortable with the basics: committing, creating branches, merging — you got that. However, something is missing; maybe you feel you're not taking full advantage of what Git has to offer; maybe you occasionally end up with an entangled history and would like to know how to avoid that. You want to know more. If this sounds like your situation, then this workshop is for you.</p>
-
-  <p>Mastering Git is about going <em>beyond</em> the basics and learn to truly unleash the power of Git to support your working style, both individually as well as within your team.</p>
-
-  <p>You will discover that Git is so much more than simply branching and merging; its unique features are designed to allow you to take care of your project's history while, at the same time, enabling new forms of collaboration. And that's not all: along the way you'll pick up a few tricks that will directly improve your personal day-to-day workflow.</p>
-
-  <h3>What You Will Learn</h3>
-
-  <p>The goal of this workshop is to teach you to take advantage of the unique features that set Git apart from the other version control systems.</p>
-
-  <p> You'll start out by learning the value of keeping a <em>clean history</em> and how Git was designed to let you do just that. You'll become aware of what makes a <em>good commit</em> and how you can apply those principles to your project. We'll also discuss the pros and cons of rewriting commits and the eternal debate of <em>readable history</em> vs. <em>true history</em>.</p>
-
-  <p>Next, you'll learn about the different branching strategies (like <a href="http://nvie.com/posts/a-successful-git-branching-model" target="_blank">GitFlow</a> and <a href="https://guides.github.com/introduction/flow" target="_blank">GitHub Flow</a>), their advantages and disadvantages and when it makes sense to use one or the other in a given project. You will also learn how to use <em>submodules</em> to manage the dependencies between different projects.</p>
-  
-  <p>Along the way, you will also pick up a few techniques that will make your personal workflow more efficient; among other things, you'll learn how to use the <a href="https://git-scm.com/docs/git-reflog" target="_blank"><em>reflog</em></a> to recover seemingly lost commits, how to work on different tasks in parallel by keeping <em>multiple working directories</em> and how to quickly find the commit that introduced a bug by doing a <em>binary search</em>.</p>
-
-  <h3>Topics</h3>
-
-  <ul>
-      <li>The importance of keeping a <a href="/2014/08/14/the-importance-of-a-good-looking-history">good-looking history</a></li>
-    <li>ACID commits</li>
-    <li>Ensuring consistent line-endings and whitespace</li>
-    <li>When and how to rewrite history</li>
-    <li>The many ways to use <code>git-rebase</code></li>
-    <li>Choosing a branching strategy for your project</li>
-    <li>GitFlow vs. GitHub Flow vs. Your Own Flow™</li>
-    <li>Managing dependencies between projects with <em>submodules</em></li>
-    <li>Searching history</li>
-    <li>Recovering <a href="/2017/10/19/the-invisible-commits-part-one/">lost commits</a></li>
-    <li>Reusing conflict resolutions (<code>git-rerere</code>)</li>
-    <li>Managing multiple working directories (<code>git-worktree</code>)</li>
-    <li>Debugging (<code>git-bisect</code>)</li>
-    <li>Taking care of your repository (<code>git-gc</code>)</li>
-  </ul>
-
-  <h3>Audience</h3>
-
-  <p>To get the most out of <a href="/workshops/#mastering_git">Mastering Git</a>, you should feel confident with Git's fundamental concepts. If you'd like to strengthen your knowledge in that area, I highly recommend that you take <a href="/workshops/#understanding_git">Understanding Git</a> first and have this as a continuation; both workshops complement each other nicely, since they share the same visualization techniques to explain the concepts.</p>
-
-  <p>You should also be familiar with handling a command-line shell. During the workshop, I'll use either <em>PowerShell</em> or <em>Bash</em>, based on your preference.</p>
-
-  <hr/>
-
-  <h2 id="bookings">Bookings</h2>
-
-  <p>If you'd like to have a workshop at your company or event, you can find more information on how to reach me on the <a href="/services#contact">contact page</a></p>.
-
-</div>
+<section id="feedback" class="students wrap">
+  <div class="section-header">
+    <h2 class="section-title">What students say</h2>
+    <p>Some of the feedback I've received from people who took my Git course on Pluralsight.</p>
+  </div>
+  {% include testimonials.html items=site.data.testimonials.students %}
+</section>

@@ -49,7 +49,6 @@ Hopefully, you'll believe me now. So, let's boil it all down to a single sentenc
 
 <div class="note">
 <p>
-<i class="fa fa-code-fork fa-2x pull-left"></i>
 In Git, a branch is a <a href="https://git-scm.com/docs/gitglossary#gitglossary-aiddefrefaref"><em>reference</em></a> to the latest commit in a sequence; the history of a branch is reconstructed starting from that latest commit going backwards, following the chain of parents.
 </p>
 </div>
@@ -73,7 +72,6 @@ But don't despair: everything becomes much clearer once you start thinking in te
 
 <div class="note">
 <p>
-<i class="fa fa-hand-o-right fa-2x pull-left"></i>
 A commit <code>A</code> is said to be <em>reachable</em> from another commit <code>B</code> if there exists a <em>contiguous</em> path of commits that lead from <code>B</code> to <code>A</code>.
 </p>
 </div>
@@ -172,9 +170,9 @@ git diff M^-1
 
 Git's syntax might be ridiculously opaque at times, but finding out what's in a branch is easier than ever thanks to Git's intuitive branching model.
 
-<div class="note">
+<div class="note course">
+<img src="{{ site.url }}/assets/pluralsight-mark-mono.png" width="19" height="19" alt="">
 <p>
-<i class="fa fa-play-circle-o fa-2x pull-left pull-left-three-lines"></i>
 Was this helpful? If you like, you can find even more ways to slice and dice the history of your Git repository in my <a href="https://www.pluralsight.com/authors/enrico-campidoglio">Pluralsight</a> course <a href="https://www.pluralsight.com/courses/git-tips-tricks">Git Tips and Tricks</a>.
 </p>
 </div>

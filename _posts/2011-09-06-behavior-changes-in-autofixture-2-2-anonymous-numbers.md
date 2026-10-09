@@ -13,7 +13,6 @@ Before I jump into the details of what exactly has been changed and how, allow m
 
 <div class="note">
 <p>
-<i class="fa fa-book fa-2x pull-left"></i>
 A key part of AutoFixture’s mission statement is to make the process of authoring unit tests faster by providing an easy way of creating test values (or “<em>specimens</em>“) for the variables involved in the test. The goal of providing values that are as neutral as possible to the test scenario at hand is achieved by employing <a href="http://blog.ploeh.dk/2009/03/05/ConstrainedNonDeterminism.aspx">“constrained non-deterministic”</a> generation algorithms.
 </p>
 </div>

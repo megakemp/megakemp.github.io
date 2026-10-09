@@ -98,7 +98,7 @@ While looking at this code, I immediately imagined this dialogue taking place be
 
 Jokes aside, the bottom line here is this:
 
-<div class="note info">
+<div class="note">
 <p>
 By implementing database operations in an <em>imperative manner</em>, you effectively tie up the hands of the query execution engine, thus preventing it from performing a number of optimizations at runtime in order to speed things up.
 </p>

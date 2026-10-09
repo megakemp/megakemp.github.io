@@ -1,0 +1,36 @@
+---
+layout: page
+title: Writing
+intro: <p>I write about programming, Git and the craft of building software. Not often, but when I have something worth saying.</p>
+graph: |
+  <div class="graph" aria-hidden="true">
+    <i style="grid-area: 1 / 1 / 2 / 5"></i>
+    <i style="grid-area: 2 / 3 / 3 / 7"></i>
+    <i style="grid-area: 3 / 5 / 4 / 9"></i>
+    <i style="grid-area: 4 / 7 / 5 / 11"></i>
+    <i style="grid-area: 5 / 9 / 6 / 13"></i>
+    <i style="grid-area: 6 / 7 / 7 / 11"></i>
+    <i style="grid-area: 7 / 5 / 8 / 9"></i>
+    <i style="grid-area: 8 / 3 / 9 / 7"></i>
+    <i style="grid-area: 9 / 1 / 10 / 5"></i>
+    <i class="h" style="grid-area: 9 / 15 / 10 / 27"></i>
+  </div>
+---
+<section class="listing wrap">
+  {% include post-list.html posts=paginator.posts %}
+  <nav class="pager" aria-label="Pages">
+    {%- if paginator.previous_page == 1 %}
+    <a href="/blog/">← Newer</a>
+    {%- elsif paginator.previous_page %}
+    <a href="/blog/page{{ paginator.previous_page }}/">← Newer</a>
+    {%- else %}
+    <span aria-disabled="true">← Newer</span>
+    {%- endif %}
+    <span class="count">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {%- if paginator.next_page %}
+    <a href="/blog/page{{ paginator.next_page }}/">Older →</a>
+    {%- else %}
+    <span aria-disabled="true">Older →</span>
+    {%- endif %}
+  </nav>
+</section>

@@ -1,54 +1,59 @@
 ---
-layout: default
-title: Enrico Campidoglio
+layout: page
+title: About
+intro: |
+  <p>Hi! My name is Enrico Campidoglio. I'm a programmer, speaker and trainer with a strong passion for quality and good old-fashioned knowledge sharing.</p>
+  <p>Since late 2017, I work as a freelance programmer, teacher and mentor, helping teams develop software better. If you think I can help you, I'd love to hear from you.</p>
+buttons:
+  - label: What I do
+    url: /services/
+  - label: Get in touch
+    url: "#contact"
 ---
+<section class="story wrap">
+  <figure class="portrait">
+    {% include picture.html src="/assets/about/portrait" width=440 height=550 alt="Enrico Campidoglio" %}
+  </figure>
+  <div class="story-body">
+    <h2 id="my_mission">My mission</h2>
+    <p>I believe in always improving — whether it's code or the teams I work with. Inspired by the "Boy Scout Rule" from Robert C. Martin, I aim to leave every project better than I found it.</p>
+    <blockquote class="pull-quote">When I join a project, I want to leave the team in better shape than I found it.</blockquote>
 
-<div id="home">
-  <h1 class="backdrop about">About</h1>
-  <p>Hi! My name is <strong>Enrico Campidoglio</strong>. I’m a <a href="/services/">programmer</a>, <a href="/speaking/">speaker</a> and <a href="/workshops/">trainer</a> with a strong passion for quality and good old-fashioned knowledge sharing.</p>
+    <h2 id="what_i_do">What I do</h2>
+    <p>I've been building software professionally for 25 years, with a focus on code quality throughout. I've been teaching technical subjects since 2004, starting with a Linux programming class while working as a consultant. Over the years, I've led internal courses for companies alongside my consulting work.</p>
+    <p>In 2017, I decided to fully focus on what I enjoy most: teaching and mentoring. Programming remains at the core of what I do, but I now split my time between writing code and helping others grow through mentoring and training. <a href="/services/">Services →</a></p>
 
-  <p>As of <a href="/2017/09/13/the-next-step/">late 2017</a>, I work as a <a href="/services/">freelance programmer, teacher and mentor</a> helping teams develop software <em>better</em>. If you think I can help you, I'd love to <a href="/services/#contact">hear from you.</a></p>
+    <h2 id="speaking">Speaking</h2>
+    <p>Since 2011, I've had the privilege of speaking at conferences and user group events around the world. My talks are typically technical, but I always aim to make them engaging and accessible. Sharing knowledge is about more than explaining concepts — it's about inspiring others to think differently and approach problems with a fresh perspective. <a href="/speaking/">Talks and podcasts →</a></p>
 
-  <hr/>
+    <h2 id="pluralsight_courses">Pluralsight courses</h2>
+    <p>In 2015, I started producing online training for Pluralsight. <a href="https://www.pluralsight.com/authors/enrico-campidoglio">Author page ↗</a></p>
+    {% include course-list.html courses=site.data.courses %}
 
-  <h2 id="my_mission">My Mission</h2>
-
-  <p>I believe in always improving — whether it's code or the teams I work with. Inspired by the <a href="https://97-things-every-x-should-know.gitbooks.io/97-things-every-programmer-should-know/content/en/thing_08/">"Boy Scout Rule"</a> from <a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin">Robert C. Martin</a>, I aim to leave every project better than I found it.
-
-  <blockquote>
-    <p>When I join a project, I want to <em>leave the team in better shape than I found it</em>.</p>
-  </blockquote>
-
-  <hr/>
-
-  <h2 id="what_i_do">What I Do</h2>
-
-  <p>I've been teaching technical subjects since 2004, starting with a Linux programming class while working as a consultant. Over the years, I’ve led internal courses for companies alongside my consulting work.</p>
-
-  <p>In 2017, I decided to fully focus on what I enjoy most: teaching and mentoring. While programming remains at the core of what I do, I now split my time between writing code and helping others grow through <a href="/services">mentoring and training</a>.</p>
-
-  <h3>Speaking</h3>
-
-  <p>Since 2011, I’ve had the privilege of <a href="/speaking">speaking</a> at conferences and user group events around the world. <a href="/speaking">My talks</a> are typically technical, but I always aim to make them engaging and accessible. I believe that sharing knowledge is about more than just explaining concepts — it’s about inspiring others to think differently and approach problems with a fresh perspective.</p>
-
-  <h3>Online Courses</h3>
-
-  <a href="https://www.pluralsight.com/authors/enrico-campidoglio" target="_blank">
-    <img class="pluralsightlogo" alt="Pluralsight logo" src="/assets/about/pluralsight-logo.png" />
-  </a>
-
-  <p>In 2015, I started producing online training for <a href="https://www.pluralsight.com" target="_blank">Pluralsight</a>. You can find my curriculum of courses on my <a href="https://www.pluralsight.com/authors/enrico-campidoglio" target="_blank">author page</a>.</p>
-
-  <h3>Open Source</h3>
-
-  <a href="https://github.com/ecampidoglio" target="_blank">
-    <img class="githublogo" alt="GitHub logo" src="/assets/about/github-logo.png" />
-  </a>
-
-  <p>Since 2011, I help maintain <a href="https://github.com/AutoFixture" target="_blank">AutoFixture</a>, an open source library for .NET that helps alleviate some of the friction experienced when doing Test-driven development by making it easier to generate test data.</p>
-
-  <p>In 2020, I joined the <a href="https://github.com/cake-build">Cake core team</a>, where I'm responsible for maintaining the <a href="https://github.com/cake-build/cake-action">Cake GitHub Action</a>, which I created during the production of my <a href="https://www.pluralsight.com/courses/building-custom-github-actions">Building Custom GitHub Actions Pluralsight course</a>.</p>
-
-  <p>I'm also the author of <a href="https://github.com/cake-contrib/Cake.Curl" target="_blank">Cake.Curl</a>, a cross-platform addin for <a href="https://cakebuild.net">Cake (C# Make)</a> that allows you to transfer data to a remote URL as part of your build script using <a href="https://curl.se" target="_blank">curl</a>.</p>
-
-</div>
+    <h2 id="open_source">Open source</h2>
+    <p>Projects I'm involved in:</p>
+    <ul class="glyph-list">
+      <li>
+        <span class="nf" aria-hidden="true">&#xF09B;</span>
+        <div>
+          <a class="name" href="https://github.com/AutoFixture/AutoFixture">AutoFixture</a>
+          <span>Maintainer since 2011. A .NET library that takes the friction out of test-driven development by generating test data for you.</span>
+        </div>
+      </li>
+      <li>
+        <span class="nf" aria-hidden="true">&#xF09B;</span>
+        <div>
+          <a class="name" href="https://github.com/cake-build/cake-action">Cake GitHub Action</a>
+          <span>Cake core team since 2020. Created during my <a href="https://www.pluralsight.com/courses/building-custom-github-actions">Building Custom GitHub Actions</a> course; I maintain it as part of the Cake project.</span>
+        </div>
+      </li>
+      <li>
+        <span class="nf" aria-hidden="true">&#xF09B;</span>
+        <div>
+          <a class="name" href="https://github.com/cake-contrib/Cake.Curl">Cake.Curl</a>
+          <span>A cross-platform Cake addin for transferring data to a remote URL from your build script using curl.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
