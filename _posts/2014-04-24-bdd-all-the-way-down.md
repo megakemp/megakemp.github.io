@@ -35,7 +35,7 @@ And that's basically it. TDD doesn't tell you _what to test_, how you should _na
 
 As a programmer, the only thing you can think of, at this point, is writing a test that _checks for nulls_. Arguably, that's the equivalent of trying to start a car by [emptying the ashtrays](http://en.wiktionary.org/wiki/yak_shaving).
 
-### Let the behavior be your guide
+## Let the behavior be your guide
 
 What if we stopped worrying about writing tests for the sake of, well, writing tests, and instead focused on _verifying what the system is supposed to do in a certain situation_? That's called _behavior_ and a lot of good things may come out of letting it be the driving force when developing software. [Dan North](http://dannorth.net) noticed this during his research, which ultimately led him to [the formalization of Behavior-driven Development](http://dannorth.net/introducing-bdd):
 
@@ -51,7 +51,7 @@ Any live cell with fewer than two live neighbors dies, as if by needs caused by 
 </p>
 </div>
 
-### Acceptance tests
+## Acceptance tests
 
 At this point we're ready to write our first test. But, since there's still no code for the feature, what exactly are we supposed to test? The answer to that question is simpler than you might expect: _the system itself_.
 
@@ -137,7 +137,7 @@ Then I should get back a new generation
 
 As expected, the test fails on the first assertion with an HTTP 404 response. We _know_ this is correct since there's nothing listening to that URL on the other end. Now that we understand **why this test fails**, we can now officially start implementing that feature.
 
-### The TDD cycle
+## The TDD cycle
 
 We're about to get our hands dirty (albeit keeping the code clean) and dive into the system. At this point we follow the normal rules of Test-driven development with its [Red-Green-Refactor](http://www.jamesshore.com/Blog/Red-Green-Refactor.html) cycle.
 However, we're faced with the exact same problem we had at the boundaries of the system. What should be our first test? Even in this case, we'll let the _behavior_ be our guiding light.
@@ -204,7 +204,7 @@ In this case I'm using a test framework for .NET called [Machine.Specifications]
 
 Speaking of readability, see all those underscores, static variables and lambdas? Those are just the tricks MSpec has to pull on the C# compiler, in order to give us a [domain-specific language](http://en.wikipedia.org/wiki/Domain-specific_language) to express requirements while still producing runnable code. Other frameworks have different techniques to get as close as possible to human language without angering the compiler. Which one you choose is largely a matter of preference.
 
-### Wrapping it up
+## Wrapping it up
 
 I'll leave the implementation of the `GenerationController` class as an exercise for the Reader, since it's outside the scope of this article. If you like, you can find mine [over at GitHub](https://github.com/ecampidoglio/gameoflife/blob/master/Src/Web/Controllers/GenerationController.cs).
 
@@ -225,7 +225,7 @@ In our little exercise, we <strong>grew a feature</strong> in our Game of Life w
 </p>
 </div>
 
-### Presentation
+## Presentation
 
 You can see a complete recording of the talk I gave [at Foo Café last year](http://www.foocafe.org/previous_event/speaker-challenge-grand-final) about this topic. The presentation pretty much covers the material described in this articles and expands a bit on the programming aspect of BDD. I hope you'll find it useful. If have any questions, please fill free to contact me directly or write in the comments.
 

@@ -1,0 +1,97 @@
+#!/usr/bin/env node
+//
+// Measures the vertical rhythm: the gaps between the blocks of every page in
+// script/urls.txt (the children of <main>, then the contact band), at 390px
+// and 1440px, on the build in _verify/ (run script/verify first).
+//
+//   script/gaps                  every page
+//   script/gaps /speaking/ ...   only these pages
+//
+// A gap runs ink to ink: from the last visible thing of one block (text, a
+// rule, a card's or a band's edge, an image) to the first visible thing of
+// the next. Padding and margins are not ink. Every gap must be on the scale of
+// its width; the script prints each page's blocks with the gaps between them
+// and exits 1 if any gap is off the scale.
+
+const { pages, serve, launch } = require('./browser');
+
+const SCALES = { 390: [48, 56], 1440: [56, 64, 88] };
+
+// Runs in the page: the blocks and the gaps between them.
+function measure() {
+  const visible = el => el.checkVisibility({ opacityProperty: true, visibilityProperty: true });
+  const opaque = color => !/^rgba\(.*, 0\)$|^transparent$/.test(color);
+  const painted = s => opaque(s.backgroundColor) || s.backgroundImage !== 'none';
+  const border = (s, side) => parseFloat(s[`border${side}Width`]) > 0 && !/none|hidden/.test(s[`border${side}Style`]) && opaque(s[`border${side}Color`]);
+  const replaced = /^(IMG|svg|VIDEO|AUDIO|IFRAME|CANVAS|INPUT|SELECT|TEXTAREA|BUTTON)$/;
+
+  function ink(block) {
+    let top = Infinity, bottom = -Infinity;
+    const add = (t, b) => { if (b - t >= 1) { top = Math.min(top, t); bottom = Math.max(bottom, b); } };
+    for (const el of [block, ...block.querySelectorAll('*')]) {
+      if (!visible(el)) continue;
+      const r = el.getBoundingClientRect(), s = getComputedStyle(el);
+      if (r.width < 1 || r.height < 1) continue;
+      if (painted(s) || replaced.test(el.tagName) || border(s, 'Left') || border(s, 'Right')) add(r.top, r.bottom);
+      if (border(s, 'Top')) add(r.top, r.top + parseFloat(s.borderTopWidth));
+      if (border(s, 'Bottom')) add(r.bottom - parseFloat(s.borderBottomWidth), r.bottom);
+      if (painted(s) && el === block) break;   // a band: its edges are its ink
+    }
+    // Text: the box of the element holding it; an inline box is the font's
+    // content area, a block's content box is its line boxes.
+    const walker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT);
+    for (let node; (node = walker.nextNode());) {
+      if (!node.data.trim() || !visible(node.parentElement)) continue;
+      let box = node.parentElement;
+      while (getComputedStyle(box).display === 'contents') box = box.parentElement;
+      const r = box.getBoundingClientRect(), s = getComputedStyle(box);
+      if (s.display === 'inline') add(r.top, r.bottom);
+      else add(r.top + parseFloat(s.borderTopWidth) + parseFloat(s.paddingTop),
+               r.bottom - parseFloat(s.borderBottomWidth) - parseFloat(s.paddingBottom));
+    }
+    return { top, bottom };
+  }
+
+  const blocks = [...document.querySelectorAll('main > *'), document.querySelector('.contact')]
+    .filter(el => el && visible(el));
+  const inks = blocks.map(el => ink(el));
+  return blocks.map((el, i) => ({
+    name: el.classList[0] || el.tagName.toLowerCase(),
+    gap: i ? Math.round(inks[i].top - inks[i - 1].bottom) : null
+  }));
+}
+
+(async () => {
+  const only = process.argv.slice(2);
+  const urls = only.length ? only : pages();
+  const site = await serve();
+  const browser = await launch();
+  let off = 0;
+  try {
+    for (const width of Object.keys(SCALES).map(Number)) {
+      const page = await browser.newPage({ viewport: { width, height: 900 } });
+      for (const url of urls) {
+        await page.goto(site.base + url, { waitUntil: 'load' });
+        await page.evaluate(async () => {
+          await document.fonts.ready;
+          const images = [...document.images];
+          images.forEach(img => { img.loading = 'eager'; });
+          await Promise.all(images.map(img => img.complete || new Promise(done => { img.onload = img.onerror = done; })));
+        });
+        const line = (await page.evaluate(measure)).map(({ name, gap }) => {
+          if (gap === null) return name;
+          const ok = SCALES[width].includes(gap);
+          if (!ok) off++;
+          return `${ok ? '' : '✗'}${gap} ${name}`;
+        });
+        console.log(`${width} ${url}  ${line.join('  ')}`);
+      }
+      await page.close();
+    }
+  } finally {
+    await browser.close();
+    site.close();
+  }
+  console.log(off ? `${off} gaps off the scale (390: ${SCALES[390]}; 1440: ${SCALES[1440]})` : 'All gaps on the scale');
+  process.exit(off ? 1 : 0);
+})();

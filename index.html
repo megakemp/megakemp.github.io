@@ -15,7 +15,7 @@ contact_intro: Want me to speak at your event, or work with your team? I'd love 
       <p class="tagline">Freelance programmer, speaker and trainer. Pluralsight&nbsp;author. Open&nbsp;source&nbsp;maintainer.</p>
       <div class="buttons">
         <a class="btn btn-primary" href="/services/">Work with me</a>
-        <a class="btn btn-secondary" href="/blog/">Read the blog</a>
+        <a class="btn btn-secondary" href="/writing/">Read the blog</a>
       </div>
     </div>
     <pre class="graph" aria-hidden="true">┌──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┐
@@ -32,17 +32,6 @@ contact_intro: Want me to speak at your event, or work with your team? I'd love 
   </div>
 </section>
 
-<section id="writing" class="home-writing">
-  <div class="wrap">
-    <div class="section-head">
-      <h2 class="section-title">Writing</h2>
-      <a href="/blog/">All posts →</a>
-    </div>
-    {% assign latest = site.posts | slice: 0, 3 %}
-    {% include post-list.html posts=latest %}
-  </div>
-</section>
-
 <section id="services" class="home-services">
   <div class="wrap">
     <div class="section-intro">
@@ -54,7 +43,7 @@ contact_intro: Want me to speak at your event, or work with your team? I'd love 
         <h3>Training</h3>
         <p>From a one-hour presentation to a full-day workshop, tailored to your team's schedule and needs. Practical skills to apply right away.</p>
         <div class="card-links">
-          <a href="/workshops/">Current workshops →</a>
+          <a href="/training/">Current workshops →</a>
           <a href="https://www.pluralsight.com/authors/enrico-campidoglio">Courses on Pluralsight ↗</a>
         </div>
       </div>
@@ -91,4 +80,15 @@ contact_intro: Want me to speak at your event, or work with your team? I'd love 
   </div>
   {% assign talks = site.data.talks | where: 'home', true %}
   {% include talks-compact.html talks=talks %}
+</section>
+
+<section id="writing" class="home-writing">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">Writing</h2>
+      <a href="/writing/">All posts →</a>
+    </div>
+    {% assign latest = site.posts | slice: 0, 3 %}
+    {% include post-list.html posts=latest heading='h3' %}
+  </div>
 </section>

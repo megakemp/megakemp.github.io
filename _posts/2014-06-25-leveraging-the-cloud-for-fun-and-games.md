@@ -35,7 +35,7 @@ Where's the place to find commodity hardware that's available <em>for rent</em>,
 
 **The cloud**, of course! This realization fell on my head like the proverbial apple from the tree.
 
-### Step 1: Getting a machine in the cloud
+## Step 1: Getting a machine in the cloud
 
 Valve puts out their [Source Dedicated Server](https://developer.valvesoftware.com/wiki/Source_Dedicated_Server) software both for Windows and Linux. The Windows version has a GUI and is generally what you'd call "user friendly". The Linux version, on the other hand, is *lean & mean* and is managed entirely from the command line. Programmers being programmers, I decided to go for the Linux version.
 
@@ -59,7 +59,7 @@ After literally 2 minutes, I had an [Ubuntu Server](http://www.ubuntu.com/server
 
 If I hadn't already eaten my hat, I would take it off for Azure.
 
-### Step 2: Installing the Steam Console Client
+## Step 2: Installing the Steam Console Client
 
 Hosting a CS:GO server implies setting up a so called [Source Dedicated Server](https://developer.valvesoftware.com/wiki/Source_Dedicated_Server), also known as **SRCDS**. That's Valve's server software used to run all their games that are based on the [Source Engine](http://source.valvesoftware.com). The list includes Half Life 2, Team Fortress, Counter-Strike and so on.
 
@@ -123,7 +123,7 @@ However, a few intricate problems would be waiting further down the road. So, I 
 Steam> quit
 ```
 
-### Step 3: Installing the CS:GO Dedicated Server
+## Step 3: Installing the CS:GO Dedicated Server
 
 Remember that thing about SteamCMD being a 32-bit binary and the Linux VM on Azure being only available in 64-bit?
 
@@ -144,7 +144,7 @@ You can find a detailed description how to use the **csgoserver** [up on his sit
      title="The status of the CS:GO Dedicated server as reported by csgoserver"
      class="screenshot" />
 
-### Step 4: Configuration
+## Step 4: Configuration
 
 The CS:GO server can be configured in a few different ways and it's all done in the **[server.cfg](https://developer.valvesoftware.com/wiki/Counter-Strike:_Global_Offensive_Dedicated_Servers#server.cfg)** configuration file. In it, you can set up things like the [game mode](http://en.wikipedia.org/wiki/Counter-Strike:_Global_Offensive#Game_modes) (Arms Race, Classic, Competitive to name a few) the maximum number of players and so on.
 
@@ -156,7 +156,7 @@ sv_cheats 0 # Disables hacks and cheat codes
 sv_lan 0 # Disables LAN mode
 ```
 
-### Step 5: Gold plating
+## Step 5: Gold plating
 
 The final touch was to provide an appropriate [Message of the Day (or MOTD)](http://css.gamebanana.com/tuts/5484#Motd) for the occasion. That would be the screen that greets the players as they join the game, setting the right tone.
 
@@ -171,7 +171,7 @@ Here's how it looked like in action:
      class="screenshot-noshadow-fullwidth" />
 </a>
 
-### Step 6: Deathmatch!
+## Step 6: Deathmatch!
 
 This article is primarily meant as a reference on how to configure a dedicated CS:GO server on a Linux box hosted on Microsoft Azure. Nonetheless, I figured it would be interesting to follow up with some information on how the server itself held up during [that glorious game night](https://twitter.com/tretton37/status/436917080739573760).
 
@@ -191,7 +191,7 @@ Here's a few stats taken both from the [Azure Dashboard](https://manage.windowsa
 
 In retrospect, that configuration was probably a little overkill for the job. A **Medium VM** with a *dual 1.6 GHz CPU* and *3.5 GB* of RAM would have probably sufficed. But hey, elastic scaling is exactly what the cloud is for.
 
-### One final thought
+## One final thought
 
 Oddly enough, this experience opened up my eyes to the **great potential of cloud computing**.
 

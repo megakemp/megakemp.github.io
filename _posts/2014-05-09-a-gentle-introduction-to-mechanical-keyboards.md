@@ -25,7 +25,7 @@ Anyway, I enjoyed the feeling of pressing those stiff plastic buttons and hear t
 
 Today, I continue to enjoy a similar experience on my computer by using a [mechanical keyboard](http://deskthority.net/wiki/Mechanical_keyboard).
 
-### So, what's a mechanical keyboard?
+## So, what's a mechanical keyboard?
 
 First and foremost, let's get the terminology straight by answering that burning question.
 
@@ -50,7 +50,7 @@ A keyboard is considered <em>mechanical</em> if it uses <strong>metal springs</s
 
 It's still true that there are different types of mechanical switches, each with their own special characteristics. The kind of switch used in a mechanical keyboard determines the overall feeling you'll get when you type on it.
 
-### A little bit of history
+## A little bit of history
 
 At this point you might rightfully wonder:
 
@@ -102,7 +102,7 @@ As a testimony of their extreme durability, I can tell you that the oldest one i
 
 That's a _25 years old_ piece of hardware still in perfectly good condition. So much, in fact, that I use it _daily_ as my primary keyboard at home.
 
-### It's all about the feeling
+## It's all about the feeling
 
 However, believe it or not, the biggest problem with rubber dome keyboards isn't their fragility. It's the fact that they're an **ergonomic nightmare**.
 
@@ -118,7 +118,7 @@ Mechanical keys, on the other hand,  are actuated <em>before</em> they bottom ou
 
 What does this mean in practice? Well, it means that you don't have to press as hard on your keyboard when you type. Your fingers don't have to travel as much and, consequently, you don't get as fatigued. It may even help you [type faster](http://youtu.be/RQeXcKxVraY).
 
-### To each his own switch
+## To each his own switch
 
 There are at least a dozen different kinds of mechanical switches available on the market today. That number doubles if you count the [vintage ones](http://www.clickykeyboards.com).
 
@@ -152,11 +152,11 @@ The important thing to remember is that the ergonomic properties of a mechanical
 
 Let's look at each of them briefly.
 
-#### Tactility
+### Tactility
 
 A switch is called **tactile** if it gives some kind of feedback about when a key is actuated. This is usually done by significantly dropping the key's resistance the instant it gets registered. Some switches even accompany that with a "click" sound and are therefore referred to as "_clicky_".
 
-#### Force
+### Force
 
 The **force** indicates how hard  you have to press down a key in order to actuate it. This is measured in *centinewtons* (cN) or, more commonly *grams-force* (gf). In practice they're interchangeable, since 1 cN is roughly equivalent to 1 gf (more precisely 1 cn = 1.02 gf).
 
@@ -174,12 +174,12 @@ Switches get progressively stiffer the further down you press a key, which, agai
 These are called _force graphs_ and indicate how much **force in cN** (Y axis) is required to press a key during its **travel in mm** (X axis) from rest position to bottom.
 Did you notice the sudden drop in force about half way through the travel? That's how _tactile_ switches announce that the key has been **actuated**, as shown by the little black dot.
 
-#### Sound
+### Sound
 
 As I mentioned earlier, certain switches emit a "click" **sound** when they get actuated. This extra piece of feedback can either be pleasurable (even [nostalgic](https://www.youtube.com/watch?v=GaFbe5gdRhY) if you will) or totally annoying. I strongly advise you to investigate how the people who will be sitting next to you feel about clicky keyboards before buying one.
 And telling them that all keyboards sounded like that back in the 80's no longer cuts it.
 
-### Wrapping it up
+## Wrapping it up
 
 I know it sounds crazy, but I barely scratched the surface of what there is to know about mechanical keyboards. However, the purpose of this post was to give you an idea about what they are and where they come from, and I hope I've succeeded in that.
 

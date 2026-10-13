@@ -7,13 +7,13 @@ categories: programming .net
 
 I can’t stress enough the importance of having a code convention in place before starting in any kind of software project.
 
-### What’s a code convention?
+## What’s a code convention?
 
 A code convention it’s about a team of developers agreeing on a standard <img alt="csharpcodingstd" src="http://megakemp.files.wordpress.com/2009/03/csharpcodingstd-thumb.png?w=90&h=99" class="article" /> way to statically structure the code that will be part of the system they are building together. Note that it doesn’t cover any aspect of the software design, (coupling, cohesion, dependency management and so on) but rather focuses exclusively on how the body of the code is organized.
 
 You may wonder, how is this valuable? Well, a convention has one primary goal that goes beyond plain esthetic: to **improve the code readability by achieving consistency**. Following a common standard will make it easier for the members of a team to work on each other’s code without the burden of having to mentally adjust to different coding styles.
 
-### Style matters
+## Style matters
 
 A code convention apply to all kinds of programming elements such as declarations, expressions and statements and it usually covers different aspects. Here is a non-exclusive list of what could be described in a coding standard:
 
@@ -24,7 +24,7 @@ A code convention apply to all kinds of programming elements such as declaration
 
 Now, making a group of developers agree on how they should format their code on such a level of detail isn’t the easiest thing in the world. We all see programming code as a way of express our minds, and that includes also how many spaces there are between the parenthesis in a method call and the list of arguments.
 
-### Verbal agreement is not enough
+## Verbal agreement is not enough
 
 Even if you do succeed in finding a middle ground that makes everybody happy (or sort of), you still need to make sure that the team will stick to what has been agreed on, without relying on tedious manual code review. Luckily **there are tools out there that can automatically check code against a predefined coding convention**. <img alt="StyleCop" src="http://megakemp.files.wordpress.com/2009/03/stylecop-thumb.png?w=100&h=100" class="article" />
 
@@ -66,7 +66,7 @@ StyleCop can also be run through a set of [MSBuild][7] tasks. All you have to do
     Project="C:\Program Files\MSBuild\Microsoft\StyleCop\v4.3\Microsoft.StyleCop.targets" />
 ```
 
-### Resources
+## Resources
 
 You can download [the latest version of StyleCop from MSDN][8] including documentation and samples. ~~If you need more information, here you can find a good tutorial on how to successfully integrate StyleCop in your .NET project~~ As of *July 29, 2014* the tutorial is no longer available online.
 

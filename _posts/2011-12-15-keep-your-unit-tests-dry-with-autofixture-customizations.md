@@ -45,7 +45,7 @@ In this particular configuration, AutoFixture will satisfy all requests for `IEn
 
 At that point I felt pretty satisfied with the way things were shaping up: I had managed to replace entire blocks of boring object initialization code with a couple of calls to the AutoFixture API, my unit tests were getting smaller and all was good.
 
-### Duplication creeps in
+## Duplication creeps in
 
 After a while though, the configuration lines created in _Step 2_ started to repeat themselves across multiple unit tests. This was naturally due to the fact that *different unit tests sometimes shared a common set of object states in their test scenario*. Things weren’t so DRY anymore and suddenly it wasn’t uncommon to find code like this in the test suite:
 
@@ -86,7 +86,7 @@ public void WhenGettingAListOfDraftsThenItShouldOnlyIncludeThose()
 See how these two tests share the same initial state even though they verify completely different behaviors? Such blatant duplication in the test code is a problem, since it inhibits the ability to make changes.
 Luckily a solution was just around the corner as I discovered [customizations][2].
 
-### Customizing your way out
+## Customizing your way out
 
 A customization is a pretty general term. However, put in the context of AutoFixture it assumes a specific definition:
 
@@ -137,7 +137,7 @@ public void WhenGettingAListOfDraftsThenItShouldOnlyIncludeThose()
 The configuration logic now exists only in one place, namely a class whose name clearly describes the kind of test data it will produce.
 If applied consistently, this approach will in time *build up a library of customizations, each representative of a given situation or scenario*. Assuming that they are created at the proper level of granularity, these customizations could even be composed to form more complex scenarios.
 
-### Conclusion
+## Conclusion
 
 Customizations in [AutoFixture][1] are a pretty powerful concept in of themselves, but they become even more effective when *mapped directly to test scenarios*. In fact, they represent a natural place to specify which objects are involved in a given scenario and the state they are supposed to be in. You can use them to remove duplication in your test code and, in time, build up a library of self-documenting modules, which describe the different contexts in which the system’s behavior is being verified.
 

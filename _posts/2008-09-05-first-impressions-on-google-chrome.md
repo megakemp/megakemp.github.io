@@ -11,23 +11,23 @@ To be honest, I am not really sure why that is. Maybe it’s the fact the percep
 
 Anyway, I thought I would share some of my initial impressions about Chrome. And since I’m still a big fan of Mozilla’s browser, I am going to make an (implicit) comparison with Firefox 3.0.
 
-### Speed
+## Speed
 
 The first thing that became obvious to me after just a few minutes of using Chrome, is that it’s **fast** at rendering web pages. I mean, really fast. Faster than Firefox! It kind of reminded me of Safari, and maybe that’s not too strange, since Google chose to use Apple’s [WebKit][1] as HTML rendering engine.
 
-### Minimalistic design
+## Minimalistic design
 
 I really like the way Chrome’s looks and feels. The browser’s tries not to occupy too much space with its own UI, giving web pages the largest possible display area. The team’s mission statement is to _“make the browser invisible”_, meaning the user should focus on the web content when browsing, rather than the browser itself. And I have to say they have partially succeeded with that. I say partially because in my opinion the download bar really doesn’t have to be that big.
 
-### Smart features
+## Smart features
 
 Google Chrome offers many of those features, standardized by other browsers, that make navigating the Web a more pleasant experience. Among these I especially like the possibility to search through the browser’s history and bookmarks when typing in the address bar (Google calls it **Omnibar**, Mozilla **Awesome Bar**). But Google goes a step further and integrates search through a search engine of choice (by default [www.google.com][2], of  course) right into the address bar. It’s even possible to receive Google’s suggestions about which keywords I might want to type in order to get highest number of matches as possible.
 
-### Multi-threading
+## Multi-threading
 
 In Google Chrome basically every tab you open runs in a separate thread process with its own memory space, but is still able to communicate with the browser’s main process. This leads to better memory management since each tab cleans up after itself when closed. It also makes the browser more stable since a buggy web page or JavaScript only affects a single tab and not the whole application. In Chrome there is also a **Task Manager**, that shows the amount of memory, CPU and network bandwidth used by each tab. While I think this is extremely cool from a _geeky_ point of view, I haven’t had the chance to notice any of its advantages yet. A part from the fact that Chrome allocates more memory up front in order to achieve this separation, than, for example, Firefox.
 
-### What I’m missing
+## What I’m missing
 
 After my initial (and slightly exaggerated) enthusiasm for Chrome had cooled down, I started to realize that my new default browser is missing some features I really appreciated in my old one, like:
 

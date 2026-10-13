@@ -2,7 +2,21 @@
 layout: default
 ---
 {%- assign date = page.date | date: '%Y-%m-%d' %}
-{%- assign lead = page.summary | default: page.excerpt | strip %}
+{%- assign opening = content | split: '<hr />' | first | strip %}
+{%- assign start = opening | slice: 0, 7 %}
+{%- assign paragraphs = opening | split: '<p>' | size %}
+{%- if content contains '<hr />' and start == '<p><em>' and paragraphs == 2 %}
+  {%- comment %} A post that opens with an italic paragraph and a rule has written its own lead. {% endcomment %}
+  {%- assign lead = opening | remove_first: '<p><em>' | remove: '</em>' | remove: '</p>' %}
+  {%- assign body = content | remove_first: opening | remove_first: '<hr />' %}
+{%- else %}
+  {%- assign summary = page.summary | default: page.excerpt | strip %}
+  {%- comment %} Without an excerpt in front matter, the lead is the first paragraph, already in the article. {% endcomment %}
+  {%- unless content contains summary %}
+    {%- assign lead = summary | markdownify | remove: '<p>' | remove: '</p>' | strip %}
+  {%- endunless %}
+  {%- assign body = content %}
+{%- endif %}
 <section class="post-header">
   <div class="wrap">
     <div class="post-meta">
@@ -10,15 +24,14 @@ layout: default
       {% include tag-link.html categories=page.categories %}
     </div>
     <h1>{{ page.title }}</h1>
-    {%- comment %} Without an excerpt in front matter, the lead is the first paragraph, already in the article. {% endcomment %}
-    {%- unless content contains lead %}
-    <p class="lead">{{ lead | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
-    {%- endunless %}
+    {%- if lead %}
+    <p class="lead">{{ lead }}</p>
+    {%- endif %}
   </div>
 </section>
 
 <article class="prose wrap">
-  {{ content }}
+  {{ body | replace: '<pre class="highlight">', '<pre class="highlight" tabindex="0">' | replace: '<pre>', '<pre tabindex="0">' }}
 </article>
 
 {%- if page.previous or page.next %}

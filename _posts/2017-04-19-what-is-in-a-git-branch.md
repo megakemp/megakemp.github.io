@@ -9,7 +9,7 @@ summary: "Regardless of how you choose to track your history, one of the things 
 excerpt: "Regardless of how you choose to track your history, one of the things you often want to know is which commits are in what branch. Sounds easy enough, right? And yet, you wouldn't believe just how cumbersome certain version control systems make answering such a simple question."
 ---
 
-### Graphs and References
+## Graphs and References
 
 Before I tell you all about querying the state of your branches, let's back up for a second and remind ourselves of how Git views history.
 
@@ -53,7 +53,7 @@ In Git, a branch is a <a href="https://git-scm.com/docs/gitglossary#gitglossary-
 </p>
 </div>
 
-### Reachability
+## Reachability
 
 Now that we have a good mental model for thinking about history, we can talk about the concept of _reachability_.
 
@@ -123,7 +123,7 @@ Now, every time I want to know which commits are in my _current_ branch (referen
 git new
 ```
 
-### What Was Merged?
+## What Was Merged?
 
 If your workflow involves a lot of merge commits (like [GitFlow](http://nvie.com/posts/a-successful-git-branching-model)), one of the questions that will pop up a lot is:
 

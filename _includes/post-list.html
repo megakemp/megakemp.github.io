@@ -1,7 +1,4 @@
-{%- comment %}
-  Post rows. With blurbs (a list of url, title and excerpt), only the posts
-  that have one are listed, with that title and excerpt.
-{% endcomment -%}
+{%- assign heading = include.heading | default: 'h3' -%}
 <div class="post-list">
   {%- for post in include.posts %}
   {%- assign blurb = include.blurbs | where: 'url', post.url | first %}
@@ -17,7 +14,7 @@
       {% include tag-link.html categories=post.categories %}
     </div>
     <div class="post-body">
-      <h3><a href="{{ post.url }}">{{ blurb.title | default: post.title }}</a></h3>
+      <{{ heading }} class="post-title"><a href="{{ post.url }}">{{ blurb.title | default: post.title }}</a></{{ heading }}>
       <p>{{ excerpt }}</p>
     </div>
   </article>

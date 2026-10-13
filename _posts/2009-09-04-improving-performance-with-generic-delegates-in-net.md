@@ -12,7 +12,7 @@ The application was originally developed a couple of years ago on top of the .NE
 Everything worked just fine from a functionality standpoint. However customers complained over long delays as data was being retrieved from the Web Services and slowly populated the widgets on the screen.
 Something had to be done to speed things up.
 
-### Reflection is a bottleneck
+## Reflection is a bottleneck
 
 A look with a .NET profiler tool such as **[JetBrains DotTrace][3]** revealed that a lot of time was spent sorting large collections of objects by the value of one of their properties. This would typically be done before binding them to various list controls in the UI.
 The code would typically look like this and was spread out all over the code base:
@@ -93,7 +93,7 @@ The real performance bottleneck here is caused by the use of <em>reflection</em>
 </p>
 </div>
 
-### Use delegates instead
+## Use delegates instead
 
 At this point it is clear that we need to [refactor][9] this class to improve its performance and still retain its original functionality, that is to provide a generic way to compare object by the value of one of their properties.
 
@@ -101,7 +101,7 @@ The key is to find a better way to retrieve the value of a property from any typ
 
 Well, since we do know the type of the objects we are comparing through the generic parameter T, we could let the caller specify which value to compare the objects with by. This can be done by having the caller pass a reference to a method, which would return that value when invoked inside of the [Compare][10] method. Let’s try it and see how it works.
 
-### Implementing the solution in .NET 2.0
+## Implementing the solution in .NET 2.0
 
 Since the application was on .NET 2.0, we need to define our own delegate type that will allow callers to pass the reference to a method returning the comparable value . Here is the complete implementation of the refactored PropertyComparer class:
 
@@ -159,7 +159,7 @@ customerList.Sort(new PropertyComparer(delegate(Customer c)
 
 Notice how the property name is no longer passed a a string. Instead it is actually invoked on the object providing compile-time type checking.
 
-### Alternative implementation in .NET 3.5
+## Alternative implementation in .NET 3.5
 
 This same solution can be implemented slightly differently in .NET 3.5 by taking advantage of the built in **[Func][15]** delegate type:
 
@@ -201,7 +201,7 @@ Don’t worry, things get much nicer on the caller’s side where the anonymous 
 customerList.Sort(new PropertyComparer(c => c.FullName));
 ```
 
-### The results
+## The results
 
 Now that we put reflection out of the picture, it is a good time to run a simple test harness to see how the new comparison strategy performs. For this purpose we will sort an increasingly large collection of objects with the two `PropertyComparer` implementations and compare how long it takes to complete the operation. Here are the results in a graph:
 
@@ -209,7 +209,7 @@ Now that we put reflection out of the picture, it is a good time to run a simple
 
 As you see, by using delegates the sorting algorithm stays on the linear *O(n)*. On the other hand with reflection it quickly jumps over in the exponential *O(cn)* space, where *c* is the time it takes to make a single comparison.
 
-### Lessons learned
+## Lessons learned
 
 This exercise teaches three general guidelines that can be applied when programming in .NET:
 

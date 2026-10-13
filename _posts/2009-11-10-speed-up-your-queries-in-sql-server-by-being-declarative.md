@@ -9,7 +9,7 @@ It’s interesting how a lot of the work I’ve been doing lately has in some wa
 
 This time it is all about performance in database processing.
 
-### The scenario
+## The scenario
 
 Imagine an application that manages a **wait list**. Users of this application put themselves in line and wait for their turn to gain access to some kind of shared resource. Here are the basic rules of this system:
 
@@ -25,7 +25,7 @@ The position of the different users in the wait list is periodically updated by 
 
 So far so good. Now, imagine that this `WaitList` table contains somewhere around **30 millions rows**, and the Stored Procedure that updates all of the scores takes about **9 hours** to complete. And now we have problem.
 
-### The imperative SQL approach
+## The imperative SQL approach
 
 Before going into all kinds of general database optimization techniques, let’s start off by looking at how that Stored Procedure is implemented.
 
@@ -106,7 +106,7 @@ By implementing database operations in an <em>imperative manner</em>, you effect
 
 And that basically means trading performance and scalability for more fine-grained control.
 
-### The declarative SQL approach
+## The declarative SQL approach
 
 Let’s see if we can make this Stored Procedure run any faster, by changing our approach to the problem altogether.
 
@@ -150,7 +150,7 @@ As you see, in the first picture the CPU is steadily at 9-10% and is basically u
 
 In the second picture, we are simply telling SQL Server our intent, rather than dictating exactly how it should be done. This allows SQL Server to parallelize the workload than can now be executed on multiple CPU/Cores at once leveraging the full power of the hardware.
 
-### Lessons learned
+## Lessons learned
 
 Here are a couple of getaways I learned from this exercise:
 

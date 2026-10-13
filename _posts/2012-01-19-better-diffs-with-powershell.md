@@ -22,7 +22,7 @@ As you can see, it looks pretty much the same across the board.
 Of course, you need to be aware of the fundamental differences in how [Distributed Version Control Systems (DVCS)][5] such as Mercurial and Git behave compared to traditional centralized [Version Control Systems (VCS)][6] like Subversion and TFS. In addition to that, each system tries to characterize itself by having its own set of features or by solving a common problem (like [branching][7]) in a unique way.
 However, there aspects must be taken into consideration regardless of your client of choice. What I'm saying is that the command line interface *at least* offers a single point of entry into those systems, which in the end makes me more productive.
 
-### Unified DIFFs
+## Unified DIFFs
 
 One of the most basic features of any source control system is the ability to compare two versions of the same file to see what's changed. The output of such comparison, or [DIFF][8], is commonly represented in text using the [Unified DIFF format][9], which looks something like this:
 
@@ -52,7 +52,7 @@ In addition to that, each modified section, referred to as _hunk_, is preceded b
 
 means that in **the original file** the modified lines start at `line 6` and continue for `12 lines`. In **the new file**, instead, that same change starts at `line 6` and includes a total of `10 lines`.
 
-### True Colors
+## True Colors
 
 At this point, you may wonder what all of this has to do with PowerShell, and rightly so. Remember when I said that I prefer to work with source control from the command line? Well, it turns out that _scrolling through gobs of text_ in a console window isn't always the best way to figure out what has changed between two change sets.
 
@@ -115,7 +115,7 @@ will generate this output in PowerShell:
 
 One thing I'd like to point out is that even if the output of `git diff` consists of many lines of text, PowerShell will redirect them to the `Out-Diff` function _one line at a time_. This is called a [streaming pipeline][15] and it allows PowerShell to be responsive and consume less memory even when processing large amounts of data. Neat.
 
-### Wrapping up
+## Wrapping up
 
 PowerShell is an extremely versatile console. In this case, it allowed me to enhance a traditional command line tool (`diff`) through a simple script. Other projects, like [Posh-Git][16] and [Posh-Hg][17], take it even further and leverage PowerShell's rich programming model to provide a better experience on top of existing console based source control tools. If you enjoy working with the command line, I seriously encourage you to check them out.
 

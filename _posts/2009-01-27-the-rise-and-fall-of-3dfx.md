@@ -9,7 +9,7 @@ The Christmas holidays usually mean taking a break from the usual everyday routi
 
 During this past Christmas season, I strangely found myself thinking about a Christmas of the past, more precisely December of 1997. Why is this interesting? Because that was the year when I bought my first [3D Accelerator][1] graphics card.
 
-### A little bit of history
+## A little bit of history
 
 Videogames have not always looked like they do today. Certainly they didn’t go straight from [Pac-Man][2] to [Fallout 3][3] either.
 
@@ -19,7 +19,7 @@ shapes. They <img alt="PacMan2Fallout" src="http://megakemp.files.wordpress.com/
 
 Unluckily, the processing power of the CPUs available in the market at that time wasn’t quite up to the challenge. In spite of the advanced algorithms that were developed to render 3D graphics in software, the end results were always far from what we would call “realistic”.
 
-### The rise
+## The rise
 
 Up until 1996, when a company called 3Dfx Interactive based in San Jose,
 California, published the first piece of computer hardware exclusively dedicated
@@ -41,7 +41,7 @@ To give you an idea of how 3Dfx impacted games, here is a screenshot of how a po
 <img alt="Quake2RenderingComparison"
 src="http://megakemp.files.wordpress.com/2009/01/quake2renderingcomparison1.jpg?w=524&h=200" class="screenshot-noshadow" />
 
-### The fall
+## The fall
 
 If the 3Dfx was so great, why isn’t it still around today, you might ask. I asked myself the same question.
 

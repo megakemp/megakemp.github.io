@@ -41,7 +41,7 @@ In other words, something like this:
 
 So, this is just to give you a little background. Here you’ll find the session’s abstract, slides and demos. There’s also a recording from when I presented this talk at [LeetSpeak][5] in Malmö, Sweden back in October 2012. I hope you find it useful.
 
-### Abstract
+## Abstract
 
 > In this session I’ll teach you the Git zen from the inside out. Working out of real world scenarios, I’ll walk you through Git’s fundamental building blocks and common use cases, working our way up to more advanced features. And I’ll do it by showing you graphically what happens under the covers, as we fire different Git commands.
 >

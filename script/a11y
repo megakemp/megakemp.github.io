@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+//
+// Runs axe-core on every page of script/urls.txt in the build in _verify/
+// (run script/verify first), at 1280px and 390px, and exits 1 on any violation.
+//
+//   script/a11y           the rules script/verify checks
+//   script/a11y RULE ...  only these axe rules
+
+const fs = require('fs');
+const { dependency, pages, serve, launch } = require('./browser');
+
+const RULES = ['color-contrast', 'heading-order', 'scrollable-region-focusable'];
+
+(async () => {
+  const rules = process.argv.length > 2 ? process.argv.slice(2) : RULES;
+  const axe = fs.readFileSync(dependency('axe-core'), 'utf8');
+  const site = await serve();
+  const browser = await launch();
+  let found = 0;
+  try {
+    for (const width of [1280, 390]) {
+      const page = await browser.newPage({ viewport: { width, height: 900 } });
+      for (const url of pages()) {
+        await page.goto(site.base + url, { waitUntil: 'load' });
+        await page.addScriptTag({ content: axe });
+        const violations = await page.evaluate(rules =>
+          axe.run(document, { runOnly: { type: 'rule', values: rules } }).then(r => r.violations), rules);
+        for (const v of violations) for (const node of v.nodes) {
+          found++;
+          console.log(`${width} ${url}  ${v.id}  ${node.target.join(' ')}  ${node.failureSummary.split('\n').slice(1).join(' ').trim()}`);
+        }
+      }
+      await page.close();
+    }
+  } finally {
+    await browser.close();
+    site.close();
+  }
+  console.log(found ? `${found} violations (${rules.join(', ')})` : `No violations (${rules.join(', ')})`);
+  process.exit(found ? 1 : 0);
+})();

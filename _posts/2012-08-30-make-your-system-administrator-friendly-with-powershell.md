@@ -27,7 +27,7 @@ Since I’m often asked about where to get the slides and the code samples from 
 
 So here it goes, I hope you find it useful.
 
-### Abstract
+## Abstract
 
 > Have you ever been in a software project where the IT staff who would run the system in production, was accounted for right from the start? My guess is not very often. In fact, it’s far too rare to see functionality being built into software systems specifically to make the job of the IT administrator _easier_. It’s a pity, because pulling that off doesn’t require as much time and effort as you might think with tools like PowerShell.
 >

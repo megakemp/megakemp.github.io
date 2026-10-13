@@ -21,7 +21,7 @@ Sure, the Web Forms model boosted productivity compared to previous technologies
 
 This is a story of how I was painfully reminded of this reality.
 
-### ASP.NET and the Ajax Control Toolkit
+## ASP.NET and the Ajax Control Toolkit
 
 At some point in time the Web became all about rich user interaction. One way to achieve this was through the power of asynchronous HTTP requests made through JavaScript, which returned XML data. This combination is commonly referred to as **[Ajax][2]**.
 When Ajax got widespread popularity, Microsoft built upon the Web Forms model to enable developers to leverage this new programming paradigm. Once more with the promise of ever having to touch a line of JavaScript.
@@ -30,13 +30,13 @@ This effort culminated in a new infrastructure made available in the .NET Framew
 
 Contrarily to what had been done in the past, the new Ajax controls were not made part of an official version of the .NET Framework, but only the underlying framework support they need in order to work. The control themselves were released as an open-source project called the [**ASP.NET Ajax Control Toolkit**][4] hosted on the [**Microsoft CodePlex site**][5].
 
-### The illusion
+## The illusion
 
 After having been away from web development for almost three years, I’ve lately been involved in a project to build a web application. Of course the customer expected a modern and interactive web application, which meant we were going to be using Ajax on the frontend to some extent.
 
 After having brought myself up to speed on the latest innovations around Ajax in ASP.NET 3.5, I was excited at the idea of be able to deliver that kind of functionality on a web page without having to handcraft (and debug) gobs of JavaScript. Or at least, so I thought.
 
-### Facing reality
+## Facing reality
 
 I have to admit that the Ajax support in ASP.NET 3.5 held up to my high expectations quite well. Up until the Web Forms metaphor leaked again and I was roughly brought back to earth.
 
@@ -51,7 +51,7 @@ The second definitely doesn’t look right. After a quick check to [the document
 
 Apparently there is currently no plan from Microsoft to fix this issue anytime soon. That could mean only one thing: I had to dig in and debug the JavaScript myself. The Web Forms’ bubble had burst once again.
 
-### The “pragmatic” workaround
+## The “pragmatic” workaround
 
 After having downloaded the AJAX Control Toolkit source code off CodePlex, I started to look around among the project files. I quickly indentified that the JavaScript code for the ComboBox control is all contained in a single file found in */AjaxControlToolkit/ComboBox/ComboBox.js* (actually the `ComboBox.debug.js` file contains the original source code while its `ComboBox.js` counterpart contains the **[minified JavaScript][10]** optimized for production).
 
@@ -123,7 +123,7 @@ Yes I know this isn’t the most elegant solution, but it works. After all, I sa
 
 Once I made sure the patch worked correctly, I used the freely available [Microsoft Ajax Minifier][13] to produce a new ultra-compact (or [*minified*][14]) version of the `ComboBox.js` file.
 
-### Integrating the workaround into the solution
+## Integrating the workaround into the solution
 
 The workaround itself may not be a piece of art. However the way it got integrated into the existing ASP.NET web application is quite elegant in my opinion. Let me give a quick background first.
 
@@ -163,7 +163,7 @@ What about the original `ComboBox.debug.js` file? Well, the ScriptManager is sma
 
 You can download the modified JavaScript files from the link at the end of this page. Note that they are based on and will work with the [Ajax Control Toolkit release 3.0.30512][18].
 
-### Conclusions
+## Conclusions
 
 The Ajax support built into [ASP.NET 3.5 Web Forms][19] together with the control freely available in the [Ajax Control Toolkit][20] is a powerful combination. When used wisely it will allow you to get quite far in creating rich and interactive web pages without having to worry about JavaScript.
 

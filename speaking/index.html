@@ -1,16 +1,17 @@
 ---
 layout: page
 title: Speaking
+description: Conference talks and podcast appearances on Git, testing and continuous delivery — NDC, GOTO, Techorama, Copenhagen Developers Festival — with videos.
 assets: speaking
 image: backdrop.jpg
 redirect_from: /tag/speaking/
 intro: |
   <p>Going out and meeting the developer community while giving technical talks is something I truly enjoy. Whether it be at a big conference, a user group or at a client, I love sharing knowledge. And the best part is, it goes both ways: with every presentation, I teach something and learn something new myself.</p>
 buttons:
-  - label: Podcasts
-    url: "#podcasts"
   - label: Talks
     url: "#talks"
+  - label: Podcasts
+    url: "#podcasts"
 contact_intro: Want me to speak at your event? I'd love to hear from you.
 ---
 <section class="photo wrap">
@@ -18,6 +19,24 @@ contact_intro: Want me to speak at your event? I'd love to hear from you.
     {% include picture.html src="/assets/speaking/backdrop" width=1120 height=632 position="50% 0%" alt="Enrico presenting to a seated audience at GOTO" %}
     <figcaption><span class="nf" aria-hidden="true">&#xF041;</span>GOTO Aarhus, 2013 — photo: Foo Café</figcaption>
   </figure>
+</section>
+
+<section id="talks" class="talks wrap">
+  <div class="section-header">
+    <h2 class="section-title">Talks</h2>
+    <p>A selection of my most popular talks from recent years. Where a talk was recorded, there's a link to the video; slides and demo material where available.</p>
+  </div>
+  {% include talk-list.html talks=site.data.talks timeline=true %}
+</section>
+
+<section id="feedback" class="feedback">
+  <div class="wrap">
+    <div class="section-header">
+      <h2 class="section-title">What attendees say</h2>
+      <p>Some of the feedback I've received from people who attended one of my talks.</p>
+    </div>
+    {% include testimonials.html items=site.data.testimonials.attendees %}
+  </div>
 </section>
 
 <section id="podcasts" class="podcasts wrap">
@@ -48,24 +67,6 @@ contact_intro: Want me to speak at your event? I'd love to hear from you.
       <a href="{{ podcast.url }}">{{ podcast.link }}</a>
     </article>
     {%- endfor %}
-  </div>
-</section>
-
-<section id="talks" class="talks wrap">
-  <div class="section-header">
-    <h2 class="section-title">Talks</h2>
-    <p>A selection of my most popular talks from recent years. Where a talk was recorded, there's a link to the video; slides and demo material where available.</p>
-  </div>
-  {% include talk-list.html talks=site.data.talks %}
-</section>
-
-<section id="feedback" class="feedback">
-  <div class="wrap">
-    <div class="section-header">
-      <h2 class="section-title">What attendees say</h2>
-      <p>Some of the feedback I've received from people who attended one of my talks.</p>
-    </div>
-    {% include testimonials.html items=site.data.testimonials.attendees %}
   </div>
 </section>
 

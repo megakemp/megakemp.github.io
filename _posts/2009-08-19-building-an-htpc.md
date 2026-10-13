@@ -15,7 +15,7 @@ My goal was to be able collect and organize all of my digital content in the for
 
 After looking at a couple of commercial products in that category (particularly [Apple Mac mini][2] and [Apple TV][3]) I realized the most common thing to do for a geek like me was to go off and build my own HTPC. This way I could pick and choose the hardware parts to build a machine that matches my specific needs.
 
-### The requirements
+## The requirements
 
 A computer that wishes to rightfully be called an HTPC must have the following basic characteristics:
 
@@ -30,7 +30,7 @@ On top of that, my personal requirements were:
   * Be able to play some occasional 3D game
   * Do not look like a computer but rather like some Audio-Video piece of equipment
 
-### The hardware
+## The hardware
 
 Based on these requirements and my budget, I came up with the following hardware configuration:
 
@@ -77,7 +77,7 @@ On the inside, it is designed to keep the hardware cool without being loud. It h
 
 In this picture you can see the two fans on the left side directing the air flow towards the two giants heat sinks mounted on the CPU and GPU.
 
-### The software
+## The software
 
 After the build was done, I immediately installed Windows Vista Home Premium and the required device drivers on it to see how it performed.
 
@@ -98,7 +98,7 @@ So I decided to run the excellent [Prime95][19] tool to stress test the system a
 
 It seems that the passive cooling is doing a pretty good job at keeping the CPU and GPU at low temperatures, even when the system is put under heavy load.
 
-### Conclusion
+## Conclusion
 
 So far I’ve been pretty satisfied with the HTPC I’ve built. It fits well into the living room thanks to its specially designed case and it’s silent enough that I can’t even tell when it’s turned on or off (OK, I can always look at the power led on the front panel). Also it does everything I need it to without issues.
 

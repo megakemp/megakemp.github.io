@@ -10,7 +10,7 @@ The technique I illustrated uses a particular **Inversion of Control** (IoC) pri
 
 In this particular case, the external dependency is represented by a WCF client proxy targeting a particular service. This approach enables me to swap the real proxy objects used in production with [test doubles][2] while running unit tests, making it possible to assert the class’s behavior in a completely isolated and controlled environment.
 
-### Moving from concrete classes to interfaces
+## Moving from concrete classes to interfaces
 
 Last time we left off with a `MailClient` class that takes an instance of `ChannelFactory` in the constructor and uses it internally every time it needs to download Email messages by following three steps:
 
@@ -32,7 +32,7 @@ and how to reach the service, like the <em>URI</em> and the <em>Binding</em>.
 
 This isn’t really what I wanted, since it forced the `MailClient` class to have knowledge of where the remote service is located or at the very least how to obtain that piece of information. This doesn’t really conform to the Dependency Injection principle, since these details naturally belong to the dependent object, and should therefore be handled outside the scope of the class.
 
-### The ChannelFactory adapter
+## The ChannelFactory adapter
 
 The solution I came up with is to create an [adapter interface][5] to hide these details from my class. The implementation of this interface would then wrap a properly configured instance of [ChannelFactory][3] and delegate all the calls it receives to it.
 
@@ -139,7 +139,7 @@ public class MailClient
 
 The only modification is in the type of the argument declared in the constructor, which is now an interface.
 
-### Finally unit testing
+## Finally unit testing
 
 We are now able to test our class in isolation by creating fake objects that implement the `IClientChannelFactory` and `IMailServiceClientChannel` interfaces respectively, and inject them into our object under test.
 

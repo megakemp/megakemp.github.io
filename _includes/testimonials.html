@@ -1,7 +1,3 @@
-{%- comment %}
-  Testimonial cards from a list or a map of testimonials. Each has quote, name,
-  either title or context, and optionally a logo (src, alt, width, height).
-{% endcomment -%}
 <div class="testimonials{% if include.wide %} wide{% endif %}">
   {%- for entry in include.items %}
   {%- comment %} Iterating a map yields [key, value] pairs. {% endcomment %}

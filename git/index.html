@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Git
+description: |
+  Everything about Git in one place: articles, Pluralsight courses and conference talks by Enrico Campidoglio.
 assets: git
 image: backdrop.png
 redirect_from: /tag/git/
@@ -94,7 +96,7 @@ talks:
     <h2 class="section-title">Articles</h2>
     <p>I made a rule for myself: every time I learn a new peculiar thing about Git, I write it down. Every once in a while, something needs more explaining than a note, and it becomes an article.</p>
   </div>
-  {% include post-list.html posts=site.categories.git blurbs=page.articles %}
+  {% include post-list.html posts=site.categories.git blurbs=page.articles heading='h3' %}
 </section>
 
 <section id="courses" class="git-courses wrap">
@@ -111,7 +113,7 @@ talks:
         <span class="source"><img src="/assets/pluralsight-mark-mono.png" width="16" height="16" alt="">Pluralsight</span>
       </div>
       <div class="post-body">
-        <h3><a href="{{ course.url }}">{{ course.title }} ↗</a></h3>
+        <h3 class="post-title"><a href="{{ course.url }}">{{ course.title }} ↗</a></h3>
         <p>{{ course.description }}</p>
       </div>
     </article>
@@ -130,6 +132,6 @@ talks:
 <section class="git-workshops wrap">
   <div class="callout">
     <p>I also teach Git in person, as one-day workshops for teams: <em>Understanding Git</em> for people new to it, <em>Mastering Git</em> for everyone else.</p>
-    <a href="/workshops/">Workshops →</a>
+    <a href="/training/">Workshops →</a>
   </div>
 </section>

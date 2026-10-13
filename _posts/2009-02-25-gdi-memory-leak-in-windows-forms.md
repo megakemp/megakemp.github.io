@@ -11,7 +11,7 @@ imagesize: contain
 
 A while ago I run into a rather interesting and insidious bug, which I thought I would share.
 
-### The scenario
+## The scenario
 
 We had a desktop application developed on the **.NET Framework 2.0** using **Windows Forms**. Part of the requirements for this application was that the standard Windows controls had to be modified to have a custom appearance, to suite the customer’s needs. Since classes that are part of Windows Forms are really nothing more than thin <img alt="winlogo" src="http://megakemp.files.wordpress.com/2009/02/winlogo.gif?w=80&h=66" class="article" /> managed wrappers around [Windows’ graphic subsystem GDI][2], many customizations that required  the use of functions not directly exposed through .NET, forced us to invoke the Win32 API directly.
 
@@ -19,7 +19,7 @@ Now, for someone who has been developing on a virtual machine for a long time (w
 
 As a side note, if we were to build the same application today we would definitely [choose Windows Presentation Foundation (WPF) over Windows Forms][4] as UI technology,  since WPF allows to easily define the controls’ visual layout separately from their functionality without leaving the CLR.
 
-### The bug
+## The bug
 
 Back to our case. Our Windows Forms application would run fine under normal operations, for about 3 hours until it suddenly crashed reporting a `System.OutOfMemoryException` (OOM). We also noticed that the application would survive for a shorter period of time if it was used more “intensively” (meaning opening and closing a lot of forms).
 
@@ -49,7 +49,7 @@ It turned out Windows puts a limit on the number of total GDI objects that can b
      title="The total number of GDI resources allocated by the application as shown by Task Manager"
      class="screenshot-noshadow-fullwidth" />
 
-### The solution
+## The solution
 
 At this point it was a matter of tracking down where in the source code we were creating [System.Drawing.Font][16] objects. Considering the rate of growth of these fonts instinct suggested it ought to be in some kind of global function that was being called from different places in the application. Here is what we found:
 
@@ -134,7 +134,7 @@ public static SizeF MeasureString(Graphics g, string text, Font font)
 
 As you can see we made sure the `DeleteObject` Win32 function is called to release the Font object created by the `Font.ToHFont()` method.
 
-### Lessons learned
+## Lessons learned
 
 So, what did we learn from this experience? We can summarize it in **3 rules of thumb** when dealing with unmanaged code in .NET, whether it be Win32, COM, you name it:
 

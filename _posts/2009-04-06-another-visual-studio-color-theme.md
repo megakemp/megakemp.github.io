@@ -48,7 +48,7 @@ And here is how an XML file looks like:
 
 You can [download my Visual Studio color theme here][13]. I have used it for quite a while now and I am pretty satisfied with it. However, I fell I’ll probably tweak it some more in the future. After all, there is always room for improvements.
 
-##### Update 2010-04-20
+## Update 2010-04-20
 
 I’ve modified my dark theme to work in Visual Studio 2010. Most of the settings worked straight way, so I only needed to make some minor changes like adding support for T-SQL keywords. By the way, the custom colours for user types and interfaces now finally work in Visual Basic too. You can download the Visual Studio 2010 theme from the link below.
 

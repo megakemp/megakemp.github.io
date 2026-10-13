@@ -8,7 +8,10 @@
   {%- else %}
   {%- assign title = page.title | append: ' — ' | append: site.name %}
   {%- endif %}
-  {%- assign description = page.description | default: page.excerpt | default: site.description | markdownify | strip_html | normalize_whitespace | escape %}
+  {%- if page.layout == 'tag' %}
+  {%- capture tag_description %}Posts about {{ page.title }} by {{ site.name }}.{% endcapture %}
+  {%- endif %}
+  {%- assign description = page.description | default: tag_description | default: page.excerpt | default: site.description | markdownify | strip_html | normalize_whitespace | escape %}
   {%- assign canonical = page.url | replace: 'index.html', '' | prepend: site.url %}
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
@@ -23,14 +26,39 @@
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   {%- if page.image %}
   <meta property="og:image" content="{{ site.url }}/assets/{{ page.assets }}/{{ page.image }}">
+  {%- else %}
+  <meta property="og:image" content="{{ site.url }}/assets/og-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   {%- endif %}
-  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="/feed.xml">
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - AutoFixture" href="/feed.autofixture.xml">
   <link rel="preload" href="/css/fonts/ibm-plex-mono-semibold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/css/fonts/ibm-plex-mono-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/main.css?v={{ site.time | date: '%s' }}">
   <script>document.documentElement.classList.add('js')</script>
+  {%- assign social = site.style.social %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.name }}",
+    "url": "{{ site.url }}/",
+    "image": "{{ site.url }}/assets/about/portrait-2x.jpg",
+    "jobTitle": "Freelance programmer, speaker and trainer",
+    "worksFor": { "@type": "Organization", "name": "{{ site.style.name }}" },
+    "sameAs": [
+      "https://github.com/{{ social.github }}",
+      "https://www.linkedin.com/in/{{ social.linkedin }}",
+      "https://stackoverflow.com/users/{{ social.stackoverflow }}",
+      "https://www.pluralsight.com/authors/enrico-campidoglio"
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -58,6 +86,44 @@
       });
       document.getElementById('phone-menu').addEventListener('click', function (e) {
         if (e.target.closest('a')) toggle(false);
+      });
+    })();
+
+    (function () {
+      var prose = document.querySelector('.prose');
+      if (!prose || !HTMLElement.prototype.showPopover) return;
+      var column = prose.querySelector('.footnotes');
+      document.querySelectorAll('sup a.footnote').forEach(function (ref) {
+        var note = document.getElementById(ref.hash.slice(1));
+        if (!note) return;
+        var box = document.createElement('div');
+        box.className = 'footnote-popover';
+        box.popover = 'auto';
+        box.innerHTML = note.innerHTML;
+        box.querySelectorAll('.reversefootnote').forEach(function (a) { a.remove(); });
+        prose.appendChild(box);
+        ref.setAttribute('aria-expanded', 'false');
+        box.addEventListener('beforetoggle', function (e) { ref.setAttribute('aria-expanded', e.newState === 'open'); });
+
+        // Under the number, pushed left to stay in the column; above the number when there is no room below.
+        function place() {
+          var r = ref.getBoundingClientRect(), c = column.getBoundingClientRect(), below = r.bottom + 8;
+          box.style.setProperty('--column', c.width + 'px');
+          box.style.left = Math.min(r.left, c.right - box.offsetWidth) + 'px';
+          box.style.top = (below + box.offsetHeight <= innerHeight ? below : r.top - box.offsetHeight - 8) + 'px';
+        }
+        // Light dismiss closes the box on pointerdown; the click that follows must not reopen it.
+        var wasOpen = false;
+        ref.addEventListener('pointerdown', function () { wasOpen = box.matches(':popover-open'); });
+        ref.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (wasOpen || box.matches(':popover-open')) box.hidePopover();
+          else { box.showPopover(); place(); }
+          wasOpen = false;
+        });
+        ['scroll', 'resize'].forEach(function (event) {
+          addEventListener(event, function () { if (box.matches(':popover-open')) place(); }, { passive: true });
+        });
       });
     })();
   </script>

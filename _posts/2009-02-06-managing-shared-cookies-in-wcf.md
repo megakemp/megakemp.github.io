@@ -13,7 +13,7 @@ Managing state across the HTTP protocol has always been one of the major challen
 
 One way to overcome the stateless nature of HTTP without putting to much load on the web server, is to offload some of the information that has to be saved in the context of a particular conversation over to the client. The HTTP specification provides a native mechanism to do just that, by allowing web servers to bundle small pieces of textual data in a dedicated header of the response messages sent to the clients. These recognize the special payload, extract it, and store it in a local cache on disk to have it ready to be sent with every subsequent request. These small texts are technically known as “cookies”.
 
-### Cookies are opaque in ASMX
+## Cookies are opaque in ASMX
 
 Cookies go back a long time in the history of HTTP, and have served the Internet (fairly) well so far. Sure they brought some serious security issues with them, but for the most part they have been a conventient way for developers of web sites/web  applications to save temporary pieces of information off the server and have it transparently sent back by the client with each request.
 This guarantee comes from the fact <img alt="AsmxWs" src="{{ site.url }}/assets/{{ page.assets }}/asmxws-thumb.jpg" class="article" /> that every web browser on Earth has had the notion of cookies since web browser have had built-in support for cookies for the last 15 years or so.    
@@ -45,7 +45,7 @@ public class Program
 
 The advantage with this approach is that it is fairly opaque to the developer, which can inspect the contents of the cookie container at any time. As a bonus, it allows the same cookie container to easily be shared between multiple clients, enabling the scenarios when same cookie is required by multiple web services.
 
-### But they are transparent in WCF
+## But they are transparent in WCF
 
 In the WCF world, things are a little bit different. WCF, being a transport-agnostic technology, doesn’t allow the concept of a cookie to be directly reflected in the high level API, since it is specific to the HTTP protocol. This translate in practice in the web service client objects not having any **CookieContainer** property to set and retrieve.
 
@@ -68,7 +68,7 @@ When this option is enabled the client will make sure all cookies received from 
 
 Well, you’ll have to **explicitly set the `EnableCookies` setting to `false`**  (kind of counter-intuitive I know, but required nonetheless) and start managing the cookies yourself. Luckily, there are a couple of solutions.
 
-### Ad-hoc cookie management
+## Ad-hoc cookie management
 
 If you wish to manually retrieve, store and send a the same given set of cookies from two different web service client objects in WCF, you could do this ad-hoc this way:
 
@@ -116,7 +116,7 @@ public class Program
 
 Here we are interacting directly with the HTTP messages exchanged with the web services, reading and writing the cookies as a string in appropriate headers. In order to accomplish the task we need to use the “transport-agnostic” WCF API, which indeed makes the code more verbose compared with the ASMX example.
 
-### Centralized cookie management
+## Centralized cookie management
 
 In situations were cookies must be managed in the same way for all web services invoked from a client applications, your best bet is to opt for a centralized solution by applying a very useful feature in WCF: **[message inspectors][3]**.
 

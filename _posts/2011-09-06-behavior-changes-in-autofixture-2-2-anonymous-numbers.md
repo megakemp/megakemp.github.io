@@ -7,7 +7,7 @@ categories: programming autofixture
 
 Now that [AutoFixture 2.2 is approaching on the horizon][1], it’s a good time to start talking about some of the changes that were made to the underlying behavior of some existing APIs. I’ll start off this series of posts by focusing on the new generation strategy for anonymous numbers.
 
-### The good old fashioned way
+## The good old fashioned way
 
 Before I jump into the details of what exactly has been changed and how, allow me to set up a little bit of stage:
 
@@ -63,7 +63,7 @@ Console.WriteLine("SingleValue property is {0}", specimen.SingleValue);
 
 We can agree that the end result doesn’t exactly live up to the expectation of anonymous values being “random”. Starting from version 2.2, however, this behavior is due to change.
 
-### The fresh new way
+## The fresh new way
 
 AutoFixture has taken a different approach to numeric specimen generation and *will now by default return unique values across all numeric types*. Running our first example in AutoFixture 2.2 will therefore yield a very different result:
 

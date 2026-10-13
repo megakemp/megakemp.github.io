@@ -13,7 +13,7 @@ Since the dawn of civilization, common sense has taught us that the way forward 
 
 For us programmers, the rear mirror through which we look at the history of a code base before we go on to shape its future is [version control](https://en.wikipedia.org/wiki/Version_control). Among all the information captured by a version control tool, the most critical ones are the *commit messages*.
 
-### Git's view of history
+## Git's view of history
 
 When we're trying to understand how a piece of software has evolved over time, the first thing we tend to do is look at the trails of messages left by the programmers who came before us. Those sentences hold the key to understanding the choices that molded the software into what it is today.
 
@@ -49,7 +49,7 @@ history"
 
 You see, Git grants you all the tools you need to [go back in time and rewrite your own commits](http://git-scm.com/book/en/Git-Tools-Rewriting-History) (for example by changing their *order*, *contents* and *messages*) because having a clear history of the code *matters*. It matters to the sanity of whoever is working on it; present or future.
 
-### A legacy of e-mails
+## A legacy of e-mails
 
 Having talked about the importance of keeping your history clean, let's take the concept one step further.
 
@@ -91,7 +91,7 @@ it will look good in the console.
 
 If you follow this simple convention, Git will reward you by going out of its way to show you your history in the prettiest way possible. And that's a *good thing*.
 
-### Formatting matters
+## Formatting matters
 
 Once you fall into the habit of keeping your commit messages under 50 characters and relegate any longer description to a separate paragraph, you can start [pretty-printing](http://en.wikipedia.org/wiki/Prettyprint) your history in almost [any way you like](https://www.kernel.org/pub/software/scm/git/docs/git-log.html#_pretty_formats).
 
@@ -142,7 +142,7 @@ where:
     <span class="caption">Pretty-printed commit message on GitHub</span>
 </p>
 
-### Enforcing the rule
+## Enforcing the rule
 
 Of course, this all works best if everyone on the project agrees to follow the convention.
 

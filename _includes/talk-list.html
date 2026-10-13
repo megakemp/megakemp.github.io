@@ -1,9 +1,4 @@
-{%- comment %}
-  Talk rows (Speaking, Git). A talk has year, title, description and optionally
-  id, event, video (a "Video ↗" link the title also points to), links (label and
-  url pairs) and thumbnail (a picture set in assets/speaking/).
-{% endcomment -%}
-<div class="talk-list">
+<div class="talk-list{% if include.timeline %} timeline{% endif %}">
   {%- for talk in include.talks %}
   <article class="talk-row"{% if talk.id %} id="{{ talk.id }}"{% endif %}>
     <div class="talk-meta">

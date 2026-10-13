@@ -10,7 +10,7 @@ The primary reason we want to do that, is because we would like to take advantag
 
 Since the ASMX model has been for a long time the primary Microsoft technology for building web services on the .NET platform, I figured they must have laid out a nice migration path to bring all those web services to the new world of WCF. It turned out, [they did][5]!
 
-### The quick way
+## The quick way
 
 If you built your ASMX web services with code separation (that is, all programming logic resided in a separate _code-behind_ file instead of being embedded in the ASMX file) it is possible to get an ASMX web service up and running in WCF pretty quickly by going through a few easy steps:
 
@@ -71,7 +71,7 @@ HTTP endpoint resource         | .ASMX               | .SVC
 
 As a side note, if you are using [.NET 3.5 SP1][6] the porting process gets a little easier, since [WCF will automatically serialize any object that is part of a service interface][7] without the need of any special metadata attached to it. This means you no longer have to decorate the classes and members exposed by a WCF service contract with the **DataContract** and **DataMember** attributes.
 
-### Important considerations
+## Important considerations
 
 The simple process I just described works well for relatively simple web services, but in any real-world scenario you will have to take into consideration a few number of aspects:
 
@@ -86,7 +86,7 @@ The simple process I just described works well for relatively simple web service
 So what if your ASMX web services are making extensive use of the ASP.NET session store or employ the ASP.NET security model? Is it a show-stopper?
 Luckily enough, no. There is a solution to keep all that ASP.NET goodness working in WCF. It is called **ASP.NET Compatibility Mode**.
 
-### Backwards compatibility
+## Backwards compatibility
 
 Running WCF services with the ASP.NET Compatibility Mode enabled will integrate them in the ASP.NET HTTP Pipeline, which of course means all ASP.NET infrastructure will be back in place and available from WCF at runtime.
 You can enable this mighty mode from WCF by following these steps:

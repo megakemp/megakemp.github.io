@@ -2,7 +2,8 @@
 #
 # Builds the site in the gh-pages Docker image and checks it.
 #
-#   script/verify           build, internal link check, URL inventory, redirects
+#   script/verify           build, internal link check, URL inventory, redirects,
+#                           accessibility (script/a11y)
 #   script/verify --shots   also take 1280px and 390px screenshots of every page
 #                           and of the matching design mockup, into _screenshots/
 #
@@ -13,7 +14,7 @@
 #
 # (The Dockerfile's default Ruby 2.7.3 image is on Debian buster, whose apt
 # repositories are gone. Ruby 3 no longer bundles webrick, which jekyll serve
-# needs.) Screenshots need Node and Google Chrome.
+# needs.) The accessibility check and the screenshots need Node and Google Chrome.
 
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -64,6 +65,9 @@ grep -rl --include='*.html' 'http-equiv="refresh"' $SITE | while read -r file; d
   esac
 done | tee /dev/stderr | grep -q FAIL && failed=1
 
+echo "==> axe (script/a11y)"
+script/a11y | tail -20 || fail "axe"
+
 if [ "${1:-}" = "--shots" ]; then
   echo "==> screenshots (_screenshots/)"
   mkdir -p _screenshots
@@ -83,12 +87,12 @@ if [ "${1:-}" = "--shots" ]; then
     echo "$name"
   done <<'EOF'
 home|/|home.html|home-phone.html
-blog|/blog/|blog.html|blog.html
+writing|/writing/|blog.html|blog.html
 post|/2019/03/20/the-case-for-pull-rebase/|post.html|post.html
 git|/git/|git.html|git.html
 speaking|/speaking/|speaking.html|speaking.html
 services|/services/|services.html|services.html
-training|/workshops/|training.html|training.html
+training|/training/|training.html|training.html
 about|/about/|about.html|about.html
 tag|/tag/programming/||
 EOF

@@ -10,7 +10,7 @@ image: raspberrypi-closet.jpg
 ranking: 1
 ---
 
-### A little background
+## A little background
 
 For the past couple of months I’ve been running a [Raspberry Pi][2] as my primary NAS at home. It wasn’t something that I had planned. On the contrary, it all started by chance when I received a Raspberry Pi as a conference gift at last year’s [Leetspeak][3].
 But why using it as a NAS when there are [much better products][4] on the market, you might ask. Well, because I happen to have a small network closet at home and the Pi is a pretty good fit for a device that’s capable of acting like a NAS while at the same time taking _very_ little space.
@@ -27,7 +27,7 @@ Much like the size, the setup itself also strikes with its simplicity: I plugged
 
 On top of that it also runs a [headless version][10] of the [CrashPlan Linux client][11] to backup the contents of the external drive to the cloud. So, the Pi not only works as a central storage for all my files, but it also manages to [fool Mac OS X into thinking that it’s a Time Capsule][12]. Not too bad for a tiny ARM11 700 MHz processor and 256 MB of RAM.
 
-### The need for (more) speed
+## The need for (more) speed
 
 A Raspberry Pi needs **5 volts** of electricity to function. On top of that, depending on the number and kind of devices that you connect to it, it’ll draw approximately between **700** and **1400 milliamperes (mA)** of current. This gives an average consumption of roughly 5 watts, which makes it ideal to work as an appliance that’s on 24/7. However, as impressive as all of this might be, it’s not all sunshine and rainbows. In fact, as the expectations get higher, the Pi’s limited hardware resources quickly become a frustrating bottleneck.
 
@@ -53,7 +53,7 @@ However, having recognized the widespread interest in overclocking, the Raspberr
 
 Setting the `force_turbo` option to `1` will cause the CPU to run at its full speed all the time and will apparently also contribute to setting the dreaded warranty bit in [some configurations][20].
 
-### Entering Turbo Mode
+## Entering Turbo Mode
 
 When Turbo Mode is enabled, the CPU speed and voltage will switch between two values, a **minimum** one and a **maximum** one, both of which are configurable. When it comes to speed, the default minimum is the stock **700 MHz**. The default voltage is **1.20 V**. During my overclocking experiments I wanted to keep a close eye on these parameters, so I wrote [a simple Bash script][21] that fetches the current state of the CPU from different sources within the system and displays a brief summary. Here’s how it looks like when the system is idle:
 
@@ -94,7 +94,7 @@ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors
 
 If you’re interested in seeing how they work, I encourage you to check out the [cpufreq source code][26] on GitHub. It’s very well written.
 
-### Fine tuning
+## Fine tuning
 
 I’ve managed to get a pretty decent performance boost out of my Raspberry Pi just by applying the settings shown above. However, there are still a couple of nods left to tweak before we can settle.
 
@@ -106,7 +106,7 @@ The `ondemand` governor used in the Raspberry Pi will increase the CPU speed to 
 
 Here we’re saying that we’d like to have the Turbo Mode kick in when the CPU is busy at least **60%** of the time. That is enough to make the Pi feel a little snappier during general use.
 
-### Wrap up
+## Wrap up
 
 I have to say that I’ve been positively surprised by the capabilities of the Raspberry Pi. Its exceptional form factor and low power consumption makes it ideal to work as a NAS in very restricted spaces, like my network closet. Add to that the flexibility that comes from running Linux and the possibilities become [ truly endless][27]. In fact, the more stuff I add to my Raspberry Pi, the more I’d like it to do. What’s next, a [Node.js server][28]?
 

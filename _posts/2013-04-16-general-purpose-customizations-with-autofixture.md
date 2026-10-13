@@ -18,7 +18,7 @@ At this point you might find yourself feeling an irresistible urge to know every
 
 In this post I’m going to talk about something different which, in a sense, is quite the opposite of that: how to write _general-purpose customizations_.
 
-### A (user) story about cooking
+## A (user) story about cooking
 
 It’s hard to talk about test data without a bit of context. So, for the sake of this post, I thought we would pretend to be working on a somewhat realistic project. The system we’re going to build is an online catalogue of food recipies. The domain, at the very basic level, consists of three concepts:
 
@@ -35,7 +35,7 @@ Now, let’s imagine that in our backlog of requirements we have one where the u
 > As a foodie, I want to know which recipes I can prepare with the ingredients I have,
 so that I can get the best value for my groceries.
 
-### From the tests…
+## From the tests…
 
 As usual, we start out by translating the requirement at hand into a set of acceptance tests. In order do that, we need to tell AutoFixture how we’d like the test data for our domain model to be generated.
 
@@ -129,7 +129,7 @@ Notice that during these tests AutoFixture will have to create `Ingredient` obje
 
 As far as AutoFixture is concerned, it doesn’t really matter which code path leads to the creation of ingredients. The algorithm provided by the `RandomIngredientsFromFixedSequence` customization will apply in all situations.
 
-### …to the implementation
+## …to the implementation
 
 After a couple of [Red-Green-Refactor][8] cycles spawned from the above tests, it’s not completely unlikely that we might end up with some production code similar to this:
 
@@ -180,7 +180,7 @@ public class Ingredient
 
 Nice and simple. But let’s not stop here. It’s time to take it a bit further.
 
-### An opportunity for generalization
+## An opportunity for generalization
 
 Given the fact that we started working from a very concrete requirement, it’s only natural that the `RandomIngredientsFromFixedSequence` customization we came up at with encapsulates a behavior that is specific to the scenario at hand. However, if we take a closer look we might notice the following:
 
@@ -241,7 +241,7 @@ var fixture = new Fixture();
 fixture.Customize(new RandomFromFixedSequence<Ingredient>());
 ```
 
-### Wrapping up
+## Wrapping up
 
 As I said before, customizations are a great way to set up test data for a specific scenario. Sometimes these configurations turn out to be useful in [more than just one situation][9].
 

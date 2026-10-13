@@ -7,11 +7,11 @@ categories: programming
 
 When discussing web development, the subject of security inevitably comes up. <img alt="Security" src="http://megakemp.files.wordpress.com/2008/11/security-thumb.jpg?w=80&h=80" class="article" /> Last week while I was teaching a class in ASP.NET, we had a sample login page that,   although being quite trivial in nature, was exposing a serious vulnerability to SQL injections attacks.
 
-### Does it hurt?
+## Does it hurt?
 
 Well, it might. But let’s first start off by defining the concepts. An SQL Injection is a term used to define a type of attack that exploits a vulnerability in the data access layer (DAL) of an application to embed arbitrary SQL statements in properly crafted user input, that will get executed at runtime. Let me show you how this works with an example.
 
-### Vulnerability and exploit
+## Vulnerability and exploit
 
 Suppose we have a web site that prompts users to enter their username and password credentials in order to authenticate their identity. Typically, somewhere in the DAL of the application, there will be a chunk of code looking not to different than this:
 
@@ -71,7 +71,7 @@ SELECT * FROM Products WHERE Category='Something';SELECT * FROM Users --'
 
 Which will display all information about the users of the web site on the products page. Ouch!
 
-### The solution
+## The solution
 
 So, how can we prevent this from happening? Well, there are a couple of security golden rules you should keep in mind:
 
@@ -89,7 +89,7 @@ using (SqlConnection connection = new SqlConnection("ConnectionString"))
 }
 ```
 
-### Bringing it all together
+## Bringing it all together
 
 SQL injections are a relatively simple way of attacking an application by embedding SQL statements in the user input and having them execute unexpectedly. When in the wrong hands they can indeed be used for great evil. Fortunately it’s not too hard to guard ourselves from this kind of vulnerability by always validating incoming data and  using parameters in all our SQL commands.
 

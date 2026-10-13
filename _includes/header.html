@@ -1,12 +1,12 @@
 {%- assign section = page.url | split: '/' -%}{%- assign section = section[1] -%}
-{%- if page.layout == 'post' or section == 'blog' or section == 'tag' or section == 'git' -%}{%- assign section = 'writing' -%}{%- endif -%}
+{%- if page.layout == 'post' or section == 'tag' or section == 'git' -%}{%- assign section = 'writing' -%}{%- endif -%}
 {%- assign current = ' aria-current="page"><span aria-hidden="true">./</span' -%}
 {%- capture links -%}
 <a href="/about/"{% if section == 'about' %}{{ current }}{% endif %}>About</a>
 <a href="/services/"{% if section == 'services' %}{{ current }}{% endif %}>Services</a>
-<a href="/workshops/"{% if section == 'workshops' %}{{ current }}{% endif %}>Training</a>
+<a href="/training/"{% if section == 'training' %}{{ current }}{% endif %}>Training</a>
 <a href="/speaking/"{% if section == 'speaking' %}{{ current }}{% endif %}>Speaking</a>
-<a href="/blog/"{% if section == 'writing' %}{{ current }}{% endif %}>Writing</a>
+<a href="/writing/"{% if section == 'writing' %}{{ current }}{% endif %}>Writing</a>
 <a href="#contact">Contact</a>
 {%- endcapture -%}
 <header class="site-header">

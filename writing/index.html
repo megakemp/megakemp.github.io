@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Writing
+description: Articles about programming, Git and the craft of building software, by Enrico Campidoglio.
+redirect_from: /blog/
 intro: <p>I write about programming, Git and the craft of building software. Not often, but when I have something worth saying.</p>
 graph: |
   <div class="graph" aria-hidden="true">
@@ -17,18 +19,18 @@ graph: |
   </div>
 ---
 <section class="listing wrap">
-  {% include post-list.html posts=paginator.posts %}
+  {% include post-list.html posts=paginator.posts heading='h2' %}
   <nav class="pager" aria-label="Pages">
     {%- if paginator.previous_page == 1 %}
-    <a href="/blog/">← Newer</a>
+    <a href="/writing/">← Newer</a>
     {%- elsif paginator.previous_page %}
-    <a href="/blog/page{{ paginator.previous_page }}/">← Newer</a>
+    <a href="/writing/page{{ paginator.previous_page }}/">← Newer</a>
     {%- else %}
     <span aria-disabled="true">← Newer</span>
     {%- endif %}
     <span class="count">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
     {%- if paginator.next_page %}
-    <a href="/blog/page{{ paginator.next_page }}/">Older →</a>
+    <a href="/writing/page{{ paginator.next_page }}/">Older →</a>
     {%- else %}
     <span aria-disabled="true">Older →</span>
     {%- endif %}

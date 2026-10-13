@@ -57,7 +57,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: 
   html { scroll-behavior: auto; }
 }
 
-/* Anchor targets land a little below the top edge (§4.4b). */
+/* Anchor targets land a little below the top edge. */
 [id] { scroll-margin-top: 24px; }
 
 body {
@@ -82,7 +82,7 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 code { font-family: var(--mono); }
-/* Terminal drawings (§4.4c) */
+/* Terminal drawings */
 .graph { margin: 0; font-family: var(--mono); }
 
 .wrap {
@@ -259,6 +259,14 @@ main { display: block; }
 }
 .section-head a { font-size: 15px; }
 
+@media (max-width: 640px) {
+  .section-head a, .card-links a, .quote-band .cite a, .post-meta .tag, .pager a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+  }
+}
+
 .section-title { font-weight: 600; font-size: 28px; letter-spacing: -0.02em; }
 
 .section-intro {
@@ -303,7 +311,7 @@ main { display: block; }
 .page-header .intro p + p { margin-top: 1.2em; }
 .page-header .buttons { margin-top: 8px; }
 
-/* Drawings in the header's right column (§4.4c); hidden below 861px. */
+/* Drawings in the header's right column; hidden below 861px. */
 .page-header .graph { display: none; flex: none; }
 
 /* Git: a git log --graph on a faint 9×20px cell grid. */
@@ -379,7 +387,7 @@ main { display: block; }
 }
 .hero .buttons { margin-top: 8px; }
 
-/* A keyboard in box-drawing characters (§4.4c); it needs the width the name takes below 1121px. */
+/* A keyboard in box-drawing characters; it needs the width the name takes below 1121px. */
 .hero .graph { display: none; flex: none; font-size: 14px; line-height: 1; color: #8491A6; }
 /* The shadows close the anti-aliased seams between adjacent █ glyphs. */
 .hero .graph span { text-shadow: 0.5px 0 currentColor, -0.5px 0 currentColor; }
@@ -399,16 +407,17 @@ main { display: block; }
 
 /* Home sections */
 
-.home-writing .wrap { padding-block: 48px 40px; }
+.home-writing .wrap { padding-block: 0 34px; }
 .home-writing .section-head { margin-bottom: 36px; }
+.home-writing .post-row:last-child { border-bottom: 0; }
 
 .home-services .wrap { padding-block: 48px 56px; }
 
 .home-speaking { padding-block: 56px; }
 
 @media (min-width: 641px) {
-  .home-writing .wrap { padding-block: 72px 40px; }
-  .home-services .wrap { padding-block: 48px 88px; }
+  .home-writing .wrap { padding-block: 0 60px; }
+  .home-services .wrap { padding-block: 56px 88px; }
   .home-speaking { padding-block: 88px; }
 }
 
@@ -441,9 +450,9 @@ main { display: block; }
 .post-meta .source img { display: inline; width: 16px; height: 16px; vertical-align: -3px; margin-right: 6px; }
 
 .post-body { display: flex; flex-direction: column; gap: 10px; }
-.post-body h3 { font-size: 26px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; }
-.post-body h3 a { color: var(--text); }
-.post-body h3 a:hover { color: var(--link); }
+.post-title { font-size: 26px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; }
+.post-title a { color: var(--text); }
+.post-title a:hover { color: var(--link); }
 .post-body p {
   font-family: var(--sans);
   font-size: 17px;
@@ -470,9 +479,10 @@ main { display: block; }
 
 /* Blog index and tag pages */
 
-.listing { padding-block: 24px 64px; }
-/* The header band's bottom edge is already the first row's top rule (§4.4a). */
+.listing { padding-block: 26px 48px; }
+/* The header band's bottom edge is already the first row's top rule. */
 .listing .post-row:first-child { border-top: 0; }
+.listing .post-list:last-child { padding-bottom: 8px; }
 
 .pager {
   display: flex;
@@ -487,6 +497,10 @@ main { display: block; }
 .pager a:hover { color: var(--link); }
 .pager [aria-disabled] { color: var(--border-strong); }
 .pager .count { color: var(--text-muted); }
+
+@media (min-width: 641px) {
+  .listing { padding-block: 30px 80px; }
+}
 
 /* Post
    ========================================================================== */
@@ -524,7 +538,7 @@ main { display: block; }
 }
 
 .prose {
-  padding-block: 56px 40px;
+  padding-block: 48px 52px;
   font-family: var(--sans);
   font-size: 18px;
   line-height: 1.65;
@@ -556,7 +570,7 @@ main { display: block; }
 
 .prose pre {
   margin: 0 0 1.6em;
-  background: var(--surface);
+  background: var(--band);
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 18px 20px;
@@ -567,14 +581,10 @@ main { display: block; }
 }
 .prose pre code { background: none; padding: 0; font-size: inherit; }
 
-.prose sup a { font-family: var(--mono); font-size: 15px; padding: 0 2px; }
+.prose sup a, .post-header .lead sup a { font-family: var(--mono); font-size: 15px; padding: 0 2px; }
 
 .prose img { border-radius: 6px; }
-.prose iframe { max-width: 100%; }
-
-/* The old theme repeated the excerpt as an italic lead and a rule; the header band shows it now. */
-.prose > p:first-child:has(+ hr),
-.prose > p:first-child + hr { display: none; }
+.prose iframe { display: block; max-width: 100%; }
 
 /* Legacy classes in old posts */
 
@@ -648,8 +658,27 @@ main { display: block; }
 .prose .footnotes li { margin: 0 0 .8em; }
 .prose .footnotes p { margin: 0; }
 
+.footnote-popover {
+  inset: auto;
+  width: fit-content;
+  max-width: min(36em, var(--column));
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--band);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-body);
+}
+.footnote-popover p { margin: 0; text-wrap: initial; }
+
+.prose > :first-child { margin-top: 0; }
+.prose > :last-child,
+.prose .footnotes li:last-child { margin-bottom: 0; }
+
 .adjacent {
-  padding-block: 8px 24px;
+  padding-block: 4px 24px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 16px;
@@ -670,7 +699,7 @@ main { display: block; }
 .adjacent .newer { text-align: right; }
 
 .author .wrap {
-  padding-block: 32px 64px;
+  padding-block: 32px 56px;
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
@@ -689,6 +718,12 @@ main { display: block; }
 .author p { font-family: var(--sans); font-size: 17px; line-height: 1.55; color: var(--text-body); }
 .author .name { font-family: var(--mono); font-weight: 600; line-height: normal; color: var(--text); }
 
+@media (min-width: 641px) {
+  .prose { padding-block: 56px 52px; }
+  .adjacent { padding-block: 12px 24px; }
+  .author .wrap { padding-block: 40px 64px; }
+}
+
 /* Rouge, Nord-ish. Rouge's .nf (function name) is not the glyph class. */
 
 .highlight .nf { font-family: inherit; font-size: inherit; line-height: inherit; display: inline; vertical-align: baseline; }
@@ -700,7 +735,7 @@ main { display: block; }
 .highlight .nc, .highlight .nn, .highlight .nt, .highlight .ne { color: #8FBCBB; }
 .highlight .nf, .highlight .fm, .highlight .na, .highlight .nb, .highlight .bp { color: #88C0D0; }
 .highlight .nv, .highlight .vi, .highlight .vg, .highlight .vc { color: #D8DEE9; }
-.highlight .gd, .highlight .err { color: var(--error); }
+.highlight .gd, .highlight .err { color: #D08770; }
 .highlight .gi { color: #A3BE8C; }
 .highlight .gh, .highlight .gu { color: #88C0D0; font-weight: 600; }
 
@@ -732,6 +767,10 @@ main { display: block; }
 .photo figcaption { font-size: 13px; color: var(--text-muted); }
 .photo figcaption .nf { margin-right: 6px; }
 
+@media (min-width: 641px) {
+  .photo { padding-block: 56px 8px; }
+}
+
 /* Bullet lists (Services, Training) */
 
 .bullets { list-style: none; margin: 0; padding: 0; }
@@ -759,7 +798,7 @@ main { display: block; }
 
 /* Offers (Services) */
 
-.offers { padding-block: 24px 0; display: flex; flex-direction: column; }
+.offers { padding-block: 0; margin-top: -8px; display: flex; flex-direction: column; }
 
 .offer {
   display: grid;
@@ -806,8 +845,13 @@ main { display: block; }
 .expertise-intro p { font-family: var(--sans); font-size: 17px; line-height: 1.55; color: var(--text-body); max-width: 24em; }
 .expertise .bullets { grid-column: span 2; }
 
-.clients { padding-block: 72px; }
+.clients { padding-block: 56px; }
 .clients .section-header { margin-bottom: 36px; }
+
+@media (min-width: 641px) {
+  .offers { padding-block: 24px 32px; margin-top: 0; }
+  .clients { padding-block: 88px; }
+}
 
 /* Workshops (Training) */
 
@@ -820,7 +864,7 @@ main { display: block; }
 .workshop-cards h3 { line-height: 1.2; }
 .workshop-cards h3 span { font-weight: 400; font-size: 17px; color: var(--text-muted); }
 .workshop-cards .level { font-size: 15px; color: var(--text-muted); }
-.workshop-cards .more { margin-top: auto; font-size: 15px; color: var(--accent); }
+.workshop-cards .more { margin-top: auto; font-size: 15px; color: var(--link); }
 
 .schedule { padding-block: 56px 24px; }
 .schedule .section-header { gap: 10px; margin-bottom: 24px; }
@@ -850,7 +894,7 @@ main { display: block; }
 .schedule .what > span span { font-family: var(--sans); color: var(--text-muted); }
 .schedule .what > a { white-space: nowrap; }
 
-.workshops { padding-block: 64px 0; display: flex; flex-direction: column; }
+.workshops { padding-block: 32px 0; display: flex; flex-direction: column; }
 
 .workshop {
   display: grid;
@@ -861,7 +905,7 @@ main { display: block; }
   border-top: 1px solid var(--border);
 }
 .workshop:last-child { border-bottom: 1px solid var(--border); }
-/* The Schedule list's closing rule is directly above (§4.4a). */
+/* The Schedule list's closing rule is directly above. */
 .workshop:first-child { padding-top: 0; border-top: 0; }
 
 .workshop-facts { display: flex; flex-direction: column; gap: 14px; }
@@ -904,8 +948,15 @@ main { display: block; }
 .workshop-body .topics { gap: 8px 24px; font-family: var(--mono); }
 .workshop-body .topics code { background: none; padding: 0; font-size: 0.95em; }
 
-.students { padding-block: 72px 80px; }
+.students { padding-block: 56px; }
 .students .section-header { margin-bottom: 36px; }
+
+@media (min-width: 641px) {
+  .workshop-cards { padding-block: 80px 0; }
+  .schedule { padding-block: 88px 24px; }
+  .workshops { padding-block: 64px 0; }
+  .students { padding-block: 88px; }
+}
 
 /* Glyph list (About, Git) */
 
@@ -928,7 +979,7 @@ main { display: block; }
 /* About */
 
 .story {
-  padding-block: 56px 88px;
+  padding-block: 48px 56px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 40px 64px;
@@ -965,13 +1016,24 @@ main { display: block; }
 .story-body h2:first-child { margin-top: 0; }
 .story-body .pull-quote { margin-block: 1.4em; max-width: 28em; }
 
+@media (min-width: 641px) {
+  .story { padding-block: 56px 88px; }
+}
+
 /* Git */
 
-.git-articles { padding-block: 64px 24px; }
-.git-courses { padding-block: 48px 24px; }
-.git-talks { padding-block: 48px 16px; }
-.git-workshops { padding-block: 40px 64px; }
+.git-articles { padding-block: 48px 24px; }
+.git-courses { padding-block: 32px 24px; }
+.git-talks { padding-block: 32px 24px; }
+.git-workshops { padding-block: 32px 56px; }
 .git-articles .section-header, .git-courses .section-header, .git-talks .section-header { margin-bottom: 28px; }
+
+@media (min-width: 641px) {
+  .git-articles { padding-block: 56px 24px; }
+  .git-courses { padding-block: 64px 24px; }
+  .git-talks { padding-block: 64px 24px; }
+  .git-workshops { padding-block: 64px 88px; }
+}
 
 .callout {
   display: flex;
@@ -990,7 +1052,7 @@ main { display: block; }
 
 /* Talk rows (Speaking, Git) */
 
-.talks { padding-block: 64px 40px; }
+.talks { padding-block: 48px 20px; }
 
 .talk-list { display: flex; flex-direction: column; }
 
@@ -1002,6 +1064,30 @@ main { display: block; }
   border-top: 1px solid var(--border);
 }
 .talk-row:last-child { border-bottom: 1px solid var(--border); }
+
+.timeline .talk-row { position: relative; padding: 20px 0 20px 28px; border-top: 0; }
+.timeline .talk-row:last-child { border-bottom: 0; }
+.timeline .talk-row::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0;
+  bottom: 0;
+  border-left: 2px dotted var(--border-strong);
+}
+.timeline .talk-row:first-child::before { top: 30px; }
+.timeline .talk-row:last-child::before { bottom: calc(100% - 30px); }
+.timeline .talk-row::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 25px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--bg);
+}
 
 .talk-meta { display: flex; flex-direction: column; gap: 8px; font-size: 15px; color: var(--text-muted); }
 .talk-meta .year { color: var(--text); font-weight: 600; }
@@ -1034,13 +1120,18 @@ main { display: block; }
 }
 .thumb img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
 
+@media (min-width: 641px) {
+  .talks { padding-block: 80px 20px; }
+}
+
 @media (min-width: 720px) {
   .talk-row { grid-template-columns: 240px minmax(0, 1fr); }
+  .timeline .talk-row { grid-template-columns: 212px minmax(0, 1fr); }
 }
 
 /* Podcast cards (Speaking) */
 
-.podcasts { padding-block: 64px 24px; }
+.podcasts { padding-block: 0 56px; }
 
 .podcast-grid {
   display: grid;
@@ -1092,9 +1183,13 @@ main { display: block; }
 .player .bar div { width: 0; height: 100%; background: var(--accent); }
 .js .player .time { display: inline; flex: none; font-size: 12px; color: var(--text-muted); }
 
+@media (min-width: 641px) {
+  .podcasts { padding-block: 0 88px; }
+}
+
 /* Testimonial cards (Speaking, Services, Training) */
 
-.feedback > .wrap { padding-block: 48px 72px; }
+.feedback > .wrap { padding-block: 16px 56px; }
 .feedback .section-header { margin-bottom: 36px; }
 
 .testimonials {
@@ -1135,6 +1230,10 @@ main { display: block; }
   white-space: nowrap;
 }
 .testimonial figcaption img { border-radius: 4px; }
+
+@media (min-width: 641px) {
+  .feedback > .wrap { padding-block: 48px 88px; }
+}
 
 /* Talk rows, compact (home)
    ========================================================================== */
@@ -1178,6 +1277,7 @@ main { display: block; }
   flex-direction: column;
   gap: 14px;
 }
+.card, .testimonial { --text-muted: #B8C0CE; }
 .card h3 { font-size: 22px; font-weight: 600; }
 .card p { font-family: var(--sans); font-size: 17px; line-height: 1.6; color: var(--text-body); }
 .card-links {
