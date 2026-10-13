@@ -25,7 +25,7 @@ In Git's parlance, each node represents a _commit_ and each commit has exactly o
 
 So far, so good. Now let's add one more piece of information to the mix:
 
-<img class="screenshot-noshadow" alt="Branch" src="{{ site.url }}/assets/{{ page.assets }}/branch.png"/>
+<img class="screenshot-noshadow" alt="Three commits, A, B and C, with the master branch pointing to C." src="{{ site.url }}/assets/{{ page.assets }}/branch.png"/>
 
 See that `master` label? That's a _branch_. Branches are simply [_references_](https://git-scm.com/docs/gitglossary#gitglossary-aiddefrefaref) that point to specific commits. In fact, a branch is a _41 bytes_ text file that contains the ID of the commit it references. Don't believe me? Try running this command in the root of your repository:[^1]
 
@@ -59,7 +59,7 @@ Now that we have a good mental model for thinking about history, we can talk abo
 
 Imagine we have a history that looks like this:
 
-<img class="screenshot-noshadow" alt="Fork" src="{{ site.url }}/assets/{{ page.assets }}/fork.png"/>
+<img class="screenshot-noshadow" alt="The master and feature branches diverging after commit B." src="{{ site.url }}/assets/{{ page.assets }}/fork.png"/>
 
 Here, we have two branches named `master` and `feature` that diverge on commit `B`. We can immediately observe two things at first glance:
 

@@ -3,6 +3,7 @@ layout: post
 title:  "Internet Explorer fights back"
 date:   2008-09-12
 categories: technology web
+assets: internet-explorer-fights-back
 ---
 
 In a [previous post][1] I wrote about how Mozilla Firefox during the last 4 years slowly grew in popularity among Internet users, until it finally became a threat to Microsoft, who finally decided to refresh good old Internet Explorer by releasing version 7 in late 2006.
@@ -13,7 +14,7 @@ Obviously Firefox wasn’t that much of a threat after all, since Internet Explo
 
 However, when [Google releases a browser][2], it’s a completely different story. Google’s solid position on the Internet market combined with its business model of free services give the company a great marketing potential. This potential can be used as a highway to mass-distribute software, much in the same way Windows served to put Internet Explorer on the majority of PCs in the world during the 90′s. And Microsoft must have sensed that threat.
 
-It doesn’t come as a surprise then, that yet a new version Internet Explorer is about to <img alt="ie8logo" src="http://megakemp.files.wordpress.com/2008/09/ie8logo-thumb.png?w=244&h=79" class="article" /> hit the market, this time quicker than ever. In fact, if it took Microsoft roughly 5 years put Internet Explorer 7 out the doors (from late 2001 to late 2006) , the first public release of [Windows Internet Explorer 8][3] was made available a mere 1,5 years later. The browser is currently in its beta 2 phase and is available for [download here][4]. Microsoft says that with this release it has focused on increasing JavaScript performance and provide full compliance with web standards, especially [CSS][5].
+It doesn’t come as a surprise then, that yet a new version Internet Explorer is about to <img alt="The Windows Internet Explorer 8 Beta logo." src="{{ site.url }}/assets/{{ page.assets }}/ie8-logo.png" class="article" width="244" height="79" /> hit the market, this time quicker than ever. In fact, if it took Microsoft roughly 5 years put Internet Explorer 7 out the doors (from late 2001 to late 2006) , the first public release of [Windows Internet Explorer 8][3] was made available a mere 1,5 years later. The browser is currently in its beta 2 phase and is available for [download here][4]. Microsoft says that with this release it has focused on increasing JavaScript performance and provide full compliance with web standards, especially [CSS][5].
 
 I am currently giving IE8 a spin, and I will soon post my impressions. In the meantime, have someone already tried it? What’s your opinion? I’m curious to hear.
 

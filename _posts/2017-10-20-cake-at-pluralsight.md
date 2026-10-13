@@ -24,7 +24,7 @@ Kidding aside, I didn't make a Pluralsight course about baking; it's about a Mak
 
 If you've never heard of it, let me tell you a story.
 
-When I first came across the [Cake project][CakeProject] it was the fall of 2014, almost exactly three years ago. [Patrik Svensson][PatrikSvensson] — a colleague of mine at [tretton37][] at the time — had been working on it for some time, and had reached a point where things were starting to shape up. So I took a quick look at the code and I remember being impressed by how well it was designed!
+When I first came across the [Cake project][CakeProject] it was the fall of 2014, almost exactly three years ago. [Patrik Svensson][PatrikSvensson] — a colleague of mine at tretton37 at the time — had been working on it for some time, and had reached a point where things were starting to shape up. So I took a quick look at the code and I remember being impressed by how well it was designed!
 
 As for the tool itself, however, I remained skeptical and here's why. Back then, the software industry had just gone through a sort of _Make renaissance_ — a period of time during which we saw a large number of build tools, all inspired by the venerable [Make][], appear on the open source scene.
 
@@ -144,7 +144,6 @@ My goal was to come up with as many scenarios as possible, throw them at Cake an
 [Cake]: https://cakebuild.net
 [CakeProject]: https://github.com/cake-build/cake
 [PatrikSvensson]: https://twitter.com/firstdrafthell
-[tretton37]: https://tretton37.com
 [DSL]: https://en.wikipedia.org/wiki/Domain-specific_language
 [Rake]: https://github.com/ruby/rake
 [Psake]: https://github.com/psake/psake

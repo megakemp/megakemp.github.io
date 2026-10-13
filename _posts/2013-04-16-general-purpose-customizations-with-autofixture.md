@@ -4,6 +4,7 @@ title:  "General-purpose customizations with AutoFixture"
 date:   2013-04-16
 categories: programming autofixture
 excerpt: If you’ve been using AutoFixture in your tests for more than a while, chances are you’ve already come across the concept of customizations.In this post I’m going to talk about how to write general-purpose customizations.
+assets: general-purpose-customizations-with-autofixture
 ---
 
 If you’ve been using [AutoFixture][1] in your tests for more than a while, chances are you’ve already come across the concept of customizations. If you’re not familiar with it, let me give you a quick introduction:
@@ -26,8 +27,8 @@ It’s hard to talk about test data without a bit of context. So, for the sake o
   * **Recipes**
   * **Ingredients**
 
-<a href="http://megakemp.files.wordpress.com/2013/04/domain.png">
-<img alt="Basic domain model for a recipe catalogue." title="Basic domain model for a recipe catalogue." src="http://megakemp.files.wordpress.com/2013/04/domain.png?w=480&h=55" class="screenshot-noshadow" />
+<a href="{{ site.url }}/assets/{{ page.assets }}/domain.png">
+<img alt="Basic domain model for a recipe catalogue." title="Basic domain model for a recipe catalogue." src="{{ site.url }}/assets/{{ page.assets }}/domain.png" class="screenshot-noshadow" />
 </a>
 
 Now, let’s imagine that in our backlog of requirements we have one where the user wishes to be able to search for recepies that contain a specific set of ingredients. Or in other words:

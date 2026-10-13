@@ -609,7 +609,7 @@ main { display: block; }
   text-align: center;
 }
 
-.prose .article { float: right; margin: 0.4em 0 1em 1.5em; }
+.prose .article { float: right; max-width: 40%; margin: 0.4em 0 0.6em 1em; }
 .prose .article.resize { max-width: 150px; }
 
 .prose .video {
@@ -722,6 +722,7 @@ main { display: block; }
   .prose { padding-block: 56px 52px; }
   .adjacent { padding-block: 12px 24px; }
   .author .wrap { padding-block: 40px 64px; }
+  .prose .article { max-width: 100%; margin: 0.4em 0 1em 1.5em; }
 }
 
 /* Rouge, Nord-ish. Rouge's .nf (function name) is not the glyph class. */

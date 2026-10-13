@@ -5,6 +5,7 @@ date:   2013-01-22
 categories: git
 excerpt: This is where the idea for my Grokking Git by seeing it session came from. The goal is to illustrate the meaning behind different Git operations by going through a series of demos, while having the command line running on one half of the screen and SeeGit on the other.
 video: //player.vimeo.com/video/52633764?color=8dc63f
+assets: grokking-git-by-seeing-it
 ---
 
 When I first started getting into [Git][1] a couple of years ago, one of the things I found most frustrating about the learning experience was the complete lack of guidance on how to interpret the myriad of commands and switches found in the documentation. On second thought, calling it _frustrating_ is actually an understatement. Utterly painful would be a better way to describe it. <img alt="Git logo" src="http://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" class="article resize" />
@@ -37,9 +38,9 @@ This is where the idea for my _Grokking Git by seeing it_ session came from. The
 
 In other words, something like this:
 
-<img alt="SeeGit session in progress." src="http://megakemp.files.wordpress.com/2013/01/seegitsession.png?w=480" class="screenshot-noshadow" />
+<img alt="SeeGit session in progress." src="{{ site.url }}/assets/{{ page.assets }}/seegit-session.png" class="screenshot-noshadow" />
 
-So, this is just to give you a little background. Here you’ll find the session’s abstract, slides and demos. There’s also a recording from when I presented this talk at [LeetSpeak][5] in Malmö, Sweden back in October 2012. I hope you find it useful.
+So, this is just to give you a little background. Here you’ll find the session’s abstract, slides and demos. There’s also a recording from when I presented this talk at LeetSpeak in Malmö, Sweden back in October 2012. I hope you find it useful.
 
 ## Abstract
 
@@ -62,13 +63,12 @@ So, this is just to give you a little background. Here you’ll find the session
 <div class="note">
 <ul>
   <li><a
-  href="http://megakemp.files.wordpress.com/2013/01/grokkinggitbyseeingit-slides.pdf">Slides</a></li>
+  href="{{ site.url }}/assets/{{ page.assets }}/grokking-git-by-seeing-it-slides.pdf">Slides</a></li>
   <li><a
-  href="http://megakemp.files.wordpress.com/2013/01/grokkinggitbyseeingit-demos.pdf">Demos</a></li>
+  href="{{ site.url }}/assets/{{ page.assets }}/grokking-git-by-seeing-it-demos.pdf">Demos</a></li>
 </ul>
 </div>
 
 [1]: http://git-scm.com
 [2]: http://ayende.com/blog/2966/graphical-domain-specific-languages
 [3]: https://github.com/Haacked/SeeGit
-[5]: http://leetspeak.se

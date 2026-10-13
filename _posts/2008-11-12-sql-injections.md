@@ -3,9 +3,10 @@ layout: post
 title:  "SQL Injections"
 date:   2008-11-12
 categories: programming
+assets: sql-injections
 ---
 
-When discussing web development, the subject of security inevitably comes up. <img alt="Security" src="http://megakemp.files.wordpress.com/2008/11/security-thumb.jpg?w=80&h=80" class="article" /> Last week while I was teaching a class in ASP.NET, we had a sample login page that,   although being quite trivial in nature, was exposing a serious vulnerability to SQL injections attacks.
+When discussing web development, the subject of security inevitably comes up. <img alt="The Windows security shield." src="{{ site.url }}/assets/{{ page.assets }}/security.jpg" class="article" width="80" height="80" /> Last week while I was teaching a class in ASP.NET, we had a sample login page that,   although being quite trivial in nature, was exposing a serious vulnerability to SQL injections attacks.
 
 ## Does it hurt?
 

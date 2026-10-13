@@ -75,5 +75,5 @@
   title: BDD All the Way Down
   id: bdd_all_the_way_down
   video: https://youtu.be/zMX588nshao
-  event: GOTO Aarhus · Foo Café
+  event: GOTO Aarhus
   description: Applying the Behaviour Driven Development cycle to a feature from top to bottom in a .NET web application, producing tests that read like specifications by focusing on what the system does rather than how it's implemented.

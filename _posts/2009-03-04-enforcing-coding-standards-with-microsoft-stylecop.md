@@ -3,13 +3,14 @@ layout: post
 title:  "Enforcing coding standards with Microsoft StyleCop"
 date:   2009-03-04
 categories: programming .net
+assets: enforcing-coding-standards-with-microsoft-stylecop
 ---
 
 I can’t stress enough the importance of having a code convention in place before starting in any kind of software project.
 
 ## What’s a code convention?
 
-A code convention it’s about a team of developers agreeing on a standard <img alt="csharpcodingstd" src="http://megakemp.files.wordpress.com/2009/03/csharpcodingstd-thumb.png?w=90&h=99" class="article" /> way to statically structure the code that will be part of the system they are building together. Note that it doesn’t cover any aspect of the software design, (coupling, cohesion, dependency management and so on) but rather focuses exclusively on how the body of the code is organized.
+A code convention it’s about a team of developers agreeing on a standard <img alt="A C# file icon with a red cross." src="{{ site.url }}/assets/{{ page.assets }}/csharp-coding-standard.png" class="article" width="90" height="99" /> way to statically structure the code that will be part of the system they are building together. Note that it doesn’t cover any aspect of the software design, (coupling, cohesion, dependency management and so on) but rather focuses exclusively on how the body of the code is organized.
 
 You may wonder, how is this valuable? Well, a convention has one primary goal that goes beyond plain esthetic: to **improve the code readability by achieving consistency**. Following a common standard will make it easier for the members of a team to work on each other’s code without the burden of having to mentally adjust to different coding styles.
 
@@ -26,7 +27,7 @@ Now, making a group of developers agree on how they should format their code on 
 
 ## Verbal agreement is not enough
 
-Even if you do succeed in finding a middle ground that makes everybody happy (or sort of), you still need to make sure that the team will stick to what has been agreed on, without relying on tedious manual code review. Luckily **there are tools out there that can automatically check code against a predefined coding convention**. <img alt="StyleCop" src="http://megakemp.files.wordpress.com/2009/03/stylecop-thumb.png?w=100&h=100" class="article" />
+Even if you do succeed in finding a middle ground that makes everybody happy (or sort of), you still need to make sure that the team will stick to what has been agreed on, without relying on tedious manual code review. Luckily **there are tools out there that can automatically check code against a predefined coding convention**. <img alt="The StyleCop logo." src="{{ site.url }}/assets/{{ page.assets }}/stylecop-logo.png" class="article" />
 
 One of them is [StyleCop][3], a tool internally used by many teams at Microsoft, which has been repackaged and made freely available to the public under the Shared Source license.
 
@@ -43,20 +44,20 @@ Here is a brief overview of StyleCop’s features:
 
 As mentioned, StyleCop includes a Visual Studio add-on, which allows to run it at any point in time against the currently opened project from a menu item.
 
-<a href="http://megakemp.files.wordpress.com/2009/03/vsstylecop4.png">
-    <img alt="VSStyleCop" src="http://megakemp.files.wordpress.com/2009/03/vsstylecop4.png?w=274&h=198" class="screenshot-noshadow" />
+<a href="{{ site.url }}/assets/{{ page.assets }}/vs-stylecop.png">
+    <img alt="The Run StyleCop commands in the Visual Studio Tools menu." src="{{ site.url }}/assets/{{ page.assets }}/vs-stylecop.png" class="screenshot-noshadow" />
 </a>
 
 By default the results of the validation are reported back to the user as warnings, but you have the option to have them show up as errors, if you care enough about consistency that is.
 
-<a href="http://megakemp.files.wordpress.com/2009/03/vsstylecopwarnings.png">
-    <img alt="VSStyleCopWarnings" src="http://megakemp.files.wordpress.com/2009/03/vsstylecopwarnings-thumb.png?w=504&h=199" class="screenshot-noshadow" />
+<a href="{{ site.url }}/assets/{{ page.assets }}/vs-stylecop-warnings.png">
+    <img alt="StyleCop warnings in the Visual Studio Error List." src="{{ site.url }}/assets/{{ page.assets }}/vs-stylecop-warnings.png" class="screenshot-noshadow" />
 </a>
 
 Configuration can be controlled via a **Settings.StyleCop** file, which is easily edited with the accompanying GUI editor.
 
-<a href="http://megakemp.files.wordpress.com/2009/03/stylecopconfigeditor.png">
-    <img alt="StyleCopConfigEditor" src="http://megakemp.files.wordpress.com/2009/03/stylecopconfigeditor-thumb.png?w=404&h=372" class="screenshot-noshadow" />
+<a href="{{ site.url }}/assets/{{ page.assets }}/stylecop-config-editor.png">
+    <img alt="The StyleCop project settings editor." src="{{ site.url }}/assets/{{ page.assets }}/stylecop-config-editor.png" class="screenshot-noshadow" />
 </a>
 
 StyleCop can also be run through a set of [MSBuild][7] tasks. All you have to do is include the target file that invoke the proper tasks in your custom build definition or Visual Studio project file:

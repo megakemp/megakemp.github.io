@@ -3,10 +3,11 @@ layout: post
 title:  "REST web services"
 date:   2008-11-21
 categories: programming web
+assets: rest-web-services
 ---
 
 If you have followed the latest advancements in the technologies and standards around web services, you must have come across the term “REST” at least more than once.
-In rough terms REST is a way of building web services by relying <img alt="webservices" src="http://megakemp.files.wordpress.com/2008/11/webservices-thumb.jpg?w=100&h=100" class="article" /> exclusively on the infrastructure of the World Wide Web to define operations and exchange messages. This is an alternative to “traditional” web services, which instead use a set of standardized XML dialects, [WSDL][1] and [SOAP][2] to achieve the same goals.
+In rough terms REST is a way of building web services by relying <img alt="A globe circled by an arrow, the icon for web services." src="{{ site.url }}/assets/{{ page.assets }}/web-services.jpg" class="article" width="100" height="100" /> exclusively on the infrastructure of the World Wide Web to define operations and exchange messages. This is an alternative to “traditional” web services, which instead use a set of standardized XML dialects, [WSDL][1] and [SOAP][2] to achieve the same goals.
 The reason I’m writing about REST is that if you, like me, have prematurely judged it as some kind of toy technology, you are in for a real eye-opener!
 
 ## The history

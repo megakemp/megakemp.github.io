@@ -108,7 +108,7 @@ So, if you want to restore the `master` branch to the same commit it referenced 
 git reset --hard @{1}
 ```
 
-<img alt="Restore"
+<img alt="The reflog entries from @{0} to @{5} pointing to the commits master has been on."
      class="screenshot-noshadow"
      src="{{ site.url }}/assets/{{ page.assets }}/restore.png"/>
 

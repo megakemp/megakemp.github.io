@@ -3,6 +3,7 @@ layout: post
 title:  "First preview of Windows 7"
 date:   2008-11-02
 categories: technology
+assets: first-preview-of-windows-7
 ---
 
 On the second day of [PDC 2008][1] in Los Angeles Microsoft gave the first public preview of the next version of their client operating system code-named Windows 7.
@@ -13,7 +14,7 @@ Well, I didn’t have to wait long to get a grasp on Microsoft’s next client o
 
 > Windows 7 = Windows Vista SP2 + Multi-touch
 
-In my opinion Windows 7 is really what Vista should have been in its first release back in November 2006. Microsoft used this release to polish the rough edges in the operating <img alt="windows-7-logo" src="http://megakemp.files.wordpress.com/2008/11/windows-7-logo-thumb.jpg?w=110&h=91" class="article" /> system like resource usage, responsiveness and user access control (UAC), amongst others. I really don’t blame them for that. They applied the hard lessons learned with Vista and used this second release to stabilize and strengthen the OS without introducing too much change. This way they hope to re-gain the users’ confidence in Windows. Here is a brief overview of some of the key improvements made in Windows 7:
+In my opinion Windows 7 is really what Vista should have been in its first release back in November 2006. Microsoft used this release to polish the rough edges in the operating <img alt="The Windows 7 logo." src="{{ site.url }}/assets/{{ page.assets }}/windows-7-logo.jpg" class="article" width="110" height="91" /> system like resource usage, responsiveness and user access control (UAC), amongst others. I really don’t blame them for that. They applied the hard lessons learned with Vista and used this second release to stabilize and strengthen the OS without introducing too much change. This way they hope to re-gain the users’ confidence in Windows. Here is a brief overview of some of the key improvements made in Windows 7:
 
   * **Usability**
     * Improved thumbnail previews in the task bar

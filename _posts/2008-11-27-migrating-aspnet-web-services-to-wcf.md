@@ -3,10 +3,11 @@ layout: post
 title:  "Migrating ASP.NET Web Services to WCF"
 date:   2008-11-27
 categories: programming .net
+assets: migrating-aspnet-web-services-to-wcf
 ---
 
 I am currently in the middle of a project where we are migrating a (large) amount of web services built on top of [ASP.NET][1] in .NET 2.0 (commonly referred to as [ASMX Web Services][2]) over to the [Windows Communication Foundation (WCF)][3] platform available in .NET 3.0.
-The primary reason we want to do that, is because we would like to take advantage of the binary message serialization support available in WCF to speed <img alt="aspnetlogo" src="http://megakemp.files.wordpress.com/2008/11/aspnetlogo-thumb.png?w=160&h=48" class="article" /> up communication  between the services and their clients. This same technique was possible in earlier versions of the .NET Framework thanks to a technology called [Remoting][4], which is now superceded by WCF. In both cases it requires that both the client and server run on .NET in order to work. But I digress.
+The primary reason we want to do that, is because we would like to take advantage of the binary message serialization support available in WCF to speed <img alt="The Microsoft ASP.NET logo." src="{{ site.url }}/assets/{{ page.assets }}/aspnet-logo.png" class="article" width="160" height="48" /> up communication  between the services and their clients. This same technique was possible in earlier versions of the .NET Framework thanks to a technology called [Remoting][4], which is now superceded by WCF. In both cases it requires that both the client and server run on .NET in order to work. But I digress.
 
 Since the ASMX model has been for a long time the primary Microsoft technology for building web services on the .NET platform, I figured they must have laid out a nice migration path to bring all those web services to the new world of WCF. It turned out, [they did][5]!
 

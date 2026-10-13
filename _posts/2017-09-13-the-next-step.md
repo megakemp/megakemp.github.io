@@ -30,7 +30,7 @@ In 2011, I started doing talks at conferences and user group meetings. In the be
 
 ### tretton37
 
-In 2012, I found a young but ambitious consulting company that valued _knowledge sharing_ as much as I did: [tretton37][2]. I joined them and had the privilege to represent those values at numerous conferences and user group events (including twice at their very own and highly praised [Leetspeak][3]). I had a great time! But as with all good things, there was a downside: although speaking _was_ part of my job description, it still only accounted for a small portion of my time. That didn't bother me too much in the beginning but, as time went on, I wished I could do more.
+In 2012, I found a young but ambitious consulting company that valued _knowledge sharing_ as much as I did: tretton37. I joined them and had the privilege to represent those values at numerous conferences and user group events (including twice at their very own and highly praised Leetspeak). I had a great time! But as with all good things, there was a downside: although speaking _was_ part of my job description, it still only accounted for a small portion of my time. That didn't bother me too much in the beginning but, as time went on, I wished I could do more.
 
 <img alt="Speaking at a Foo Café meetup in Malmö, March 2013"
      src="{{ site.url }}/assets/{{ page.assets }}/speaking.jpg"
@@ -51,7 +51,7 @@ Eventually, I realized that pursuing two careers is unsustainable — willingnes
 
 Needless to say, I chose the latter.
 
-I am grateful for my time at tretton37 — they're a talented group of people with a [great culture][7] and I wish them all the best for the future. As for myself, I'm going to pursue my dream of helping others improve the way they develop software by [teaching and mentoring][8].
+I am grateful for my time at tretton37 — they're a talented group of people with a great culture and I wish them all the best for the future. As for myself, I'm going to pursue my dream of helping others improve the way they develop software by [teaching and mentoring][8].
 
 ---
 
@@ -69,12 +69,9 @@ That's all for now. If you've made it this far, thank you for reading. Exciting 
 [^2]: In fact, I have a [_new course_]({{ site.url }}/2017/10/20/cake-at-pluralsight/) coming out in just a few short weeks, so watch out for that. 😊
 
 [1]: #whats-next
-[2]: https://tretton37.com
-[3]: https://leetspeak.se
 [4]: https://www.pluralsight.com
 [5]: https://www.pluralsight.com/courses/git-advanced-tips-tricks
 [6]: /git
-[7]: https://tretton37.com/knowledge-sharing
 [8]: /services
 [9]: /services/#training
 [10]: /training/

@@ -12,7 +12,7 @@ ranking: 1
 
 ## A little background
 
-For the past couple of months I’ve been running a [Raspberry Pi][2] as my primary NAS at home. It wasn’t something that I had planned. On the contrary, it all started by chance when I received a Raspberry Pi as a conference gift at last year’s [Leetspeak][3].
+For the past couple of months I’ve been running a [Raspberry Pi][2] as my primary NAS at home. It wasn’t something that I had planned. On the contrary, it all started by chance when I received a Raspberry Pi as a conference gift at last year’s Leetspeak.
 But why using it as a NAS when there are [much better products][4] on the market, you might ask. Well, because I happen to have a small network closet at home and the Pi is a pretty good fit for a device that’s capable of acting like a NAS while at the same time taking _very_ little space.
 
 <img alt="My Raspberry Pi sitting in the network closet."
@@ -118,7 +118,6 @@ I have to say that I’ve been positively surprised by the capabilities of the R
 </div>
 
 [2]: https://en.wikipedia.org/wiki/Raspberry_pi
-[3]: http://leetspeak.se
 [4]: http://www.synology.com/products
 [6]: http://www.wdc.com/en/products/products.aspx?id=470
 [7]: http://www.raspbian.org

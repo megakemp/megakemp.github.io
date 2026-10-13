@@ -3,9 +3,10 @@ layout: post
 title:  "Microsoft Oslo and the evolution of programming"
 date:   2008-10-22
 categories: programming
+assets: microsoft-oslo-and-the-evolution-of-programming
 ---
 
-The other day I was reading about one of the most talked about future Microsoft technologies code-named “Oslo”. The details of what “Oslo” is are still pretty vague, at  least until [PDC 2008][1]. In short it’s a set of technologies aimed at creating Domain Specific Languages (DSL) that can then be used to build executable programs. Yes, I know that still sounds vague, but that’s really all Microsoft has reveled about the whole project so far. <img alt="dsl" src="http://megakemp.files.wordpress.com/2008/10/dsl-thumb.gif?w=184&h=181" class="article" />
+The other day I was reading about one of the most talked about future Microsoft technologies code-named “Oslo”. The details of what “Oslo” is are still pretty vague, at  least until [PDC 2008][1]. In short it’s a set of technologies aimed at creating Domain Specific Languages (DSL) that can then be used to build executable programs. Yes, I know that still sounds vague, but that’s really all Microsoft has reveled about the whole project so far. <img alt="A model drawn with a graphical domain-specific language." src="{{ site.url }}/assets/{{ page.assets }}/dsl.gif" class="article" width="184" height="181" />
 
 According to a [recent interview on .NET Rocks!][2] with Don Box and Doug Purdy, two of the main architects behind “Oslo”, Microsoft’s goal is:
 

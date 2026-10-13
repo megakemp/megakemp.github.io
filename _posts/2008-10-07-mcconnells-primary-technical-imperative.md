@@ -3,11 +3,12 @@ layout: post
 title:  "McConnell’s Primary Technical Imperative"
 date:   2008-10-07
 categories: programming
+assets: mcconnells-primary-technical-imperative
 ---
 
 I’ve recently picked up reading (again) my all-time favorite book about software development: _Code Complete_ by Steve McConnell. The book was first published in 1993 and has been a timeless guide for anyone in this industry about the science and art of software development. A craftsman’s handbook, if you will.
 
-In 2004 McConnell published [_Code Complete Second Edition_][1], updated to cover the  advancements in the software development practices that has happened <img alt="cc2-cover" src="http://megakemp.files.wordpress.com/2008/10/cc2e-cover-small-thumb.png?w=154&h=187" class="article" /> since the first release, like object-oriented programming, agile and test-driven development to name a few. All the code examples have also been updated to modern languages like C++ and Visual Basic, which substitute C and Pascal. However the main topic of the book remains unchanged, and that’s the whole point really. Software development concepts and best practices are a foundation whose principles are independent of specific technologies and programming languages.
+In 2004 McConnell published [_Code Complete Second Edition_][1], updated to cover the  advancements in the software development practices that has happened <img alt="The cover of Code Complete, Second Edition." src="{{ site.url }}/assets/{{ page.assets }}/code-complete-2-cover.png" class="article" /> since the first release, like object-oriented programming, agile and test-driven development to name a few. All the code examples have also been updated to modern languages like C++ and Visual Basic, which substitute C and Pascal. However the main topic of the book remains unchanged, and that’s the whole point really. Software development concepts and best practices are a foundation whose principles are independent of specific technologies and programming languages.
 
 Once I read the original Code Complete and now I am going through the Second Edition. My plan is to write here about some of the **gems of wisdom** kept in these tomes, based on the opinion that is extremely valuable to keep track of and share precious knowledge.
 

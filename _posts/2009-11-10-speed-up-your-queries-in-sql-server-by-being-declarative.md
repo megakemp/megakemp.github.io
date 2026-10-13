@@ -3,6 +3,7 @@ layout: post
 title:  "Speed up your queries in SQL Server by being declarative"
 date:   2009-11-10
 categories: programming sql
+assets: speed-up-your-queries-in-sql-server-by-being-declarative
 ---
 
 It’s interesting how a lot of the work I’ve been doing lately has in some way involved a kind of performance tuning. Previously I’ve talked about [how to increase the performance of .NET applications][1] by using delegates instead of reflection in code that runs frequently.
@@ -19,7 +20,7 @@ Imagine an application that manages a **wait list**. Users of this application p
 
 Let’s say that this wait list is modeled in a [Microsoft SQL Server][2] database with the following schema:
 
-<img alt="WaitListSchema" src="http://megakemp.files.wordpress.com/2009/11/waitlistschema_thumb1.png?w=500&h=317" class="screenshot-noshadow" />
+<img alt="The schema of the WaitList, User and Resource tables." src="{{ site.url }}/assets/{{ page.assets }}/waitlist-schema.png" class="screenshot-noshadow" />
 
 The position of the different users in the wait list is periodically updated by a [Stored Procedure][4] that calculates the current score for each and every row in the `WaitList` table.
 
@@ -134,17 +135,17 @@ What we did is basically removing the explicit loop and merging all operations i
 
 Now, let’s look at some performance comparison:
 
-<img alt="WaitListPerfChart" src="http://megakemp.files.wordpress.com/2009/11/waitlistperfchart.png?w=499&h=323" class="screenshot-noshadow" />
+<img alt="A chart comparing the time the declarative and the imperative SQL take to calculate 500,000 and 1.5 million rows." src="{{ site.url }}/assets/{{ page.assets }}/waitlist-perf-chart.png" class="screenshot-noshadow" />
 
 That’s a pretty significant leap in speed. How is that possible? A look at the CPU usage on the database server while running the two versions of the Stored Procedure pretty much explains it all:
 
 CPU usage while executing `CalculateWaitListScores_Imperative`:
 
-<img alt="CpuUsageWithImperativeSql" src="http://megakemp.files.wordpress.com/2009/11/cpuusagewithimperativesql.png?w=504&h=129" class="screenshot-noshadow" />
+<img alt="The CPU usage while running the imperative SQL, steady at 10% on one of the four cores." src="{{ site.url }}/assets/{{ page.assets }}/cpu-usage-with-imperative-sql.png" class="screenshot-noshadow" />
 
 CPU usage while executing `CalculateWaitListScores_Declarative`:
 
-<img alt="CpuUsageWithDeclarativeSql" src="http://megakemp.files.wordpress.com/2009/11/cpuusagewithdeclarativesql.png?w=504&h=129" class="screenshot-noshadow" />
+<img alt="The CPU usage while running the declarative SQL, spread over all four cores." src="{{ site.url }}/assets/{{ page.assets }}/cpu-usage-with-declarative-sql.png" class="screenshot-noshadow" />
 
 As you see, in the first picture the CPU is steadily at 9-10% and is basically using only one out of four available cores. This is because SQL Server is forced to do its work sequentially and has to wait until the score for the current row has been calculated and updated before proceeding to the next.
 

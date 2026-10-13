@@ -3,16 +3,17 @@ layout: post
 title:  "Another Visual Studio Color Theme"
 date:   2009-04-06
 categories: musings .net
+assets: another-visual-studio-color-theme
 ---
 
-An interesting trend has emerged in the .NET community during the past couple of years, which involves [developers sharing their favorite color theme for the Visual Studio code editor][1] with their peers. <img alt="VSSettingsDialog" src="http://megakemp.files.wordpress.com/2009/04/vssettingsdialog1.png?w=190&h=117" class="article" />
+An interesting trend has emerged in the .NET community during the past couple of years, which involves [developers sharing their favorite color theme for the Visual Studio code editor][1] with their peers. <img alt="The Visual Studio Import and Export Settings Wizard." src="{{ site.url }}/assets/{{ page.assets }}/vs-settings-dialog.png" class="article" />
 
 It seems the origin of this trend is somehow related to the introduction of a new feature in Visual Studio 2005 that makes it really easy to export/import all or a subset of the customizations made to the IDE’s into a single XML file. These **settings files** (*.vssettings*) include  every configurable aspect of Visual Studio, from font colors and window sizes to keyboard shortcuts.
 Useful for backups as well as for [keeping Visual Studio the way you like it every time you switch to work on a different computer][3].
 
 What developers are most excited about, however, is exchanging the color combinations they use for the text editor included in the IDE, referred to as **“themes”**.
 
-It’s interesting to notice how a fair amount of developers seem to prefer light text on a dark background, as opposed to the traditional “black on white” paper metaphor <img alt="VimEmacsEffect" src="http://megakemp.files.wordpress.com/2009/04/vimemacseffect.png?w=240&h=240" class="article" /> introduced by the word processors. These themes mimic the colors used by the classic programmer text editors of the past, like [VIM][5] and [EMACS][6] running on DOS or UNIX, which used to sport dark gray or bright blue backgrounds.
+It’s interesting to notice how a fair amount of developers seem to prefer light text on a dark background, as opposed to the traditional “black on white” paper metaphor <img alt="Vim and Emacs with light text on a dark background." src="{{ site.url }}/assets/{{ page.assets }}/vim-emacs-effect.png" class="article" /> introduced by the word processors. These themes mimic the colors used by the classic programmer text editors of the past, like [VIM][5] and [EMACS][6] running on DOS or UNIX, which used to sport dark gray or bright blue backgrounds.
 
 Colors are entirely a matter of personal taste, and in this regard I prefer the clean contrast of  white text on black background.
 Some people even argue that dark backgrounds are easier on the eyes than white ones, due to the reduced amount of bright light emitted by the computer screens. However I don’t know of any official study conducted to scientifically prove this statement.
@@ -36,14 +37,14 @@ It’s a high contrast scheme, but I feel comfortable with it since the colors a
 
 Here is how a C# file looks like with it:
 
-<a href="http://megakemp.files.wordpress.com/2009/04/vssettingscseditor2.png">
-    <img alt="VSSettingsCSEditor" src="http://megakemp.files.wordpress.com/2009/04/vssettingscseditor-thumb2.png?w=504&h=308" class="screenshot-noshadow" />
+<a href="{{ site.url }}/assets/{{ page.assets }}/vs-settings-csharp-editor.png">
+    <img alt="A C# file in Visual Studio with my color theme." src="{{ site.url }}/assets/{{ page.assets }}/vs-settings-csharp-editor.png" class="screenshot-noshadow" />
 </a>
 
 And here is how an XML file looks like:
 
-<a href="http://megakemp.files.wordpress.com/2009/04/vssettingsxmleditor2.png">
-    <img alt="VSSettingsXMLEditor" src="http://megakemp.files.wordpress.com/2009/04/vssettingsxmleditor-thumb2.png?w=504&h=342" class="screenshot-noshadow" />
+<a href="{{ site.url }}/assets/{{ page.assets }}/vs-settings-xml-editor.png">
+    <img alt="An XML file in Visual Studio with my color theme." src="{{ site.url }}/assets/{{ page.assets }}/vs-settings-xml-editor.png" class="screenshot-noshadow" />
 </a>
 
 You can [download my Visual Studio color theme here][13]. I have used it for quite a while now and I am pretty satisfied with it. However, I fell I’ll probably tweak it some more in the future. After all, there is always room for improvements.

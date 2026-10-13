@@ -3,15 +3,16 @@ layout: post
 title:  "Microsoft launches Windows Azure"
 date:   2008-10-28
 categories: technology
+assets: microsoft-launches-windows-azure
 ---
 
 Yesterday at 9:00 AM (Pacific Time) at the [Microsoft PDC 2008][1]‘s keynote, Microsoft Chief Software Architect Ray Ozzie reveled the company’s platform for cloud computing named **[Windows Azure][2]**.
 
-Windows Azure is an **application hosting infrastructure service** <img alt="azure" src="http://megakemp.files.wordpress.com/2008/10/azure-thumb.png?w=204&h=51" class="article" /> where customers can have their software running without having to worry about the costs of deploying   as well as maintaining server and network hardware. Microsoft offers 24/7 hosting based on virtual servers in a configuration that can easily be adapted to scale up depending on the customer’s needs.
+Windows Azure is an **application hosting infrastructure service** <img alt="The Windows Azure logo." src="{{ site.url }}/assets/{{ page.assets }}/windows-azure-logo.png" class="article" /> where customers can have their software running without having to worry about the costs of deploying   as well as maintaining server and network hardware. Microsoft offers 24/7 hosting based on virtual servers in a configuration that can easily be adapted to scale up depending on the customer’s needs.
 
 This is **cloud computing** in a nutshell. Software will no longer run exclusively on a client machine or inside the fences of a corporate intranet, but will be able to take advantage of the functionality offered by ubiquitous services that live on the Internet, a.k.a. “the cloud”
 
-[Windows Azure][3] is the software and hardware platform provided by Microsoft to create a cloud where customers can deploy applications that will available <img alt="dotnet" src="http://megakemp.files.wordpress.com/2008/10/dotnet-thumb.png?w=184&h=59" class="article" /> through the Internet. Right now Windows Azure supports applications built on top of the .NET Framework,  SharePoint, or Dynamics CMS. Moreover the platform offers permanent storage with SQL Server and a series of centralized information sharing and synchronization services that go under the name **[Live Services][4]**.
+[Windows Azure][3] is the software and hardware platform provided by Microsoft to create a cloud where customers can deploy applications that will available <img alt="The Microsoft .NET logo." src="{{ site.url }}/assets/{{ page.assets }}/dotnet-logo.png" class="article" width="184" height="59" /> through the Internet. Right now Windows Azure supports applications built on top of the .NET Framework,  SharePoint, or Dynamics CMS. Moreover the platform offers permanent storage with SQL Server and a series of centralized information sharing and synchronization services that go under the name **[Live Services][4]**.
 
 Microsoft is proving the value of Windows Azure by betting on its own platform, and will soon start to give customers the option to buy server installations of their products on the cloud. This means that customers will be able to have a Microsoft server product up and running really quickly by delegating configuration and maintenance to Microsoft, all of this for the price of a subscription. This concept is called **[Microsoft Online Services][5]**, and it the current offering are included Exchange, Office Live, SharePoint, and Microsoft Dynamics CMS.
 

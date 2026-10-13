@@ -3,6 +3,7 @@ layout: post
 title:  "Improving performance with generic delegates in .NET"
 date:   2009-09-04
 categories: programming .net
+assets: improving-performance-with-generic-delegates-in-net
 ---
 
 Lately I have been involved in the performance profiling work of a Windows client application, which customers had lamented to be way too slow for their taste.
@@ -205,7 +206,7 @@ customerList.Sort(new PropertyComparer(c => c.FullName));
 
 Now that we put reflection out of the picture, it is a good time to run a simple test harness to see how the new comparison strategy performs. For this purpose we will sort an increasingly large collection of objects with the two `PropertyComparer` implementations and compare how long it takes to complete the operation. Here are the results in a graph:
 
-<img alt="SortingPerformanceChart" src="http://megakemp.files.wordpress.com/2009/09/sortingperformancechart.png?w=461&h=310" class="screenshot-noshadow" />
+<img alt="A chart comparing the time it takes to sort with reflection and with delegates." src="{{ site.url }}/assets/{{ page.assets }}/sorting-performance-chart.png" class="screenshot-noshadow" />
 
 As you see, by using delegates the sorting algorithm stays on the linear *O(n)*. On the other hand with reflection it quickly jumps over in the exponential *O(cn)* space, where *c* is the time it takes to make a single comparison.
 

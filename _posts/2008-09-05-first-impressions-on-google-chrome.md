@@ -3,6 +3,7 @@ layout: post
 title:  "First impressions on Google Chrome"
 date:   2008-09-05
 categories: technology web
+assets: first-impressions-on-google-chrome
 ---
 
 I’ve been using Google Chrome as my primary browser for a few days now. As a side note, I almost feel bad about having abandoned Firefox so quickly. I mean, I’ve been using Firefox since version 0.5 (back when it was still called _Phoenix_), for all my daily browsing, both at work and at home. For 4 years, I’ve always been satisfied with the experience. Then Google comes out with its own browser, and in a blink of an eye away goes Firefox and Chrome suddenly gets to be my default browser. Incredible!
@@ -33,15 +34,15 @@ After my initial (and slightly exaggerated) enthusiasm for Chrome had cooled dow
 
   * Integrated support to view and subscribe to RSS/Atom feeds on a web page
 
-<img alt="feeds" src="http://megakemp.files.wordpress.com/2008/09/feeds-thumb.jpg?w=244&h=26" class="screenshot-noshadow" />
+<img alt="The Firefox address bar with the icon to subscribe to the page's feed." src="{{ site.url }}/assets/{{ page.assets }}/feeds.jpg" class="screenshot-noshadow" />
 
   * A bookmark manager to organize, tag and export/import my bookmarks
 
-<img alt="bookmarks" src="http://megakemp.files.wordpress.com/2008/09/bookmarks-thumb.jpg?w=244&h=102" class="screenshot-noshadow" />
+<img alt="The Firefox bookmark manager." src="{{ site.url }}/assets/{{ page.assets }}/bookmarks.jpg" class="screenshot-noshadow" />
 
   * History in a sidebar, where the URLs can be grouped and collapsed by day
 
-<img alt="history" src="http://megakemp.files.wordpress.com/2008/09/history-thumb.jpg?w=202&h=134" class="screenshot-noshadow" />
+<img alt="The Firefox history sidebar, grouped by day." src="{{ site.url }}/assets/{{ page.assets }}/history.jpg" class="screenshot-noshadow" />
 
 Google Chrome is still a (incredibly good) beta product, so I expect the development team to fill in the gaps sooner rather then later. It will be interesting to see which impact Chrome will have on the browser market, once it has matured a bit.
 

@@ -7,7 +7,7 @@ assets: leveraging-the-cloud-for-fun-and-games
 summary: "The story of a group of programmers, who one day decided to have a <a href=\"http://store.steampowered.com/app/730\">Counter-Strike: Global Offensive</a> deathmatch, but didn't have the hardware to host their own game. So they took it to the cloud, learning a few lessons along the way."
 ---
 
-<a href="https://twitter.com/tretton37/status/436790174014791680">Friday night, February 21, 2014</a>. That's when the [tretton37](http://tretton37.com) Counter-Strike: Global Offensive [fragfest](http://www.urbandictionary.com/define.php?term=fragfest) was bound to start. Avid gamers looking to share virtual blood together, were eager to join in from our offices in Lund and Stockholm. A few more would play over the Internet.
+<a href="https://twitter.com/tretton37/status/436790174014791680">Friday night, February 21, 2014</a>. That's when the tretton37 Counter-Strike: Global Offensive [fragfest](http://www.urbandictionary.com/define.php?term=fragfest) was bound to start. Avid gamers looking to share virtual blood together, were eager to join in from our offices in Lund and Stockholm. A few more would play over the Internet.
 
 <img src="{{ site.url }}/assets/{{ page.assets }}/counter-strike-global-offensive-by-griddark.png"
      alt="CS:GO icon by griddark"
@@ -39,7 +39,7 @@ Where's the place to find commodity hardware that's available <em>for rent</em>,
 
 Valve puts out their [Source Dedicated Server](https://developer.valvesoftware.com/wiki/Source_Dedicated_Server) software both for Windows and Linux. The Windows version has a GUI and is generally what you'd call "user friendly". The Linux version, on the other hand, is *lean & mean* and is managed entirely from the command line. Programmers being programmers, I decided to go for the Linux version.
 
-Now, having established that I needed a Linux box, the next question was: which of the available clouds was I going to entrust with our gaming night? Since [tretton37](http://tretton37.com) is mainly a Microsoft shop, it felt natural to go for [Microsoft Azure](http://azure.microsoft.com). However, I wasn't holding any high hopes that they would allow me to install Linux on one of their virtual machines.
+Now, having established that I needed a Linux box, the next question was: which of the available clouds was I going to entrust with our gaming night? Since tretton37 is mainly a Microsoft shop, it felt natural to go for [Microsoft Azure](http://azure.microsoft.com). However, I wasn't holding any high hopes that they would allow me to install Linux on one of their virtual machines.
 
 As it turned out, I had to [eat my hat](http://english.stackexchange.com/questions/150159/origin-of-eat-my-hat) on that one. Azure does, in fact, offer [pre-installed Linux virtual machines](http://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-tutorial) ready to go. To me, this is proof that the cloud division at Microsoft totally gets how things are supposed to work in the 21st century. Kudos to them.
 

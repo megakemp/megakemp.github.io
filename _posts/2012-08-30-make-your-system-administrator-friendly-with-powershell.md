@@ -4,11 +4,12 @@ title:  "Make your system administrator friendly with PowerShell"
 date:   2012-08-30
 categories: speaking
 excerpt: Following up on my interest for PowerShell, I’ve found myself talking a fair deal about it both at conferences and user groups. In particular, during the last year or so, I’ve been giving a presentation about how to integrate PowerShell into your own applications.
+assets: make-your-system-administrator-friendly-with-powershell
 ---
 
 I know I’ve said it before, but I love the command line. And being a command line junkie, I’m naturally attracted to all kinds of tools the involve a bright blinking square on a black canvas. Historically, I’ve always been a huge fan of the mighty [Bash][1]. PowerShell, however, came to change that.
 
-<img alt="PowerShell" src="http://megakemp.files.wordpress.com/2012/08/powershell-cropped-small.png?w=480" class="article" />
+<img alt="The PowerShell logo." src="{{ site.url }}/assets/{{ page.assets }}/powershell-logo.png" class="article" />
 
 Since PowerShell made its first appearance under the [codename “_Monad_”][3] back in 2005, it proposed itself as more than just a regular command prompt. It brought, in fact, something completely new to the table: _it combined the flexibility of a Unix-style console, such as Bash, with the richness of the .NET Framework and an [object-oriented pipeline][4]_, which in itself was totally unheard of.
 With such a compelling story, it soon became apparent that PowerShell was aiming to become the official command line tool for Windows, replacing both the ancient [Command Prompt][5] and the often criticized [Windows Script Host][6]. And so it has been.
@@ -39,9 +40,9 @@ So here it goes, I hope you find it useful.
 <div class="note">
 <ul>
   <li><a
-  href="http://megakemp.files.wordpress.com/2012/08/sysadminfriendlywithpowershell-slides.pdf">Slides</a></li>
+  href="{{ site.url }}/assets/{{ page.assets }}/sysadmin-friendly-with-powershell-slides.pdf">Slides</a></li>
   <li><a
-  href="http://megakemp.files.wordpress.com/2012/08/sysadminfriendlywithpowershell-codesamples.pdf">Code samples</a></li>
+  href="{{ site.url }}/assets/{{ page.assets }}/sysadmin-friendly-with-powershell-code-samples.pdf">Code samples</a></li>
   <li><a href="https://github.com/ecampidoglio/Expresso">Expresso on GitHub</a></li>
 </ul>
 </div>

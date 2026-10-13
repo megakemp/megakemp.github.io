@@ -5,7 +5,7 @@ date:   2009-02-25
 categories: programming
 assets: gdi-memory-leak-in-windows-forms
 excerpt: A while ago I run into a rather interesting and insidious bug, which I thought I would share. The bug manifested itself in a Windows Forms application, occasionally causing it to crash with an "out of memory" error. Little did we know that the hunt would lead us down the dark corners of the Win32 graphics API.
-image: windowslogo.png
+image: windows-logo.png
 imagesize: contain
 ---
 
@@ -13,9 +13,9 @@ A while ago I run into a rather interesting and insidious bug, which I thought I
 
 ## The scenario
 
-We had a desktop application developed on the **.NET Framework 2.0** using **Windows Forms**. Part of the requirements for this application was that the standard Windows controls had to be modified to have a custom appearance, to suite the customer’s needs. Since classes that are part of Windows Forms are really nothing more than thin <img alt="winlogo" src="http://megakemp.files.wordpress.com/2009/02/winlogo.gif?w=80&h=66" class="article" /> managed wrappers around [Windows’ graphic subsystem GDI][2], many customizations that required  the use of functions not directly exposed through .NET, forced us to invoke the Win32 API directly.
+We had a desktop application developed on the **.NET Framework 2.0** using **Windows Forms**. Part of the requirements for this application was that the standard Windows controls had to be modified to have a custom appearance, to suite the customer’s needs. Since classes that are part of Windows Forms are really nothing more than thin <img alt="The Windows logo." src="{{ site.url }}/assets/{{ page.assets }}/windows-logo.png" class="article" width="80" height="66" /> managed wrappers around [Windows’ graphic subsystem GDI][2], many customizations that required  the use of functions not directly exposed through .NET, forced us to invoke the Win32 API directly.
 
-Now, for someone who has been developing on a virtual machine for a long time (whether it be the CLR or Java), commodities like garbage collection are quickly taken for granted. And when the time comes to step out of the safe and cozy managed world, it is easy to forget that those assumptions are no longer valid. And that’s where problems usually start. <img alt="wpf" src="http://megakemp.files.wordpress.com/2009/02/wpf.png?w=80&h=80" class="article" />
+Now, for someone who has been developing on a virtual machine for a long time (whether it be the CLR or Java), commodities like garbage collection are quickly taken for granted. And when the time comes to step out of the safe and cozy managed world, it is easy to forget that those assumptions are no longer valid. And that’s where problems usually start. <img alt="The Windows Presentation Foundation logo." src="{{ site.url }}/assets/{{ page.assets }}/wpf-logo.png" class="article" />
 
 As a side note, if we were to build the same application today we would definitely [choose Windows Presentation Foundation (WPF) over Windows Forms][4] as UI technology,  since WPF allows to easily define the controls’ visual layout separately from their functionality without leaving the CLR.
 
@@ -29,12 +29,12 @@ Oddly enough, a through examination of the source code confirmed that all bitmap
 
 To further investigate exactly what was being used and left hanging around, we used a free tool called [GDIUsage][11], which shows exactly how many and which kinds of GDI objects are being allocated by an application. On the left picture you can see how memory looked like at application startup compared to after a couple of minutes of normal usage.
 
-<img src="{{ site.url }}/assets/{{ page.assets }}/gdileaksbefore.png"
+<img src="{{ site.url }}/assets/{{ page.assets }}/gdi-leaks-before.png"
      alt="The number of allocated GDI resources right after the application is launched"
      title="The number of allocated GDI resources right after the application is launched"
      class="screenshot-noshadow-fullwidth"
      style="display: inline;" />
-<img src="{{ site.url }}/assets/{{ page.assets }}/gdiusageafter.png"
+<img src="{{ site.url }}/assets/{{ page.assets }}/gdi-usage-after.png"
      alt="The number of allocated GDI resources after using the application for a few minutes"
      title="The number of allocated GDI resources after using the application for a few minutes"
      class="screenshot-noshadow-fullwidth"
@@ -44,7 +44,7 @@ It was apparent that we were creating an awful lot of **font objects** and forge
 
 It turned out Windows puts a limit on the number of total GDI objects that can be created inside of a process. And [that limit is exactly of 10.000 GDI objects in Windows XP][14]. This means that allocating GDI object number 10.001 will always cause an error. You can use Task Manager to see how many GDI resources each process has currently allocated by selecting the **GDI Objects** column.
 
-<img src="{{ site.url }}/assets/{{ page.assets }}/taskmanagergdiobjects.png"
+<img src="{{ site.url }}/assets/{{ page.assets }}/task-manager-gdi-objects.png"
      alt="The total number of GDI resources allocated by the application as shown by Task Manager"
      title="The total number of GDI resources allocated by the application as shown by Task Manager"
      class="screenshot-noshadow-fullwidth" />

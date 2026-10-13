@@ -3,9 +3,10 @@ layout: post
 title:  "Visual Studio Code Coverage reports with MSBuild"
 date:   2008-10-09
 categories: .net
+assets: visual-studio-code-coverage-reports-with-msbuild
 ---
 
-Recently I had a project where I was using Microsoft Visual Studio 2008 Team System for development and [CruiseControl.NET][1] for doing continuous integration. I <img alt="VisualStudioLogo" src="http://megakemp.files.wordpress.com/2008/10/visualstudiologo-thumb.jpg?w=104&h=67" class="article" /> usually care about code coverage when running unit tests, so I decided to integrate the code profiling tool included in Visual Studio Team System as part of my build process, in order to produce a code coverage report with each build.
+Recently I had a project where I was using Microsoft Visual Studio 2008 Team System for development and [CruiseControl.NET][1] for doing continuous integration. I <img alt="The Visual Studio logo." src="{{ site.url }}/assets/{{ page.assets }}/visual-studio-logo.jpg" class="article" width="104" height="67" /> usually care about code coverage when running unit tests, so I decided to integrate the code profiling tool included in Visual Studio Team System as part of my build process, in order to produce a code coverage report with each build.
 
 I figured that wouldn’t be too hard, all I had to do in my build script was to invoke Visual Studio’s test runner’s executable (usually found in _C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\MSTest.exe_) passing an option to enable code coverage profiling, and grab the output in a file that CruiseControl.NET would later use to produce the build report.
 
